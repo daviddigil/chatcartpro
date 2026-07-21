@@ -1,0 +1,167 @@
+<!--
+  EmailJS HTML Template — "Demo Request" notification email
+  ----------------------------------------------------------
+  How to use:
+  1. In the EmailJS dashboard, go to Email Templates → Create New Template.
+  2. Switch the editor to "Code" / HTML view (not the visual drag-and-drop editor).
+  3. Paste the ENTIRE contents of this file into that HTML editor.
+  4. Set the template's "To email" field to your own Gmail address.
+  5. Set the "Subject" field to something like: New demo request from {{business_name}} ({{from_name}})
+  6. Save the template and copy its Template ID back to me so I can wire up index.html.
+
+  Variables used below (must match what the JS submit handler sends):
+    {{from_name}}      -> visitor's full name
+    {{business_name}}  -> business name
+    {{industry}}       -> selected industry
+    {{whatsapp}}       -> WhatsApp number
+    {{from_email}}     -> visitor's email
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f2fbf5; padding:32px 16px; font-family:'Segoe UI', Helvetica, Arial, sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px; background-color:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #ececec;">
+
+        <!-- Header -->
+        <tr>
+          <td style="background-color:#0a0a0a; padding:24px 32px;">
+            <table role="presentation" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="width:34px; height:34px; background-color:#ccff00; border-radius:10px; text-align:center; vertical-align:middle; font-size:16px;">
+                  &#128172;
+                </td>
+                <td style="padding-left:10px; color:#ffffff; font-size:18px; font-weight:800;">
+                  ChatCart Pro AI
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Eyebrow / title -->
+        <tr>
+          <td style="padding:32px 32px 8px;">
+            <span style="display:inline-block; background-color:#0a0a0a; color:#ccff00; font-size:12px; font-weight:700; letter-spacing:0.03em; padding:5px 12px; border-radius:999px;">
+              NEW DEMO REQUEST
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:8px 32px 4px;">
+            <h1 style="margin:0; font-size:22px; font-weight:800; color:#0a0a0a; line-height:1.3;">
+              Someone wants a ChatCart Pro AI demo
+            </h1>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:4px 32px 24px;">
+            <p style="margin:0; font-size:14px; color:#5b6360; line-height:1.6;">
+              A visitor just submitted the demo request form on your website. Their details are below — reach out on WhatsApp or email to schedule the live demo.
+            </p>
+          </td>
+        </tr>
+
+        <!-- Details card -->
+        <tr>
+          <td style="padding:0 32px 32px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f6f7fb; border:1px solid #ececec; border-radius:16px;">
+              <tr>
+                <td style="padding:18px 20px; border-bottom:1px solid #ececec;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="font-size:12px; font-weight:700; color:#5b6360; text-transform:uppercase; letter-spacing:0.03em; padding-bottom:4px;">Full name</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:15px; font-weight:600; color:#0a0a0a;">{{from_name}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 20px; border-bottom:1px solid #ececec;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="font-size:12px; font-weight:700; color:#5b6360; text-transform:uppercase; letter-spacing:0.03em; padding-bottom:4px;">Business name</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:15px; font-weight:600; color:#0a0a0a;">{{business_name}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 20px; border-bottom:1px solid #ececec;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="font-size:12px; font-weight:700; color:#5b6360; text-transform:uppercase; letter-spacing:0.03em; padding-bottom:4px;">Industry</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:15px; font-weight:600; color:#0a0a0a;">{{industry}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 20px; border-bottom:1px solid #ececec;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="font-size:12px; font-weight:700; color:#5b6360; text-transform:uppercase; letter-spacing:0.03em; padding-bottom:4px;">WhatsApp number</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:15px; font-weight:600; color:#0a0a0a;">{{whatsapp}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:18px 20px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="font-size:12px; font-weight:700; color:#5b6360; text-transform:uppercase; letter-spacing:0.03em; padding-bottom:4px;">Email</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:15px; font-weight:600; color:#0a0a0a;">{{from_email}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CTA buttons -->
+        <tr>
+          <td style="padding:0 32px 36px;">
+            <table role="presentation" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="border-radius:999px; background-color:#ccff00;">
+                  <a href="mailto:{{from_email}}" style="display:inline-block; padding:12px 22px; font-size:14px; font-weight:700; color:#0a0a0a; text-decoration:none;">
+                    Reply by Email
+                  </a>
+                </td>
+                <td style="width:12px;"></td>
+                <td style="border-radius:999px; background-color:#0a0a0a;">
+                  <a href="https://wa.me/{{whatsapp}}" style="display:inline-block; padding:12px 22px; font-size:14px; font-weight:700; color:#ccff00; text-decoration:none;">
+                    Message on WhatsApp
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color:#0a0a0a; padding:20px 32px; text-align:center;">
+            <p style="margin:0; font-size:12px; color:rgba(255,255,255,0.6);">
+              This notification was sent automatically from the ChatCart Pro AI demo request form.
+            </p>
+            <p style="margin:6px 0 0; font-size:12px; color:rgba(255,255,255,0.4);">
+              Powered by <span style="color:#ccff00;">Nexsofture Private Ltd</span>
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>

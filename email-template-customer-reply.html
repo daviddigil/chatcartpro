@@ -1,0 +1,127 @@
+<!--
+  EmailJS HTML Template — "Customer Auto-Reply" confirmation email
+  ------------------------------------------------------------------
+  This is a SECOND, SEPARATE EmailJS template — it goes to the
+  VISITOR who filled out the form (not to you), confirming their
+  demo request was received.
+
+  How to use:
+  1. In the EmailJS dashboard, go to Email Templates → Create New Template.
+  2. Switch the editor to "Code" / HTML view (not the visual drag-and-drop editor).
+  3. Paste the ENTIRE contents of this file into that HTML editor.
+  4. Set the template's "To email" field to: {{from_email}}
+     (this sends it to the visitor's own email address, not yours)
+  5. Set the "Subject" field to something like: We've received your ChatCart Pro AI demo request!
+  6. Save and copy this template's Template ID — you'll need it alongside the
+     "New Demo Request" template's ID when the form is wired up, since one
+     form submission will trigger TWO emails (one to you, one to the visitor).
+
+  Variables used below (must match what the JS submit handler sends):
+    {{from_name}}      -> visitor's full name
+    {{business_name}}  -> business name
+    {{industry}}       -> selected industry
+-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f2fbf5; padding:32px 16px; font-family:'Segoe UI', Helvetica, Arial, sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px; background-color:#ffffff; border-radius:20px; overflow:hidden; border:1px solid #ececec;">
+
+        <!-- Header -->
+        <tr>
+          <td style="background-color:#0a0a0a; padding:24px 32px;">
+            <table role="presentation" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="width:34px; height:34px; background-color:#ccff00; border-radius:10px; text-align:center; vertical-align:middle; font-size:16px;">
+                  &#128172;
+                </td>
+                <td style="padding-left:10px; color:#ffffff; font-size:18px; font-weight:800;">
+                  ChatCart Pro AI
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Success badge + title -->
+        <tr>
+          <td style="padding:32px 32px 8px;">
+            <span style="display:inline-block; background-color:#0a0a0a; color:#ccff00; font-size:12px; font-weight:700; letter-spacing:0.03em; padding:5px 12px; border-radius:999px;">
+              REQUEST RECEIVED
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:8px 32px 4px;">
+            <h1 style="margin:0; font-size:22px; font-weight:800; color:#0a0a0a; line-height:1.3;">
+              Thanks, {{from_name}} &mdash; we've got your request!
+            </h1>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:4px 32px 24px;">
+            <p style="margin:0; font-size:14px; color:#5b6360; line-height:1.6;">
+              We've received your demo request for <strong style="color:#0a0a0a;">{{business_name}}</strong> ({{industry}}). Our team will reach out on WhatsApp or email within <strong style="color:#0a0a0a;">one business day</strong> to schedule your live walkthrough.
+            </p>
+          </td>
+        </tr>
+
+        <!-- What happens next -->
+        <tr>
+          <td style="padding:0 32px 28px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f6f7fb; border:1px solid #ececec; border-radius:16px;">
+              <tr>
+                <td style="padding:20px;">
+                  <p style="margin:0 0 12px; font-size:12px; font-weight:700; color:#5b6360; text-transform:uppercase; letter-spacing:0.03em;">
+                    What happens next
+                  </p>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="padding:6px 0; font-size:14px; color:#0a0a0a; vertical-align:top; width:24px;">1.</td>
+                      <td style="padding:6px 0; font-size:14px; color:#0a0a0a;">Our team reviews your business details and industry.</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:6px 0; font-size:14px; color:#0a0a0a; vertical-align:top;">2.</td>
+                      <td style="padding:6px 0; font-size:14px; color:#0a0a0a;">We contact you on WhatsApp or email to find a time that works.</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:6px 0; font-size:14px; color:#0a0a0a; vertical-align:top;">3.</td>
+                      <td style="padding:6px 0; font-size:14px; color:#0a0a0a;">We walk you through exactly how ChatCart Pro AI would work for {{business_name}}.</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CTA -->
+        <tr>
+          <td style="padding:0 32px 36px;">
+            <table role="presentation" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="border-radius:999px; background-color:#ccff00;">
+                  <a href="https://chatcartpro.ai/#faq" style="display:inline-block; padding:12px 22px; font-size:14px; font-weight:700; color:#0a0a0a; text-decoration:none;">
+                    Have a question? See our FAQ
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color:#0a0a0a; padding:20px 32px; text-align:center;">
+            <p style="margin:0; font-size:12px; color:rgba(255,255,255,0.6);">
+              You're receiving this because you requested a demo at chatcartpro.ai.
+            </p>
+            <p style="margin:6px 0 0; font-size:12px; color:rgba(255,255,255,0.4);">
+              ChatCart Pro AI &middot; Powered by <span style="color:#ccff00;">Nexsofture Private Ltd</span>
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>

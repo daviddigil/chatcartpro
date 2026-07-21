@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing (Draft, Unpublished) - ChatCart Pro AI</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --navy:#0b0f0d;
+    --navy-soft:#5b6360;
+    --ink:#0a0a0a;
+    --lime:#ccff00;
+    --lime-dark:#a6d600;
+    --card:#ffffff;
+    --border:#ececec;
+    --shadow: 0 20px 45px -20px rgba(7,94,84,0.22);
+    --amber-bg:#fff8e6; --amber-text:#8a6100; --amber-border:#f0dca6;
+    --pastel-blue:#e3f0fc;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Nirmala UI', 'Tamil MN', 'Malayalam MN', Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:#ffffff;
+  }
+  a{color:var(--lime-dark); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  img,svg{max-width:100%;}
+
+  .draft-banner{
+    background:var(--amber-bg); color:var(--amber-text); border-bottom:1px solid var(--amber-border);
+    text-align:center; font-size:13.5px; font-weight:700; padding:10px 16px;
+  }
+
+  header{
+    position:sticky; top:14px; z-index:50;
+    padding:0 16px;
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 12px 12px 22px; gap:16px;
+    max-width:1200px; margin:0 auto;
+    background:var(--ink);
+    border-radius:999px;
+    box-shadow:0 18px 40px -18px rgba(0,0,0,0.45);
+  }
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; color:#fff; text-decoration:none;}
+  .logo-mark{
+    width:34px; height:34px; border-radius:10px;
+    background:var(--lime);
+    display:flex; align-items:center; justify-content:center; color:var(--ink); font-size:18px; flex-shrink:0;
+  }
+  .logo-mark .ico-svg{width:18px; height:18px;}
+  .ico-svg{width:1em; height:1em; display:inline-block; flex-shrink:0; vertical-align:middle;}
+  .back-link{font-size:14px; font-weight:600; color:#fff; background:rgba(255,255,255,0.1); padding:9px 16px; border-radius:999px;}
+  .back-link:hover{background:rgba(255,255,255,0.18); text-decoration:none;}
+
+  main{padding:56px 0 80px;}
+  .hero{text-align:center; max-width:720px; margin:0 auto 50px;}
+  .eyebrow{
+    display:inline-block; padding:6px 16px; border-radius:999px;
+    background:var(--ink); color:var(--lime); font-weight:700; font-size:13px;
+    letter-spacing:.02em; margin-bottom:16px;
+  }
+  h1{font-size:38px; font-weight:800; margin:0 0 14px; line-height:1.2;}
+  .hero p{color:var(--navy-soft); font-size:16px; line-height:1.6; margin:0;}
+
+  .currency-toggle{display:flex; justify-content:center; gap:8px; margin:26px 0 0;}
+  .currency-toggle button{
+    border:1px solid var(--border); background:var(--card); color:var(--navy-soft);
+    padding:8px 18px; border-radius:999px; font-size:13px; font-weight:700; cursor:pointer; font-family:inherit;
+  }
+  .currency-toggle button.active{background:var(--lime); color:var(--ink); border-color:transparent;}
+
+  .tier-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:40px;}
+  @media (max-width:980px){.tier-grid{grid-template-columns:1fr; max-width:460px; margin-left:auto; margin-right:auto;}}
+
+  .tier-card{
+    background:var(--card); border-radius:24px; padding:32px; border:1px solid var(--border); box-shadow:var(--shadow);
+    display:flex; flex-direction:column;
+  }
+  .tier-card.featured{border:2px solid var(--lime-dark); position:relative;}
+  .tier-card .badge{
+    position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+    background:var(--lime); color:var(--ink); font-size:12px; font-weight:700;
+    padding:5px 14px; border-radius:999px; white-space:nowrap;
+  }
+  .tier-name{font-size:13px; font-weight:700; color:var(--lime-dark); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px;}
+  .tier-audience{font-size:14px; color:var(--navy-soft); margin-bottom:18px;}
+  .tier-price{font-size:34px; font-weight:800; margin-bottom:2px;}
+  .tier-price .cycle{font-size:14px; font-weight:600; color:var(--navy-soft);}
+  .tier-setup{font-size:13px; color:var(--navy-soft); margin-bottom:22px;}
+  .tier-cta{
+    display:inline-flex; align-items:center; justify-content:center; padding:12px 20px; border-radius:999px;
+    font-weight:700; font-size:14px; margin-bottom:24px; background:rgba(0,0,0,0.06); color:var(--ink);
+  }
+  .tier-card.featured .tier-cta{background:var(--ink); color:var(--lime);}
+  .tier-features{list-style:none; margin:0; padding:0; font-size:14px; color:var(--navy-soft); flex:1;}
+  .tier-features li{padding:8px 0; border-top:1px solid var(--border); display:flex; gap:8px; align-items:flex-start;}
+  .tier-features li:first-child{border-top:none;}
+  .tier-features li .check{color:var(--lime-dark); flex-shrink:0;}
+
+  /* Cost breakdown tables */
+  .breakdown{margin-top:70px;}
+  .section-head{text-align:center; max-width:640px; margin:0 auto 36px;}
+  .section-head h2{font-size:28px; font-weight:800; margin:0 0 10px;}
+  .section-head p{color:var(--navy-soft); font-size:15px; line-height:1.6; margin:0;}
+
+  .cost-table-wrap{overflow-x:auto; border-radius:20px; border:1px solid var(--border); box-shadow:var(--shadow); background:var(--card);}
+  table{width:100%; border-collapse:collapse; min-width:640px;}
+  th, td{text-align:left; padding:14px 18px; font-size:14px; border-bottom:1px solid var(--border);}
+  th{background:var(--pastel-blue); font-weight:700; color:var(--navy); white-space:nowrap;}
+  td{color:var(--navy-soft);}
+  tr:last-child td{border-bottom:none;}
+  td strong{color:var(--navy);}
+
+  .ai-modality-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:30px;}
+  @media (max-width:900px){.ai-modality-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.ai-modality-grid{grid-template-columns:1fr;}}
+  .modality-card{
+    background:var(--card); border:1px solid var(--border); border-radius:18px; padding:22px;
+    box-shadow:0 12px 30px -18px rgba(21,36,71,0.15);
+  }
+  .modality-card .ico{font-size:26px; margin-bottom:10px;}
+  .modality-card h4{margin:0 0 6px; font-size:15px;}
+  .modality-card p{margin:0 0 10px; font-size:13px; color:var(--navy-soft); line-height:1.5;}
+  .modality-card .rate{font-size:13px; font-weight:700; color:var(--lime-dark);}
+
+  .notes{
+    background:var(--card); border:1px dashed var(--border); border-radius:18px; padding:26px; margin-top:40px;
+    font-size:13.5px; color:var(--navy-soft); line-height:1.7;
+  }
+  .notes h3{margin:0 0 10px; font-size:15px; color:var(--navy);}
+  .notes ul{margin:8px 0 0; padding-left:20px;}
+
+  footer{background:var(--ink); padding:40px 0 30px; text-align:center; color:rgba(255,255,255,0.6); font-size:13px; margin-top:40px;}
+
+  [data-cur="inr"] .usd{display:none;}
+  [data-cur="usd"] .inr{display:none;}
+
+  @media (max-width:640px){
+    header{top:10px; padding:0 12px;}
+    nav.wrap{padding:10px 10px 10px 18px; border-radius:26px;}
+    .logo{font-size:16px;}
+    .back-link{font-size:13px; padding:8px 12px;}
+  }
+  @media (max-width:400px){
+    .back-link span.back-text{display:none;}
+  }
+</style>
+</head>
+<body data-cur="usd" id="pricingBody">
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="draft-banner">&#9888;&#65039; DRAFT &mdash; INTERNAL ONLY. Not linked from the live site, not for public distribution. Numbers are illustrative placeholders.</div>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg class="ico-svg" aria-hidden="true"><use href="#icon-chat"></use></svg></span> ChatCart Pro AI
+    </a>
+    <a href="index.html" class="back-link">&larr; <span class="back-text">Back to home</span></a>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <span class="eyebrow">Pricing Tiers (Working Draft)</span>
+      <h1>Plan ChatCart Pro AI's pricing</h1>
+      <p>Three tiers covering one-time setup, monthly platform/server cost, WhatsApp (Meta) conversation pass-through, and AI model usage across text, voice, image, and video. Replace placeholder figures with real costs and margins before publishing.</p>
+      <div class="currency-toggle" id="curToggle">
+        <button type="button" data-c="usd" class="active">USD ($)</button>
+        <button type="button" data-c="inr">INR (&#8377;)</button>
+      </div>
+    </div>
+
+    <div class="tier-grid">
+
+      <div class="tier-card">
+        <div class="tier-name">Starter</div>
+        <div class="tier-audience">Single location, one industry use case (e.g. one grocery store or one salon)</div>
+        <div class="tier-price">
+          <span class="usd">$49<span class="cycle">/mo</span></span>
+          <span class="inr">&#8377;3,999<span class="cycle">/mo</span></span>
+        </div>
+        <div class="tier-setup">+ <span class="usd">$149</span><span class="inr">&#8377;11,999</span> one-time setup</div>
+        <div class="tier-cta">Best for testing the waters</div>
+        <ul class="tier-features">
+          <li><span class="check">&#10003;</span> Up to 500 AI-handled conversations / mo</li>
+          <li><span class="check">&#10003;</span> Order taking OR appointment booking (1 mode)</li>
+          <li><span class="check">&#10003;</span> Text-based AI responses (English + 2 languages)</li>
+          <li><span class="check">&#10003;</span> Basic order/booking confirmations & reminders</li>
+          <li><span class="check">&#10003;</span> Email support, 48-hr response</li>
+          <li><span class="check">&#10003;</span> Meta conversation charges billed at cost (pass-through)</li>
+        </ul>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="badge">Most Popular</div>
+        <div class="tier-name">Growth</div>
+        <div class="tier-audience">Multi-location or higher-volume single business, both order + booking modes</div>
+        <div class="tier-price">
+          <span class="usd">$149<span class="cycle">/mo</span></span>
+          <span class="inr">&#8377;11,999<span class="cycle">/mo</span></span>
+        </div>
+        <div class="tier-setup">+ <span class="usd">$349</span><span class="inr">&#8377;27,999</span> one-time setup</div>
+        <div class="tier-cta">Best value for active businesses</div>
+        <ul class="tier-features">
+          <li><span class="check">&#10003;</span> Up to 3,000 AI-handled conversations / mo</li>
+          <li><span class="check">&#10003;</span> Order taking AND appointment booking (both modes)</li>
+          <li><span class="check">&#10003;</span> Text + voice-note transcription AI (40+ languages)</li>
+          <li><span class="check">&#10003;</span> Image recognition (e.g. product photos, prescriptions)</li>
+          <li><span class="check">&#10003;</span> POS / calendar / CRM integration (1 integration incl.)</li>
+          <li><span class="check">&#10003;</span> Priority chat support, 12-hr response</li>
+          <li><span class="check">&#10003;</span> Meta conversation charges billed at cost (pass-through)</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-name">Enterprise</div>
+        <div class="tier-audience">Chains, franchises, or high-volume operations needing custom workflows</div>
+        <div class="tier-price">Custom</div>
+        <div class="tier-setup">Setup scoped per deployment</div>
+        <div class="tier-cta">Talk to sales</div>
+        <ul class="tier-features">
+          <li><span class="check">&#10003;</span> Unlimited / volume-negotiated conversations</li>
+          <li><span class="check">&#10003;</span> All AI modalities: text, voice, image, and video</li>
+          <li><span class="check">&#10003;</span> Multiple locations, brands, or business units</li>
+          <li><span class="check">&#10003;</span> Custom integrations (ERP, multi-POS, custom CRM)</li>
+          <li><span class="check">&#10003;</span> Dedicated account manager & SLA</li>
+          <li><span class="check">&#10003;</span> Custom AI model fine-tuning / brand voice</li>
+          <li><span class="check">&#10003;</span> Meta conversation charges billed at cost (pass-through)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- COST BREAKDOWN -->
+    <div class="breakdown">
+      <div class="section-head">
+        <h2>Underlying cost components</h2>
+        <p>These are the real cost levers behind each tier &mdash; use this to sanity-check margins before setting final prices.</p>
+      </div>
+
+      <div class="cost-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Cost component</th>
+              <th>Starter</th>
+              <th>Growth</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>One-time setup</strong><br>WhatsApp Business API onboarding, number verification, initial menu/calendar configuration, testing</td>
+              <td class="usd">$149</td>
+              <td class="usd">$349</td>
+              <td class="usd">Scoped (typically $500&ndash;$2,000+)</td>
+            </tr>
+            <tr class="inr-row">
+              <td></td>
+              <td class="inr">&#8377;11,999</td>
+              <td class="inr">&#8377;27,999</td>
+              <td class="inr">Scoped (typically &#8377;40,000&ndash;&#8377;1,60,000+)</td>
+            </tr>
+            <tr>
+              <td><strong>Server / platform fee</strong><br>Hosting, uptime monitoring, backups, dashboard access, standard support</td>
+              <td class="usd">$29 / mo</td>
+              <td class="usd">$69 / mo</td>
+              <td class="usd">Scoped (multi-tenant or dedicated infra)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="inr">&#8377;2,399 / mo</td>
+              <td class="inr">&#8377;5,699 / mo</td>
+              <td class="inr">Scoped</td>
+            </tr>
+            <tr>
+              <td><strong>Meta WhatsApp API cost</strong><br>Per-conversation charges set by Meta, vary by country & category (marketing / utility / service / authentication). Billed at pass-through cost, not marked up.</td>
+              <td colspan="3">Pass-through at Meta's published per-conversation rates (varies by country &mdash; e.g. UAE and India service conversations are typically lower-cost than marketing conversations). See <a href="https://developers.facebook.com/docs/whatsapp/pricing" target="_blank" rel="noopener">Meta's official pricing</a> for current rates.</td>
+            </tr>
+            <tr>
+              <td><strong>AI model usage &mdash; included allowance</strong><br>Text-based conversation handling bundled into the monthly fee, up to the plan's conversation limit</td>
+              <td class="usd">500 conv/mo incl.</td>
+              <td class="usd">3,000 conv/mo incl.</td>
+              <td class="usd">Volume-negotiated</td>
+            </tr>
+            <tr>
+              <td><strong>AI model usage &mdash; overage</strong><br>Charged per additional conversation once the plan's included allowance is exceeded</td>
+              <td class="usd">$0.06 / conv</td>
+              <td class="usd">$0.045 / conv</td>
+              <td class="usd">Negotiated volume rate</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="inr">&#8377;5 / conv</td>
+              <td class="inr">&#8377;3.75 / conv</td>
+              <td class="inr">Negotiated volume rate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- AI MODEL COST BY MODALITY -->
+    <div class="breakdown">
+      <div class="section-head">
+        <h2>AI model cost by modality</h2>
+        <p>Text is included in every plan's conversation allowance. Voice, image, and video are heavier-cost modalities &mdash; priced separately or bundled only from Growth upward.</p>
+      </div>
+      <div class="ai-modality-grid">
+        <div class="modality-card">
+          <div class="ico">&#128172;</div>
+          <h4>Text</h4>
+          <p>Core conversation handling: understanding requests, generating replies, order/booking logic.</p>
+          <div class="rate">Included in all plans</div>
+        </div>
+        <div class="modality-card">
+          <div class="ico">&#127911;</div>
+          <h4>Voice</h4>
+          <p>Transcribing customer voice notes and optionally replying with voice messages.</p>
+          <div class="rate usd">~$0.006 / min &middot; Growth+</div>
+          <div class="rate inr">~&#8377;0.50 / min &middot; Growth+</div>
+        </div>
+        <div class="modality-card">
+          <div class="ico">&#128248;</div>
+          <h4>Image</h4>
+          <p>Reading product photos, prescriptions, or ID documents shared by customers.</p>
+          <div class="rate usd">~$0.01 / image &middot; Growth+</div>
+          <div class="rate inr">~&#8377;0.85 / image &middot; Growth+</div>
+        </div>
+        <div class="modality-card">
+          <div class="ico">&#127909;</div>
+          <h4>Video</h4>
+          <p>Analyzing short video clips (e.g. product condition, room walkthroughs for real estate).</p>
+          <div class="rate usd">~$0.05 / min &middot; Enterprise only</div>
+          <div class="rate inr">~&#8377;4.20 / min &middot; Enterprise only</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h3>Notes for internal review before publishing</h3>
+      <ul>
+        <li>All prices above are <strong>placeholders</strong> for structuring the offer — replace with real, margin-checked numbers before this page goes live.</li>
+        <li>Meta's WhatsApp Business API pricing changes periodically and varies significantly by country and conversation category (marketing / utility / authentication / service) — confirm current rates for UAE and India before finalizing pass-through pricing.</li>
+        <li>AI model usage costs depend on which underlying model provider(s) are used for text, voice, image, and video — confirm actual per-unit costs from the chosen provider(s) and build in margin, not just pass-through.</li>
+        <li>Consider whether setup fees should be waived for annual commitments, and whether a free trial or pilot tier makes sense for market entry in UAE/India.</li>
+        <li>This file is marked <code>noindex, nofollow</code> and is intentionally not linked from the main site nor added to any sitemap.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Internal draft &mdash; ChatCart Pro AI by Nexsofture Private Ltd. Not for public distribution.</p>
+  </div>
+</footer>
+
+<script>
+  var body = document.getElementById('pricingBody');
+  var buttons = document.querySelectorAll('#curToggle button');
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      body.setAttribute('data-cur', btn.getAttribute('data-c'));
+    });
+  });
+</script>
+
+</body>
+</html>

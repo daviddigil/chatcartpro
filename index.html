@@ -1,0 +1,1886 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatCart Pro AI - Turn Your WhatsApp into an AI-Powered 24x7 Employee</title>
+<meta name="description" content="ChatCart Pro AI turns your WhatsApp into an AI-powered 24x7 employee that takes orders and books appointments automatically for grocery, pharmacy, restaurant, salon, hospital, auto repair, real estate, gym, dental, event venue, laundry, and courier businesses worldwide. Book a free demo.">
+<meta name="keywords" content="WhatsApp AI agent, AI WhatsApp chatbot, WhatsApp ordering bot, WhatsApp appointment booking, AI employee, WhatsApp Business API automation, AI order taking, AI appointment scheduling">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Nexsofture Private Ltd">
+<link rel="canonical" href="https://chatcartpro.ai/">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ChatCart Pro AI">
+<meta property="og:title" content="ChatCart Pro AI - Turn Your WhatsApp into an AI-Powered 24x7 Employee">
+<meta property="og:description" content="AI WhatsApp agent that takes orders and books appointments automatically, 24x7, in 40+ languages. Built for grocery, pharmacy, restaurants, salons, clinics, gyms, real estate, and more.">
+<meta property="og:url" content="https://chatcartpro.ai/">
+<meta property="og:image" content="https://chatcartpro.ai/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChatCart Pro AI - Turn Your WhatsApp into an AI-Powered 24x7 Employee">
+<meta name="twitter:description" content="AI WhatsApp agent that takes orders and books appointments automatically, 24x7, in 40+ languages.">
+<meta name="twitter:image" content="https://chatcartpro.ai/og-image.png">
+
+<!-- Structured data: Organization + Software product, for search engines and AI answer engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChatCart Pro AI",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, WhatsApp",
+  "description": "ChatCart Pro AI turns WhatsApp into an AI-powered 24x7 employee that automatically takes orders and books appointments for businesses such as grocery stores, pharmacies, restaurants, salons, hospitals, dental clinics, auto repair shops, real estate agencies, gyms, event venues, laundry services, and courier companies, in 40+ languages.",
+  "url": "https://chatcartpro.ai/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://chatcartpro.ai/#demo",
+    "description": "Book a free demo"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Nexsofture Private Ltd",
+    "url": "https://nexsofture.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    }
+  }
+}
+</script>
+<style>
+  :root{
+    --navy:#0b0f0d;
+    --navy-soft:#5b6360;
+    --ink:#0a0a0a;
+    --lime:#ccff00;
+    --lime-dark:#a6d600;
+    --grad-a:#25d366;
+    --grad-b:#128c7e;
+    --bg-blue:#e7f8ee;
+    --bg-peach:#eef7f2;
+    --pastel-pink:#fbe7f3;
+    --pastel-blue:#e3f0fc;
+    --pastel-yellow:#fdf3d9;
+    --pastel-mint:#e6f7ee;
+    --card:#ffffff;
+    --border:#ececec;
+    --shadow: 0 20px 45px -20px rgba(7,94,84,0.22);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Nirmala UI', 'Tamil MN', 'Malayalam MN', Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:#ffffff;
+    overflow-x:hidden;
+  }
+  html[lang="ta"] body{font-family:'Noto Sans Tamil', 'Tamil MN', 'Nirmala UI', 'Segoe UI', sans-serif;}
+  html[lang="ml"] body{font-family:'Noto Sans Malayalam', 'Malayalam MN', 'Nirmala UI', 'Segoe UI', sans-serif;}
+  a{text-decoration:none; color:inherit;}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 24px;}
+  @media (max-width:420px){
+    .wrap{padding:0 16px;}
+  }
+  img,svg{max-width:100%;}
+
+  /* Buttons */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:13px 26px; border-radius:999px; font-weight:700; font-size:15px;
+    cursor:pointer; border:none; white-space:nowrap;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--lime);
+    color:var(--ink);
+    box-shadow:0 12px 24px -10px rgba(204,255,0,0.55);
+  }
+  .btn-primary:hover{background:var(--lime-dark);}
+  .btn-ghost{
+    background:rgba(255,255,255,0.1);
+    color:#fff;
+  }
+  .btn-dark{
+    background:var(--ink); color:#fff;
+  }
+
+  /* Nav */
+  header{
+    position:sticky; top:14px; z-index:50;
+    padding:0 16px;
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:10px 10px 10px 22px; gap:16px; flex-wrap:wrap;
+    max-width:1200px; margin:0 auto;
+    background:var(--ink);
+    border-radius:999px;
+    box-shadow:0 18px 40px -18px rgba(0,0,0,0.45);
+  }
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; min-width:0; color:#fff;}
+  .logo-mark{
+    width:32px; height:32px; border-radius:9px;
+    background:var(--lime);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink); font-size:18px; flex-shrink:0;
+  }
+  .logo-mark .ico-svg{width:17px; height:17px;}
+
+  /* Inline SVG icon set (replaces decorative emoji) */
+  .ico-svg{width:1em; height:1em; display:inline-block; flex-shrink:0; vertical-align:middle;}
+  .nav-links{display:flex; gap:28px; font-size:14.5px; font-weight:600; color:rgba(255,255,255,0.75);}
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{display:flex; align-items:center; gap:12px;}
+  .nav-toggle{display:none; background:none; border:none; font-size:24px; cursor:pointer; color:#fff; padding:4px 6px; line-height:1;}
+  .nav-cta .btn-primary{padding:11px 22px; font-size:14px;}
+
+  .lang-select{
+    padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.08);
+    font-size:12.5px; font-weight:600; color:#fff; cursor:pointer; font-family:inherit;
+    max-width:132px;
+  }
+  .lang-select option{color:var(--ink);}
+
+  @media (max-width:860px){
+    header{top:10px; padding:0 12px;}
+    nav.wrap{
+      padding:10px 10px 10px 18px;
+      border-radius:26px;
+      flex-wrap:nowrap;
+    }
+    nav.wrap.menu-open{border-radius:20px;}
+    .nav-links{
+      display:none; flex-direction:column; align-items:flex-start; gap:2px;
+      width:100%; order:3;
+      max-height:0; overflow:hidden;
+      transition:max-height .25s ease;
+    }
+    .nav-links.open{display:flex; max-height:320px; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.12);}
+    .nav-links a{width:100%; padding:12px 6px; border-top:1px solid rgba(255,255,255,0.1); font-size:16px; color:rgba(255,255,255,0.8);}
+    .nav-links a:first-child{border-top:none;}
+    .nav-toggle{display:block;}
+    .nav-cta{gap:8px; flex-wrap:nowrap;}
+    .lang-select{max-width:96px; font-size:12px; padding:8px 8px;}
+    .nav-cta .btn-primary{padding:9px 16px; font-size:13px;}
+  }
+
+  @media (max-width:420px){
+    .logo{font-size:16px;}
+    .logo-text{display:none;}
+    .nav-cta .btn-primary{padding:9px 12px; font-size:12px; white-space:normal; text-align:center; line-height:1.2; max-width:96px;}
+    .lang-select{max-width:74px; padding:8px 6px; font-size:11px;}
+  }
+
+  /* Hero */
+  .hero{padding:70px 0 40px; text-align:center;}
+  .eyebrow{
+    display:inline-block; padding:6px 16px; border-radius:999px;
+    background:var(--ink); color:var(--lime); font-weight:700; font-size:13px;
+    letter-spacing:.02em; margin-bottom:20px;
+  }
+  .hero h1{
+    font-size:56px; line-height:1.1; margin:0 0 20px; font-weight:800;
+    max-width:820px; margin-left:auto; margin-right:auto; letter-spacing:-.01em;
+  }
+  .hero h1 .highlight{
+    background:var(--lime);
+    background-size:300% 100%;
+    color:var(--ink);
+    padding:2px 10px; border-radius:10px;
+    animation:gradientShift 6s ease-in-out infinite;
+    display:inline-block;
+  }
+  @keyframes gradientShift{
+    0%{background-color:var(--lime);}
+    50%{background-color:var(--lime-dark);}
+    100%{background-color:var(--lime);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero h1 .highlight{animation:none;}
+  }
+  .hero p.sub{
+    max-width:600px; margin:0 auto 32px; font-size:18px; color:var(--navy-soft); line-height:1.6;
+  }
+  .hero-ctas{display:flex; gap:14px; justify-content:center; margin-bottom:16px;}
+  .hero-note{font-size:13px; color:var(--navy-soft); margin-bottom:56px;}
+
+  @media (max-width:760px){
+    .hero{padding:44px 0 28px;}
+    .hero h1{font-size:36px;}
+    .hero p.sub{font-size:16px; margin-bottom:24px;}
+    .hero-note{margin-bottom:36px;}
+  }
+  @media (max-width:420px){
+    .hero h1{font-size:28px;}
+    .eyebrow{font-size:12px; padding:5px 12px;}
+  }
+
+  /* Hero mockup */
+  .mock-stage{
+    position:relative; max-width:920px; margin:0 auto; padding:0 20px;
+  }
+  .chat-card{
+    background:var(--card); border-radius:26px; box-shadow:var(--shadow);
+    max-width:420px; width:100%; margin:0 auto; overflow:hidden; text-align:left;
+    border:1px solid var(--border); direction:ltr;
+  }
+  @media (max-width:480px){
+    .mock-stage{padding:0 8px;}
+    .chat-card{border-radius:20px;}
+    .chat-body{min-height:220px; padding:14px;}
+    .bubble{max-width:86%; font-size:13px;}
+  }
+  .chat-head{
+    background:#075e54; color:#fff; padding:14px 18px; display:flex; align-items:center; gap:12px;
+  }
+  .chat-head .avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--lime);
+    color:var(--ink);
+    display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;
+  }
+  .chat-head .name{font-weight:700; font-size:15px;}
+  .chat-head .status{font-size:12px; opacity:.8;}
+  .chat-body{background:#e5ddd3; padding:18px; display:flex; flex-direction:column; gap:10px; min-height:280px;}
+  .bubble{
+    max-width:78%; padding:10px 14px; border-radius:14px; font-size:14px; line-height:1.45;
+    box-shadow:0 1px 1px rgba(0,0,0,.08);
+  }
+  .bubble.in{background:#fff; border-top-left-radius:2px; align-self:flex-start;}
+  .bubble.out{background:#dcf8c6; border-top-right-radius:2px; align-self:flex-end;}
+  .bubble small{display:block; margin-top:4px; font-size:10.5px; color:#8b9a8d; text-align:right;}
+  .bubble .chips{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px;}
+  .bubble .chip{
+    background:#075e54; color:#fff; font-size:12px; padding:5px 10px; border-radius:999px; font-weight:600;
+  }
+
+  .float-card{
+    position:absolute; background:var(--card); border-radius:16px; box-shadow:var(--shadow);
+    padding:14px 16px; border:1px solid var(--border); font-size:13px; text-align:left; width:190px;
+    direction:ltr;
+  }
+  .float-card .big{font-size:22px; font-weight:800; color:var(--ink);}
+  .float-card .lbl{color:var(--navy-soft); margin-top:2px;}
+  .fc1{top:10%; left:0;}
+  .fc2{top:55%; left:2%;}
+  .fc3{top:15%; right:0;}
+  .fc4{top:60%; right:2%;}
+  @media (max-width:900px){
+    .float-card{position:static; width:auto; margin:10px auto; max-width:260px;}
+    .float-row{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px;}
+  }
+  @media (min-width:901px){
+    .float-row{display:contents;}
+  }
+
+  /* Showcase (cycling business chat demo) */
+  .showcase{padding-top:10px;}
+  .showcase-stage{max-width:520px; margin:0 auto; padding:0 12px;}
+  .showcase-tabs{
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-bottom:22px;
+  }
+  .showcase-tabs button{
+    display:inline-flex; align-items:center; gap:6px;
+    border:1px solid var(--border); background:var(--card); color:var(--navy-soft);
+    padding:8px 14px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer;
+    font-family:inherit; transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  @media (max-width:480px){
+    .showcase-tabs button{padding:7px 11px; font-size:12px;}
+    .showcase-chat .chat-body{min-height:220px; padding:14px;}
+  }
+  .showcase-tabs button.active{
+    background:var(--ink); color:var(--lime); border-color:transparent;
+  }
+  .showcase-chat{margin:0 auto;}
+  .showcase-chat .chat-body{min-height:260px;}
+  .showcase-chat .bubble{
+    opacity:0; transform:translateY(6px);
+    animation:bubbleIn .35s ease forwards;
+  }
+  @keyframes bubbleIn{
+    to{opacity:1; transform:translateY(0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .showcase-chat .bubble{animation:none; opacity:1; transform:none;}
+  }
+
+  /* Trusted strip */
+  .trusted{padding:50px 0; text-align:center;}
+  .trusted p{color:var(--navy-soft); font-weight:600; margin-bottom:28px; font-size:14px; letter-spacing:.03em;}
+  .logo-row{display:flex; justify-content:center; align-items:center; gap:48px; flex-wrap:wrap; opacity:.55; font-weight:700; font-size:17px; color:var(--navy-soft);}
+  @media (max-width:600px){
+    .trusted{padding:32px 0;}
+    .trusted p{font-size:12px; margin-bottom:18px;}
+    .logo-row{gap:20px 28px; font-size:14px;}
+  }
+
+  /* Section shared */
+  section{padding:70px 0;}
+  .section-head{text-align:center; max-width:640px; margin:0 auto 48px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:36px; font-weight:800; margin:0 0 14px; line-height:1.2; color:var(--ink);}
+  .section-head p{color:var(--navy-soft); font-size:16px; line-height:1.6; margin:0;}
+
+  /* Pastel section background blocks (Wati-style) */
+  .section-pastel{position:relative;}
+  .section-pastel-pink{background:var(--pastel-pink);}
+  .section-pastel-blue{background:var(--pastel-blue);}
+  .section-pastel-yellow{background:var(--pastel-yellow);}
+  .section-pastel-mint{background:var(--pastel-mint);}
+
+  @media (max-width:760px){
+    section{padding:44px 0;}
+    .section-head{margin-bottom:32px;}
+    .section-head h2{font-size:26px;}
+    .section-head p{font-size:14.5px;}
+  }
+
+  /* Two-mode */
+  .mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  @media (max-width:800px){.mode-grid{grid-template-columns:1fr;}}
+  .mode-card{
+    background:var(--card); border-radius:24px; padding:32px; border:1px solid var(--border); box-shadow:var(--shadow);
+  }
+  .mode-card .tag{
+    display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; font-weight:700; font-size:13px; margin-bottom:16px;
+  }
+  .mode-card .tag .ico-svg{width:15px; height:15px;}
+  .mode-card.orders .tag{background:var(--lime); color:var(--ink);}
+  .mode-card.bookings .tag{background:var(--ink); color:var(--lime);}
+  .mode-card h3{font-size:24px; margin:0 0 10px;}
+  .mode-card p.desc{color:var(--navy-soft); font-size:15px; line-height:1.6; margin:0 0 22px;}
+  .industry-list{display:flex; flex-wrap:wrap; gap:10px;}
+  .industry-chip{
+    display:flex; align-items:center; gap:8px;
+    background:#f6f7fb; border:1px solid var(--border); border-radius:12px;
+    padding:10px 14px; font-size:14px; font-weight:600; color:var(--navy);
+  }
+  .industry-chip .ico{font-size:17px; display:inline-flex;}
+  .industry-chip .ico .ico-svg{color:var(--lime-dark);}
+
+  @media (max-width:600px){
+    .mode-card{padding:22px;}
+    .mode-card h3{font-size:20px;}
+    .industry-chip{padding:8px 12px; font-size:13px;}
+  }
+
+  /* Benefits grid */
+  .benefits-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  @media (max-width:1000px){.benefits-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.benefits-grid{grid-template-columns:1fr;}}
+  .benefit-card{
+    background:var(--card); border-radius:20px; padding:26px; border:1px solid var(--border);
+    box-shadow:0 12px 30px -18px rgba(21,36,71,0.15);
+  }
+  .benefit-card .ico{
+    width:44px; height:44px; border-radius:12px; margin-bottom:16px;
+    background:var(--ink);
+    display:flex; align-items:center; justify-content:center; font-size:20px; color:var(--lime);
+  }
+  .benefit-card h4{margin:0 0 8px; font-size:17px;}
+  .benefit-card p{margin:0; font-size:14px; color:var(--navy-soft); line-height:1.55;}
+  @media (max-width:600px){
+    .benefit-card{padding:20px;}
+  }
+
+  /* Industry strip (all 12) */
+  .industry-strip{display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
+  .industry-strip .industry-chip{background:var(--card); box-shadow:0 8px 20px -14px rgba(21,36,71,0.2);}
+  @media (max-width:600px){
+    .industry-strip{gap:10px;}
+    .industry-strip .industry-chip{padding:8px 12px; font-size:13px;}
+  }
+
+  /* Testimonials */
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media (max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-card{
+    background:var(--card); border-radius:20px; padding:26px; border:1px solid var(--border);
+    box-shadow:0 12px 30px -18px rgba(21,36,71,0.15);
+  }
+  .testi-card p.quote{font-size:14.5px; line-height:1.65; color:var(--navy-soft); margin:0 0 20px;}
+  .testi-person{display:flex; align-items:center; gap:12px;}
+  .testi-person .av{
+    width:40px; height:40px; border-radius:50%;
+    background:var(--lime);
+    display:flex; align-items:center; justify-content:center; color:var(--ink); font-weight:700; font-size:15px; flex-shrink:0;
+  }
+  .testi-person .who{font-weight:700; font-size:14px;}
+  .testi-person .role{font-size:12.5px; color:var(--navy-soft);}
+  @media (max-width:600px){
+    .testi-card{padding:20px;}
+  }
+
+  /* FAQ */
+  .faq-list{max-width:760px; margin:0 auto;}
+  .faq-item{
+    background:var(--card); border:1px solid var(--border); border-radius:16px; margin-bottom:12px; overflow:hidden;
+  }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; padding:20px 22px; font-size:16px; font-weight:600;
+    color:var(--navy); display:flex; justify-content:space-between; align-items:center; cursor:pointer; gap:16px;
+  }
+  .faq-q .chev{transition:transform .2s ease; font-size:14px; color:var(--navy-soft); flex-shrink:0;}
+  .faq-item.open .faq-q .chev{transform:rotate(180deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a p{margin:0; padding:0 22px 20px; color:var(--navy-soft); font-size:14.5px; line-height:1.6;}
+  @media (max-width:600px){
+    .faq-q{padding:16px; font-size:14.5px; gap:10px;}
+    .faq-a p{padding:0 16px 16px; font-size:13.5px;}
+  }
+
+  /* Demo form */
+  .demo-section{
+    background:var(--card); border-radius:28px; box-shadow:var(--shadow); border:1px solid var(--border);
+    padding:48px; max-width:760px; margin:0 auto;
+  }
+  @media (max-width:600px){
+    .demo-section{padding:26px 20px; border-radius:20px;}
+  }
+  .demo-section h2{font-size:30px; margin:0 0 8px; text-align:center;}
+  .demo-section p.sub{text-align:center; color:var(--navy-soft); margin:0 0 32px; font-size:15px;}
+  form#demoForm{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  form#demoForm .full{grid-column:1 / -1;}
+  @media (max-width:600px){form#demoForm{grid-template-columns:1fr;}}
+  .field label{display:block; font-size:13px; font-weight:700; margin-bottom:6px; color:var(--navy);}
+  .field input, .field select{
+    width:100%; padding:12px 14px; border-radius:12px; border:1px solid #dfe2ec; font-size:14px;
+    font-family:inherit; background:#fafbfe;
+  }
+  .field input:focus, .field select:focus{outline:2px solid var(--lime-dark); border-color:transparent;}
+  #demoForm .submit-row{margin-top:6px;}
+  #demoForm button{width:100%;}
+  #demoForm button[disabled]{opacity:0.6; cursor:not-allowed;}
+  .form-error{color:#c62828; font-size:13px; text-align:center; margin:12px 0 0;}
+  .demo-success{display:none; text-align:center; padding:20px 0;}
+  .demo-success .check{
+    width:56px; height:56px; border-radius:50%; margin:0 auto 16px;
+    background:var(--lime);
+    color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:28px;
+  }
+  .demo-success h3{margin:0 0 8px;}
+  .demo-success p{color:var(--navy-soft); margin:0;}
+
+  /* Final CTA band */
+  .cta-band{
+    background:var(--ink);
+    border-radius:32px; padding:64px 40px; text-align:center; color:#fff;
+    max-width:1100px; margin:0 auto;
+  }
+  .cta-band h2{font-size:34px; margin:0 0 12px; font-weight:800;}
+  .cta-band p{opacity:.75; margin:0 0 28px; font-size:16px;}
+  .cta-band .btn-primary{background:var(--lime); color:var(--ink); box-shadow:0 12px 24px -10px rgba(0,0,0,0.4);}
+  @media (max-width:600px){
+    .cta-band{padding:40px 22px; border-radius:22px;}
+    .cta-band h2{font-size:24px;}
+    .cta-band p{font-size:14.5px;}
+  }
+
+  footer{background:var(--ink); padding:56px 0 34px; text-align:center; color:rgba(255,255,255,0.6); font-size:13.5px; margin-top:70px;}
+  footer .flogo{display:flex; align-items:center; gap:8px; justify-content:center; font-weight:800; color:#fff; margin-bottom:10px; font-size:16px;}
+  footer .flogo .logo-mark{background:var(--lime); color:var(--ink);}
+  footer .footer-legal{margin-top:16px; font-size:13px;}
+  footer .footer-legal a{color:rgba(255,255,255,0.6); font-weight:600;}
+  footer .footer-legal a:hover{color:var(--lime); text-decoration:underline;}
+  footer .powered-by{margin-top:14px; font-size:12.5px; color:rgba(255,255,255,0.5);}
+  footer .powered-by a{color:var(--lime); font-weight:700; text-decoration:none;}
+  footer .powered-by a:hover{text-decoration:underline;}
+
+  /* RTL adjustments */
+  html[dir="rtl"] .faq-q{text-align:right;}
+  html[dir="rtl"] .testi-person, html[dir="rtl"] .chat-head{direction:rtl;}
+  html[dir="rtl"] .field label{text-align:right;}
+</style>
+</head>
+<body>
+
+<!-- Inline SVG icon sprite: minimal line-style icons (replaces decorative emoji) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-grocery" viewBox="0 0 24 24"><path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.4" fill="currentColor"/><circle cx="17" cy="21" r="1.4" fill="currentColor"/></symbol>
+
+    <symbol id="icon-pharmacy" viewBox="0 0 24 24"><rect x="3.5" y="9.5" width="17" height="8" rx="4" transform="rotate(-45 12 13.5)" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="9.5" y1="13.5" x2="14.5" y2="13.5" stroke="currentColor" stroke-width="1.8" transform="rotate(-45 12 13.5)"/></symbol>
+
+    <symbol id="icon-restaurant" viewBox="0 0 24 24"><path d="M7 2v8M5 2v5a2 2 0 0 0 4 0V2M9 2v20M17 2c-1.7 0-3 2-3 5s1.3 5 3 5v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-laundry" viewBox="0 0 24 24"><rect x="3.5" y="2.5" width="17" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="13" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 13a2.5 3.2 0 0 0 5 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="7" cy="5.5" r="0.9" fill="currentColor"/></symbol>
+
+    <symbol id="icon-courier" viewBox="0 0 24 24"><rect x="1.5" y="7" width="12" height="9" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13.5 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="6" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+
+    <symbol id="icon-salon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="6" cy="18" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="20" y1="4" x2="8" y2="16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="8" x2="20" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-hospital" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 8.5v7M8.5 12h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-dental" viewBox="0 0 24 24"><path d="M12 3c-2.4 0-3.8 1.4-5 1.4C5.3 4.4 3.8 5.8 3.8 8.6c0 2.4.9 4 1.5 6.6.5 2.1.9 5.3 2.3 5.3 1.6 0 1.5-4.3 2.6-4.3s1 4.3 2.6 4.3c1.4 0 1.8-3.2 2.3-5.3.6-2.6 1.5-4.2 1.5-6.6 0-2.8-1.5-4.2-3.2-4.2-1.2 0-2.6-1.4-5-1.4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-auto" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 4.6L3 17.2V21h3.8l6.3-6.3a4 4 0 0 0 4.6-5.4l-2.8 2.8-2-2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-gym" viewBox="0 0 24 24"><path d="M2 10v4M6 7v10M18 7v10M22 10v4M6 12h12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-realestate" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 10v9.5a1 1 0 0 0 1 1H17.5a1 1 0 0 0 1-1V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 20.5V14h4v6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-events" viewBox="0 0 24 24"><path d="M4 21 8.5 8l7.5 7.5L3 20Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M13.5 3.5 15 5M17.5 6l1.5 1.5M15.5 10 17 11.5M20 9l1.5 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12.5a1.5 1.5 0 0 1-1.5 1.5H6.5A1.5 1.5 0 0 1 5 20.5L6 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-automate" viewBox="0 0 24 24"><path d="M6 8h12l1 12.5a1.5 1.5 0 0 1-1.5 1.5H6.5A1.5 1.5 0 0 1 5 20.5L6 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m9.5 13 1.8 1.8L14.5 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12.5 6 9l3.2 2.6a1.6 1.6 0 0 0 2.2-2.3L9.5 7.3M22 12.5 18 9l-3.2 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m6 9 5 4.5 1.3-1.1M18 9l-5.5 5-2.5-2M2 12.5 6 17l2 1.8a1.5 1.5 0 0 0 2.1-2.1M22 12.5 18 17l-2 1.8a1.5 1.5 0 0 1-2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+
+    <symbol id="icon-no-app" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="10" y1="18.3" x2="14" y2="18.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-commission" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-offer" viewBox="0 0 24 24"><path d="M12.7 2.9 20 10.2a2 2 0 0 1 0 2.8l-6.5 6.5a2 2 0 0 1-2.8 0L3.5 12.3a2 2 0 0 1-.6-1.6l.4-6.1a2 2 0 0 1 1.9-1.9l6.1-.4a2 2 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.4" fill="currentColor"/></symbol>
+
+    <symbol id="icon-stock" viewBox="0 0 24 24"><path d="M3.5 7.5 12 3l8.5 4.5V16L12 20.5 3.5 16Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v8.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><svg class="ico-svg" aria-hidden="true"><use href="#icon-chat"></use></svg></span> <span class="logo-text">ChatCart Pro AI</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#modes" data-i18n="nav_product">Product</a>
+      <a href="#industries" data-i18n="nav_industries">Industries</a>
+      <a href="#benefits" data-i18n="nav_how">How it works</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <select class="lang-select" id="langSelect" aria-label="Language"></select>
+      <a href="#demo" class="btn btn-primary" data-i18n="nav_cta">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="hero_eyebrow">Built for businesses worldwide</span>
+      <h1><span data-i18n="hero_title_pre">Turn your WhatsApp into an AI-powered</span> <span class="highlight" data-i18n="hero_title_highlight">24x7 Employee</span></h1>
+      <p class="sub" data-i18n="hero_sub">ChatCart Pro AI answers every customer chat instantly, takes orders, confirms appointments, and follows up automatically &mdash; day and night, without hiring more staff.</p>
+      <div class="hero-ctas">
+        <a href="#demo" class="btn btn-primary" data-i18n="hero_cta">Book a Demo</a>
+      </div>
+      <p class="hero-note" data-i18n="hero_note">No app for your customers to install &mdash; it all happens inside WhatsApp.</p>
+
+      <div class="mock-stage">
+        <div class="float-card fc1">
+          <div class="big">92%</div>
+          <div class="lbl" data-i18n="fc1_lbl">Chats resolved without a human</div>
+        </div>
+        <div class="float-card fc2">
+          <div class="big">3.2x</div>
+          <div class="lbl" data-i18n="fc2_lbl">More orders & bookings captured after hours</div>
+        </div>
+
+        <div class="chat-card">
+          <div class="chat-head">
+            <div class="avatar">GM</div>
+            <div>
+              <div class="name">Green Mart Grocery</div>
+              <div class="status" data-i18n="chat_status">AI Agent &middot; online</div>
+            </div>
+          </div>
+          <div class="chat-body">
+            <div class="bubble in">Hi! I'd like to order 2kg rice, milk, and eggs &#128722;</div>
+            <div class="bubble out">Got it! Adding 2kg Basmati Rice, 1L Milk, and 1 dozen Eggs to your cart.
+              <div class="chips"><span class="chip">View cart</span><span class="chip">Pay now</span></div>
+              <small>10:14 AM &#10003;&#10003;</small>
+            </div>
+            <div class="bubble in">Can I get it delivered by 6pm today?</div>
+            <div class="bubble out">Yes! Delivery slot 5:00&ndash;6:00 PM confirmed. Your order total is $12.90.
+              <small>10:15 AM &#10003;&#10003;</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-card fc3">
+          <div class="big">24/7</div>
+          <div class="lbl" data-i18n="fc3_lbl">Instant replies, any time of day</div>
+        </div>
+        <div class="float-card fc4">
+          <div class="big" data-i18n="fc4_big">40+ Languages</div>
+          <div class="lbl" data-i18n="fc4_lbl">Auto-detects your customer's language</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE ACROSS INDUSTRIES (cycling chat demo) -->
+  <section id="showcase" class="showcase">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="showcase_eyebrow">See It In Action</span>
+        <h2 data-i18n="showcase_title">One AI employee, every kind of business</h2>
+        <p data-i18n="showcase_sub">Watch how the same AI employee adapts its conversation for different industries &mdash; automatically.</p>
+      </div>
+
+      <div class="showcase-stage">
+        <div class="showcase-tabs" id="showcaseTabs"></div>
+
+        <div class="chat-card showcase-chat">
+          <div class="chat-head">
+            <div class="avatar" id="scAvatar">GM</div>
+            <div>
+              <div class="name" id="scBizName">Green Mart Grocery</div>
+              <div class="status" data-i18n="chat_status">AI Employee &middot; online</div>
+            </div>
+          </div>
+          <div class="chat-body" id="scChatBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED STRIP -->
+  <section class="trusted">
+    <div class="wrap">
+      <p data-i18n="trusted_label">TRUSTED BY GROWING BUSINESSES WORLDWIDE</p>
+      <div class="logo-row">
+        <span>Northgate Mart</span>
+        <span>CarePlus Pharmacy</span>
+        <span>Spice Route</span>
+        <span>UrbanFit Gyms</span>
+        <span>QuickDrop Logistics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO MODES -->
+  <section id="modes" class="section-pastel section-pastel-blue">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="modes_eyebrow">One Agent, Two Jobs</span>
+        <h2 data-i18n="modes_title">Whatever your business does, ChatCart Pro AI handles it</h2>
+        <p data-i18n="modes_sub">Some businesses take orders. Others take bookings. Our AI employee is built to do both &mdash; configured to your exact workflow on day one.</p>
+      </div>
+      <div class="mode-grid">
+        <div class="mode-card orders">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg><span data-i18n="orders_tag">Order Placing</span></span>
+          <h3 data-i18n="orders_title">Let customers order straight from chat</h3>
+          <p class="desc" data-i18n="orders_desc">Customers browse your menu or catalog, place an order, get it confirmed, and pay &mdash; all without leaving WhatsApp.</p>
+          <div class="industry-list">
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-grocery"></use></svg></span><span data-i18n="ind_grocery">Grocery</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-pharmacy"></use></svg></span><span data-i18n="ind_pharmacy">Pharmacy</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-restaurant"></use></svg></span><span data-i18n="ind_restaurant">Restaurant</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-laundry"></use></svg></span><span data-i18n="ind_laundry">Laundry & Dry Cleaning</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-courier"></use></svg></span><span data-i18n="ind_courier">Courier & Logistics</span></span>
+          </div>
+        </div>
+        <div class="mode-card bookings">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-calendar"></use></svg><span data-i18n="bookings_tag">Appointment Booking</span></span>
+          <h3 data-i18n="bookings_title">Let customers book a slot in seconds</h3>
+          <p class="desc" data-i18n="bookings_desc">Customers check availability, pick a time, and get automatic reminders and confirmations &mdash; no phone tag required.</p>
+          <div class="industry-list">
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-salon"></use></svg></span><span data-i18n="ind_salon">Salons</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-hospital"></use></svg></span><span data-i18n="ind_hospital">Hospitals & Clinics</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-dental"></use></svg></span><span data-i18n="ind_dental">Dental Clinics</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-auto"></use></svg></span><span data-i18n="ind_auto">Auto Repair Shops</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-gym"></use></svg></span><span data-i18n="ind_gym">Gyms & Fitness Studios</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-realestate"></use></svg></span><span data-i18n="ind_realestate">Real Estate Agencies</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-events"></use></svg></span><span data-i18n="ind_events">Event Venues</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="benefits_eyebrow">Benefits</span>
+        <h2 data-i18n="benefits_title">Why businesses switch to ChatCart Pro AI</h2>
+        <p data-i18n="benefits_sub">Everything you need to stop losing customers to slow replies and missed calls.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-zap"></use></svg></div>
+          <h4 data-i18n="benefit1_title">Instant replies, 24/7</h4>
+          <p data-i18n="benefit1_desc">No more "we'll get back to you" &mdash; every chat gets an answer in seconds, day or night.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-automate"></use></svg></div>
+          <h4 data-i18n="benefit2_title">Orders & bookings, automated</h4>
+          <p data-i18n="benefit2_desc">Confirmations, reminders, and follow-ups happen on their own &mdash; no manual entry.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-globe"></use></svg></div>
+          <h4 data-i18n="benefit3_title">Speaks 40+ languages</h4>
+          <p data-i18n="benefit3_desc">Your AI employee auto-detects each customer's language and replies in it &mdash; anywhere in the world.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-handshake"></use></svg></div>
+          <h4 data-i18n="benefit4_title">Smooth human handoff</h4>
+          <p data-i18n="benefit4_desc">Complex requests are routed to your team instantly, with full chat context included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SMALL BUSINESS BENEFITS -->
+  <section id="small-business" class="section-pastel section-pastel-yellow">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="smb_eyebrow">Built For Small Businesses</span>
+        <h2 data-i18n="smb_title">Keep more of what you earn</h2>
+        <p data-i18n="smb_sub">ChatCart Pro AI is designed for local and small-scale businesses that want the reach of a delivery app, without giving up their margin or their customer relationship.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-no-app"></use></svg></div>
+          <h4 data-i18n="smb1_title">No extra app to install</h4>
+          <p data-i18n="smb1_desc">Nothing new for you to download or learn &mdash; ChatCart Pro AI runs entirely inside the WhatsApp number you already use.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-commission"></use></svg></div>
+          <h4 data-i18n="smb2_title">Zero commission, unlike delivery apps</h4>
+          <p data-i18n="smb2_desc">Food and grocery delivery apps take 20&ndash;30% of every order. With ChatCart Pro AI you sell directly to your customer and keep 100% of what they pay you.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-offer"></use></svg></div>
+          <h4 data-i18n="smb3_title">Run your own real offers</h4>
+          <p data-i18n="smb3_desc">Set discounts, bundles, and promotions on your own terms &mdash; no aggregator deciding what deal your customers see.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-stock"></use></svg></div>
+          <h4 data-i18n="smb4_title">Live stock & pricing, always accurate</h4>
+          <p data-i18n="smb4_desc">The AI checks your real-time inventory and price list before confirming an order &mdash; so customers are never quoted a sold-out item or an old price.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRY STRIP -->
+  <section id="industries">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="industries_eyebrow">Industries</span>
+        <h2 data-i18n="industries_title">Built for how your business actually runs</h2>
+        <p data-i18n="industries_sub">12 industries, one WhatsApp AI employee, configured for your exact use case.</p>
+      </div>
+      <div class="industry-strip">
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-grocery"></use></svg></span><span data-i18n="ind_grocery">Grocery</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-pharmacy"></use></svg></span><span data-i18n="ind_pharmacy">Pharmacy</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-restaurant"></use></svg></span><span data-i18n="ind_restaurant">Restaurant</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-salon"></use></svg></span><span data-i18n="ind_salon2">Salon</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-hospital"></use></svg></span><span data-i18n="ind_hospital2">Hospital</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-auto"></use></svg></span><span data-i18n="ind_auto2">Auto Repair</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-realestate"></use></svg></span><span data-i18n="ind_realestate2">Real Estate</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-gym"></use></svg></span><span data-i18n="ind_gym2">Gyms & Fitness</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-dental"></use></svg></span><span data-i18n="ind_dental">Dental Clinics</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-events"></use></svg></span><span data-i18n="ind_events">Event Venues</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-laundry"></use></svg></span><span data-i18n="ind_laundry">Laundry & Dry Cleaning</span></span>
+        <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-courier"></use></svg></span><span data-i18n="ind_courier">Courier & Logistics</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-pastel section-pastel-pink">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="testi_eyebrow">Testimonials</span>
+        <h2 data-i18n="testi_title">What business owners are saying</h2>
+        <p data-i18n="testi_sub">Trusted by teams running businesses of every size, everywhere.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="quote" data-i18n="testi1_quote">"We used to lose orders every night after closing. Now ChatCart Pro AI takes them for us and they're ready first thing in the morning."</p>
+          <div class="testi-person">
+            <div class="av">RA</div>
+            <div><div class="who">Riya Anand</div><div class="role" data-i18n="testi1_role">Owner, Northgate Mart</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p class="quote" data-i18n="testi2_quote">"Our front desk used to be swamped with booking calls. Now most patients just book their slot on WhatsApp in under a minute."</p>
+          <div class="testi-person">
+            <div class="av">PS</div>
+            <div><div class="who">Dr. Priya Suresh</div><div class="role" data-i18n="testi2_role">Founder, Smile Care Dental</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p class="quote" data-i18n="testi3_quote">"Setup took a single afternoon. Within a week our no-show rate for gym trials dropped by half thanks to automatic reminders."</p>
+          <div class="testi-person">
+            <div class="av">JT</div>
+            <div><div class="who">Jason Torres</div><div class="role" data-i18n="testi3_role">Manager, UrbanFit Gyms</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="faq_eyebrow">FAQ</span>
+        <h2 data-i18n="faq_title">Everything you need to know</h2>
+        <p data-i18n="faq_sub">Still curious? Book a demo and we'll walk you through it live.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="faq1_q">How does ChatCart Pro AI actually work?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p data-i18n="faq1_a">We connect to your WhatsApp Business number. When a customer messages you, our AI employee understands the request &mdash; placing an order or booking a slot &mdash; and handles it automatically, using your menu, price list, or calendar.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="faq2_q">Will it work for my type of business?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p data-i18n="faq2_a">Yes. We support order-based businesses (grocery, pharmacy, restaurants, laundry, courier) and appointment-based businesses (salons, clinics, gyms, auto repair, real estate, event venues) out of the box.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="faq3_q">Do I need the WhatsApp Business API?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p data-i18n="faq3_a">We handle the WhatsApp Business API setup for you as part of onboarding &mdash; no technical work required on your end.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="faq4_q">Can it integrate with my POS or CRM?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p data-i18n="faq4_a">Yes, ChatCart Pro AI can sync orders and bookings with common POS, calendar, and CRM tools. We'll confirm exact integrations during your demo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span data-i18n="faq5_q">What languages does it support?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p data-i18n="faq5_a">ChatCart Pro AI supports 40+ languages and automatically detects and replies in whichever language your customer messages in &mdash; no setup needed.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="demo-section">
+        <div id="demoFormWrap">
+          <h2 data-i18n="demo_title">Book your free demo</h2>
+          <p class="sub" data-i18n="demo_sub">Tell us a bit about your business &mdash; we'll show you exactly how ChatCart Pro AI would work for you.</p>
+          <form id="demoForm">
+            <div class="field">
+              <label for="fname" data-i18n="form_name">Full name</label>
+              <input id="fname" type="text" required data-i18n-placeholder="form_name_ph" placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="fbusiness" data-i18n="form_business">Business name</label>
+              <input id="fbusiness" type="text" required data-i18n-placeholder="form_business_ph" placeholder="e.g. Green Mart Grocery">
+            </div>
+            <div class="field">
+              <label for="findustry" data-i18n="form_industry">Industry</label>
+              <select id="findustry" required>
+                <option value="" data-i18n="form_industry_select">Select industry</option>
+                <option data-i18n="ind_grocery">Grocery</option>
+                <option data-i18n="ind_pharmacy">Pharmacy</option>
+                <option data-i18n="ind_restaurant">Restaurant</option>
+                <option data-i18n="ind_laundry">Laundry & Dry Cleaning</option>
+                <option data-i18n="ind_courier">Courier & Logistics</option>
+                <option data-i18n="ind_salon2">Salon</option>
+                <option data-i18n="form_hospital_clinic">Hospital / Clinic</option>
+                <option data-i18n="ind_dental">Dental Clinic</option>
+                <option data-i18n="ind_auto">Auto Repair Shop</option>
+                <option data-i18n="ind_realestate">Real Estate Agency</option>
+                <option data-i18n="form_gym_fitness">Gym / Fitness Studio</option>
+                <option data-i18n="form_event_venue">Event Venue</option>
+                <option data-i18n="form_other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fwhatsapp" data-i18n="form_whatsapp">WhatsApp number</label>
+              <input id="fwhatsapp" type="tel" required data-i18n-placeholder="form_whatsapp_ph" placeholder="+1 5XX XXX XXXX">
+            </div>
+            <div class="field full">
+              <label for="femail" data-i18n="form_email">Email</label>
+              <input id="femail" type="email" required placeholder="you@business.com">
+            </div>
+            <div class="field full submit-row">
+              <button type="submit" class="btn btn-primary" id="demoSubmitBtn" data-i18n="form_submit">Book a Demo</button>
+              <p class="form-error" id="demoFormError" style="display:none;">Something went wrong sending your request. Please try again, or reach us directly.</p>
+            </div>
+          </form>
+        </div>
+        <div class="demo-success" id="demoSuccess">
+          <div class="check">&#10003;</div>
+          <h3 data-i18n="success_title">Thanks &mdash; request received!</h3>
+          <p data-i18n="success_desc">Our team will reach out on WhatsApp within one business day to schedule your live demo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2 data-i18n="cta_title">Ready to put your WhatsApp to work?</h2>
+        <p data-i18n="cta_sub">Join businesses around the world automating orders and bookings with ChatCart Pro AI.</p>
+        <a href="#demo" class="btn btn-primary" data-i18n="cta_button">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="flogo"><span class="logo-mark" style="width:26px;height:26px;font-size:14px;"><svg class="ico-svg" style="width:14px;height:14px;" aria-hidden="true"><use href="#icon-chat"></use></svg></span> ChatCart Pro AI</div>
+    <p data-i18n="footer_tagline">AI WhatsApp employees for orders & bookings &mdash; built for businesses everywhere.</p>
+    <p>&copy; 2026 ChatCart Pro AI. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    <p class="footer-legal"><a href="privacy-policy.html" data-i18n="footer_privacy">Privacy Policy</a> &middot; <a href="terms-and-conditions.html" data-i18n="footer_terms">Terms & Conditions</a></p>
+    <p class="powered-by"><span data-i18n="footer_powered_by">Powered by</span> <a href="https://nexsofture.com" target="_blank" rel="noopener">Nexsofture Private Ltd</a></p>
+  </div>
+</footer>
+
+<script>
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  var navWrap = navToggle ? navToggle.closest('nav.wrap') : null;
+  function closeMobileNav(){
+    if(!navLinks || !navToggle) return;
+    navLinks.classList.remove('open');
+    if(navWrap) navWrap.classList.remove('menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.innerHTML = '&#9776;';
+  }
+  if(navToggle && navLinks){
+    navToggle.addEventListener('click', function(){
+      var isOpen = navLinks.classList.toggle('open');
+      if(navWrap) navWrap.classList.toggle('menu-open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navToggle.innerHTML = isOpen ? '&times;' : '&#9776;';
+    });
+    navLinks.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', closeMobileNav);
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 860 && navLinks.classList.contains('open')){
+        closeMobileNav();
+      }
+    });
+  }
+
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if(openItem !== item){
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  (function(){
+    var EMAILJS_PUBLIC_KEY = 'NRu8tw60wiU7jY3pD';
+    var EMAILJS_SERVICE_ID = 'service_9cpjres';
+    var EMAILJS_TEMPLATE_NOTIFY = 'template_4pu5t3l';
+    var EMAILJS_TEMPLATE_AUTOREPLY = 'template_8bvo8id';
+
+    if(window.emailjs){
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    var demoForm = document.getElementById('demoForm');
+    var submitBtn = document.getElementById('demoSubmitBtn');
+    var errorEl = document.getElementById('demoFormError');
+
+    demoForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      errorEl.style.display = 'none';
+      submitBtn.disabled = true;
+      var originalLabel = submitBtn.textContent;
+      submitBtn.textContent = '...';
+
+      var params = {
+        from_name: document.getElementById('fname').value,
+        business_name: document.getElementById('fbusiness').value,
+        industry: document.getElementById('findustry').value,
+        whatsapp: document.getElementById('fwhatsapp').value,
+        from_email: document.getElementById('femail').value
+      };
+
+      var sendNotify = emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFY, params);
+      var sendAutoReply = emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, params);
+
+      Promise.all([sendNotify, sendAutoReply]).then(function(){
+        document.getElementById('demoFormWrap').style.display = 'none';
+        document.getElementById('demoSuccess').style.display = 'block';
+      }).catch(function(err){
+        console.error('EmailJS send failed:', err);
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      });
+    });
+  })();
+
+  /* ---------- i18n ---------- */
+  var translations = {
+    en: {
+      nav_product:"Product", nav_industries:"Industries", nav_how:"How it works", nav_faq:"FAQ", nav_cta:"Book a Demo",
+      hero_eyebrow:"Built for businesses worldwide",
+      hero_title_pre:"Turn your WhatsApp into an AI-powered",
+      hero_title_highlight:"24x7 Employee",
+      hero_sub:"ChatCart Pro AI answers every customer chat instantly, takes orders, confirms appointments, and follows up automatically — day and night, without hiring more staff.",
+      hero_cta:"Book a Demo",
+      hero_note:"No app for your customers to install — it all happens inside WhatsApp.",
+      fc1_lbl:"Chats resolved without a human", fc2_lbl:"More orders & bookings captured after hours",
+      chat_status:"AI Employee · online",
+      fc3_lbl:"Instant replies, any time of day", fc4_big:"40+ Languages", fc4_lbl:"Auto-detects your customer's language",
+      trusted_label:"TRUSTED BY GROWING BUSINESSES WORLDWIDE",
+      modes_eyebrow:"One Agent, Two Jobs", modes_title:"Whatever your business does, ChatCart Pro AI handles it",
+      modes_sub:"Some businesses take orders. Others take bookings. Our AI employee is built to do both — configured to your exact workflow on day one.",
+      orders_tag:"Order Placing", orders_title:"Let customers order straight from chat",
+      orders_desc:"Customers browse your menu or catalog, place an order, get it confirmed, and pay — all without leaving WhatsApp.",
+      bookings_tag:"Appointment Booking", bookings_title:"Let customers book a slot in seconds",
+      bookings_desc:"Customers check availability, pick a time, and get automatic reminders and confirmations — no phone tag required.",
+      ind_grocery:"Grocery", ind_pharmacy:"Pharmacy", ind_restaurant:"Restaurant", ind_laundry:"Laundry & Dry Cleaning", ind_courier:"Courier & Logistics",
+      ind_salon:"Salons", ind_hospital:"Hospitals & Clinics", ind_dental:"Dental Clinics", ind_auto:"Auto Repair Shops", ind_gym:"Gyms & Fitness Studios", ind_realestate:"Real Estate Agencies", ind_events:"Event Venues",
+      ind_salon2:"Salon", ind_hospital2:"Hospital", ind_auto2:"Auto Repair", ind_realestate2:"Real Estate", ind_gym2:"Gyms & Fitness",
+      benefits_eyebrow:"Benefits", benefits_title:"Why businesses switch to ChatCart Pro AI", benefits_sub:"Everything you need to stop losing customers to slow replies and missed calls.",
+      benefit1_title:"Instant replies, 24/7", benefit1_desc:"No more “we'll get back to you” — every chat gets an answer in seconds, day or night.",
+      benefit2_title:"Orders & bookings, automated", benefit2_desc:"Confirmations, reminders, and follow-ups happen on their own — no manual entry.",
+      benefit3_title:"Speaks 40+ languages", benefit3_desc:"Your AI employee auto-detects each customer's language and replies in it — anywhere in the world.",
+      benefit4_title:"Smooth human handoff", benefit4_desc:"Complex requests are routed to your team instantly, with full chat context included.",
+      smb_eyebrow:"Built For Small Businesses", smb_title:"Keep more of what you earn",
+      smb_sub:"ChatCart Pro AI is designed for local and small-scale businesses that want the reach of a delivery app, without giving up their margin or their customer relationship.",
+      smb1_title:"No extra app to install", smb1_desc:"Nothing new for you to download or learn — ChatCart Pro AI runs entirely inside the WhatsApp number you already use.",
+      smb2_title:"Zero commission, unlike delivery apps", smb2_desc:"Food and grocery delivery apps take 20–30% of every order. With ChatCart Pro AI you sell directly to your customer and keep 100% of what they pay you.",
+      smb3_title:"Run your own real offers", smb3_desc:"Set discounts, bundles, and promotions on your own terms — no aggregator deciding what deal your customers see.",
+      smb4_title:"Live stock & pricing, always accurate", smb4_desc:"The AI checks your real-time inventory and price list before confirming an order — so customers are never quoted a sold-out item or an old price.",
+      industries_eyebrow:"Industries", industries_title:"Built for how your business actually runs", industries_sub:"12 industries, one WhatsApp AI employee, configured for your exact use case.",
+      testi_eyebrow:"Testimonials", testi_title:"What business owners are saying", testi_sub:"Trusted by teams running businesses of every size, everywhere.",
+      testi1_quote:"“We used to lose orders every night after closing. Now ChatCart Pro AI takes them for us and they're ready first thing in the morning.”", testi1_role:"Owner, Northgate Mart",
+      testi2_quote:"“Our front desk used to be swamped with booking calls. Now most patients just book their slot on WhatsApp in under a minute.”", testi2_role:"Founder, Smile Care Dental",
+      testi3_quote:"“Setup took a single afternoon. Within a week our no-show rate for gym trials dropped by half thanks to automatic reminders.”", testi3_role:"Manager, UrbanFit Gyms",
+      faq_eyebrow:"FAQ", faq_title:"Everything you need to know", faq_sub:"Still curious? Book a demo and we'll walk you through it live.",
+      faq1_q:"How does ChatCart Pro AI actually work?", faq1_a:"We connect to your WhatsApp Business number. When a customer messages you, our AI employee understands the request — placing an order or booking a slot — and handles it automatically, using your menu, price list, or calendar.",
+      faq2_q:"Will it work for my type of business?", faq2_a:"Yes. We support order-based businesses (grocery, pharmacy, restaurants, laundry, courier) and appointment-based businesses (salons, clinics, gyms, auto repair, real estate, event venues) out of the box.",
+      faq3_q:"Do I need the WhatsApp Business API?", faq3_a:"We handle the WhatsApp Business API setup for you as part of onboarding — no technical work required on your end.",
+      faq4_q:"Can it integrate with my POS or CRM?", faq4_a:"Yes, ChatCart Pro AI can sync orders and bookings with common POS, calendar, and CRM tools. We'll confirm exact integrations during your demo.",
+      faq5_q:"What languages does it support?", faq5_a:"ChatCart Pro AI supports 40+ languages and automatically detects and replies in whichever language your customer messages in — no setup needed.",
+      demo_title:"Book your free demo", demo_sub:"Tell us a bit about your business — we'll show you exactly how ChatCart Pro AI would work for you.",
+      form_name:"Full name", form_name_ph:"Your name", form_business:"Business name", form_business_ph:"e.g. Green Mart Grocery",
+      form_industry:"Industry", form_industry_select:"Select industry", form_hospital_clinic:"Hospital / Clinic", form_gym_fitness:"Gym / Fitness Studio", form_event_venue:"Event Venue", form_other:"Other",
+      form_whatsapp:"WhatsApp number", form_whatsapp_ph:"+1 5XX XXX XXXX", form_email:"Email", form_submit:"Book a Demo",
+      success_title:"Thanks — request received!", success_desc:"Our team will reach out on WhatsApp within one business day to schedule your live demo.",
+      cta_title:"Ready to put your WhatsApp to work?", cta_sub:"Join businesses around the world automating orders and bookings with ChatCart Pro AI.", cta_button:"Book a Demo",
+      footer_tagline:"AI WhatsApp employees for orders & bookings — built for businesses everywhere.", footer_rights:"All rights reserved.",
+      showcase_eyebrow:"See It In Action", showcase_title:"One AI employee, every kind of business", showcase_sub:"Watch how the same AI employee adapts its conversation for different industries — automatically.",
+      showcase_tab_grocery:"Grocery", showcase_tab_salon:"Salon", showcase_tab_clinic:"Dental Clinic", showcase_tab_restaurant:"Restaurant", showcase_tab_auto:"Auto Repair", showcase_tab_realestate:"Real Estate",
+      footer_powered_by:"Powered by", footer_company:"Nexsofture Private Ltd",
+      footer_privacy:"Privacy Policy", footer_terms:"Terms & Conditions"
+    },
+    ar: {
+      nav_product:"المنتج", nav_industries:"الصناعات", nav_how:"كيف يعمل", nav_faq:"الأسئلة الشائعة", nav_cta:"احجز عرضًا تجريبيًا",
+      hero_eyebrow:"مصمم للشركات في جميع أنحاء العالم",
+      hero_title_pre:"حوّل واتساب إلى موظف يعمل بالذكاء الاصطناعي",
+      hero_title_highlight:"على مدار الساعة",
+      hero_sub:"يرد ChatCart Pro AI على كل محادثة عميل فورًا، يستقبل الطلبات، يؤكد المواعيد، ويتابع تلقائيًا ليلًا ونهارًا دون الحاجة لتوظيف المزيد من الموظفين.",
+      hero_cta:"احجز عرضًا تجريبيًا",
+      hero_note:"لا حاجة لتثبيت أي تطبيق لعملائك — كل شيء يحدث داخل واتساب.",
+      fc1_lbl:"محادثات تم حلها دون تدخل بشري", fc2_lbl:"مزيد من الطلبات والحجوزات بعد ساعات العمل",
+      chat_status:"موظف ذكاء اصطناعي · متصل",
+      fc3_lbl:"ردود فورية في أي وقت", fc4_big:"+40 لغة", fc4_lbl:"يكتشف لغة عميلك تلقائيًا",
+      trusted_label:"موثوق به من قبل شركات نامية حول العالم",
+      modes_eyebrow:"وكيل واحد، مهمتان", modes_title:"مهما كان نشاطك التجاري، ChatCart Pro AI يتولى الأمر",
+      modes_sub:"بعض الشركات تستقبل طلبات، وأخرى تستقبل حجوزات. موظفنا الذكي مصمم للقيام بكلتا المهمتين — يُعدّ حسب سير عملك الفعلي منذ اليوم الأول.",
+      orders_tag:"استقبال الطلبات", orders_title:"دع عملاءك يطلبون مباشرة من المحادثة",
+      orders_desc:"يتصفح العملاء قائمتك أو كتالوجك، يضعون طلبًا، يحصلون على تأكيد، ويدفعون — كل ذلك دون مغادرة واتساب.",
+      bookings_tag:"حجز المواعيد", bookings_title:"دع عملاءك يحجزون موعدًا خلال ثوانٍ",
+      bookings_desc:"يتحقق العملاء من التوفر، يختارون موعدًا، ويحصلون على تذكيرات وتأكيدات تلقائية — دون أي مكالمات هاتفية.",
+      ind_grocery:"البقالة", ind_pharmacy:"الصيدلية", ind_restaurant:"المطعم", ind_laundry:"غسيل وتنظيف جاف", ind_courier:"الشحن والخدمات اللوجستية",
+      ind_salon:"صالونات التجميل", ind_hospital:"المستشفيات والعيادات", ind_dental:"عيادات الأسنان", ind_auto:"ورش تصليح السيارات", ind_gym:"الصالات الرياضية", ind_realestate:"شركات العقارات", ind_events:"قاعات المناسبات",
+      ind_salon2:"صالون", ind_hospital2:"مستشفى", ind_auto2:"تصليح السيارات", ind_realestate2:"العقارات", ind_gym2:"اللياقة البدنية",
+      benefits_eyebrow:"المزايا", benefits_title:"لماذا تنتقل الشركات إلى ChatCart Pro AI", benefits_sub:"كل ما تحتاجه لوقف خسارة العملاء بسبب الردود البطيئة والمكالمات الفائتة.",
+      benefit1_title:"ردود فورية على مدار الساعة", benefit1_desc:"لا مزيد من “سنعاود الاتصال بك” — كل محادثة تحصل على رد خلال ثوانٍ ليلًا أو نهارًا.",
+      benefit2_title:"طلبات وحجوزات آلية بالكامل", benefit2_desc:"التأكيدات والتذكيرات والمتابعات تحدث تلقائيًا — دون إدخال يدوي.",
+      benefit3_title:"يتحدث أكثر من 40 لغة", benefit3_desc:"يكتشف موظفك الذكي لغة كل عميل تلقائيًا ويرد بها — في أي مكان بالعالم.",
+      benefit4_title:"تحويل سلس إلى موظف بشري", benefit4_desc:"يتم توجيه الطلبات المعقدة إلى فريقك فورًا مع كامل سياق المحادثة.",
+      smb_eyebrow:"مصمم للأعمال الصغيرة", smb_title:"احتفظ بالمزيد مما تكسبه",
+      smb_sub:"ChatCart Pro AI مصمم للأعمال المحلية والصغيرة التي تريد الوصول الذي يوفره تطبيق توصيل، دون التنازل عن هامش ربحها أو علاقتها بعملائها.",
+      smb1_title:"لا حاجة لتثبيت تطبيق إضافي", smb1_desc:"لا شيء جديد لتنزيله أو تعلمه — يعمل ChatCart Pro AI بالكامل داخل رقم واتساب الذي تستخدمه بالفعل.",
+      smb2_title:"بدون عمولة، على عكس تطبيقات التوصيل", smb2_desc:"تأخذ تطبيقات توصيل الطعام والبقالة 20–30% من كل طلب. مع ChatCart Pro AI تبيع مباشرة لعميلك وتحتفظ بـ100% مما يدفعه لك.",
+      smb3_title:"قدّم عروضك الحقيقية الخاصة", smb3_desc:"حدد الخصومات والباقات والعروض الترويجية بشروطك الخاصة — دون وسيط يقرر العرض الذي يراه عملاؤك.",
+      smb4_title:"مخزون وأسعار مباشرة ودقيقة دائمًا", smb4_desc:"يتحقق الذكاء الاصطناعي من مخزونك وقائمة أسعارك الفعلية قبل تأكيد الطلب — حتى لا يُعرض على العملاء أبدًا صنف نفد أو سعر قديم.",
+      industries_eyebrow:"الصناعات", industries_title:"مصمم لطريقة عمل نشاطك التجاري فعليًا", industries_sub:"12 قطاعًا، موظف ذكاء اصطناعي واحد على واتساب، مُعدّ خصيصًا لحالتك.",
+      testi_eyebrow:"آراء العملاء", testi_title:"ماذا يقول أصحاب الأعمال", testi_sub:"موثوق به من فرق تدير أعمالًا من كل الأحجام، في كل مكان.",
+      testi1_quote:"“كنا نخسر الطلبات كل ليلة بعد الإغلاق. الآن يستقبلها ChatCart Pro AI ونجدها جاهزة أول شيء في الصباح.”", testi1_role:"مالك، Northgate Mart",
+      testi2_quote:"“كانت استقبالنا مثقلة بمكالمات الحجز. الآن يحجز معظم المرضى موعدهم عبر واتساب في أقل من دقيقة.”", testi2_role:"مؤسسة، Smile Care Dental",
+      testi3_quote:"“استغرق الإعداد بعد ظهر واحد فقط. خلال أسبوع انخفض معدل الغياب عن حصص النادي الرياضي إلى النصف بفضل التذكيرات التلقائية.”", testi3_role:"مدير، UrbanFit Gyms",
+      faq_eyebrow:"الأسئلة الشائعة", faq_title:"كل ما تحتاج لمعرفته", faq_sub:"لا تزال لديك أسئلة؟ احجز عرضًا تجريبيًا وسنوضح لك كل شيء مباشرة.",
+      faq1_q:"كيف يعمل ChatCart Pro AI فعليًا؟", faq1_a:"نقوم بربط رقم واتساب بزنس الخاص بك. عندما يراسلك عميل، يفهم موظفنا الذكي الطلب — سواء كان طلب شراء أو حجز موعد — ويتولى الأمر تلقائيًا باستخدام قائمتك أو قائمة الأسعار أو التقويم الخاص بك.",
+      faq2_q:"هل سيعمل مع نوع نشاطي التجاري؟", faq2_a:"نعم. ندعم الشركات القائمة على الطلبات (البقالة، الصيدليات، المطاعم، المغاسل، الشحن) والشركات القائمة على المواعيد (الصالونات، العيادات، الصالات الرياضية، ورش السيارات، العقارات، قاعات المناسبات) بشكل جاهز.",
+      faq3_q:"هل أحتاج إلى واجهة برمجة تطبيقات واتساب بزنس؟", faq3_a:"نتولى إعداد واجهة برمجة تطبيقات واتساب بزنس نيابة عنك كجزء من الإعداد — دون أي عمل تقني من جانبك.",
+      faq4_q:"هل يمكنه التكامل مع نظام نقاط البيع أو CRM الخاص بي؟", faq4_a:"نعم، يمكن لـChatCart Pro AI مزامنة الطلبات والحجوزات مع أنظمة نقاط البيع والتقويم وCRM الشائعة. سنؤكد التكاملات الدقيقة أثناء عرضك التجريبي.",
+      faq5_q:"ما هي اللغات التي يدعمها؟", faq5_a:"يدعم ChatCart Pro AI أكثر من 40 لغة ويكتشف تلقائيًا لغة رسالة العميل ويرد بها — دون أي إعداد.",
+      demo_title:"احجز عرضك التجريبي المجاني", demo_sub:"أخبرنا قليلاً عن نشاطك التجاري — وسنوضح لك بالضبط كيف يمكن لـChatCart Pro AI أن يعمل من أجلك.",
+      form_name:"الاسم الكامل", form_name_ph:"اسمك", form_business:"اسم النشاط التجاري", form_business_ph:"مثال: Green Mart Grocery",
+      form_industry:"القطاع", form_industry_select:"اختر القطاع", form_hospital_clinic:"مستشفى / عيادة", form_gym_fitness:"صالة رياضية / لياقة", form_event_venue:"قاعة مناسبات", form_other:"أخرى",
+      form_whatsapp:"رقم واتساب", form_whatsapp_ph:"+971 5X XXX XXXX", form_email:"البريد الإلكتروني", form_submit:"احجز عرضًا تجريبيًا",
+      success_title:"شكرًا — تم استلام طلبك!", success_desc:"سيتواصل معك فريقنا عبر واتساب خلال يوم عمل واحد لتحديد موعد عرضك التجريبي المباشر.",
+      cta_title:"هل أنت مستعد لتفعيل واتساب للعمل؟", cta_sub:"انضم إلى الشركات حول العالم التي تُشغل الطلبات والحجوزات تلقائيًا مع ChatCart Pro AI.", cta_button:"احجز عرضًا تجريبيًا",
+      footer_tagline:"موظفو واتساب بالذكاء الاصطناعي للطلبات والحجوزات — مصممون لجميع الشركات في كل مكان.", footer_rights:"جميع الحقوق محفوظة.",
+      footer_powered_by:"مشغّل بواسطة",
+      footer_privacy:"سياسة الخصوصية", footer_terms:"الشروط والأحكام"
+    },
+    hi: {
+      nav_product:"उत्पाद", nav_industries:"उद्योग", nav_how:"यह कैसे काम करता है", nav_faq:"सामान्य प्रश्न", nav_cta:"डेमो बुक करें",
+      hero_eyebrow:"दुनिया भर के व्यवसायों के लिए बनाया गया",
+      hero_title_pre:"अपने व्हाट्सएप को एक AI-संचालित",
+      hero_title_highlight:"24x7 कर्मचारी में बदलें",
+      hero_sub:"ChatCart Pro AI हर ग्राहक चैट का तुरंत जवाब देता है, ऑर्डर लेता है, अपॉइंटमेंट कन्फर्म करता है, और अपने आप फॉलो-अप करता है — दिन-रात, बिना अतिरिक्त स्टाफ रखे।",
+      hero_cta:"डेमो बुक करें",
+      hero_note:"आपके ग्राहकों को कोई ऐप इंस्टॉल करने की ज़रूरत नहीं — सब कुछ व्हाट्सएप के अंदर ही होता है।",
+      fc1_lbl:"बिना इंसान के हल हुई चैट", fc2_lbl:"बंद समय के बाद ज़्यादा ऑर्डर और बुकिंग",
+      chat_status:"AI कर्मचारी · ऑनलाइन",
+      fc3_lbl:"दिन के किसी भी समय तुरंत जवाब", fc4_big:"40+ भाषाएं", fc4_lbl:"आपके ग्राहक की भाषा अपने आप पहचानता है",
+      trusted_label:"दुनिया भर के बढ़ते व्यवसायों द्वारा भरोसा किया गया",
+      modes_eyebrow:"एक एजेंट, दो काम", modes_title:"आपका व्यवसाय जो भी करे, ChatCart Pro AI उसे संभालता है",
+      modes_sub:"कुछ व्यवसाय ऑर्डर लेते हैं। कुछ बुकिंग लेते हैं। हमारा AI कर्मचारी दोनों करने के लिए बनाया गया है — पहले ही दिन आपके वर्कफ़्लो के अनुसार सेट किया जाता है।",
+      orders_tag:"ऑर्डर लेना", orders_title:"ग्राहकों को सीधे चैट से ऑर्डर करने दें",
+      orders_desc:"ग्राहक आपका मेन्यू या कैटलॉग देखते हैं, ऑर्डर करते हैं, कन्फर्मेशन पाते हैं, और भुगतान करते हैं — यह सब व्हाट्सएप छोड़े बिना।",
+      bookings_tag:"अपॉइंटमेंट बुकिंग", bookings_title:"ग्राहकों को कुछ ही सेकंड में स्लॉट बुक करने दें",
+      bookings_desc:"ग्राहक उपलब्धता जांचते हैं, समय चुनते हैं, और अपने आप रिमाइंडर व कन्फर्मेशन पाते हैं — कोई फोन कॉल की ज़रूरत नहीं।",
+      ind_grocery:"किराना", ind_pharmacy:"फार्मेसी", ind_restaurant:"रेस्टोरेंट", ind_laundry:"लॉन्ड्री और ड्राई क्लीनिंग", ind_courier:"कूरियर और लॉजिस्टिक्स",
+      ind_salon:"सैलून", ind_hospital:"अस्पताल और क्लीनिक", ind_dental:"डेंटल क्लीनिक", ind_auto:"ऑटो रिपेयर शॉप", ind_gym:"जिम और फिटनेस स्टूडियो", ind_realestate:"रियल एस्टेट एजेंसियां", ind_events:"इवेंट वेन्यू",
+      ind_salon2:"सैलून", ind_hospital2:"अस्पताल", ind_auto2:"ऑटो रिपेयर", ind_realestate2:"रियल एस्टेट", ind_gym2:"जिम और फिटनेस",
+      benefits_eyebrow:"फ़ायदे", benefits_title:"व्यवसाय ChatCart Pro AI क्यों अपना रहे हैं", benefits_sub:"धीमे जवाबों और छूटी हुई कॉल से ग्राहक खोना बंद करने के लिए आपको जो चाहिए वह सब कुछ।",
+      benefit1_title:"24/7 तुरंत जवाब", benefit1_desc:"अब “हम आपसे संपर्क करेंगे” नहीं — हर चैट को दिन हो या रात, सेकंडों में जवाब मिलता है।",
+      benefit2_title:"ऑर्डर और बुकिंग, पूरी तरह ऑटोमेटेड", benefit2_desc:"कन्फर्मेशन, रिमाइंडर, और फॉलो-अप अपने आप होते हैं — कोई मैन्युअल एंट्री नहीं।",
+      benefit3_title:"40+ भाषाएं बोलता है", benefit3_desc:"आपका AI कर्मचारी हर ग्राहक की भाषा को अपने आप पहचानता है और उसी में जवाब देता है — दुनिया में कहीं भी।",
+      benefit4_title:"आसान इंसानी हैंडऑफ", benefit4_desc:"जटिल अनुरोध पूरी चैट जानकारी के साथ तुरंत आपकी टीम को भेजे जाते हैं।",
+      smb_eyebrow:"छोटे व्यवसायों के लिए बनाया गया", smb_title:"जो कमाएं, उसका ज़्यादा हिस्सा अपने पास रखें",
+      smb_sub:"ChatCart Pro AI स्थानीय और छोटे व्यवसायों के लिए बनाया गया है जो अपने मुनाफे या ग्राहक संबंध को खोए बिना डिलीवरी ऐप जैसी पहुंच चाहते हैं।",
+      smb1_title:"कोई अतिरिक्त ऐप इंस्टॉल नहीं करना", smb1_desc:"आपके लिए डाउनलोड या सीखने के लिए कुछ नया नहीं — ChatCart Pro AI पूरी तरह आपके मौजूदा व्हाट्सएप नंबर के भीतर काम करता है।",
+      smb2_title:"डिलीवरी ऐप्स के विपरीत, शून्य कमीशन", smb2_desc:"फूड और ग्रोसरी डिलीवरी ऐप्स हर ऑर्डर पर 20–30% लेते हैं। ChatCart Pro AI के साथ आप सीधे अपने ग्राहक को बेचते हैं और उनके भुगतान का 100% अपने पास रखते हैं।",
+      smb3_title:"अपने खुद के असली ऑफर चलाएं", smb3_desc:"अपनी शर्तों पर छूट, बंडल, और प्रमोशन तय करें — कोई एग्रीगेटर यह तय नहीं करता कि आपके ग्राहक कौन सा डील देखें।",
+      smb4_title:"लाइव स्टॉक और कीमत, हमेशा सटीक", smb4_desc:"ऑर्डर कन्फर्म करने से पहले AI आपकी वास्तविक इन्वेंटरी और प्राइस लिस्ट जांचता है — ताकि ग्राहकों को कभी बिका हुआ आइटम या पुरानी कीमत न बताई जाए।",
+      industries_eyebrow:"उद्योग", industries_title:"आपका व्यवसाय जैसे वास्तव में चलता है, वैसे ही बनाया गया", industries_sub:"12 उद्योग, एक व्हाट्सएप AI कर्मचारी, आपके सटीक उपयोग के लिए सेट किया गया।",
+      testi_eyebrow:"प्रशंसापत्र", testi_title:"व्यवसाय मालिक क्या कह रहे हैं", testi_sub:"हर आकार के व्यवसाय चलाने वाली टीमों द्वारा भरोसा किया गया, हर जगह।",
+      testi1_quote:"“हम बंद होने के बाद हर रात ऑर्डर खो देते थे। अब ChatCart Pro AI उन्हें ले लेता है और सुबह सबसे पहले वे तैयार होते हैं।”", testi1_role:"मालिक, Northgate Mart",
+      testi2_quote:"“हमारा फ्रंट डेस्क बुकिंग कॉल्स से भरा रहता था। अब ज़्यादातर मरीज़ एक मिनट से भी कम समय में व्हाट्सएप पर अपना स्लॉट बुक कर लेते हैं।”", testi2_role:"संस्थापक, Smile Care Dental",
+      testi3_quote:"“सेटअप में सिर्फ एक दोपहर लगी। एक हफ़्ते के भीतर ऑटोमेटिक रिमाइंडर की वजह से जिम ट्रायल का नो-शो रेट आधा हो गया।”", testi3_role:"मैनेजर, UrbanFit Gyms",
+      faq_eyebrow:"सामान्य प्रश्न", faq_title:"आपको जो कुछ जानना चाहिए", faq_sub:"अब भी सवाल हैं? डेमो बुक करें और हम आपको लाइव दिखाएंगे।",
+      faq1_q:"ChatCart Pro AI वास्तव में कैसे काम करता है?", faq1_a:"हम आपके व्हाट्सएप बिज़नेस नंबर से जुड़ते हैं। जब कोई ग्राहक आपको मैसेज करता है, हमारा AI कर्मचारी अनुरोध को समझता है — ऑर्डर देना हो या स्लॉट बुक करना — और आपके मेन्यू, प्राइस लिस्ट, या कैलेंडर का उपयोग करके इसे अपने आप संभालता है।",
+      faq2_q:"क्या यह मेरे व्यवसाय के प्रकार के लिए काम करेगा?", faq2_a:"हाँ। हम ऑर्डर-आधारित व्यवसायों (किराना, फार्मेसी, रेस्टोरेंट, लॉन्ड्री, कूरियर) और अपॉइंटमेंट-आधारित व्यवसायों (सैलून, क्लीनिक, जिम, ऑटो रिपेयर, रियल एस्टेट, इवेंट वेन्यू) दोनों को शुरू से ही सपोर्ट करते हैं।",
+      faq3_q:"क्या मुझे व्हाट्सएप बिज़नेस API की ज़रूरत है?", faq3_a:"हम ऑनबोर्डिंग के हिस्से के रूप में आपके लिए व्हाट्सएप बिज़नेस API सेटअप संभालते हैं — आपकी तरफ से कोई तकनीकी काम नहीं।",
+      faq4_q:"क्या यह मेरे POS या CRM के साथ इंटीग्रेट हो सकता है?", faq4_a:"हाँ, ChatCart Pro AI सामान्य POS, कैलेंडर, और CRM टूल्स के साथ ऑर्डर और बुकिंग सिंक कर सकता है। हम आपके डेमो के दौरान सटीक इंटीग्रेशन कन्फर्म करेंगे।",
+      faq5_q:"यह कौन सी भाषाएं सपोर्ट करता है?", faq5_a:"ChatCart Pro AI 40+ भाषाओं को सपोर्ट करता है और अपने आप पहचानता है व उसी भाषा में जवाब देता है जिसमें ग्राहक मैसेज करता है — किसी सेटअप की ज़रूरत नहीं।",
+      demo_title:"अपना मुफ़्त डेमो बुक करें", demo_sub:"हमें अपने व्यवसाय के बारे में थोड़ा बताएं — हम आपको दिखाएंगे कि ChatCart Pro AI आपके लिए बिल्कुल कैसे काम करेगा।",
+      form_name:"पूरा नाम", form_name_ph:"आपका नाम", form_business:"व्यवसाय का नाम", form_business_ph:"जैसे Green Mart Grocery",
+      form_industry:"उद्योग", form_industry_select:"उद्योग चुनें", form_hospital_clinic:"अस्पताल / क्लीनिक", form_gym_fitness:"जिम / फिटनेस स्टूडियो", form_event_venue:"इवेंट वेन्यू", form_other:"अन्य",
+      form_whatsapp:"व्हाट्सएप नंबर", form_whatsapp_ph:"+91 XXXXX XXXXX", form_email:"ईमेल", form_submit:"डेमो बुक करें",
+      success_title:"धन्यवाद — अनुरोध प्राप्त हुआ!", success_desc:"हमारी टीम आपके लाइव डेमो को शेड्यूल करने के लिए एक कार्यदिवस के भीतर व्हाट्सएप पर संपर्क करेगी।",
+      cta_title:"अपने व्हाट्सएप को काम पर लगाने के लिए तैयार हैं?", cta_sub:"दुनिया भर के उन व्यवसायों से जुड़ें जो ChatCart Pro AI के साथ ऑर्डर और बुकिंग को ऑटोमेट कर रहे हैं।", cta_button:"डेमो बुक करें",
+      footer_tagline:"ऑर्डर और बुकिंग के लिए AI व्हाट्सएप कर्मचारी — हर जगह के व्यवसायों के लिए बनाया गया।", footer_rights:"सर्वाधिकार सुरक्षित।",
+      footer_powered_by:"द्वारा संचालित",
+      footer_privacy:"गोपनीयता नीति", footer_terms:"नियम और शर्तें"
+    },
+    fr: {
+      nav_product:"Produit", nav_industries:"Secteurs", nav_how:"Fonctionnement", nav_faq:"FAQ", nav_cta:"Réserver une démo",
+      hero_eyebrow:"Conçu pour les entreprises du monde entier",
+      hero_title_pre:"Transformez votre WhatsApp en employé propulsé par l'IA,",
+      hero_title_highlight:"24h/24 et 7j/7",
+      hero_sub:"ChatCart Pro AI répond instantanément à chaque conversation client, prend les commandes, confirme les rendez-vous et effectue un suivi automatique, jour et nuit, sans embaucher davantage de personnel.",
+      hero_cta:"Réserver une démo",
+      hero_note:"Aucune application à installer pour vos clients — tout se passe dans WhatsApp.",
+      fc1_lbl:"Conversations résolues sans intervention humaine", fc2_lbl:"Plus de commandes et réservations en dehors des heures",
+      chat_status:"Employé IA · en ligne",
+      fc3_lbl:"Réponses instantanées, à toute heure", fc4_big:"40+ langues", fc4_lbl:"Détecte automatiquement la langue du client",
+      trusted_label:"APPROUVÉ PAR DES ENTREPRISES EN CROISSANCE DANS LE MONDE ENTIER",
+      modes_eyebrow:"Un agent, deux métiers", modes_title:"Quel que soit votre métier, ChatCart Pro AI s'en charge",
+      modes_sub:"Certaines entreprises prennent des commandes, d'autres des réservations. Notre employé IA est conçu pour faire les deux, configuré selon votre flux de travail dès le premier jour.",
+      orders_tag:"Prise de commandes", orders_title:"Laissez vos clients commander directement depuis le chat",
+      orders_desc:"Les clients consultent votre menu ou catalogue, passent commande, reçoivent une confirmation et payent, sans jamais quitter WhatsApp.",
+      bookings_tag:"Prise de rendez-vous", bookings_title:"Laissez vos clients réserver un créneau en quelques secondes",
+      bookings_desc:"Les clients vérifient les disponibilités, choisissent un horaire et reçoivent rappels et confirmations automatiques, sans échange téléphonique.",
+      ind_grocery:"Épicerie", ind_pharmacy:"Pharmacie", ind_restaurant:"Restaurant", ind_laundry:"Blanchisserie & Pressing", ind_courier:"Coursiers & Logistique",
+      ind_salon:"Salons de coiffure", ind_hospital:"Hôpitaux & Cliniques", ind_dental:"Cliniques dentaires", ind_auto:"Garages automobiles", ind_gym:"Salles de sport", ind_realestate:"Agences immobilières", ind_events:"Salles d'événements",
+      ind_salon2:"Salon", ind_hospital2:"Hôpital", ind_auto2:"Garage auto", ind_realestate2:"Immobilier", ind_gym2:"Sport & Fitness",
+      benefits_eyebrow:"Avantages", benefits_title:"Pourquoi les entreprises choisissent ChatCart Pro AI", benefits_sub:"Tout ce qu'il vous faut pour ne plus perdre de clients à cause de réponses lentes ou d'appels manqués.",
+      benefit1_title:"Réponses instantanées, 24/7", benefit1_desc:"Fini le « on vous recontacte » : chaque message obtient une réponse en quelques secondes, jour et nuit.",
+      benefit2_title:"Commandes et réservations automatisées", benefit2_desc:"Confirmations, rappels et suivis se font tout seuls, sans saisie manuelle.",
+      benefit3_title:"Parle plus de 40 langues", benefit3_desc:"Votre employé IA détecte automatiquement la langue de chaque client et y répond, partout dans le monde.",
+      benefit4_title:"Transfert humain fluide", benefit4_desc:"Les demandes complexes sont transférées instantanément à votre équipe, avec tout le contexte de la conversation.",
+      smb_eyebrow:"Conçu Pour Les Petites Entreprises", smb_title:"Gardez plus de ce que vous gagnez",
+      smb_sub:"ChatCart Pro AI est conçu pour les commerces locaux et de petite taille qui veulent la portée d'une appli de livraison, sans sacrifier leur marge ni leur relation client.",
+      smb1_title:"Aucune application supplémentaire à installer", smb1_desc:"Rien de nouveau à télécharger ou à apprendre — ChatCart Pro AI fonctionne entièrement dans le numéro WhatsApp que vous utilisez déjà.",
+      smb2_title:"Zéro commission, contrairement aux applis de livraison", smb2_desc:"Les applis de livraison de repas et d'épicerie prennent 20 à 30 % de chaque commande. Avec ChatCart Pro AI, vous vendez directement à votre client et gardez 100 % de ce qu'il vous paie.",
+      smb3_title:"Proposez vos propres offres réelles", smb3_desc:"Définissez remises, formules et promotions selon vos propres conditions — aucun intermédiaire ne décide de l'offre que voient vos clients.",
+      smb4_title:"Stock et prix en direct, toujours exacts", smb4_desc:"L'IA vérifie votre inventaire et votre liste de prix en temps réel avant de confirmer une commande, afin que vos clients ne se voient jamais proposer un article épuisé ou un prix obsolète.",
+      industries_eyebrow:"Secteurs", industries_title:"Conçu pour le fonctionnement réel de votre entreprise", industries_sub:"12 secteurs, un seul employé IA WhatsApp, configuré pour votre cas d'usage précis.",
+      testi_eyebrow:"Témoignages", testi_title:"Ce que disent les chefs d'entreprise", testi_sub:"La confiance d'équipes qui gèrent des entreprises de toutes tailles, partout.",
+      testi1_quote:"«Nous perdions des commandes chaque soir après la fermeture. Maintenant, ChatCart Pro AI les prend en charge et elles sont prêtes dès le matin.»", testi1_role:"Propriétaire, Northgate Mart",
+      testi2_quote:"«Notre accueil était submergé d'appels de réservation. Maintenant, la plupart des patients réservent leur créneau sur WhatsApp en moins d'une minute.»", testi2_role:"Fondatrice, Smile Care Dental",
+      testi3_quote:"«La mise en place a pris un seul après-midi. En une semaine, notre taux d'absence aux essais de sport a été réduit de moitié grâce aux rappels automatiques.»", testi3_role:"Manager, UrbanFit Gyms",
+      faq_eyebrow:"FAQ", faq_title:"Tout ce que vous devez savoir", faq_sub:"Encore des questions ? Réservez une démo et nous vous montrerons tout en direct.",
+      faq1_q:"Comment fonctionne réellement ChatCart Pro AI ?", faq1_a:"Nous nous connectons à votre numéro WhatsApp Business. Lorsqu'un client vous écrit, notre employé IA comprend la demande, commande ou rendez-vous, et la traite automatiquement à l'aide de votre menu, tarifs ou calendrier.",
+      faq2_q:"Est-ce que ça fonctionnera pour mon type d'entreprise ?", faq2_a:"Oui. Nous prenons en charge les entreprises basées sur les commandes (épicerie, pharmacie, restaurants, blanchisserie, coursiers) et celles basées sur les rendez-vous (salons, cliniques, salles de sport, garages, immobilier, salles d'événements), prêtes à l'emploi.",
+      faq3_q:"Ai-je besoin de l'API WhatsApp Business ?", faq3_a:"Nous gérons la configuration de l'API WhatsApp Business pour vous dans le cadre de l'intégration, sans travail technique de votre part.",
+      faq4_q:"Peut-il s'intégrer à mon logiciel de caisse ou CRM ?", faq4_a:"Oui, ChatCart Pro AI peut synchroniser commandes et réservations avec les outils de caisse, calendrier et CRM courants. Nous confirmerons les intégrations exactes lors de votre démo.",
+      faq5_q:"Quelles langues sont prises en charge ?", faq5_a:"ChatCart Pro AI prend en charge plus de 40 langues et détecte automatiquement la langue de chaque client pour y répondre, sans configuration nécessaire.",
+      demo_title:"Réservez votre démo gratuite", demo_sub:"Parlez-nous un peu de votre entreprise, nous vous montrerons exactement comment ChatCart Pro AI fonctionnerait pour vous.",
+      form_name:"Nom complet", form_name_ph:"Votre nom", form_business:"Nom de l'entreprise", form_business_ph:"ex. Green Mart Grocery",
+      form_industry:"Secteur", form_industry_select:"Choisir un secteur", form_hospital_clinic:"Hôpital / Clinique", form_gym_fitness:"Salle de sport / Fitness", form_event_venue:"Salle d'événements", form_other:"Autre",
+      form_whatsapp:"Numéro WhatsApp", form_whatsapp_ph:"+33 6 XX XX XX XX", form_email:"E-mail", form_submit:"Réserver une démo",
+      success_title:"Merci, votre demande a été reçue !", success_desc:"Notre équipe vous contactera sur WhatsApp sous un jour ouvré pour programmer votre démo en direct.",
+      cta_title:"Prêt à mettre votre WhatsApp au travail ?", cta_sub:"Rejoignez des entreprises du monde entier qui automatisent commandes et réservations avec ChatCart Pro AI.", cta_button:"Réserver une démo",
+      footer_tagline:"Employés IA WhatsApp pour commandes et réservations — conçu pour les entreprises, partout.", footer_rights:"Tous droits réservés.",
+      footer_powered_by:"Propulsé par",
+      footer_privacy:"Politique de confidentialité", footer_terms:"Conditions générales"
+    },
+    es: {
+      nav_product:"Producto", nav_industries:"Sectores", nav_how:"Cómo funciona", nav_faq:"Preguntas frecuentes", nav_cta:"Reservar una demo",
+      hero_eyebrow:"Creado para empresas de todo el mundo",
+      hero_title_pre:"Convierte tu WhatsApp en un empleado con IA,",
+      hero_title_highlight:"activo las 24 horas",
+      hero_sub:"ChatCart Pro AI responde al instante cada chat de un cliente, toma pedidos, confirma citas y hace seguimiento automáticamente, de día y de noche, sin contratar más personal.",
+      hero_cta:"Reservar una demo",
+      hero_note:"Tus clientes no necesitan instalar ninguna app: todo ocurre dentro de WhatsApp.",
+      fc1_lbl:"Chats resueltos sin intervención humana", fc2_lbl:"Más pedidos y reservas fuera de horario",
+      chat_status:"Empleado IA · en línea",
+      fc3_lbl:"Respuestas instantáneas a cualquier hora", fc4_big:"40+ idiomas", fc4_lbl:"Detecta automáticamente el idioma del cliente",
+      trusted_label:"CON LA CONFIANZA DE EMPRESAS EN CRECIMIENTO DE TODO EL MUNDO",
+      modes_eyebrow:"Un agente, dos funciones", modes_title:"Sea cual sea tu negocio, ChatCart Pro AI se encarga",
+      modes_sub:"Algunos negocios reciben pedidos. Otros reciben reservas. Nuestro empleado con IA está diseñado para hacer ambas cosas, configurado según tu flujo de trabajo desde el primer día.",
+      orders_tag:"Toma de pedidos", orders_title:"Deja que tus clientes pidan directamente desde el chat",
+      orders_desc:"Los clientes revisan tu menú o catálogo, hacen un pedido, reciben confirmación y pagan, todo sin salir de WhatsApp.",
+      bookings_tag:"Reserva de citas", bookings_title:"Deja que tus clientes reserven un horario en segundos",
+      bookings_desc:"Los clientes consultan la disponibilidad, eligen un horario y reciben recordatorios y confirmaciones automáticas, sin llamadas telefónicas.",
+      ind_grocery:"Supermercado", ind_pharmacy:"Farmacia", ind_restaurant:"Restaurante", ind_laundry:"Lavandería y tintorería", ind_courier:"Mensajería y logística",
+      ind_salon:"Salones de belleza", ind_hospital:"Hospitales y clínicas", ind_dental:"Clínicas dentales", ind_auto:"Talleres mecánicos", ind_gym:"Gimnasios", ind_realestate:"Agencias inmobiliarias", ind_events:"Salones de eventos",
+      ind_salon2:"Salón", ind_hospital2:"Hospital", ind_auto2:"Taller mecánico", ind_realestate2:"Inmobiliaria", ind_gym2:"Gimnasio y fitness",
+      benefits_eyebrow:"Beneficios", benefits_title:"Por qué las empresas cambian a ChatCart Pro AI", benefits_sub:"Todo lo que necesitas para dejar de perder clientes por respuestas lentas y llamadas perdidas.",
+      benefit1_title:"Respuestas instantáneas, 24/7", benefit1_desc:"Se acabó el “te contactaremos”: cada chat recibe respuesta en segundos, de día o de noche.",
+      benefit2_title:"Pedidos y reservas, automatizados", benefit2_desc:"Confirmaciones, recordatorios y seguimientos ocurren solos, sin entrada manual.",
+      benefit3_title:"Habla más de 40 idiomas", benefit3_desc:"Tu empleado con IA detecta automáticamente el idioma de cada cliente y responde en él, en cualquier parte del mundo.",
+      benefit4_title:"Transferencia fluida a un humano", benefit4_desc:"Las solicitudes complejas se envían de inmediato a tu equipo, con todo el contexto del chat.",
+      smb_eyebrow:"Diseñado Para Pequeños Negocios", smb_title:"Quédate con más de lo que ganas",
+      smb_sub:"ChatCart Pro AI está diseñado para negocios locales y pequeños que quieren el alcance de una app de delivery, sin renunciar a su margen ni a su relación con el cliente.",
+      smb1_title:"Ninguna app adicional que instalar", smb1_desc:"Nada nuevo que descargar o aprender: ChatCart Pro AI funciona por completo dentro del número de WhatsApp que ya usas.",
+      smb2_title:"Cero comisión, a diferencia de las apps de delivery", smb2_desc:"Las apps de delivery de comida y supermercado cobran entre 20 % y 30 % de cada pedido. Con ChatCart Pro AI vendes directamente a tu cliente y te quedas con el 100 % de lo que te paga.",
+      smb3_title:"Crea tus propias ofertas reales", smb3_desc:"Define descuentos, combos y promociones a tu manera, sin que un intermediario decida qué oferta ve tu cliente.",
+      smb4_title:"Stock y precios en vivo, siempre exactos", smb4_desc:"La IA revisa tu inventario y lista de precios en tiempo real antes de confirmar un pedido, para que nunca se le muestre a un cliente un producto agotado o un precio desactualizado.",
+      industries_eyebrow:"Sectores", industries_title:"Diseñado según cómo funciona realmente tu negocio", industries_sub:"12 sectores, un solo empleado con IA en WhatsApp, configurado para tu caso exacto.",
+      testi_eyebrow:"Testimonios", testi_title:"Lo que dicen los dueños de negocios", testi_sub:"Con la confianza de equipos que gestionan negocios de todos los tamaños, en todas partes.",
+      testi1_quote:"“Solíamos perder pedidos cada noche después de cerrar. Ahora ChatCart Pro AI los recibe y están listos a primera hora de la mañana.”", testi1_role:"Propietario, Northgate Mart",
+      testi2_quote:"“Nuestra recepción solía estar saturada de llamadas de reserva. Ahora la mayoría de los pacientes reservan su horario en WhatsApp en menos de un minuto.”", testi2_role:"Fundadora, Smile Care Dental",
+      testi3_quote:"“La configuración tomó solo una tarde. En una semana, nuestra tasa de ausencias en pruebas de gimnasio se redujo a la mitad gracias a los recordatorios automáticos.”", testi3_role:"Gerente, UrbanFit Gyms",
+      faq_eyebrow:"Preguntas frecuentes", faq_title:"Todo lo que necesitas saber", faq_sub:"¿Aún tienes dudas? Reserva una demo y te lo mostraremos en vivo.",
+      faq1_q:"¿Cómo funciona realmente ChatCart Pro AI?", faq1_a:"Nos conectamos a tu número de WhatsApp Business. Cuando un cliente te escribe, nuestro empleado con IA entiende la solicitud, ya sea un pedido o una cita, y la gestiona automáticamente usando tu menú, lista de precios o calendario.",
+      faq2_q:"¿Funcionará para mi tipo de negocio?", faq2_a:"Sí. Admitimos negocios basados en pedidos (supermercados, farmacias, restaurantes, lavanderías, mensajería) y negocios basados en citas (salones, clínicas, gimnasios, talleres, inmobiliarias, salones de eventos) listos para usar.",
+      faq3_q:"¿Necesito la API de WhatsApp Business?", faq3_a:"Nosotros gestionamos la configuración de la API de WhatsApp Business por ti como parte del proceso de incorporación, sin trabajo técnico de tu parte.",
+      faq4_q:"¿Puede integrarse con mi TPV o CRM?", faq4_a:"Sí, ChatCart Pro AI puede sincronizar pedidos y reservas con las herramientas comunes de TPV, calendario y CRM. Confirmaremos las integraciones exactas durante tu demo.",
+      faq5_q:"¿Qué idiomas admite?", faq5_a:"ChatCart Pro AI admite más de 40 idiomas y detecta automáticamente el idioma en que te escribe cada cliente para responder en él, sin configuración necesaria.",
+      demo_title:"Reserva tu demo gratuita", demo_sub:"Cuéntanos un poco sobre tu negocio: te mostraremos exactamente cómo funcionaría ChatCart Pro AI para ti.",
+      form_name:"Nombre completo", form_name_ph:"Tu nombre", form_business:"Nombre del negocio", form_business_ph:"ej. Green Mart Grocery",
+      form_industry:"Sector", form_industry_select:"Selecciona un sector", form_hospital_clinic:"Hospital / Clínica", form_gym_fitness:"Gimnasio / Fitness", form_event_venue:"Salón de eventos", form_other:"Otro",
+      form_whatsapp:"Número de WhatsApp", form_whatsapp_ph:"+34 6XX XXX XXX", form_email:"Correo electrónico", form_submit:"Reservar una demo",
+      success_title:"¡Gracias, solicitud recibida!", success_desc:"Nuestro equipo te contactará por WhatsApp dentro de un día hábil para programar tu demo en vivo.",
+      cta_title:"¿Listo para poner tu WhatsApp a trabajar?", cta_sub:"Únete a empresas de todo el mundo que automatizan pedidos y reservas con ChatCart Pro AI.", cta_button:"Reservar una demo",
+      footer_tagline:"Empleados con IA en WhatsApp para pedidos y reservas, creado para negocios en todas partes.", footer_rights:"Todos los derechos reservados.",
+      footer_powered_by:"Desarrollado por",
+      footer_privacy:"Política de privacidad", footer_terms:"Términos y condiciones"
+    },
+    pt: {
+      nav_product:"Produto", nav_industries:"Setores", nav_how:"Como funciona", nav_faq:"Perguntas frequentes", nav_cta:"Agendar demonstração",
+      hero_eyebrow:"Feito para empresas em todo o mundo",
+      hero_title_pre:"Transforme seu WhatsApp em um funcionário com IA,",
+      hero_title_highlight:"24 horas por dia",
+      hero_sub:"O ChatCart Pro AI responde instantaneamente a cada conversa com o cliente, recebe pedidos, confirma agendamentos e faz o acompanhamento automaticamente, dia e noite, sem contratar mais funcionários.",
+      hero_cta:"Agendar demonstração",
+      hero_note:"Seus clientes não precisam instalar nenhum aplicativo — tudo acontece dentro do WhatsApp.",
+      fc1_lbl:"Conversas resolvidas sem intervenção humana", fc2_lbl:"Mais pedidos e agendamentos fora do horário",
+      chat_status:"Funcionário IA · online",
+      fc3_lbl:"Respostas instantâneas a qualquer hora", fc4_big:"40+ idiomas", fc4_lbl:"Detecta automaticamente o idioma do cliente",
+      trusted_label:"CONFIADO POR EMPRESAS EM CRESCIMENTO NO MUNDO TODO",
+      modes_eyebrow:"Um agente, duas funções", modes_title:"Seja qual for o seu negócio, o ChatCart Pro AI cuida disso",
+      modes_sub:"Alguns negócios recebem pedidos. Outros recebem agendamentos. Nosso funcionário com IA foi feito para fazer os dois, configurado conforme seu fluxo de trabalho desde o primeiro dia.",
+      orders_tag:"Recebimento de pedidos", orders_title:"Deixe os clientes pedirem direto pelo chat",
+      orders_desc:"Os clientes navegam pelo seu cardápio ou catálogo, fazem um pedido, recebem confirmação e pagam, tudo sem sair do WhatsApp.",
+      bookings_tag:"Agendamento de horários", bookings_title:"Deixe os clientes agendarem um horário em segundos",
+      bookings_desc:"Os clientes verificam disponibilidade, escolhem um horário e recebem lembretes e confirmações automáticas, sem trocar ligações.",
+      ind_grocery:"Mercearia", ind_pharmacy:"Farmácia", ind_restaurant:"Restaurante", ind_laundry:"Lavanderia e limpeza a seco", ind_courier:"Entregas e logística",
+      ind_salon:"Salões de beleza", ind_hospital:"Hospitais e clínicas", ind_dental:"Clínicas odontológicas", ind_auto:"Oficinas automotivas", ind_gym:"Academias e estúdios de fitness", ind_realestate:"Imobiliárias", ind_events:"Espaços para eventos",
+      ind_salon2:"Salão", ind_hospital2:"Hospital", ind_auto2:"Oficina automotiva", ind_realestate2:"Imóveis", ind_gym2:"Academia e fitness",
+      benefits_eyebrow:"Benefícios", benefits_title:"Por que empresas estão migrando para o ChatCart Pro AI", benefits_sub:"Tudo que você precisa para parar de perder clientes por respostas lentas e ligações perdidas.",
+      benefit1_title:"Respostas instantâneas, 24/7", benefit1_desc:"Chega de “retornaremos o contato” — cada conversa recebe resposta em segundos, de dia ou de noite.",
+      benefit2_title:"Pedidos e agendamentos automatizados", benefit2_desc:"Confirmações, lembretes e acompanhamentos acontecem sozinhos, sem entrada manual.",
+      benefit3_title:"Fala mais de 40 idiomas", benefit3_desc:"Seu funcionário com IA detecta automaticamente o idioma de cada cliente e responde nele, em qualquer lugar do mundo.",
+      benefit4_title:"Transferência humana tranquila", benefit4_desc:"Solicitações complexas são encaminhadas instantaneamente para sua equipe, com todo o contexto da conversa.",
+      smb_eyebrow:"Feito Para Pequenos Negócios", smb_title:"Fique com mais do que você ganha",
+      smb_sub:"O ChatCart Pro AI foi criado para negócios locais e de pequeno porte que querem o alcance de um aplicativo de entrega, sem abrir mão da sua margem ou do relacionamento com o cliente.",
+      smb1_title:"Nenhum aplicativo extra para instalar", smb1_desc:"Nada novo para baixar ou aprender — o ChatCart Pro AI funciona totalmente dentro do número de WhatsApp que você já usa.",
+      smb2_title:"Zero comissão, diferente dos apps de entrega", smb2_desc:"Apps de entrega de comida e mercado cobram de 20% a 30% de cada pedido. Com o ChatCart Pro AI você vende diretamente ao seu cliente e fica com 100% do que ele paga.",
+      smb3_title:"Crie suas próprias ofertas reais", smb3_desc:"Defina descontos, combos e promoções do seu jeito — sem um intermediário decidindo qual oferta seus clientes veem.",
+      smb4_title:"Estoque e preços em tempo real, sempre corretos", smb4_desc:"A IA verifica seu estoque e lista de preços em tempo real antes de confirmar um pedido — para que o cliente nunca veja um item esgotado ou um preço desatualizado.",
+      industries_eyebrow:"Setores", industries_title:"Feito para como seu negócio realmente funciona", industries_sub:"12 setores, um único funcionário com IA no WhatsApp, configurado para o seu caso de uso exato.",
+      testi_eyebrow:"Depoimentos", testi_title:"O que os empresários estão dizendo", testi_sub:"Com a confiança de equipes que administram negócios de todos os tamanhos, em qualquer lugar.",
+      testi1_quote:"“Antes perdíamos pedidos toda noite após o fechamento. Agora o ChatCart Pro AI os recebe e eles já estão prontos logo pela manhã.”", testi1_role:"Proprietário, Northgate Mart",
+      testi2_quote:"“Nossa recepção costumava ficar sobrecarregada com ligações de agendamento. Agora a maioria dos pacientes agenda o horário pelo WhatsApp em menos de um minuto.”", testi2_role:"Fundadora, Smile Care Dental",
+      testi3_quote:"“A configuração levou apenas uma tarde. Em uma semana, nossa taxa de ausência em aulas experimentais caiu pela metade graças aos lembretes automáticos.”", testi3_role:"Gerente, UrbanFit Gyms",
+      faq_eyebrow:"Perguntas frequentes", faq_title:"Tudo o que você precisa saber", faq_sub:"Ainda tem dúvidas? Agende uma demonstração e mostraremos tudo ao vivo.",
+      faq1_q:"Como o ChatCart Pro AI realmente funciona?", faq1_a:"Conectamos ao seu número do WhatsApp Business. Quando um cliente envia uma mensagem, nosso funcionário com IA entende o pedido, seja para fazer um pedido ou agendar um horário, e cuida disso automaticamente usando seu cardápio, lista de preços ou calendário.",
+      faq2_q:"Vai funcionar para o meu tipo de negócio?", faq2_a:"Sim. Damos suporte a negócios baseados em pedidos (mercearias, farmácias, restaurantes, lavanderias, entregas) e negócios baseados em agendamento (salões, clínicas, academias, oficinas, imobiliárias, espaços para eventos) prontos para uso.",
+      faq3_q:"Preciso da API do WhatsApp Business?", faq3_a:"Cuidamos da configuração da API do WhatsApp Business para você como parte do onboarding, sem nenhum trabalho técnico da sua parte.",
+      faq4_q:"Ele pode se integrar ao meu PDV ou CRM?", faq4_a:"Sim, o ChatCart Pro AI pode sincronizar pedidos e agendamentos com ferramentas comuns de PDV, calendário e CRM. Confirmaremos as integrações exatas durante sua demonstração.",
+      faq5_q:"Quais idiomas ele suporta?", faq5_a:"O ChatCart Pro AI suporta mais de 40 idiomas e detecta automaticamente o idioma em que cada cliente escreve, respondendo nele — sem necessidade de configuração.",
+      demo_title:"Agende sua demonstração gratuita", demo_sub:"Conte um pouco sobre o seu negócio — mostraremos exatamente como o ChatCart Pro AI funcionaria para você.",
+      form_name:"Nome completo", form_name_ph:"Seu nome", form_business:"Nome do negócio", form_business_ph:"ex.: Green Mart Grocery",
+      form_industry:"Setor", form_industry_select:"Selecione o setor", form_hospital_clinic:"Hospital / Clínica", form_gym_fitness:"Academia / Estúdio de fitness", form_event_venue:"Espaço para eventos", form_other:"Outro",
+      form_whatsapp:"Número do WhatsApp", form_whatsapp_ph:"+55 11 9XXXX-XXXX", form_email:"E-mail", form_submit:"Agendar demonstração",
+      success_title:"Obrigado — solicitação recebida!", success_desc:"Nossa equipe entrará em contato pelo WhatsApp dentro de um dia útil para agendar sua demonstração ao vivo.",
+      cta_title:"Pronto para colocar seu WhatsApp para trabalhar?", cta_sub:"Junte-se a empresas em todo o mundo que automatizam pedidos e agendamentos com o ChatCart Pro AI.", cta_button:"Agendar demonstração",
+      footer_tagline:"Funcionários com IA no WhatsApp para pedidos e agendamentos — feito para empresas em qualquer lugar.", footer_rights:"Todos os direitos reservados.",
+      footer_powered_by:"Desenvolvido por",
+      footer_privacy:"Política de Privacidade", footer_terms:"Termos e Condições"
+    },
+    zh: {
+      nav_product:"产品", nav_industries:"行业", nav_how:"工作原理", nav_faq:"常见问题", nav_cta:"预约演示",
+      hero_eyebrow:"为全球企业打造",
+      hero_title_pre:"将您的WhatsApp变成",
+      hero_title_highlight:"全天候的AI员工",
+      hero_sub:"ChatCart Pro AI 即时回复每一位客户的消息，自动接单、确认预约并进行跟进——全天候运行，无需增加人手。",
+      hero_cta:"预约演示",
+      hero_note:"客户无需安装任何应用程序——一切都在WhatsApp内完成。",
+      fc1_lbl:"无需人工即可解决的对话", fc2_lbl:"非营业时间获取更多订单和预约",
+      chat_status:"AI员工 · 在线",
+      fc3_lbl:"全天候即时回复", fc4_big:"支持40+种语言", fc4_lbl:"自动识别客户使用的语言",
+      trusted_label:"受到全球成长型企业的信赖",
+      modes_eyebrow:"一个智能体，两种功能", modes_title:"无论您经营什么业务，ChatCart Pro AI 都能胜任",
+      modes_sub:"有些企业需要接单，有些需要预约。我们的AI员工两者都能胜任——从第一天起就按您的实际工作流程配置。",
+      orders_tag:"接单服务", orders_title:"让客户直接在聊天中下单",
+      orders_desc:"客户浏览您的菜单或商品目录、下单、获得确认并完成支付——全程无需离开WhatsApp。",
+      bookings_tag:"预约服务", bookings_title:"让客户几秒钟内完成预约",
+      bookings_desc:"客户查看可用时段、选择时间，并自动收到提醒和确认——无需电话往返。",
+      ind_grocery:"生鲜杂货店", ind_pharmacy:"药店", ind_restaurant:"餐厅", ind_laundry:"洗衣及干洗店", ind_courier:"快递与物流",
+      ind_salon:"美容美发沙龙", ind_hospital:"医院与诊所", ind_dental:"牙科诊所", ind_auto:"汽车维修店", ind_gym:"健身房与健身工作室", ind_realestate:"房地产中介", ind_events:"活动场地",
+      ind_salon2:"沙龙", ind_hospital2:"医院", ind_auto2:"汽车维修", ind_realestate2:"房地产", ind_gym2:"健身",
+      benefits_eyebrow:"优势", benefits_title:"企业为何选择 ChatCart Pro AI", benefits_sub:"让您不再因回复缓慢或错过来电而失去客户，一切所需尽在其中。",
+      benefit1_title:"全天候即时回复", benefit1_desc:"再也不用说“我们会回复您”——每条消息无论昼夜都能在几秒内得到回应。",
+      benefit2_title:"订单与预约全自动化", benefit2_desc:"确认、提醒和跟进均自动完成，无需人工录入。",
+      benefit3_title:"支持40多种语言", benefit3_desc:"您的AI员工能自动识别每位客户使用的语言并用该语言回复——无论身处世界何地。",
+      benefit4_title:"顺畅转接人工", benefit4_desc:"复杂请求会连同完整对话内容即时转交给您的团队处理。",
+      smb_eyebrow:"专为小微企业打造", smb_title:"把更多利润留在自己手中",
+      smb_sub:"ChatCart Pro AI 专为本地及小型企业设计，让您拥有外卖平台般的触达能力，同时无需牺牲利润或客户关系。",
+      smb1_title:"无需安装额外应用", smb1_desc:"无需下载或学习任何新软件——ChatCart Pro AI 完全在您已在使用的WhatsApp号码内运行。",
+      smb2_title:"零佣金，不同于外卖平台", smb2_desc:"外卖和生鲜配送平台每笔订单抽成20%至30%。使用ChatCart Pro AI，您直接向客户销售，收款100%归您所有。",
+      smb3_title:"自主推出真实优惠", smb3_desc:"按您自己的条件设置折扣、套餐和促销活动——无需平台方决定客户能看到什么优惠。",
+      smb4_title:"实时库存与价格，始终准确", smb4_desc:"AI会在确认订单前核实您的实时库存和价目表，确保客户不会被告知已售罄的商品或过时的价格。",
+      industries_eyebrow:"行业", industries_title:"根据您业务的实际运作方式打造", industries_sub:"12个行业，一个WhatsApp AI员工，针对您的具体场景进行配置。",
+      testi_eyebrow:"客户评价", testi_title:"企业主的真实反馈", testi_sub:"受到各地、各种规模企业团队的信赖。",
+      testi1_quote:"“以前我们每晚打烊后都会流失订单。现在ChatCart Pro AI帮我们接单，第二天一早订单就准备好了。”", testi1_role:"店主，Northgate Mart",
+      testi2_quote:"“我们的前台以前被预约电话淹没。现在大多数患者能在一分钟内通过WhatsApp完成预约。”", testi2_role:"创始人，Smile Care Dental",
+      testi3_quote:"“设置只花了一个下午。一周内，由于自动提醒，我们健身试听课的爽约率就降低了一半。”", testi3_role:"经理，UrbanFit Gyms",
+      faq_eyebrow:"常见问题", faq_title:"您需要了解的一切", faq_sub:"还有疑问？预约演示，我们将为您现场演示。",
+      faq1_q:"ChatCart Pro AI 究竟是如何工作的？", faq1_a:"我们会连接您的WhatsApp Business号码。当客户给您发消息时，我们的AI员工会理解请求——无论是下单还是预约——并使用您的菜单、价目表或日历自动处理。",
+      faq2_q:"它适用于我的业务类型吗？", faq2_a:"是的。我们支持基于订单的业务（生鲜杂货、药店、餐厅、洗衣、快递）以及基于预约的业务（沙龙、诊所、健身房、汽修、房地产、活动场地），开箱即用。",
+      faq3_q:"我需要WhatsApp Business API吗？", faq3_a:"我们会在入驻过程中为您处理WhatsApp Business API的设置——您无需进行任何技术工作。",
+      faq4_q:"它能与我的POS或CRM系统集成吗？", faq4_a:"可以，ChatCart Pro AI 可以将订单和预约与常见的POS、日历和CRM工具同步。我们会在演示期间确认具体的集成方式。",
+      faq5_q:"它支持哪些语言？", faq5_a:"ChatCart Pro AI 支持40多种语言，并能自动检测客户发来消息所使用的语言并用该语言回复——无需任何设置。",
+      demo_title:"预约您的免费演示", demo_sub:"告诉我们一些关于您业务的信息——我们会向您展示ChatCart Pro AI具体将如何为您服务。",
+      form_name:"姓名", form_name_ph:"您的姓名", form_business:"企业名称", form_business_ph:"例如：Green Mart Grocery",
+      form_industry:"行业", form_industry_select:"选择行业", form_hospital_clinic:"医院/诊所", form_gym_fitness:"健身房/健身工作室", form_event_venue:"活动场地", form_other:"其他",
+      form_whatsapp:"WhatsApp 号码", form_whatsapp_ph:"+86 1XX XXXX XXXX", form_email:"电子邮箱", form_submit:"预约演示",
+      success_title:"谢谢——已收到您的请求！", success_desc:"我们的团队将在一个工作日内通过WhatsApp与您联系，安排您的现场演示。",
+      cta_title:"准备好让您的WhatsApp开始工作了吗？", cta_sub:"加入全球正在使用ChatCart Pro AI自动处理订单和预约的企业。", cta_button:"预约演示",
+      footer_tagline:"用于接单与预约的AI WhatsApp员工——为全球各地的企业打造。", footer_rights:"版权所有。",
+      footer_powered_by:"技术支持：",
+      footer_privacy:"隐私政策", footer_terms:"条款和条件"
+    },
+    ur: {
+      nav_product:"پروڈکٹ", nav_industries:"صنعتیں", nav_how:"یہ کیسے کام کرتا ہے", nav_faq:"عمومی سوالات", nav_cta:"ڈیمو بک کریں",
+      hero_eyebrow:"دنیا بھر کے کاروباروں کے لیے تیار کیا گیا",
+      hero_title_pre:"اپنے واٹس ایپ کو ایک AI سے چلنے والا",
+      hero_title_highlight:"24x7 ملازم بنائیں",
+      hero_sub:"ChatCart Pro AI ہر گاہک کی چیٹ کا فوری جواب دیتا ہے، آرڈرز لیتا ہے، اپائنٹمنٹس کنفرم کرتا ہے، اور خودکار طور پر فالو اپ کرتا ہے — دن رات، بغیر مزید عملہ رکھے۔",
+      hero_cta:"ڈیمو بک کریں",
+      hero_note:"آپ کے گاہکوں کو کوئی ایپ انسٹال کرنے کی ضرورت نہیں — سب کچھ واٹس ایپ کے اندر ہی ہوتا ہے۔",
+      fc1_lbl:"بغیر انسانی مدد کے حل ہونے والی چیٹس", fc2_lbl:"بند اوقات کے بعد مزید آرڈرز اور بکنگز",
+      chat_status:"AI ملازم · آن لائن",
+      fc3_lbl:"دن کے کسی بھی وقت فوری جواب", fc4_big:"40+ زبانیں", fc4_lbl:"آپ کے گاہک کی زبان خود بخود پہچانتا ہے",
+      trusted_label:"دنیا بھر کے ترقی پذیر کاروباروں کا اعتماد",
+      modes_eyebrow:"ایک ایجنٹ، دو کام", modes_title:"آپ کا کاروبار جو بھی کرے، ChatCart Pro AI اسے سنبھالتا ہے",
+      modes_sub:"کچھ کاروبار آرڈرز لیتے ہیں۔ کچھ بکنگز لیتے ہیں۔ ہمارا AI ملازم دونوں کام کرنے کے لیے بنایا گیا ہے — پہلے ہی دن آپ کے ورک فلو کے مطابق ترتیب دیا جاتا ہے۔",
+      orders_tag:"آرڈر لینا", orders_title:"گاہکوں کو براہ راست چیٹ سے آرڈر کرنے دیں",
+      orders_desc:"گاہک آپ کا مینو یا کیٹلاگ دیکھتے ہیں، آرڈر دیتے ہیں، تصدیق حاصل کرتے ہیں، اور ادائیگی کرتے ہیں — یہ سب واٹس ایپ چھوڑے بغیر۔",
+      bookings_tag:"اپائنٹمنٹ بکنگ", bookings_title:"گاہکوں کو چند سیکنڈز میں سلاٹ بک کرنے دیں",
+      bookings_desc:"گاہک دستیابی چیک کرتے ہیں، وقت منتخب کرتے ہیں، اور خودکار یاد دہانیاں اور تصدیقات حاصل کرتے ہیں — بغیر کسی فون کال کے۔",
+      ind_grocery:"گروسری", ind_pharmacy:"فارمیسی", ind_restaurant:"ریستوران", ind_laundry:"لانڈری اور ڈرائی کلیننگ", ind_courier:"کوریئر اور لاجسٹکس",
+      ind_salon:"سیلونز", ind_hospital:"ہسپتال اور کلینکس", ind_dental:"ڈینٹل کلینکس", ind_auto:"آٹو ریپیئر شاپس", ind_gym:"جمز اور فٹنس اسٹوڈیوز", ind_realestate:"رئیل اسٹیٹ ایجنسیاں", ind_events:"ایونٹ وینیوز",
+      ind_salon2:"سیلون", ind_hospital2:"ہسپتال", ind_auto2:"آٹو ریپیئر", ind_realestate2:"رئیل اسٹیٹ", ind_gym2:"جم اور فٹنس",
+      benefits_eyebrow:"فوائد", benefits_title:"کاروبار ChatCart Pro AI کیوں اپنا رہے ہیں", benefits_sub:"سست جوابات اور چھوٹی ہوئی کالز کی وجہ سے گاہک کھونا بند کرنے کے لیے آپ کو جو کچھ چاہیے۔",
+      benefit1_title:"24/7 فوری جوابات", benefit1_desc:"اب “ہم آپ سے رابطہ کریں گے” نہیں — ہر چیٹ کو دن ہو یا رات، سیکنڈوں میں جواب ملتا ہے۔",
+      benefit2_title:"آرڈرز اور بکنگز، مکمل خودکار", benefit2_desc:"تصدیقات، یاد دہانیاں، اور فالو اپس خود بخود ہوتے ہیں — کوئی دستی اندراج نہیں۔",
+      benefit3_title:"40+ زبانیں بولتا ہے", benefit3_desc:"آپ کا AI ملازم ہر گاہک کی زبان خود بخود پہچانتا ہے اور اسی میں جواب دیتا ہے — دنیا میں کہیں بھی۔",
+      benefit4_title:"ہموار انسانی منتقلی", benefit4_desc:"پیچیدہ درخواستیں مکمل چیٹ سیاق و سباق کے ساتھ فوری طور پر آپ کی ٹیم کو بھیجی جاتی ہیں۔",
+      smb_eyebrow:"چھوٹے کاروباروں کے لیے تیار کردہ", smb_title:"جو کمائیں، اس کا زیادہ حصہ اپنے پاس رکھیں",
+      smb_sub:"ChatCart Pro AI مقامی اور چھوٹے کاروباروں کے لیے بنایا گیا ہے جو اپنا منافع یا گاہک تعلق کھوئے بغیر ڈیلیوری ایپ جیسی رسائی چاہتے ہیں۔",
+      smb1_title:"کوئی اضافی ایپ انسٹال نہیں کرنی", smb1_desc:"ڈاؤن لوڈ یا سیکھنے کے لیے کچھ نیا نہیں — ChatCart Pro AI مکمل طور پر آپ کے موجودہ واٹس ایپ نمبر کے اندر کام کرتا ہے۔",
+      smb2_title:"ڈیلیوری ایپس کے برعکس، صفر کمیشن", smb2_desc:"فوڈ اور گروسری ڈیلیوری ایپس ہر آرڈر پر 20 سے 30 فیصد لیتی ہیں۔ ChatCart Pro AI کے ساتھ آپ براہ راست اپنے گاہک کو فروخت کرتے ہیں اور ان کی ادائیگی کا 100 فیصد اپنے پاس رکھتے ہیں۔",
+      smb3_title:"اپنی حقیقی پیشکشیں خود چلائیں", smb3_desc:"اپنی شرائط پر رعایتیں، بنڈلز اور پروموشنز طے کریں — کوئی ایگریگیٹر یہ فیصلہ نہیں کرتا کہ آپ کے گاہک کون سی ڈیل دیکھیں۔",
+      smb4_title:"لائیو اسٹاک اور قیمت، ہمیشہ درست", smb4_desc:"آرڈر کنفرم کرنے سے پہلے AI آپ کی حقیقی انوینٹری اور قیمتوں کی فہرست چیک کرتا ہے — تاکہ گاہکوں کو کبھی بھی ختم شدہ آئٹم یا پرانی قیمت نہ بتائی جائے۔",
+      industries_eyebrow:"صنعتیں", industries_title:"آپ کا کاروبار جیسے واقعی چلتا ہے، ویسے ہی بنایا گیا", industries_sub:"12 صنعتیں، ایک واٹس ایپ AI ملازم، آپ کے مخصوص استعمال کے لیے ترتیب دیا گیا۔",
+      testi_eyebrow:"تعریفیں", testi_title:"کاروباری مالکان کیا کہہ رہے ہیں", testi_sub:"ہر سائز کے کاروبار چلانے والی ٹیموں کا اعتماد، ہر جگہ۔",
+      testi1_quote:"“ہم بند ہونے کے بعد ہر رات آرڈرز کھو دیتے تھے۔ اب ChatCart Pro AI انہیں لے لیتا ہے اور صبح سب سے پہلے وہ تیار ہوتے ہیں۔”", testi1_role:"مالک، Northgate Mart",
+      testi2_quote:"“ہمارا فرنٹ ڈیسک بکنگ کالز سے بھرا رہتا تھا۔ اب زیادہ تر مریض ایک منٹ سے بھی کم وقت میں واٹس ایپ پر اپنا سلاٹ بک کر لیتے ہیں۔”", testi2_role:"بانی، Smile Care Dental",
+      testi3_quote:"“سیٹ اپ میں صرف ایک دوپہر لگی۔ ایک ہفتے کے اندر خودکار یاد دہانیوں کی بدولت جم ٹرائلز کی نو شو ریٹ آدھی رہ گئی۔”", testi3_role:"منیجر، UrbanFit Gyms",
+      faq_eyebrow:"عمومی سوالات", faq_title:"آپ کو جو کچھ جاننا چاہیے", faq_sub:"ابھی بھی سوالات ہیں؟ ڈیمو بک کریں اور ہم آپ کو براہ راست دکھائیں گے۔",
+      faq1_q:"ChatCart Pro AI اصل میں کیسے کام کرتا ہے؟", faq1_a:"ہم آپ کے واٹس ایپ بزنس نمبر سے جڑتے ہیں۔ جب کوئی گاہک آپ کو میسج کرتا ہے، ہمارا AI ملازم درخواست کو سمجھتا ہے — آرڈر دینا ہو یا سلاٹ بک کرنا — اور آپ کے مینو، قیمت کی فہرست، یا کیلنڈر کا استعمال کرتے ہوئے اسے خودکار طور پر سنبھالتا ہے۔",
+      faq2_q:"کیا یہ میرے کاروبار کی قسم کے لیے کام کرے گا؟", faq2_a:"جی ہاں۔ ہم آرڈر پر مبنی کاروباروں (گروسری، فارمیسی، ریستوران، لانڈری، کوریئر) اور اپائنٹمنٹ پر مبنی کاروباروں (سیلونز، کلینکس، جمز، آٹو ریپیئر، رئیل اسٹیٹ، ایونٹ وینیوز) دونوں کو فوری استعمال کے لیے سپورٹ کرتے ہیں۔",
+      faq3_q:"کیا مجھے واٹس ایپ بزنس API کی ضرورت ہے؟", faq3_a:"ہم آن بورڈنگ کے حصے کے طور پر آپ کے لیے واٹس ایپ بزنس API سیٹ اپ سنبھالتے ہیں — آپ کی طرف سے کوئی تکنیکی کام نہیں۔",
+      faq4_q:"کیا یہ میرے POS یا CRM کے ساتھ ضم ہو سکتا ہے؟", faq4_a:"جی ہاں، ChatCart Pro AI عام POS، کیلنڈر، اور CRM ٹولز کے ساتھ آرڈرز اور بکنگز کو ہم آہنگ کر سکتا ہے۔ ہم آپ کے ڈیمو کے دوران درست انضمام کی تصدیق کریں گے۔",
+      faq5_q:"یہ کون سی زبانیں سپورٹ کرتا ہے؟", faq5_a:"ChatCart Pro AI 40 سے زیادہ زبانیں سپورٹ کرتا ہے اور خودکار طور پر پہچانتا ہے اور اسی زبان میں جواب دیتا ہے جس میں گاہک میسج کرتا ہے — کسی سیٹ اپ کی ضرورت نہیں۔",
+      demo_title:"اپنا مفت ڈیمو بک کریں", demo_sub:"ہمیں اپنے کاروبار کے بارے میں تھوڑا بتائیں — ہم آپ کو دکھائیں گے کہ ChatCart Pro AI آپ کے لیے بالکل کیسے کام کرے گا۔",
+      form_name:"پورا نام", form_name_ph:"آپ کا نام", form_business:"کاروبار کا نام", form_business_ph:"مثال: Green Mart Grocery",
+      form_industry:"صنعت", form_industry_select:"صنعت منتخب کریں", form_hospital_clinic:"ہسپتال / کلینک", form_gym_fitness:"جم / فٹنس اسٹوڈیو", form_event_venue:"ایونٹ وینیو", form_other:"دیگر",
+      form_whatsapp:"واٹس ایپ نمبر", form_whatsapp_ph:"+92 3XX XXXXXXX", form_email:"ای میل", form_submit:"ڈیمو بک کریں",
+      success_title:"شکریہ — درخواست موصول ہو گئی!", success_desc:"ہماری ٹیم آپ کے لائیو ڈیمو کو شیڈول کرنے کے لیے ایک کاروباری دن کے اندر واٹس ایپ پر رابطہ کرے گی۔",
+      cta_title:"کیا آپ اپنے واٹس ایپ کو کام پر لگانے کے لیے تیار ہیں؟", cta_sub:"دنیا بھر کے ان کاروباروں میں شامل ہوں جو ChatCart Pro AI کے ساتھ آرڈرز اور بکنگز کو خودکار بنا رہے ہیں۔", cta_button:"ڈیمو بک کریں",
+      footer_tagline:"آرڈرز اور بکنگز کے لیے AI واٹس ایپ ملازمین — ہر جگہ کاروباروں کے لیے تیار کیا گیا۔", footer_rights:"جملہ حقوق محفوظ ہیں۔",
+      footer_powered_by:"تیار کردہ",
+      footer_privacy:"رازداری کی پالیسی", footer_terms:"شرائط و ضوابط"
+    },
+    id: {
+      nav_product:"Produk", nav_industries:"Industri", nav_how:"Cara kerja", nav_faq:"FAQ", nav_cta:"Pesan Demo",
+      hero_eyebrow:"Dibuat untuk bisnis di seluruh dunia",
+      hero_title_pre:"Ubah WhatsApp Anda menjadi",
+      hero_title_highlight:"Karyawan bertenaga AI 24x7",
+      hero_sub:"ChatCart Pro AI menjawab setiap chat pelanggan secara instan, menerima pesanan, mengonfirmasi janji temu, dan melakukan tindak lanjut otomatis — siang dan malam, tanpa perlu menambah staf.",
+      hero_cta:"Pesan Demo",
+      hero_note:"Pelanggan Anda tidak perlu menginstal aplikasi apa pun — semuanya terjadi di dalam WhatsApp.",
+      fc1_lbl:"Chat yang diselesaikan tanpa manusia", fc2_lbl:"Lebih banyak pesanan & booking di luar jam kerja",
+      chat_status:"Karyawan AI · online",
+      fc3_lbl:"Balasan instan kapan saja", fc4_big:"40+ Bahasa", fc4_lbl:"Mendeteksi bahasa pelanggan secara otomatis",
+      trusted_label:"DIPERCAYA OLEH BISNIS YANG BERKEMBANG DI SELURUH DUNIA",
+      modes_eyebrow:"Satu Agen, Dua Tugas", modes_title:"Apa pun bisnis Anda, ChatCart Pro AI dapat menanganinya",
+      modes_sub:"Beberapa bisnis menerima pesanan. Yang lain menerima booking. Karyawan AI kami dibuat untuk melakukan keduanya — dikonfigurasi sesuai alur kerja Anda sejak hari pertama.",
+      orders_tag:"Penerimaan Pesanan", orders_title:"Biarkan pelanggan memesan langsung dari chat",
+      orders_desc:"Pelanggan menelusuri menu atau katalog Anda, melakukan pemesanan, mendapat konfirmasi, dan membayar — semua tanpa meninggalkan WhatsApp.",
+      bookings_tag:"Booking Janji Temu", bookings_title:"Biarkan pelanggan booking slot dalam hitungan detik",
+      bookings_desc:"Pelanggan memeriksa ketersediaan, memilih waktu, dan mendapatkan pengingat serta konfirmasi otomatis — tanpa perlu telepon-teleponan.",
+      ind_grocery:"Toko Kelontong", ind_pharmacy:"Apotek", ind_restaurant:"Restoran", ind_laundry:"Laundry & Dry Cleaning", ind_courier:"Kurir & Logistik",
+      ind_salon:"Salon", ind_hospital:"Rumah Sakit & Klinik", ind_dental:"Klinik Gigi", ind_auto:"Bengkel Mobil", ind_gym:"Gym & Studio Kebugaran", ind_realestate:"Agen Properti", ind_events:"Gedung Acara",
+      ind_salon2:"Salon", ind_hospital2:"Rumah Sakit", ind_auto2:"Bengkel Mobil", ind_realestate2:"Properti", ind_gym2:"Gym & Kebugaran",
+      benefits_eyebrow:"Manfaat", benefits_title:"Mengapa bisnis beralih ke ChatCart Pro AI", benefits_sub:"Semua yang Anda butuhkan untuk berhenti kehilangan pelanggan akibat balasan lambat dan telepon yang terlewat.",
+      benefit1_title:"Balasan instan, 24/7", benefit1_desc:"Tidak ada lagi “kami akan menghubungi Anda kembali” — setiap chat mendapat jawaban dalam hitungan detik, siang atau malam.",
+      benefit2_title:"Pesanan & booking, otomatis", benefit2_desc:"Konfirmasi, pengingat, dan tindak lanjut terjadi dengan sendirinya — tanpa entri manual.",
+      benefit3_title:"Berbicara 40+ bahasa", benefit3_desc:"Karyawan AI Anda mendeteksi bahasa setiap pelanggan secara otomatis dan membalas dalam bahasa itu — di mana pun di dunia.",
+      benefit4_title:"Pengalihan ke manusia yang mulus", benefit4_desc:"Permintaan rumit langsung diarahkan ke tim Anda, lengkap dengan konteks chat.",
+      smb_eyebrow:"Dibuat Untuk Bisnis Kecil", smb_title:"Simpan lebih banyak dari yang Anda hasilkan",
+      smb_sub:"ChatCart Pro AI dirancang untuk bisnis lokal dan skala kecil yang menginginkan jangkauan seperti aplikasi delivery, tanpa harus mengorbankan margin atau hubungan dengan pelanggan.",
+      smb1_title:"Tidak perlu instal aplikasi tambahan", smb1_desc:"Tidak ada yang baru untuk diunduh atau dipelajari — ChatCart Pro AI berjalan sepenuhnya di dalam nomor WhatsApp yang sudah Anda gunakan.",
+      smb2_title:"Tanpa komisi, tidak seperti aplikasi delivery", smb2_desc:"Aplikasi delivery makanan dan sembako mengambil 20–30% dari setiap pesanan. Dengan ChatCart Pro AI Anda menjual langsung ke pelanggan dan menyimpan 100% dari pembayaran mereka.",
+      smb3_title:"Jalankan penawaran asli Anda sendiri", smb3_desc:"Tetapkan diskon, paket bundel, dan promosi sesuai keinginan Anda — tanpa pihak agregator yang menentukan penawaran apa yang dilihat pelanggan Anda.",
+      smb4_title:"Stok & harga langsung, selalu akurat", smb4_desc:"AI memeriksa inventaris dan daftar harga real-time Anda sebelum mengonfirmasi pesanan — sehingga pelanggan tidak pernah diberi tahu produk habis atau harga yang sudah usang.",
+      industries_eyebrow:"Industri", industries_title:"Dibuat sesuai cara bisnis Anda benar-benar berjalan", industries_sub:"12 industri, satu karyawan AI WhatsApp, dikonfigurasi untuk kasus penggunaan Anda yang spesifik.",
+      testi_eyebrow:"Testimoni", testi_title:"Apa kata para pemilik bisnis", testi_sub:"Dipercaya oleh tim yang menjalankan bisnis dari segala ukuran, di mana saja.",
+      testi1_quote:"“Kami dulu kehilangan pesanan setiap malam setelah tutup. Sekarang ChatCart Pro AI menerimanya untuk kami dan sudah siap pertama kali di pagi hari.”", testi1_role:"Pemilik, Northgate Mart",
+      testi2_quote:"“Resepsionis kami dulu kewalahan dengan telepon booking. Sekarang sebagian besar pasien langsung booking slot mereka di WhatsApp dalam waktu kurang dari satu menit.”", testi2_role:"Pendiri, Smile Care Dental",
+      testi3_quote:"“Pengaturannya hanya butuh satu sore. Dalam seminggu, tingkat ketidakhadiran untuk trial gym kami turun setengahnya berkat pengingat otomatis.”", testi3_role:"Manajer, UrbanFit Gyms",
+      faq_eyebrow:"FAQ", faq_title:"Semua yang perlu Anda ketahui", faq_sub:"Masih penasaran? Pesan demo dan kami akan menjelaskannya secara langsung.",
+      faq1_q:"Bagaimana sebenarnya cara kerja ChatCart Pro AI?", faq1_a:"Kami terhubung ke nomor WhatsApp Business Anda. Saat pelanggan mengirim pesan, karyawan AI kami memahami permintaan — memesan atau booking slot — dan menanganinya secara otomatis menggunakan menu, daftar harga, atau kalender Anda.",
+      faq2_q:"Apakah ini akan berfungsi untuk jenis bisnis saya?", faq2_a:"Ya. Kami mendukung bisnis berbasis pesanan (toko kelontong, apotek, restoran, laundry, kurir) dan bisnis berbasis janji temu (salon, klinik, gym, bengkel, properti, gedung acara) langsung siap pakai.",
+      faq3_q:"Apakah saya memerlukan WhatsApp Business API?", faq3_a:"Kami menangani pengaturan WhatsApp Business API untuk Anda sebagai bagian dari onboarding — tidak ada pekerjaan teknis yang diperlukan dari pihak Anda.",
+      faq4_q:"Bisakah terintegrasi dengan POS atau CRM saya?", faq4_a:"Ya, ChatCart Pro AI dapat menyinkronkan pesanan dan booking dengan alat POS, kalender, dan CRM umum. Kami akan mengonfirmasi integrasi yang tepat selama demo Anda.",
+      faq5_q:"Bahasa apa saja yang didukung?", faq5_a:"ChatCart Pro AI mendukung lebih dari 40 bahasa dan secara otomatis mendeteksi serta membalas dalam bahasa apa pun yang digunakan pelanggan Anda — tanpa perlu pengaturan.",
+      demo_title:"Pesan demo gratis Anda", demo_sub:"Ceritakan sedikit tentang bisnis Anda — kami akan menunjukkan persis bagaimana ChatCart Pro AI akan bekerja untuk Anda.",
+      form_name:"Nama lengkap", form_name_ph:"Nama Anda", form_business:"Nama bisnis", form_business_ph:"cth. Green Mart Grocery",
+      form_industry:"Industri", form_industry_select:"Pilih industri", form_hospital_clinic:"Rumah Sakit / Klinik", form_gym_fitness:"Gym / Studio Kebugaran", form_event_venue:"Gedung Acara", form_other:"Lainnya",
+      form_whatsapp:"Nomor WhatsApp", form_whatsapp_ph:"+62 8XX XXXX XXXX", form_email:"Email", form_submit:"Pesan Demo",
+      success_title:"Terima kasih — permintaan diterima!", success_desc:"Tim kami akan menghubungi Anda melalui WhatsApp dalam satu hari kerja untuk menjadwalkan demo langsung Anda.",
+      cta_title:"Siap membuat WhatsApp Anda bekerja?", cta_sub:"Bergabunglah dengan bisnis di seluruh dunia yang mengotomatiskan pesanan dan booking dengan ChatCart Pro AI.", cta_button:"Pesan Demo",
+      footer_tagline:"Karyawan AI WhatsApp untuk pesanan & booking — dibuat untuk bisnis di mana saja.", footer_rights:"Semua hak dilindungi.",
+      footer_powered_by:"Didukung oleh",
+      footer_privacy:"Kebijakan Privasi", footer_terms:"Syarat & Ketentuan"
+    },
+    ru: {
+      nav_product:"Продукт", nav_industries:"Отрасли", nav_how:"Как это работает", nav_faq:"Частые вопросы", nav_cta:"Записаться на демо",
+      hero_eyebrow:"Создано для бизнеса по всему миру",
+      hero_title_pre:"Превратите свой WhatsApp в ИИ-сотрудника,",
+      hero_title_highlight:"работающего 24/7",
+      hero_sub:"ChatCart Pro AI мгновенно отвечает на каждое сообщение клиента, принимает заказы, подтверждает записи и автоматически выполняет последующие действия — днём и ночью, без найма дополнительного персонала.",
+      hero_cta:"Записаться на демо",
+      hero_note:"Вашим клиентам не нужно устанавливать никакое приложение — всё происходит прямо в WhatsApp.",
+      fc1_lbl:"Диалоги, решённые без участия человека", fc2_lbl:"Больше заказов и записей в нерабочее время",
+      chat_status:"ИИ-сотрудник · онлайн",
+      fc3_lbl:"Мгновенные ответы в любое время суток", fc4_big:"40+ языков", fc4_lbl:"Автоматически определяет язык клиента",
+      trusted_label:"НАМ ДОВЕРЯЮТ РАСТУЩИЕ КОМПАНИИ ПО ВСЕМУ МИРУ",
+      modes_eyebrow:"Один агент, две задачи", modes_title:"Чем бы ни занимался ваш бизнес, ChatCart Pro AI справится",
+      modes_sub:"Одни компании принимают заказы. Другие — записи на приём. Наш ИИ-сотрудник умеет и то, и другое — настраивается под ваш рабочий процесс с первого дня.",
+      orders_tag:"Приём заказов", orders_title:"Позвольте клиентам заказывать прямо в чате",
+      orders_desc:"Клиенты просматривают ваше меню или каталог, оформляют заказ, получают подтверждение и оплачивают — не покидая WhatsApp.",
+      bookings_tag:"Запись на приём", bookings_title:"Позвольте клиентам записаться за считанные секунды",
+      bookings_desc:"Клиенты проверяют доступное время, выбирают удобный слот и автоматически получают напоминания и подтверждения — без звонков.",
+      ind_grocery:"Продуктовый магазин", ind_pharmacy:"Аптека", ind_restaurant:"Ресторан", ind_laundry:"Прачечная и химчистка", ind_courier:"Курьерская доставка и логистика",
+      ind_salon:"Салоны красоты", ind_hospital:"Больницы и клиники", ind_dental:"Стоматологические клиники", ind_auto:"Автосервисы", ind_gym:"Тренажёрные залы и фитнес-студии", ind_realestate:"Агентства недвижимости", ind_events:"Площадки для мероприятий",
+      ind_salon2:"Салон", ind_hospital2:"Больница", ind_auto2:"Автосервис", ind_realestate2:"Недвижимость", ind_gym2:"Фитнес",
+      benefits_eyebrow:"Преимущества", benefits_title:"Почему компании переходят на ChatCart Pro AI", benefits_sub:"Всё необходимое, чтобы перестать терять клиентов из-за медленных ответов и пропущенных звонков.",
+      benefit1_title:"Мгновенные ответы 24/7", benefit1_desc:"Больше никаких «мы вам перезвоним» — каждое сообщение получает ответ за секунды, днём и ночью.",
+      benefit2_title:"Автоматизация заказов и записей", benefit2_desc:"Подтверждения, напоминания и последующие действия происходят сами по себе — без ручного ввода.",
+      benefit3_title:"Говорит на 40+ языках", benefit3_desc:"Ваш ИИ-сотрудник автоматически определяет язык каждого клиента и отвечает на нём — в любой точке мира.",
+      benefit4_title:"Плавная передача оператору", benefit4_desc:"Сложные запросы мгновенно направляются вашей команде вместе с полным контекстом переписки.",
+      smb_eyebrow:"Создано Для Малого Бизнеса", smb_title:"Оставляйте себе больше заработанного",
+      smb_sub:"ChatCart Pro AI создан для локального и малого бизнеса, который хочет получить охват сервиса доставки, не жертвуя своей маржой или отношениями с клиентами.",
+      smb1_title:"Не нужно устанавливать ещё одно приложение", smb1_desc:"Ничего нового скачивать или изучать не нужно — ChatCart Pro AI полностью работает через ваш уже существующий номер WhatsApp.",
+      smb2_title:"Без комиссии, в отличие от сервисов доставки", smb2_desc:"Сервисы доставки еды и продуктов забирают 20–30% с каждого заказа. С ChatCart Pro AI вы продаёте клиенту напрямую и оставляете себе 100% оплаты.",
+      smb3_title:"Запускайте собственные реальные акции", smb3_desc:"Устанавливайте скидки, комплекты и акции на своих условиях — никакой посредник не решает, какое предложение увидит ваш клиент.",
+      smb4_title:"Актуальные остатки и цены в реальном времени", smb4_desc:"ИИ проверяет ваш реальный склад и прайс-лист перед подтверждением заказа — клиенту никогда не предложат закончившийся товар или устаревшую цену.",
+      industries_eyebrow:"Отрасли", industries_title:"Создано с учётом реальной работы вашего бизнеса", industries_sub:"12 отраслей, один ИИ-сотрудник в WhatsApp, настроенный под ваш конкретный случай использования.",
+      testi_eyebrow:"Отзывы", testi_title:"Что говорят владельцы бизнеса", testi_sub:"Нам доверяют команды, управляющие бизнесом любого масштаба, по всему миру.",
+      testi1_quote:"«Раньше мы теряли заказы каждую ночь после закрытия. Теперь ChatCart Pro AI принимает их за нас, и они готовы уже с самого утра.»", testi1_role:"Владелец, Northgate Mart",
+      testi2_quote:"«Наша стойка регистрации была завалена звонками по записи. Теперь большинство пациентов записываются через WhatsApp меньше чем за минуту.»", testi2_role:"Основательница, Smile Care Dental",
+      testi3_quote:"«Настройка заняла всего один вечер. За неделю доля неявок на пробные тренировки сократилась вдвое благодаря автоматическим напоминаниям.»", testi3_role:"Менеджер, UrbanFit Gyms",
+      faq_eyebrow:"Частые вопросы", faq_title:"Всё, что нужно знать", faq_sub:"Остались вопросы? Запишитесь на демо, и мы всё покажем вживую.",
+      faq1_q:"Как на самом деле работает ChatCart Pro AI?", faq1_a:"Мы подключаемся к вашему номеру WhatsApp Business. Когда клиент пишет вам, наш ИИ-сотрудник понимает запрос — оформить заказ или записаться — и автоматически обрабатывает его, используя ваше меню, прайс-лист или календарь.",
+      faq2_q:"Подойдёт ли это для моего вида бизнеса?", faq2_a:"Да. Мы поддерживаем бизнес, работающий с заказами (продуктовые магазины, аптеки, рестораны, прачечные, курьерские службы), и бизнес, работающий по записи (салоны, клиники, спортзалы, автосервисы, недвижимость, площадки для мероприятий) — из коробки.",
+      faq3_q:"Нужен ли мне WhatsApp Business API?", faq3_a:"Мы сами настроим WhatsApp Business API для вас в рамках подключения — никакой технической работы с вашей стороны не требуется.",
+      faq4_q:"Можно ли интегрировать с моей POS-системой или CRM?", faq4_a:"Да, ChatCart Pro AI может синхронизировать заказы и записи с популярными POS-системами, календарями и CRM. Мы уточним точные интеграции во время демо.",
+      faq5_q:"Какие языки поддерживаются?", faq5_a:"ChatCart Pro AI поддерживает более 40 языков и автоматически определяет и отвечает на том языке, на котором пишет клиент — без какой-либо настройки.",
+      demo_title:"Запишитесь на бесплатное демо", demo_sub:"Расскажите немного о своём бизнесе — мы покажем, как именно ChatCart Pro AI будет работать для вас.",
+      form_name:"Полное имя", form_name_ph:"Ваше имя", form_business:"Название компании", form_business_ph:"напр. Green Mart Grocery",
+      form_industry:"Отрасль", form_industry_select:"Выберите отрасль", form_hospital_clinic:"Больница / Клиника", form_gym_fitness:"Спортзал / Фитнес-студия", form_event_venue:"Площадка для мероприятий", form_other:"Другое",
+      form_whatsapp:"Номер WhatsApp", form_whatsapp_ph:"+7 9XX XXX-XX-XX", form_email:"Эл. почта", form_submit:"Записаться на демо",
+      success_title:"Спасибо — заявка получена!", success_desc:"Наша команда свяжется с вами в WhatsApp в течение одного рабочего дня, чтобы назначить живое демо.",
+      cta_title:"Готовы заставить WhatsApp работать на вас?", cta_sub:"Присоединяйтесь к компаниям по всему миру, автоматизирующим заказы и записи с ChatCart Pro AI.", cta_button:"Записаться на демо",
+      footer_tagline:"ИИ-сотрудники WhatsApp для заказов и записей — созданы для бизнеса в любой точке мира.", footer_rights:"Все права защищены.",
+      footer_powered_by:"Работает на технологии",
+      footer_privacy:"Политика конфиденциальности", footer_terms:"Условия использования"
+    },
+    ta: {
+      nav_product:"தயாரிப்பு", nav_industries:"தொழில்கள்", nav_how:"இது எப்படி செயல்படுகிறது", nav_faq:"அடிக்கடி கேட்கப்படும் கேள்விகள்", nav_cta:"டெமோ முன்பதிவு செய்யுங்கள்",
+      hero_eyebrow:"உலகெங்கிலும் உள்ள வணிகங்களுக்காக உருவாக்கப்பட்டது",
+      hero_title_pre:"உங்கள் வாட்ஸ்அப்பை AI-இயங்கும்",
+      hero_title_highlight:"24x7 ஊழியராக மாற்றுங்கள்",
+      hero_sub:"ChatCart Pro AI ஒவ்வொரு வாடிக்கையாளர் அரட்டைக்கும் உடனடியாக பதிலளிக்கிறது, ஆர்டர்களை எடுக்கிறது, அப்பாயிண்ட்மென்ட்களை உறுதிப்படுத்துகிறது, மேலும் தானாகவே பின்தொடர்கிறது — பகலும் இரவும், கூடுதல் பணியாளர்களை பணியமர்த்தாமல்.",
+      hero_cta:"டெமோ முன்பதிவு செய்யுங்கள்",
+      hero_note:"உங்கள் வாடிக்கையாளர்கள் எந்த ஆப்பையும் நிறுவ வேண்டியதில்லை — எல்லாம் வாட்ஸ்அப்பிற்குள்ளேயே நடக்கிறது.",
+      fc1_lbl:"மனிதர் இல்லாமல் தீர்க்கப்பட்ட அரட்டைகள்", fc2_lbl:"வேலை நேரத்திற்குப் பிறகு அதிக ஆர்டர்கள் & முன்பதிவுகள்",
+      chat_status:"AI ஊழியர் · ஆன்லைன்",
+      fc3_lbl:"நாளின் எந்த நேரத்திலும் உடனடி பதில்கள்", fc4_big:"40+ மொழிகள்", fc4_lbl:"உங்கள் வாடிக்கையாளரின் மொழியை தானாக கண்டறிகிறது",
+      trusted_label:"உலகெங்கிலும் வளர்ந்து வரும் வணிகங்களால் நம்பப்படுகிறது",
+      modes_eyebrow:"ஒரு ஏஜென்ட், இரண்டு பணிகள்", modes_title:"உங்கள் வணிகம் எதைச் செய்தாலும், ChatCart Pro AI அதை கையாளும்",
+      modes_sub:"சில வணிகங்கள் ஆர்டர்களை எடுக்கின்றன. வேறு சில முன்பதிவுகளை எடுக்கின்றன. எங்கள் AI ஊழியர் இரண்டையும் செய்ய வடிவமைக்கப்பட்டுள்ளது — முதல் நாளிலிருந்தே உங்கள் வேலைப்பாய்வுக்கு ஏற்ப அமைக்கப்படுகிறது.",
+      orders_tag:"ஆர்டர் எடுத்தல்", orders_title:"வாடிக்கையாளர்கள் நேரடியாக அரட்டையிலிருந்து ஆர்டர் செய்ய அனுமதியுங்கள்",
+      orders_desc:"வாடிக்கையாளர்கள் உங்கள் மெனு அல்லது காடலாக்கை பார்வையிடுகிறார்கள், ஆர்டர் செய்கிறார்கள், உறுதிப்படுத்தல் பெறுகிறார்கள், மற்றும் பணம் செலுத்துகிறார்கள் — இவை அனைத்தும் வாட்ஸ்அப்பை விட்டு வெளியேறாமல்.",
+      bookings_tag:"அப்பாயிண்ட்மென்ட் முன்பதிவு", bookings_title:"வாடிக்கையாளர்கள் சில வினாடிகளில் ஸ்லாட் முன்பதிவு செய்ய அனுமதியுங்கள்",
+      bookings_desc:"வாடிக்கையாளர்கள் கிடைக்கும் தன்மையை சரிபார்க்கிறார்கள், நேரத்தைத் தேர்ந்தெடுக்கிறார்கள், மேலும் தானியங்கி நினைவூட்டல்கள் மற்றும் உறுதிப்படுத்தல்களைப் பெறுகிறார்கள் — தொலைபேசி அழைப்புகள் தேவையில்லை.",
+      ind_grocery:"மளிகை", ind_pharmacy:"மருந்தகம்", ind_restaurant:"உணவகம்", ind_laundry:"லாண்ட்ரி & டிரை கிளீனிங்", ind_courier:"கூரியர் & லாஜிஸ்டிக்ஸ்",
+      ind_salon:"சலூன்கள்", ind_hospital:"மருத்துவமனைகள் & கிளினிக்குகள்", ind_dental:"பல் மருத்துவ கிளினிக்குகள்", ind_auto:"ஆட்டோ ரிப்பேர் கடைகள்", ind_gym:"ஜிம் & ஃபிட்னஸ் ஸ்டூடியோக்கள்", ind_realestate:"ரியல் எஸ்டேட் ஏஜென்சிகள்", ind_events:"நிகழ்வு அரங்குகள்",
+      ind_salon2:"சலூன்", ind_hospital2:"மருத்துவமனை", ind_auto2:"ஆட்டோ ரிப்பேர்", ind_realestate2:"ரியல் எஸ்டேட்", ind_gym2:"ஜிம் & ஃபிட்னஸ்",
+      benefits_eyebrow:"நன்மைகள்", benefits_title:"வணிகங்கள் ChatCart Pro AI-க்கு ஏன் மாறுகின்றன", benefits_sub:"மெதுவான பதில்கள் மற்றும் தவறவிட்ட அழைப்புகளால் வாடிக்கையாளர்களை இழப்பதை நிறுத்த உங்களுக்குத் தேவையான அனைத்தும்.",
+      benefit1_title:"உடனடி பதில்கள், 24/7", benefit1_desc:"இனி “நாங்கள் உங்களைத் தொடர்பு கொள்கிறோம்” இல்லை — ஒவ்வொரு அரட்டையும் பகலோ இரவோ வினாடிகளில் பதில் பெறுகிறது.",
+      benefit2_title:"ஆர்டர்கள் & முன்பதிவுகள், தானியங்கு", benefit2_desc:"உறுதிப்படுத்தல்கள், நினைவூட்டல்கள், மற்றும் பின்தொடர்தல்கள் தானாகவே நடக்கின்றன — கைமுறை உள்ளீடு தேவையில்லை.",
+      benefit3_title:"40+ மொழிகளைப் பேசுகிறது", benefit3_desc:"உங்கள் AI ஊழியர் ஒவ்வொரு வாடிக்கையாளரின் மொழியையும் தானாக கண்டறிந்து அதிலேயே பதிலளிக்கிறது — உலகின் எந்த இடத்திலும்.",
+      benefit4_title:"சீரான மனித கையளிப்பு", benefit4_desc:"சிக்கலான கோரிக்கைகள் முழு அரட்டை சூழலுடன் உடனடியாக உங்கள் குழுவிற்கு அனுப்பப்படுகின்றன.",
+      smb_eyebrow:"சிறு வணிகங்களுக்காக உருவாக்கப்பட்டது", smb_title:"நீங்கள் சம்பாதிப்பதில் அதிகமானதை உங்களிடமே வைத்திருங்கள்",
+      smb_sub:"ChatCart Pro AI உள்ளூர் மற்றும் சிறு அளவிலான வணிகங்களுக்காக வடிவமைக்கப்பட்டுள்ளது, அவை தங்கள் லாபம் அல்லது வாடிக்கையாளர் உறவை இழக்காமல் டெலிவரி ஆப் போன்ற வீச்சை விரும்புகின்றன.",
+      smb1_title:"கூடுதல் ஆப் நிறுவ வேண்டியதில்லை", smb1_desc:"பதிவிறக்கம் செய்ய அல்லது கற்றுக்கொள்ள புதியது எதுவும் இல்லை — ChatCart Pro AI நீங்கள் ஏற்கனவே பயன்படுத்தும் வாட்ஸ்அப் எண்ணுக்குள்ளேயே முழுமையாக இயங்குகிறது.",
+      smb2_title:"டெலிவரி ஆப்களைப் போலல்லாமல், பூஜ்ஜிய கமிஷன்", smb2_desc:"உணவு மற்றும் மளிகை டெலிவரி ஆப்கள் ஒவ்வொரு ஆர்டரிலும் 20–30% எடுத்துக்கொள்கின்றன. ChatCart Pro AI உடன் நீங்கள் நேரடியாக உங்கள் வாடிக்கையாளருக்கு விற்று, அவர்கள் செலுத்தும் தொகையில் 100% உங்களிடமே வைத்திருக்கிறீர்கள்.",
+      smb3_title:"உங்கள் சொந்த உண்மையான சலுகைகளை நடத்துங்கள்", smb3_desc:"உங்கள் சொந்த விதிமுறைகளில் தள்ளுபடிகள், தொகுப்புகள், மற்றும் விளம்பரங்களை அமைக்கவும் — உங்கள் வாடிக்கையாளர் என்ன சலுகையைப் பார்க்கிறார் என்பதை எந்த அக்ரிகேட்டரும் தீர்மானிக்காது.",
+      smb4_title:"நேரடி இருப்பு & விலை, எப்போதும் துல்லியமானது", smb4_desc:"ஆர்டரை உறுதிப்படுத்தும் முன் AI உங்கள் நிகழ்நேர இன்வென்டரி மற்றும் விலைப் பட்டியலைச் சரிபார்க்கிறது — இதனால் வாடிக்கையாளர்களுக்கு விற்றுத் தீர்ந்த பொருள் அல்லது பழைய விலை ஒருபோதும் தெரிவிக்கப்படாது.",
+      industries_eyebrow:"தொழில்கள்", industries_title:"உங்கள் வணிகம் உண்மையில் எவ்வாறு இயங்குகிறதோ அதற்கேற்ப உருவாக்கப்பட்டது", industries_sub:"12 தொழில்கள், ஒரே வாட்ஸ்அப் AI ஊழியர், உங்கள் சரியான பயன்பாட்டுக்கு ஏற்ப அமைக்கப்பட்டுள்ளது.",
+      testi_eyebrow:"சான்றுகள்", testi_title:"வணிக உரிமையாளர்கள் என்ன சொல்கிறார்கள்", testi_sub:"எல்லா அளவிலான வணிகங்களையும் நடத்தும் குழுக்களால் நம்பப்படுகிறது, எல்லா இடங்களிலும்.",
+      testi1_quote:"“மூடிய பிறகு ஒவ்வொரு இரவும் நாங்கள் ஆர்டர்களை இழந்துகொண்டிருந்தோம். இப்போது ChatCart Pro AI அவற்றை எங்களுக்காக எடுத்துக்கொள்கிறது, காலையில் முதலிலேயே அவை தயாராக இருக்கின்றன.”", testi1_role:"உரிமையாளர், Northgate Mart",
+      testi2_quote:"“எங்கள் முன் மேசை முன்பதிவு அழைப்புகளால் நிரம்பியிருந்தது. இப்போது பெரும்பாலான நோயாளிகள் ஒரு நிமிடத்திற்குள் வாட்ஸ்அப்பில் தங்கள் ஸ்லாட்டை முன்பதிவு செய்கிறார்கள்.”", testi2_role:"நிறுவனர், Smile Care Dental",
+      testi3_quote:"“அமைப்பதற்கு ஒரு மதியம் மட்டுமே ஆனது. ஒரு வாரத்திற்குள், தானியங்கி நினைவூட்டல்கள் மூலம் ஜிம் ட்ரையல் நோ-ஷோ விகிதம் பாதியாகக் குறைந்தது.”", testi3_role:"மேலாளர், UrbanFit Gyms",
+      faq_eyebrow:"அடிக்கடி கேட்கப்படும் கேள்விகள்", faq_title:"நீங்கள் தெரிந்துகொள்ள வேண்டிய அனைத்தும்", faq_sub:"இன்னும் சந்தேகமா? டெமோ முன்பதிவு செய்யுங்கள், நேரடியாகக் காண்பிக்கிறோம்.",
+      faq1_q:"ChatCart Pro AI உண்மையில் எப்படி வேலை செய்கிறது?", faq1_a:"நாங்கள் உங்கள் வாட்ஸ்அப் பிசினஸ் எண்ணுடன் இணைகிறோம். ஒரு வாடிக்கையாளர் உங்களுக்கு மெசேஜ் அனுப்பும்போது, எங்கள் AI ஊழியர் கோரிக்கையைப் புரிந்துகொள்கிறது — ஆர்டர் செய்வதாக இருந்தாலும் ஸ்லாட் முன்பதிவு செய்வதாக இருந்தாலும் — உங்கள் மெனு, விலைப் பட்டியல், அல்லது கேலெண்டரைப் பயன்படுத்தி தானாகவே அதைக் கையாளுகிறது.",
+      faq2_q:"இது என் வணிக வகைக்கு வேலை செய்யுமா?", faq2_a:"ஆம். நாங்கள் ஆர்டர் அடிப்படையிலான வணிகங்களை (மளிகை, மருந்தகம், உணவகங்கள், லாண்ட்ரி, கூரியர்) மற்றும் அப்பாயிண்ட்மென்ட் அடிப்படையிலான வணிகங்களை (சலூன்கள், கிளினிக்குகள், ஜிம், ஆட்டோ ரிப்பேர், ரியல் எஸ்டேட், நிகழ்வு அரங்குகள்) உடனடியாகவே ஆதரிக்கிறோம்.",
+      faq3_q:"எனக்கு வாட்ஸ்அப் பிசினஸ் API தேவையா?", faq3_a:"ஆன்போர்டிங்கின் ஒரு பகுதியாக நாங்களே உங்களுக்காக வாட்ஸ்அப் பிசினஸ் API அமைப்பைக் கையாளுகிறோம் — உங்கள் தரப்பில் எந்த தொழில்நுட்ப வேலையும் தேவையில்லை.",
+      faq4_q:"இது என் POS அல்லது CRM உடன் ஒருங்கிணைக்க முடியுமா?", faq4_a:"ஆம், ChatCart Pro AI பொதுவான POS, கேலெண்டர், மற்றும் CRM கருவிகளுடன் ஆர்டர்கள் மற்றும் முன்பதிவுகளை ஒத்திசைக்க முடியும். உங்கள் டெமோவின் போது சரியான ஒருங்கிணைப்புகளை உறுதிப்படுத்துவோம்.",
+      faq5_q:"இது எந்த மொழிகளை ஆதரிக்கிறது?", faq5_a:"ChatCart Pro AI 40+ மொழிகளை ஆதரிக்கிறது, மேலும் உங்கள் வாடிக்கையாளர் மெசேஜ் செய்யும் மொழியை தானாக கண்டறிந்து அதிலேயே பதிலளிக்கிறது — எந்த அமைப்பும் தேவையில்லை.",
+      demo_title:"உங்கள் இலவச டெமோவை முன்பதிவு செய்யுங்கள்", demo_sub:"உங்கள் வணிகத்தைப் பற்றி எங்களிடம் கொஞ்சம் சொல்லுங்கள் — ChatCart Pro AI உங்களுக்காக சரியாக எப்படி வேலை செய்யும் என்பதைக் காண்பிப்போம்.",
+      form_name:"முழு பெயர்", form_name_ph:"உங்கள் பெயர்", form_business:"வணிகத்தின் பெயர்", form_business_ph:"எ.கா. Green Mart Grocery",
+      form_industry:"தொழில்", form_industry_select:"தொழிலைத் தேர்ந்தெடுக்கவும்", form_hospital_clinic:"மருத்துவமனை / கிளினிக்", form_gym_fitness:"ஜிம் / ஃபிட்னஸ் ஸ்டூடியோ", form_event_venue:"நிகழ்வு அரங்கம்", form_other:"மற்றவை",
+      form_whatsapp:"வாட்ஸ்அப் எண்", form_whatsapp_ph:"+91 XXXXX XXXXX", form_email:"மின்னஞ்சல்", form_submit:"டெமோ முன்பதிவு செய்யுங்கள்",
+      success_title:"நன்றி — கோரிக்கை பெறப்பட்டது!", success_desc:"உங்கள் நேரடி டெமோவை திட்டமிட எங்கள் குழு ஒரு வணிக நாளுக்குள் வாட்ஸ்அப்பில் தொடர்பு கொள்ளும்.",
+      cta_title:"உங்கள் வாட்ஸ்அப்பை வேலைக்கு அமைக்க தயாரா?", cta_sub:"ChatCart Pro AI உடன் ஆர்டர்கள் மற்றும் முன்பதிவுகளை தானியங்குபடுத்தும் உலகெங்கிலும் உள்ள வணிகங்களுடன் இணையுங்கள்.", cta_button:"டெமோ முன்பதிவு செய்யுங்கள்",
+      footer_tagline:"ஆர்டர்கள் & முன்பதிவுகளுக்கான AI வாட்ஸ்அப் ஊழியர்கள் — எல்லா இடங்களிலும் உள்ள வணிகங்களுக்காக உருவாக்கப்பட்டது.", footer_rights:"அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+      footer_powered_by:"இயக்குபவர்",
+      footer_privacy:"தனியுரிமைக் கொள்கை", footer_terms:"விதிமுறைகள் & நிபந்தனைகள்"
+    },
+    ml: {
+      nav_product:"ഉൽപ്പന്നം", nav_industries:"വ്യവസായങ്ങൾ", nav_how:"ഇത് എങ്ങനെ പ്രവർത്തിക്കുന്നു", nav_faq:"പതിവ് ചോദ്യങ്ങൾ", nav_cta:"ഡെമോ ബുക്ക് ചെയ്യുക",
+      hero_eyebrow:"ലോകമെമ്പാടുമുള്ള ബിസിനസുകൾക്കായി നിർമ്മിച്ചത്",
+      hero_title_pre:"നിങ്ങളുടെ വാട്ട്‌സ്ആപ്പിനെ AI-പ്രവർത്തിത",
+      hero_title_highlight:"24x7 ജീവനക്കാരനാക്കി മാറ്റുക",
+      hero_sub:"ChatCart Pro AI ഓരോ ഉപഭോക്തൃ ചാറ്റിനും തൽക്ഷണം മറുപടി നൽകുന്നു, ഓർഡറുകൾ സ്വീകരിക്കുന്നു, അപ്പോയിന്റ്മെന്റുകൾ സ്ഥിരീകരിക്കുന്നു, കൂടാതെ സ്വയമേവ ഫോളോ-അപ്പ് ചെയ്യുന്നു — രാവും പകലും, കൂടുതൽ ജീവനക്കാരെ നിയമിക്കാതെ തന്നെ.",
+      hero_cta:"ഡെമോ ബുക്ക് ചെയ്യുക",
+      hero_note:"നിങ്ങളുടെ ഉപഭോക്താക്കൾ ഒരു ആപ്പും ഇൻസ്റ്റാൾ ചെയ്യേണ്ടതില്ല — എല്ലാം വാട്ട്‌സ്ആപ്പിനുള്ളിൽ തന്നെ നടക്കുന്നു.",
+      fc1_lbl:"മനുഷ്യരില്ലാതെ പരിഹരിച്ച ചാറ്റുകൾ", fc2_lbl:"പ്രവൃത്തി സമയത്തിന് ശേഷം കൂടുതൽ ഓർഡറുകളും ബുക്കിംഗുകളും",
+      chat_status:"AI ജീവനക്കാരൻ · ഓൺലൈൻ",
+      fc3_lbl:"ദിവസത്തിലെ ഏത് സമയത്തും തൽക്ഷണ മറുപടികൾ", fc4_big:"40+ ഭാഷകൾ", fc4_lbl:"നിങ്ങളുടെ ഉപഭോക്താവിന്റെ ഭാഷ സ്വയമേവ കണ്ടെത്തുന്നു",
+      trusted_label:"ലോകമെമ്പാടുമുള്ള വളരുന്ന ബിസിനസുകൾ വിശ്വസിക്കുന്നു",
+      modes_eyebrow:"ഒരു ഏജന്റ്, രണ്ട് ജോലികൾ", modes_title:"നിങ്ങളുടെ ബിസിനസ് എന്ത് ചെയ്താലും, ChatCart Pro AI അത് കൈകാര്യം ചെയ്യും",
+      modes_sub:"ചില ബിസിനസുകൾ ഓർഡറുകൾ എടുക്കുന്നു. മറ്റുള്ളവ ബുക്കിംഗുകൾ എടുക്കുന്നു. ഞങ്ങളുടെ AI ജീവനക്കാരൻ രണ്ടും ചെയ്യാൻ നിർമ്മിച്ചതാണ് — ആദ്യ ദിവസം മുതൽ നിങ്ങളുടെ വർക്ക്ഫ്ലോയ്ക്ക് അനുസരിച്ച് ക്രമീകരിക്കുന്നു.",
+      orders_tag:"ഓർഡർ സ്വീകരണം", orders_title:"ഉപഭോക്താക്കളെ നേരിട്ട് ചാറ്റിൽ നിന്ന് ഓർഡർ ചെയ്യാൻ അനുവദിക്കുക",
+      orders_desc:"ഉപഭോക്താക്കൾ നിങ്ങളുടെ മെനുവോ കാറ്റലോഗോ പരിശോധിക്കുന്നു, ഓർഡർ ചെയ്യുന്നു, സ്ഥിരീകരണം ലഭിക്കുന്നു, പണം നൽകുന്നു — ഇതെല്ലാം വാട്ട്‌സ്ആപ്പ് വിട്ടുപോകാതെ തന്നെ.",
+      bookings_tag:"അപ്പോയിന്റ്മെന്റ് ബുക്കിംഗ്", bookings_title:"ഉപഭോക്താക്കളെ സെക്കൻഡുകൾക്കുള്ളിൽ സ്ലോട്ട് ബുക്ക് ചെയ്യാൻ അനുവദിക്കുക",
+      bookings_desc:"ഉപഭോക്താക്കൾ ലഭ്യത പരിശോധിക്കുന്നു, സമയം തിരഞ്ഞെടുക്കുന്നു, കൂടാതെ ഓട്ടോമാറ്റിക് ഓർമ്മപ്പെടുത്തലുകളും സ്ഥിരീകരണങ്ങളും ലഭിക്കുന്നു — ഫോൺ വിളികളൊന്നും ആവശ്യമില്ല.",
+      ind_grocery:"പലചരക്ക്", ind_pharmacy:"ഫാർമസി", ind_restaurant:"റെസ്റ്റോറന്റ്", ind_laundry:"ലോൺഡ്രി & ഡ്രൈ ക്ലീനിംഗ്", ind_courier:"കൊറിയർ & ലോജിസ്റ്റിക്സ്",
+      ind_salon:"സലൂണുകൾ", ind_hospital:"ആശുപത്രികളും ക്ലിനിക്കുകളും", ind_dental:"ദന്ത ക്ലിനിക്കുകൾ", ind_auto:"ഓട്ടോ റിപ്പയർ ഷോപ്പുകൾ", ind_gym:"ജിമ്മുകളും ഫിറ്റ്നസ് സ്റ്റുഡിയോകളും", ind_realestate:"റിയൽ എസ്റ്റേറ്റ് ഏജൻസികൾ", ind_events:"ഇവന്റ് വേദികൾ",
+      ind_salon2:"സലൂൺ", ind_hospital2:"ആശുപത്രി", ind_auto2:"ഓട്ടോ റിപ്പയർ", ind_realestate2:"റിയൽ എസ്റ്റേറ്റ്", ind_gym2:"ജിമ്മും ഫിറ്റ്നസും",
+      benefits_eyebrow:"ആനുകൂല്യങ്ങൾ", benefits_title:"ബിസിനസുകൾ ChatCart Pro AI-യിലേക്ക് മാറുന്നത് എന്തുകൊണ്ട്", benefits_sub:"മന്ദഗതിയിലുള്ള മറുപടികളും നഷ്ടപ്പെട്ട കോളുകളും കാരണം ഉപഭോക്താക്കളെ നഷ്ടപ്പെടുത്തുന്നത് നിർത്താൻ നിങ്ങൾക്ക് വേണ്ടതെല്ലാം.",
+      benefit1_title:"തൽക്ഷണ മറുപടികൾ, 24/7", benefit1_desc:"ഇനി “ഞങ്ങൾ നിങ്ങളെ തിരികെ ബന്ധപ്പെടാം” എന്നില്ല — ഓരോ ചാറ്റിനും പകലോ രാത്രിയോ എന്നില്ലാതെ സെക്കൻഡുകൾക്കുള്ളിൽ മറുപടി ലഭിക്കുന്നു.",
+      benefit2_title:"ഓർഡറുകളും ബുക്കിംഗുകളും, ഓട്ടോമേറ്റഡ്", benefit2_desc:"സ്ഥിരീകരണങ്ങൾ, ഓർമ്മപ്പെടുത്തലുകൾ, ഫോളോ-അപ്പുകൾ എന്നിവ സ്വയമേവ നടക്കുന്നു — മാനുവൽ എൻട്രി ആവശ്യമില്ല.",
+      benefit3_title:"40+ ഭാഷകൾ സംസാരിക്കുന്നു", benefit3_desc:"നിങ്ങളുടെ AI ജീവനക്കാരൻ ഓരോ ഉപഭോക്താവിന്റെയും ഭാഷ സ്വയമേവ കണ്ടെത്തി അതിൽ തന്നെ മറുപടി നൽകുന്നു — ലോകത്തിന്റെ ഏത് ഭാഗത്തും.",
+      benefit4_title:"സുഗമമായ മനുഷ്യ കൈമാറ്റം", benefit4_desc:"സങ്കീർണ്ണമായ അഭ്യർത്ഥനകൾ പൂർണ്ണ ചാറ്റ് സന്ദർഭത്തോടെ ഉടനടി നിങ്ങളുടെ ടീമിലേക്ക് അയക്കുന്നു.",
+      smb_eyebrow:"ചെറുകിട ബിസിനസുകൾക്കായി നിർമ്മിച്ചത്", smb_title:"നിങ്ങൾ സമ്പാദിക്കുന്നതിൽ കൂടുതൽ നിങ്ങളുടെ കൈവശം സൂക്ഷിക്കുക",
+      smb_sub:"തങ്ങളുടെ മാർജിനോ ഉപഭോക്തൃ ബന്ധമോ ഉപേക്ഷിക്കാതെ ഡെലിവറി ആപ്പിന്റെ വ്യാപ്തി ആഗ്രഹിക്കുന്ന പ്രാദേശികവും ചെറുകിടവുമായ ബിസിനസുകൾക്കായി ChatCart Pro AI രൂപകൽപ്പന ചെയ്തിരിക്കുന്നു.",
+      smb1_title:"അധിക ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യേണ്ടതില്ല", smb1_desc:"ഡൗൺലോഡ് ചെയ്യാനോ പഠിക്കാനോ പുതിയതായി ഒന്നുമില്ല — ChatCart Pro AI നിങ്ങൾ ഇതിനകം ഉപയോഗിക്കുന്ന വാട്ട്‌സ്ആപ്പ് നമ്പറിനുള്ളിൽ തന്നെ പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.",
+      smb2_title:"ഡെലിവറി ആപ്പുകളിൽ നിന്ന് വ്യത്യസ്തമായി, കമ്മീഷൻ ഇല്ല", smb2_desc:"ഭക്ഷണ, പലചരക്ക് ഡെലിവറി ആപ്പുകൾ ഓരോ ഓർഡറിലും 20–30% എടുക്കുന്നു. ChatCart Pro AI ഉപയോഗിച്ച് നിങ്ങൾ നേരിട്ട് നിങ്ങളുടെ ഉപഭോക്താവിന് വിൽക്കുകയും അവർ നൽകുന്നതിന്റെ 100% നിങ്ങളുടെ കൈവശം സൂക്ഷിക്കുകയും ചെയ്യുന്നു.",
+      smb3_title:"നിങ്ങളുടെ സ്വന്തം യഥാർത്ഥ ഓഫറുകൾ നടത്തുക", smb3_desc:"നിങ്ങളുടെ സ്വന്തം നിബന്ധനകളിൽ കിഴിവുകൾ, ബണ്ടിലുകൾ, പ്രമോഷനുകൾ എന്നിവ സജ്ജമാക്കുക — നിങ്ങളുടെ ഉപഭോക്താവ് ഏത് ഡീൽ കാണുന്നു എന്ന് ഒരു അഗ്രഗേറ്ററും തീരുമാനിക്കില്ല.",
+      smb4_title:"തത്സമയ സ്റ്റോക്കും വിലയും, എപ്പോഴും കൃത്യം", smb4_desc:"ഓർഡർ സ്ഥിരീകരിക്കുന്നതിന് മുമ്പ് AI നിങ്ങളുടെ യഥാർത്ഥ ഇൻവെന്ററിയും വിലവിവരപ്പട്ടികയും പരിശോധിക്കുന്നു — അതിനാൽ വിറ്റുതീർന്ന ഇനമോ പഴയ വിലയോ ഉപഭോക്താക്കളോട് ഒരിക്കലും പറയില്ല.",
+      industries_eyebrow:"വ്യവസായങ്ങൾ", industries_title:"നിങ്ങളുടെ ബിസിനസ് യഥാർത്ഥത്തിൽ പ്രവർത്തിക്കുന്ന രീതിക്കായി നിർമ്മിച്ചത്", industries_sub:"12 വ്യവസായങ്ങൾ, ഒരു വാട്ട്‌സ്ആപ്പ് AI ജീവനക്കാരൻ, നിങ്ങളുടെ കൃത്യമായ ഉപയോഗത്തിനായി ക്രമീകരിച്ചത്.",
+      testi_eyebrow:"സാക്ഷ്യപത്രങ്ങൾ", testi_title:"ബിസിനസ് ഉടമകൾ എന്താണ് പറയുന്നത്", testi_sub:"എല്ലായിടത്തും, എല്ലാ വലുപ്പത്തിലുമുള്ള ബിസിനസുകൾ നടത്തുന്ന ടീമുകൾ വിശ്വസിക്കുന്നു.",
+      testi1_quote:"“അടച്ചതിനുശേഷം എല്ലാ രാത്രിയും ഞങ്ങൾക്ക് ഓർഡറുകൾ നഷ്ടപ്പെടുമായിരുന്നു. ഇപ്പോൾ ChatCart Pro AI അവ ഞങ്ങൾക്കായി എടുക്കുന്നു, രാവിലെ തന്നെ അവ തയ്യാറാണ്.”", testi1_role:"ഉടമ, Northgate Mart",
+      testi2_quote:"“ഞങ്ങളുടെ ഫ്രണ്ട് ഡെസ്ക് ബുക്കിംഗ് കോളുകളാൽ നിറഞ്ഞിരുന്നു. ഇപ്പോൾ മിക്ക രോഗികളും ഒരു മിനിറ്റിനുള്ളിൽ വാട്ട്‌സ്ആപ്പിൽ അവരുടെ സ്ലോട്ട് ബുക്ക് ചെയ്യുന്നു.”", testi2_role:"സ്ഥാപക, Smile Care Dental",
+      testi3_quote:"“സജ്ജീകരണത്തിന് ഒരു ഉച്ചതിരിഞ്ഞ് മാത്രമേ എടുത്തുള്ളൂ. ഒരാഴ്ചയ്ക്കുള്ളിൽ, ഓട്ടോമാറ്റിക് ഓർമ്മപ്പെടുത്തലുകൾ കാരണം ജിം ട്രയലുകളുടെ നോ-ഷോ നിരക്ക് പകുതിയായി കുറഞ്ഞു.”", testi3_role:"മാനേജർ, UrbanFit Gyms",
+      faq_eyebrow:"പതിവ് ചോദ്യങ്ങൾ", faq_title:"നിങ്ങൾ അറിഞ്ഞിരിക്കേണ്ട എല്ലാം", faq_sub:"ഇപ്പോഴും സംശയമുണ്ടോ? ഡെമോ ബുക്ക് ചെയ്യുക, ഞങ്ങൾ അത് തത്സമയം കാണിച്ചുതരാം.",
+      faq1_q:"ChatCart Pro AI യഥാർത്ഥത്തിൽ എങ്ങനെ പ്രവർത്തിക്കുന്നു?", faq1_a:"ഞങ്ങൾ നിങ്ങളുടെ വാട്ട്‌സ്ആപ്പ് ബിസിനസ് നമ്പറുമായി ബന്ധിപ്പിക്കുന്നു. ഒരു ഉപഭോക്താവ് നിങ്ങൾക്ക് സന്ദേശം അയക്കുമ്പോൾ, ഞങ്ങളുടെ AI ജീവനക്കാരൻ അഭ്യർത്ഥന മനസ്സിലാക്കുന്നു — ഓർഡർ ചെയ്യുന്നതോ സ്ലോട്ട് ബുക്ക് ചെയ്യുന്നതോ ആകട്ടെ — നിങ്ങളുടെ മെനു, വിലവിവരപ്പട്ടിക, അല്ലെങ്കിൽ കലണ്ടർ ഉപയോഗിച്ച് സ്വയമേവ അത് കൈകാര്യം ചെയ്യുന്നു.",
+      faq2_q:"ഇത് എന്റെ ബിസിനസ് തരത്തിന് പ്രവർത്തിക്കുമോ?", faq2_a:"അതെ. ഞങ്ങൾ ഓർഡർ അധിഷ്ഠിത ബിസിനസുകളെ (പലചരക്ക്, ഫാർമസി, റെസ്റ്റോറന്റുകൾ, ലോൺഡ്രി, കൊറിയർ) കൂടാതെ അപ്പോയിന്റ്മെന്റ് അധിഷ്ഠിത ബിസിനസുകളെയും (സലൂണുകൾ, ക്ലിനിക്കുകൾ, ജിമ്മുകൾ, ഓട്ടോ റിപ്പയർ, റിയൽ എസ്റ്റേറ്റ്, ഇവന്റ് വേദികൾ) ഉടനടി പിന്തുണയ്ക്കുന്നു.",
+      faq3_q:"എനിക്ക് വാട്ട്‌സ്ആപ്പ് ബിസിനസ് API വേണോ?", faq3_a:"ഓൺബോർഡിംഗിന്റെ ഭാഗമായി ഞങ്ങൾ തന്നെ നിങ്ങൾക്കായി വാട്ട്‌സ്ആപ്പ് ബിസിനസ് API സജ്ജീകരണം കൈകാര്യം ചെയ്യുന്നു — നിങ്ങളുടെ ഭാഗത്ത് നിന്ന് സാങ്കേതിക ജോലിയൊന്നും ആവശ്യമില്ല.",
+      faq4_q:"ഇതിന് എന്റെ POS അല്ലെങ്കിൽ CRM-മായി സംയോജിപ്പിക്കാൻ കഴിയുമോ?", faq4_a:"അതെ, ChatCart Pro AI-ക്ക് സാധാരണ POS, കലണ്ടർ, CRM ടൂളുകളുമായി ഓർഡറുകളും ബുക്കിംഗുകളും സമന്വയിപ്പിക്കാൻ കഴിയും. നിങ്ങളുടെ ഡെമോയ്ക്കിടെ കൃത്യമായ സംയോജനങ്ങൾ ഞങ്ങൾ സ്ഥിരീകരിക്കും.",
+      faq5_q:"ഇത് ഏതെല്ലാം ഭാഷകളെ പിന്തുണയ്ക്കുന്നു?", faq5_a:"ChatCart Pro AI 40+ ഭാഷകളെ പിന്തുണയ്ക്കുന്നു, കൂടാതെ നിങ്ങളുടെ ഉപഭോക്താവ് സന്ദേശമയക്കുന്ന ഭാഷ സ്വയമേവ കണ്ടെത്തി അതിൽ തന്നെ മറുപടി നൽകുന്നു — ഒരു സജ്ജീകരണവും ആവശ്യമില്ല.",
+      demo_title:"നിങ്ങളുടെ സൗജന്യ ഡെമോ ബുക്ക് ചെയ്യുക", demo_sub:"നിങ്ങളുടെ ബിസിനസിനെക്കുറിച്ച് ഞങ്ങളോട് അൽപ്പം പറയൂ — ChatCart Pro AI നിങ്ങൾക്കായി കൃത്യമായി എങ്ങനെ പ്രവർത്തിക്കുമെന്ന് ഞങ്ങൾ കാണിച്ചുതരാം.",
+      form_name:"മുഴുവൻ പേര്", form_name_ph:"നിങ്ങളുടെ പേര്", form_business:"ബിസിനസിന്റെ പേര്", form_business_ph:"ഉദാ. Green Mart Grocery",
+      form_industry:"വ്യവസായം", form_industry_select:"വ്യവസായം തിരഞ്ഞെടുക്കുക", form_hospital_clinic:"ആശുപത്രി / ക്ലിനിക്", form_gym_fitness:"ജിം / ഫിറ്റ്നസ് സ്റ്റുഡിയോ", form_event_venue:"ഇവന്റ് വേദി", form_other:"മറ്റുള്ളവ",
+      form_whatsapp:"വാട്ട്‌സ്ആപ്പ് നമ്പർ", form_whatsapp_ph:"+91 XXXXX XXXXX", form_email:"ഇമെയിൽ", form_submit:"ഡെമോ ബുക്ക് ചെയ്യുക",
+      success_title:"നന്ദി — അഭ്യർത്ഥന ലഭിച്ചു!", success_desc:"നിങ്ങളുടെ തത്സമയ ഡെമോ ഷെഡ്യൂൾ ചെയ്യാൻ ഞങ്ങളുടെ ടീം ഒരു പ്രവൃത്തി ദിവസത്തിനുള്ളിൽ വാട്ട്‌സ്ആപ്പിൽ ബന്ധപ്പെടും.",
+      cta_title:"നിങ്ങളുടെ വാട്ട്‌സ്ആപ്പിനെ ജോലിക്ക് സജ്ജമാക്കാൻ തയ്യാറാണോ?", cta_sub:"ChatCart Pro AI ഉപയോഗിച്ച് ഓർഡറുകളും ബുക്കിംഗുകളും ഓട്ടോമേറ്റ് ചെയ്യുന്ന ലോകമെമ്പാടുമുള്ള ബിസിനസുകളുമായി ചേരുക.", cta_button:"ഡെമോ ബുക്ക് ചെയ്യുക",
+      footer_tagline:"ഓർഡറുകൾക്കും ബുക്കിംഗുകൾക്കുമുള്ള AI വാട്ട്‌സ്ആപ്പ് ജീവനക്കാർ — എല്ലായിടത്തുമുള്ള ബിസിനസുകൾക്കായി നിർമ്മിച്ചത്.", footer_rights:"എല്ലാ അവകാശങ്ങളും സംരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു.",
+      footer_powered_by:"പവർ ചെയ്യുന്നത്",
+      footer_privacy:"സ്വകാര്യതാ നയം", footer_terms:"നിബന്ധനകളും വ്യവസ്ഥകളും"
+    }
+  };
+
+  var currentLang = 'en';
+
+  /* ---------- Showcase: cycling business chat demo ---------- */
+  var showcaseData = [
+    { key:"grocery", initials:"GM", name:"Green Mart Grocery",
+      msgs:[
+        {who:"in", text:"Hi! I'd like to order 2kg rice, milk, and eggs 🛒"},
+        {who:"out", text:"Got it! Adding 2kg Rice, 1L Milk, and 1 dozen Eggs to your cart. Total: $12.90.", chips:["View cart","Pay now"]},
+        {who:"in", text:"Can I get it delivered by 6pm today?"},
+        {who:"out", text:"Yes! Delivery slot 5:00–6:00 PM confirmed ✅"}
+      ]},
+    { key:"salon", initials:"GS", name:"Glow Beauty Salon",
+      msgs:[
+        {who:"in", text:"Hey, do you have a haircut slot open tomorrow afternoon?"},
+        {who:"out", text:"Yes! We have 2:30 PM and 4:00 PM open tomorrow. Which works for you?"},
+        {who:"in", text:"4pm please"},
+        {who:"out", text:"Booked! Haircut with Maya, tomorrow 4:00 PM ✅ We'll remind you 1 hour before.", chips:["Add to calendar"]}
+      ]},
+    { key:"clinic", initials:"SC", name:"Smile Care Dental",
+      msgs:[
+        {who:"in", text:"I need to book a dental checkup this week"},
+        {who:"out", text:"Sure! Dr. Suresh has openings Thursday 10 AM or Friday 3 PM. Which suits you?"},
+        {who:"in", text:"Thursday 10am works"},
+        {who:"out", text:"Appointment confirmed for Thursday, 10:00 AM ✅ A reminder will be sent 24 hours before.", chips:["Reschedule"]}
+      ]},
+    { key:"restaurant", initials:"SR", name:"Spice Route Restaurant",
+      msgs:[
+        {who:"in", text:"Table for 4 tonight at 8pm?"},
+        {who:"out", text:"We have a table for 4 available at 8:00 PM tonight. Shall I reserve it?"},
+        {who:"in", text:"Yes please, and can we start with 2 starters?"},
+        {who:"out", text:"Reservation confirmed ✅ I've noted 2 starters to be ready when you arrive."}
+      ]},
+    { key:"auto", initials:"QF", name:"QuickFix Auto Repair",
+      msgs:[
+        {who:"in", text:"My car is making a strange noise, can I bring it in?"},
+        {who:"out", text:"Sorry to hear that! We have a diagnostic slot open tomorrow at 9 AM or 1 PM."},
+        {who:"in", text:"9am works"},
+        {who:"out", text:"Booked for 9:00 AM tomorrow ✅ Please share your car model so our mechanic is ready.", chips:["Share car details"]}
+      ]},
+    { key:"realestate", initials:"UH", name:"Urban Homes Realty",
+      msgs:[
+        {who:"in", text:"I'm interested in the 2BHK listing you posted"},
+        {who:"out", text:"Great choice! Would you like to schedule a site visit this weekend?"},
+        {who:"in", text:"Yes, Saturday morning"},
+        {who:"out", text:"Site visit booked for Saturday, 11:00 AM ✅ Our agent will meet you there.", chips:["View listing"]}
+      ]}
+  ];
+
+  var scTabs = document.getElementById('showcaseTabs');
+  var scBody = document.getElementById('scChatBody');
+  var scAvatar = document.getElementById('scAvatar');
+  var scBizName = document.getElementById('scBizName');
+  var scIndex = 0;
+  var scTimer = null;
+  var scTypingTimers = [];
+
+  function scLabelKey(key){ return 'showcase_tab_' + key; }
+
+  /* Maps showcase item key -> sprite icon id (JS string, not HTML, so the
+     icon is built as a DOM node here rather than embedded in the
+     translation string, which is rendered via textContent). */
+  var scIconMap = {
+    grocery:"icon-grocery", salon:"icon-salon", clinic:"icon-dental",
+    restaurant:"icon-restaurant", auto:"icon-auto", realestate:"icon-realestate"
+  };
+
+  function renderShowcaseTabs(){
+    if(!scTabs) return;
+    scTabs.innerHTML = '';
+    showcaseData.forEach(function(item, i){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+
+      var iconId = scIconMap[item.key];
+      if(iconId){
+        var svgNS = 'http://www.w3.org/2000/svg';
+        var xlinkNS = 'http://www.w3.org/1999/xlink';
+        var svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('class', 'ico-svg');
+        svg.setAttribute('aria-hidden', 'true');
+        var use = document.createElementNS(svgNS, 'use');
+        use.setAttributeNS(xlinkNS, 'xlink:href', '#' + iconId);
+        use.setAttribute('href', '#' + iconId);
+        svg.appendChild(use);
+        btn.appendChild(svg);
+      }
+
+      var label = document.createElement('span');
+      label.setAttribute('data-i18n', scLabelKey(item.key));
+      label.textContent = (translations[currentLang] && translations[currentLang][scLabelKey(item.key)]) || translations.en[scLabelKey(item.key)] || item.name;
+      btn.appendChild(label);
+
+      if(i === scIndex) btn.classList.add('active');
+      btn.addEventListener('click', function(){
+        scIndex = i;
+        showScenario(scIndex, true);
+      });
+      scTabs.appendChild(btn);
+    });
+  }
+
+  function showScenario(index, userInitiated){
+    if(!scTabs || !scBody) return;
+    scIndex = index;
+    var item = showcaseData[index];
+    scAvatar.textContent = item.initials;
+    scBizName.textContent = item.name;
+    scBody.innerHTML = '';
+    Array.prototype.forEach.call(scTabs.children, function(btn, i){
+      btn.classList.toggle('active', i === index);
+    });
+    scTypingTimers.forEach(clearTimeout);
+    scTypingTimers = [];
+    item.msgs.forEach(function(m, i){
+      var t = setTimeout(function(){
+        var b = document.createElement('div');
+        b.className = 'bubble ' + m.who;
+        b.textContent = m.text;
+        if(m.chips){
+          var chipsWrap = document.createElement('div');
+          chipsWrap.className = 'chips';
+          m.chips.forEach(function(c){
+            var chip = document.createElement('span');
+            chip.className = 'chip';
+            chip.textContent = c;
+            chipsWrap.appendChild(chip);
+          });
+          b.appendChild(chipsWrap);
+        }
+        scBody.appendChild(b);
+      }, i * 750);
+      scTypingTimers.push(t);
+    });
+    if(userInitiated) restartAutoCycle();
+  }
+
+  function restartAutoCycle(){
+    if(scTimer) clearInterval(scTimer);
+    scTimer = setInterval(function(){
+      scIndex = (scIndex + 1) % showcaseData.length;
+      showScenario(scIndex, false);
+    }, 6500);
+  }
+
+  if(scTabs){
+    renderShowcaseTabs();
+    showScenario(0, false);
+    restartAutoCycle();
+  }
+
+  var availableLangs = ['en','ar','hi','fr','es','pt','zh','ur','id','ru','ta','ml'];
+  var langNames = {en:'English', ar:'العربية', hi:'हिन्दी', fr:'Français', es:'Español', pt:'Português', zh:'中文', ur:'اردو', id:'Bahasa Indonesia', ru:'Русский', ta:'தமிழ்', ml:'മലയാളം'};
+  var rtlLangs = ['ar','ur'];
+
+  var langSelect = document.getElementById('langSelect');
+  availableLangs.forEach(function(code){
+    var opt = document.createElement('option');
+    opt.value = code;
+    opt.textContent = langNames[code];
+    langSelect.appendChild(opt);
+  });
+
+  function applyLanguage(lang){
+    var dict = translations[lang] || translations.en;
+    currentLang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      var text = dict[key] || translations.en[key];
+      if(text !== undefined) el.textContent = text;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      var text = dict[key] || translations.en[key];
+      if(text !== undefined) el.setAttribute('placeholder', text);
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = rtlLangs.indexOf(lang) > -1 ? 'rtl' : 'ltr';
+    langSelect.value = lang;
+    localStorage.setItem('chatdesk_lang', lang);
+    if(typeof renderShowcaseTabs === 'function' && document.getElementById('showcaseTabs')){
+      renderShowcaseTabs();
+    }
+  }
+
+  function detectLanguage(){
+    var stored = localStorage.getItem('chatdesk_lang');
+    if(stored && availableLangs.indexOf(stored) > -1) return stored;
+    var browserLangs = navigator.languages || [navigator.language || 'en'];
+    for(var i=0;i<browserLangs.length;i++){
+      var base = browserLangs[i].split('-')[0].toLowerCase();
+      if(availableLangs.indexOf(base) > -1) return base;
+    }
+    return 'en';
+  }
+
+  langSelect.addEventListener('change', function(){
+    applyLanguage(langSelect.value);
+  });
+
+  applyLanguage(detectLanguage());
+</script>
+
+</body>
+</html>

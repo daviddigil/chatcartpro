@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /pricing.html
+
+Sitemap: https://chatcartpro.ai/sitemap.xml
