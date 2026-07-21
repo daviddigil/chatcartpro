@@ -1031,6 +1031,8 @@
         document.getElementById('demoSuccess').style.display = 'block';
       }).catch(function(err){
         console.error('EmailJS send failed:', err);
+        var detail = (err && (err.text || err.message)) ? (' (' + (err.status || '') + ' ' + (err.text || err.message) + ')') : '';
+        errorEl.textContent = 'Something went wrong sending your request' + detail + '. Please try again, or reach us directly.';
         errorEl.style.display = 'block';
         submitBtn.disabled = false;
         submitBtn.textContent = originalLabel;
