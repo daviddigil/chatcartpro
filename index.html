@@ -209,6 +209,8 @@
   }
   .lang-select option{color:var(--ink);}
 
+  .nav-links-mobile-extra{display:none;}
+
   @media (max-width:860px){
     header{top:10px; padding:0 12px;}
     nav.wrap{
@@ -218,25 +220,31 @@
     }
     nav.wrap.menu-open{border-radius:20px;}
     .nav-links{
-      display:none; flex-direction:column; align-items:flex-start; gap:2px;
+      display:none; flex-direction:column; align-items:stretch; gap:2px;
       width:100%; order:3;
       max-height:0; overflow:hidden;
       transition:max-height .25s ease;
     }
-    .nav-links.open{display:flex; max-height:320px; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.12);}
+    .nav-links.open{display:flex; max-height:420px; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.12);}
     .nav-links a{width:100%; padding:12px 6px; border-top:1px solid rgba(255,255,255,0.1); font-size:16px; color:rgba(255,255,255,0.8);}
     .nav-links a:first-child{border-top:none;}
     .nav-toggle{display:block;}
-    .nav-cta{gap:8px; flex-wrap:nowrap;}
-    .lang-select{max-width:96px; font-size:12px; padding:8px 8px;}
-    .nav-cta .btn-primary{padding:9px 16px; font-size:13px;}
+
+    /* On mobile, the top bar shows only the logo + hamburger; language + CTA move into the dropdown */
+    .nav-cta{gap:8px;}
+    .nav-cta .lang-select, .nav-cta .btn-primary{display:none;}
+
+    .nav-links-mobile-extra{
+      display:flex; flex-direction:column; gap:10px;
+      width:100%; padding:14px 6px 4px; border-top:1px solid rgba(255,255,255,0.12); margin-top:6px;
+    }
+    .nav-links-mobile-extra .lang-select{width:100%; max-width:none;}
+    .nav-links-mobile-extra .btn-primary{width:100%; text-align:center;}
   }
 
   @media (max-width:420px){
     .logo{font-size:16px;}
     .logo-text{display:none;}
-    .nav-cta .btn-primary{padding:9px 12px; font-size:12px; white-space:normal; text-align:center; line-height:1.2; max-width:96px;}
-    .lang-select{max-width:74px; padding:8px 6px; font-size:11px;}
   }
 
   /* Hero */
@@ -624,6 +632,10 @@
       <a href="#industries" data-i18n="nav_industries">Industries</a>
       <a href="#benefits" data-i18n="nav_how">How it works</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <div class="nav-links-mobile-extra">
+        <select class="lang-select" id="langSelectMobile" aria-label="Language"></select>
+        <a href="#demo" class="btn btn-primary" data-i18n="nav_cta">Book a Demo</a>
+      </div>
     </div>
     <div class="nav-cta">
       <select class="lang-select" id="langSelect" aria-label="Language"></select>
@@ -1905,11 +1917,14 @@
   var rtlLangs = ['ar','ur'];
 
   var langSelect = document.getElementById('langSelect');
-  availableLangs.forEach(function(code){
-    var opt = document.createElement('option');
-    opt.value = code;
-    opt.textContent = langNames[code];
-    langSelect.appendChild(opt);
+  var langSelectMobile = document.getElementById('langSelectMobile');
+  [langSelect, langSelectMobile].forEach(function(select){
+    availableLangs.forEach(function(code){
+      var opt = document.createElement('option');
+      opt.value = code;
+      opt.textContent = langNames[code];
+      select.appendChild(opt);
+    });
   });
 
   function applyLanguage(lang){
@@ -1928,6 +1943,7 @@
     document.documentElement.lang = lang;
     document.documentElement.dir = rtlLangs.indexOf(lang) > -1 ? 'rtl' : 'ltr';
     langSelect.value = lang;
+    langSelectMobile.value = lang;
     localStorage.setItem('chatdesk_lang', lang);
     if(typeof renderShowcaseTabs === 'function' && document.getElementById('showcaseTabs')){
       renderShowcaseTabs();
@@ -1947,6 +1963,9 @@
 
   langSelect.addEventListener('change', function(){
     applyLanguage(langSelect.value);
+  });
+  langSelectMobile.addEventListener('change', function(){
+    applyLanguage(langSelectMobile.value);
   });
 
   applyLanguage(detectLanguage());
