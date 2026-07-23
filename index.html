@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W50ECXZCXE');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ChatCart Pro AI - Turn Your WhatsApp into an AI-Powered 24x7 Employee</title>
 <meta name="description" content="ChatCart Pro AI turns your WhatsApp into an AI-powered 24x7 employee that takes orders and books appointments automatically for grocery, pharmacy, restaurant, salon, hospital, auto repair, real estate, gym, dental, event venue, laundry, and courier businesses worldwide. Book a free demo.">
@@ -1080,6 +1091,12 @@
       Promise.all([sendNotify, sendAutoReply]).then(function(){
         document.getElementById('demoFormWrap').style.display = 'none';
         document.getElementById('demoSuccess').style.display = 'block';
+        if(typeof gtag === 'function'){
+          gtag('event', 'generate_lead', {
+            event_category: 'demo_form',
+            event_label: params.industry
+          });
+        }
       }).catch(function(err){
         console.error('EmailJS send failed:', err);
         var detail = (err && (err.text || err.message)) ? (' (' + (err.status || '') + ' ' + (err.text || err.message) + ')') : '';
