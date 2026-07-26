@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatCart Pro — Admin Dashboard (Demo)</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============ Exact port of the live Al Madina admin.css (ChatCart palette) ============ */
+* { box-sizing: border-box; }
+
+:root {
+  --accent: #0a0a0a;
+  --accent-dark: #000000;
+  --accent-soft: #f2ffcc;
+  --lime: #ccff00;
+  --lime-dark: #a6d600;
+  --bg: #f4f8f5;
+  --card: #ffffff;
+  --text: #0a0a0a;
+  --muted: #5b6360;
+  --border: #ececec;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --amber-bg: #fff3cd; --amber-fg: #8a6d00;
+  --green-bg: #e6f7ee; --green-fg: #1a7a4c;
+  --red-bg: #fde2e2; --red-fg: #b02a2a;
+  --blue-bg: #e3f0fc; --blue-fg: #2a4bb0;
+  --grey-bg: #eee; --grey-fg: #555;
+}
+
+body {
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.app-shell { display: flex; min-height: 100vh; padding: 20px; gap: 20px; }
+
+/* ---- Sidebar ---- */
+.sidebar { width: 240px; flex-shrink: 0; background: var(--card); border-radius: var(--radius); padding: 24px 18px; display: flex; flex-direction: column; }
+.sidebar .brand { display: flex; align-items: center; gap: 10px; padding: 0 6px 24px; font-weight: 700; font-size: 1.15em; }
+.sidebar .brand .logo { width: 34px; height: 34px; border-radius: 50%; background: var(--lime); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.1em; flex-shrink: 0; }
+.sidebar .brand .brand-text { min-width: 0; }
+.sidebar .brand .brand-name { line-height: 1.2; }
+.sidebar .brand .brand-sub { font-size: 0.62em; font-weight: 500; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sidebar .powered-by { text-align: center; font-size: 0.68em; color: var(--muted); margin-top: 12px; }
+.sidebar .powered-by b { color: var(--accent-dark); }
+.sidebar .section-label { font-size: 0.72em; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 18px 10px 8px; }
+.sidebar nav a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; color: var(--muted); font-size: 0.92em; font-weight: 500; margin-bottom: 2px; cursor: pointer; border: none; background: none; width: 100%; text-align: left; font-family: inherit; }
+.sidebar nav a:hover { background: var(--accent-soft); color: var(--accent-dark); }
+.sidebar nav a.active { background: var(--accent); color: white; }
+.sidebar nav a .icon { width: 18px; text-align: center; }
+.sidebar .promo-card { margin-top: auto; background: linear-gradient(160deg, #0a0a0a, #16201a); border-radius: var(--radius-sm); padding: 18px; color: white; }
+.sidebar .promo-card h4 { margin: 0 0 6px; font-size: 0.95em; }
+.sidebar .promo-card p { margin: 0 0 12px; font-size: 0.78em; color: rgba(255,255,255,0.65); }
+.sidebar .promo-card .badge-plan { display: inline-block; background: var(--lime); color: var(--accent); border-radius: 8px; padding: 6px 10px; font-size: 0.8em; font-weight: 600; }
+
+/* ---- Main column ---- */
+.main-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+
+.topbar { background: var(--card); border-radius: var(--radius); padding: 14px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.topbar .search { flex: 1; display: flex; align-items: center; gap: 10px; background: var(--bg); border-radius: 10px; padding: 9px 14px; color: var(--muted); font-size: 0.9em; min-width: 120px; }
+.topbar .spacer { flex: 1; }
+.topbar .biz-select { border: 1px solid var(--border); background: var(--card); border-radius: 10px; padding: 8px 12px; font-size: 0.85em; font-weight: 600; color: var(--text); font-family: inherit; }
+.topbar .who { display: flex; align-items: center; gap: 10px; }
+.topbar .avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+.topbar .who .name { font-weight: 600; font-size: 0.9em; }
+.topbar .who .role { font-size: 0.75em; color: var(--muted); }
+
+.page-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
+.page-header h1 { margin: 0; font-size: 1.7em; }
+.page-header p { margin: 4px 0 0; color: var(--muted); font-size: 0.92em; }
+.page-header .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 10px; border: none; font-size: 0.88em; font-weight: 600; cursor: pointer; font-family: inherit; }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline { background: white; border: 1px solid var(--border); color: var(--text); }
+.btn-outline:hover { background: var(--bg); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+.stat-card { background: var(--card); border-radius: var(--radius); padding: 18px 20px; }
+.stat-card.dark { background: var(--accent-dark); color: white; }
+.stat-card .top { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-weight: 600; font-size: 0.92em; }
+.stat-card.dark .top { color: rgba(255,255,255,0.65); }
+.stat-card .top .arrow { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.8em; }
+.stat-card.dark .top .arrow { border-color: rgba(255,255,255,0.3); }
+.stat-card .value { font-size: 2em; font-weight: 700; margin: 10px 0 6px; }
+.stat-card .delta { font-size: 0.78em; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+.stat-card.dark .delta { color: var(--lime); }
+
+.grid-2 { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 18px; align-items: start; }
+@media (max-width: 1000px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+/* ---- Hamburger / off-canvas sidebar ---- */
+.menu-btn { display: none; width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
+.menu-btn span, .menu-btn::before, .menu-btn::after { content: ""; display: block; width: 18px; height: 2px; background: var(--text); border-radius: 2px; }
+.menu-btn::before { margin-bottom: 4px; }
+.menu-btn::after { margin-top: 4px; }
+.sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.45); z-index: 40; }
+
+@media (max-width: 860px) {
+  .app-shell { padding: 12px; gap: 12px; }
+  .menu-btn { display: flex; }
+  .topbar .search { display: none; }
+  .topbar .biz-select { flex: 1; min-width: 0; }
+
+  .sidebar {
+    position: fixed; top: 0; left: 0; height: 100vh; z-index: 50;
+    width: 260px; max-width: 84vw; border-radius: 0 var(--radius) var(--radius) 0;
+    transform: translateX(-100%); transition: transform 0.22s ease;
+    overflow-y: auto;
+  }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar-overlay.open { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar { transition: none; }
+}
+
+.panel { background: var(--card); border-radius: var(--radius); padding: 20px 22px; }
+.panel h2 { margin: 0 0 16px; font-size: 1.05em; }
+.panel .panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.88em; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th { color: var(--muted); font-weight: 600; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.03em; }
+tr:last-child td { border-bottom: none; }
+tr.active-row { background: var(--accent-soft); }
+tr:hover td { background: #fafbfa; }
+.muted { color: var(--muted); }
+
+.badge { padding: 3px 10px; border-radius: 20px; font-size: 0.78em; font-weight: 600; display: inline-block; }
+.badge-grey { background: var(--grey-bg); color: var(--grey-fg); }
+.badge-amber { background: var(--amber-bg); color: var(--amber-fg); }
+.badge-green { background: var(--green-bg); color: var(--green-fg); }
+.badge-red { background: var(--red-bg); color: var(--red-fg); }
+.badge-blue { background: var(--blue-bg); color: var(--blue-fg); }
+
+.avatar-row { display: flex; align-items: center; gap: 10px; }
+.avatar-sm { width: 32px; height: 32px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-dark); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8em; flex-shrink: 0; }
+
+.chat-window { max-height: 480px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; padding-right: 4px; }
+.bubble { max-width: 78%; padding: 9px 13px; border-radius: 12px; font-size: 0.88em; }
+.bubble.in { align-self: flex-start; background: var(--bg); }
+.bubble.out { align-self: flex-end; background: var(--green-bg); }
+.bubble-text { white-space: pre-wrap; word-break: break-word; }
+.bubble-time { font-size: 0.7em; color: var(--muted); margin-top: 4px; }
+
+.filters-form { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.filters-form label { font-size: 0.82em; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+.filters-form input, .filters-form select { padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.9em; font-family: inherit; }
+
+.offer-chat { display: flex; flex-direction: column; gap: 12px; }
+.offer-chat textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 12px; font-size: 0.9em; font-family: inherit; resize: vertical; min-height: 70px; }
+.offer-draft { background: var(--accent-soft); border-radius: var(--radius-sm); padding: 16px 18px; }
+.offer-draft h3 { margin: 0 0 8px; font-size: 1em; }
+.offer-draft .field { font-size: 0.85em; margin-bottom: 4px; }
+.offer-draft .field b { color: var(--accent-dark); }
+
+.upload-row { margin-top: 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 520px; }
+.form-grid label { font-size: 0.85em; color: var(--muted); display: flex; flex-direction: column; gap: 6px; }
+.form-grid input { padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; }
+.form-grid .full { grid-column: 1 / -1; }
+
+.settings-value { background: var(--bg); border-radius: 8px; padding: 10px 14px; font-family: monospace; font-size: 0.88em; }
+
+canvas { max-width: 100%; }
+
+.page { display: none; }
+.page.active { display: flex; flex-direction: column; gap: 18px; }
+
+.demo-banner {
+  background: var(--accent); color: var(--lime); font-size: 0.78em; font-weight: 700;
+  text-align: center; padding: 8px 14px; border-radius: var(--radius-sm); letter-spacing: 0.02em;
+}
+
+@media (max-width: 700px) {
+  .stat-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 480px) {
+  .stat-grid { grid-template-columns: 1fr; }
+  .demo-banner { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div class="brand-text">
+        <div class="brand-name">ChatCart Pro</div>
+        <div class="brand-sub" id="sbStoreName">Al Madina Nawes Supermarket</div>
+      </div>
+    </div>
+
+    <div class="section-label">Menu</div>
+    <nav id="navMenu">
+      <a data-page="dashboard" class="active"><span class="icon">&#9635;</span> Dashboard</a>
+      <a data-page="customers"><span class="icon">&#128101;</span> Customers</a>
+      <a data-page="conversations"><span class="icon">&#128172;</span> Conversations</a>
+      <a data-page="orders"><span class="icon">&#128230;</span> Orders</a>
+      <a data-page="analytics"><span class="icon">&#128200;</span> Analytics</a>
+      <a data-page="catalog"><span class="icon">&#128722;</span> Catalog</a>
+      <a data-page="offers"><span class="icon">&#127991;</span> Offers</a>
+    </nav>
+
+    <div class="section-label">General</div>
+    <nav>
+      <a data-page="billing"><span class="icon">&#128179;</span> Billing</a>
+      <a data-page="settings"><span class="icon">&#9881;</span> Settings</a>
+    </nav>
+
+    <div class="promo-card">
+      <h4>WhatsApp AI Agent</h4>
+      <p>Live and answering customer orders on WhatsApp.</p>
+      <span class="badge-plan">Free Plan</span>
+    </div>
+
+    <div class="powered-by">AI Powered by <b>Nexsofture Pvt Ltd</b></div>
+  </aside>
+
+  <div class="main-col">
+    <div class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar"></button>
+      <div class="search">&#128269; Search&hellip;</div>
+      <span class="demo-banner">DEMO &mdash; sample data for pitch purposes</span>
+      <select class="biz-select" id="bizSelect">
+        <option value="grocery">Grocery &middot; Al Madina Nawes Supermarket</option>
+        <option value="pharmacy">Pharmacy &middot; Wellness Pharmacy</option>
+        <option value="restaurant">Restaurant &middot; Basil &amp; Bay Kitchen</option>
+        <option value="salon">Salon &middot; Smile Salon &amp; Spa</option>
+      </select>
+      <div class="spacer"></div>
+      <div class="who">
+        <div class="avatar" id="adminAvatar">A</div>
+        <div>
+          <div class="name" id="adminName">admin</div>
+          <div class="role">Admin</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== DASHBOARD ===================== -->
+    <section class="page active" id="page-dashboard">
+      <div class="page-header">
+        <div><h1>Dashboard</h1><p id="dashSub">Plan, track, and grow Al Madina Nawes Supermarket's WhatsApp orders.</p></div>
+        <div class="actions">
+          <button class="btn btn-outline" data-goto="catalog">Manage Catalog</button>
+          <button class="btn btn-primary" data-goto="offers">+ Create Offer</button>
+        </div>
+      </div>
+
+      <div class="stat-grid" id="dashStats"></div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Order activity (last 7 days)</h2>
+          <canvas id="dashChart" height="140"></canvas>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h2>Recent orders</h2><a class="muted" data-goto="orders">View all</a></div>
+          <div class="table-scroll">
+            <table id="dashRecentOrders"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CUSTOMERS ===================== -->
+    <section class="page" id="page-customers">
+      <div class="page-header">
+        <div><h1>Customers</h1><p id="custSub">Everyone who has messaged Al Madina Nawes Supermarket on WhatsApp.</p></div>
+      </div>
+      <div class="panel">
+        <form class="filters-form" onsubmit="return false;">
+          <label>From <input type="date" value="2026-07-01"></label>
+          <label>To <input type="date" value="2026-07-26"></label>
+          <button class="btn btn-primary" type="submit">Apply</button>
+        </form>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2 id="custCount">Customers</h2></div>
+        <div class="table-scroll"><table id="custTable"></table></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONVERSATIONS ===================== -->
+    <section class="page" id="page-conversations">
+      <div class="page-header">
+        <div><h1>Conversations</h1><p>Browse full WhatsApp transcripts per customer.</p></div>
+      </div>
+      <div class="panel">
+        <form class="filters-form" onsubmit="return false;">
+          <label>From <input type="date" value="2026-07-01"></label>
+          <label>To <input type="date" value="2026-07-26"></label>
+          <button class="btn btn-primary" type="submit">Apply</button>
+        </form>
+      </div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2 id="convCustCount">Customers</h2>
+          <div class="table-scroll"><table id="convCustTable"></table></div>
+        </div>
+        <div class="panel">
+          <h2 id="convTranscriptTitle">Transcript</h2>
+          <div class="chat-window" id="convTranscript"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ORDERS ===================== -->
+    <section class="page" id="page-orders">
+      <div class="page-header">
+        <div><h1>Orders</h1><p>All customer orders placed via WhatsApp.</p></div>
+      </div>
+      <div class="panel">
+        <form class="filters-form" onsubmit="return false;">
+          <label>From <input type="date" value="2026-07-01"></label>
+          <label>To <input type="date" value="2026-07-26"></label>
+          <label>Status
+            <select>
+              <option>All</option>
+              <option>draft</option>
+              <option>awaiting_confirmation</option>
+              <option>confirmed</option>
+              <option>cancelled</option>
+              <option>fulfilled</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit">Apply</button>
+        </form>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2 id="ordersCount">Orders</h2></div>
+        <div class="table-scroll"><table id="ordersTable"></table></div>
+      </div>
+    </section>
+
+    <!-- ===================== ANALYTICS ===================== -->
+    <section class="page" id="page-analytics">
+      <div class="page-header">
+        <div><h1>Sales Analytics</h1><p>Revenue and order activity, by day, month, or a custom range.</p></div>
+        <div class="actions"><button class="btn btn-outline">Export to Excel</button></div>
+      </div>
+      <div class="panel">
+        <form class="filters-form" onsubmit="return false;">
+          <label>From <input type="date" value="2026-07-01"></label>
+          <label>To <input type="date" value="2026-07-26"></label>
+          <button class="btn btn-outline" type="button">Today</button>
+          <button class="btn btn-outline" type="button">Last 7 days</button>
+          <button class="btn btn-outline" type="button">This month</button>
+          <button class="btn btn-primary" type="submit">Apply custom range</button>
+        </form>
+      </div>
+      <div class="stat-grid" id="analyticsStats"></div>
+      <div class="panel">
+        <h2>Daily activity</h2>
+        <canvas id="analyticsChart" height="90"></canvas>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2 id="analyticsOrdersCount">Orders in range</h2></div>
+        <div class="table-scroll"><table id="analyticsOrdersTable"></table></div>
+      </div>
+    </section>
+
+    <!-- ===================== CATALOG ===================== -->
+    <section class="page" id="page-catalog">
+      <div class="page-header">
+        <div><h1>Catalog</h1><p id="catalogSub">Live stock and pricing the WhatsApp AI grounds every reply in. Last synced 4 minutes ago.</p></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2 id="catalogCount">Stock items</h2></div>
+        <div class="table-scroll"><table id="catalogTable"></table></div>
+        <form class="upload-row" onsubmit="return false;">
+          <input type="file" accept=".xlsx,.xls,.csv">
+          <button class="btn btn-primary" type="submit">Upload stock file</button>
+          <span class="muted">Columns: SKU, Name, Category, Unit, Price, Stock Qty</span>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===================== OFFERS ===================== -->
+    <section class="page" id="page-offers">
+      <div class="page-header">
+        <div><h1>Offers</h1><p>Describe a promotion in plain language and let AI draft it.</p></div>
+      </div>
+      <div class="panel">
+        <h2>Create offer with AI</h2>
+        <form class="offer-chat" id="offerForm">
+          <textarea placeholder="e.g. 10% off all dairy this weekend" id="offerPrompt"></textarea>
+          <div><button class="btn btn-primary" type="submit">Draft offer</button></div>
+        </form>
+        <div class="offer-draft" style="margin-top:16px; display:none;" id="offerDraftBox">
+          <h3>AI-drafted offer &middot; review before activating</h3>
+          <div class="field"><b>Title:</b> <span id="odTitle"></span></div>
+          <div class="field"><b>Description:</b> <span id="odDesc"></span></div>
+          <div class="field"><b>Discount:</b> <span id="odDiscount"></span></div>
+          <div class="field"><b>Scope:</b> <span id="odScope"></span></div>
+          <div class="field"><b>Dates:</b> <span id="odDates"></span></div>
+          <div style="margin-top:12px;"><button class="btn btn-primary" type="button" id="odSave">Save as draft offer</button></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h2 id="offersCount">All offers</h2></div>
+        <div class="table-scroll"><table id="offersTable"></table></div>
+      </div>
+    </section>
+
+    <!-- ===================== BILLING ===================== -->
+    <section class="page" id="page-billing">
+      <div class="page-header"><div><h1>Billing</h1><p>Your current plan and usage.</p></div></div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Current plan</h2>
+          <div class="stat-card dark" style="margin-bottom:16px;">
+            <div class="top">Plan</div>
+            <div class="value">Free</div>
+            <div class="delta">No charges &mdash; this WhatsApp AI agent is currently free to run.</div>
+          </div>
+          <p class="muted">Included: 1 WhatsApp number, unlimited catalog items, order capture, customer conversations, sales analytics, and this admin dashboard.</p>
+          <button class="btn btn-primary" disabled>Upgrade (coming soon)</button>
+        </div>
+        <div class="panel">
+          <h2>Usage this month</h2>
+          <table>
+            <tr><th>Metric</th><th>Value</th></tr>
+            <tr><td>Messages received</td><td id="billMsgs">-</td></tr>
+            <tr><td>Orders confirmed</td><td id="billOrders">-</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SETTINGS ===================== -->
+    <section class="page" id="page-settings">
+      <div class="page-header"><div><h1>Settings</h1><p>Account and store configuration.</p></div></div>
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Change password</h2>
+          <form class="form-grid" onsubmit="return false;">
+            <label class="full">Current password<input type="password"></label>
+            <label class="full">New password (min 8 characters)<input type="password"></label>
+            <div class="full"><button class="btn btn-primary" type="submit">Update password</button></div>
+          </form>
+        </div>
+        <div class="panel">
+          <h2>Store configuration</h2>
+          <p class="muted">These values are set via environment variables (.env). Edit and redeploy to change them.</p>
+          <table id="settingsTable"></table>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Mock data per industry ---------------- */
+  var DATA = {
+    grocery: {
+      storeName: "Al Madina Nawes Supermarket", currency: "AED",
+      stats_today: { orders_confirmed: 38, revenue: 2140.50, messages_received: 211, replies_sent: 198 },
+      stats_month: { orders_confirmed: 642, revenue: 34890.00, unique_customers: 356 },
+      daily: [
+        {day:"07-20", received:180, sent:170}, {day:"07-21", received:195, sent:183},
+        {day:"07-22", received:170, sent:162}, {day:"07-23", received:210, sent:200},
+        {day:"07-24", received:188, sent:179}, {day:"07-25", received:225, sent:212},
+        {day:"07-26", received:211, sent:198}
+      ],
+      orders: [
+        {id:1842, phone:"+971 55 010 2231", status:"confirmed", items:"2x Basmati Rice 5kg, 1x Milk 2L", subtotal:88.50, delivery:8.00, total:96.50, offer:false, placed:"2026-07-26 10:41"},
+        {id:1841, phone:"+971 55 010 8871", status:"awaiting_confirmation", items:"1x Cooking Oil 2L, Spices set", subtotal:58.00, delivery:0, total:58.00, offer:false, placed:"2026-07-26 10:32"},
+        {id:1840, phone:"+971 55 010 0325", status:"fulfilled", items:"Grocery bundle (12 items)", subtotal:133.20, delivery:10.00, total:143.20, offer:true, placed:"2026-07-26 09:58"},
+        {id:1839, phone:"+971 55 010 7712", status:"draft", items:"1x Fresh vegetables bundle", subtotal:42.00, delivery:0, total:42.00, offer:false, placed:"2026-07-26 09:47"},
+        {id:1838, phone:"+971 55 010 9903", status:"cancelled", items:"1x Chicken 1kg", subtotal:28.00, delivery:0, total:28.00, offer:false, placed:"2026-07-26 09:40"}
+      ],
+      customers: [
+        {phone:"+971 55 010 2231", name:"Fatima R.", msgs:44, last:"2026-07-26 10:41"},
+        {phone:"+971 55 010 8871", name:"Ahmed K.", msgs:12, last:"2026-07-26 10:32"},
+        {phone:"+971 55 010 0325", name:null, msgs:3, last:"2026-07-26 09:58"},
+        {phone:"+971 55 010 7712", name:"Sara M.", msgs:27, last:"2026-07-26 09:47"},
+        {phone:"+971 55 010 9903", name:"Yusuf D.", msgs:9, last:"2026-07-26 09:40"}
+      ],
+      transcript: [
+        {dir:"in", text:"Hi! I'd like to order 2kg rice, milk, and eggs", time:"2026-07-26 10:14"},
+        {dir:"out", text:"Got it! Adding 2kg Basmati Rice, 1L Milk, and 1 dozen Eggs to your cart. Total so far: AED 46.50", time:"2026-07-26 10:14"},
+        {dir:"in", text:"Can I get it delivered by 6pm today?", time:"2026-07-26 10:15"},
+        {dir:"out", text:"Yes! Delivery slot 5:00-6:00 PM confirmed. Your order total is AED 46.50 + AED 8.00 delivery.", time:"2026-07-26 10:15"}
+      ],
+      catalog: [
+        {name:"Basmati Rice 5kg", cat:"Grains", price:38.00, stock:62, unit:"pcs", inStock:true},
+        {name:"Milk 2L", cat:"Dairy", price:11.50, stock:8, unit:"pcs", inStock:true},
+        {name:"Cooking Oil 2L", cat:"Pantry", price:22.00, stock:0, unit:"pcs", inStock:false},
+        {name:"Fresh Dates 1kg", cat:"Produce", price:19.90, stock:34, unit:"pcs", inStock:true},
+        {name:"Farm Eggs (12)", cat:"Dairy", price:9.50, stock:22, unit:"pcs", inStock:true}
+      ],
+      offers: [
+        {title:"Weekend Dairy Discount", discount:"10%", status:"active", dates:"2026-07-25 → 2026-07-27"},
+        {title:"Ramadan Bundle Offer", discount:"AED 15", status:"expired", dates:"2026-03-01 → 2026-03-30"},
+        {title:"New Customer Welcome", discount:"5%", status:"draft", dates:"- → -"}
+      ],
+      deliveryFee: 10, freeDeliveryThreshold: 100
+    },
+    pharmacy: {
+      storeName: "Wellness Pharmacy", currency: "AED",
+      stats_today: { orders_confirmed: 31, revenue: 1420.00, messages_received: 154, replies_sent: 149 },
+      stats_month: { orders_confirmed: 480, revenue: 21870.00, unique_customers: 268 },
+      daily: [
+        {day:"07-20", received:130, sent:124}, {day:"07-21", received:142, sent:135},
+        {day:"07-22", received:120, sent:115}, {day:"07-23", received:160, sent:151},
+        {day:"07-24", received:138, sent:130}, {day:"07-25", received:165, sent:158},
+        {day:"07-26", received:154, sent:149}
+      ],
+      orders: [
+        {id:4410, phone:"+971 50 220 1120", status:"confirmed", items:"Amlodipine 5mg refill (30)", subtotal:41.20, delivery:0, total:41.20, offer:false, placed:"2026-07-26 09:12"},
+        {id:4411, phone:"+971 50 220 4471", status:"fulfilled", items:"Cetirizine, Vitamin D3", subtotal:53.60, delivery:8.00, total:61.60, offer:false, placed:"2026-07-26 09:40"},
+        {id:4412, phone:"+971 50 220 8832", status:"awaiting_confirmation", items:"Metformin 500mg refill", subtotal:32.90, delivery:0, total:32.90, offer:false, placed:"2026-07-26 09:55"},
+        {id:4413, phone:"+971 50 220 6612", status:"confirmed", items:"First-aid bundle", subtotal:82.40, delivery:8.00, total:90.40, offer:true, placed:"2026-07-26 10:02"}
+      ],
+      customers: [
+        {phone:"+971 50 220 1120", name:"George H.", msgs:19, last:"2026-07-26 09:12"},
+        {phone:"+971 50 220 4471", name:"Nadia F.", msgs:4, last:"2026-07-26 09:40"},
+        {phone:"+971 50 220 8832", name:"Liam F.", msgs:26, last:"2026-07-26 09:55"},
+        {phone:"+971 50 220 6612", name:"Sara I.", msgs:2, last:"2026-07-26 10:02"}
+      ],
+      transcript: [
+        {dir:"in", text:"Hi, can I get a refill on my blood pressure medication?", time:"2026-07-26 09:11"},
+        {dir:"out", text:"Sure! I found your last order: Amlodipine 5mg, 30 tablets. Shall I confirm the refill?", time:"2026-07-26 09:11"},
+        {dir:"in", text:"Yes please, pickup today", time:"2026-07-26 09:12"},
+        {dir:"out", text:"Order confirmed. Ready for pickup today after 4:00 PM at the counter.", time:"2026-07-26 09:12"}
+      ],
+      catalog: [
+        {name:"Amlodipine 5mg", cat:"Prescription", price:11.20, stock:120, unit:"pack", inStock:true},
+        {name:"Cetirizine 10mg", cat:"OTC", price:9.80, stock:18, unit:"pack", inStock:true},
+        {name:"Vitamin D3 1000IU", cat:"Supplements", price:14.00, stock:52, unit:"pack", inStock:true},
+        {name:"BP Monitor (unit)", cat:"Devices", price:124.00, stock:0, unit:"unit", inStock:false}
+      ],
+      offers: [
+        {title:"Senior Citizen Discount", discount:"8%", status:"active", dates:"2026-07-01 → 2026-08-31"},
+        {title:"First Aid Bundle Deal", discount:"AED 10", status:"draft", dates:"- → -"}
+      ],
+      deliveryFee: 8, freeDeliveryThreshold: 80
+    },
+    restaurant: {
+      storeName: "Basil & Bay Kitchen", currency: "AED",
+      stats_today: { orders_confirmed: 63, revenue: 7132.00, messages_received: 302, replies_sent: 288 },
+      stats_month: { orders_confirmed: 1180, revenue: 128900.00, unique_customers: 512 },
+      daily: [
+        {day:"07-20", received:260, sent:248}, {day:"07-21", received:275, sent:262},
+        {day:"07-22", received:250, sent:238}, {day:"07-23", received:290, sent:277},
+        {day:"07-24", received:268, sent:255}, {day:"07-25", received:310, sent:296},
+        {day:"07-26", received:302, sent:288}
+      ],
+      orders: [
+        {id:8810, phone:"+971 52 330 1187", status:"fulfilled", items:"Margherita pizza, Tiramisu", subtotal:82.00, delivery:10.00, total:92.00, offer:false, placed:"2026-07-26 12:04"},
+        {id:8811, phone:"+971 52 330 5541", status:"confirmed", items:"Butter chicken, Garlic naan x2", subtotal:99.00, delivery:0, total:99.00, offer:false, placed:"2026-07-26 12:18"},
+        {id:8812, phone:"+971 52 330 7723", status:"awaiting_confirmation", items:"Caesar salad, Sparkling water", subtotal:54.00, delivery:10.00, total:64.00, offer:false, placed:"2026-07-26 12:22"},
+        {id:8815, phone:"+971 52 330 9902", status:"cancelled", items:"Cheeseburger, Fries", subtotal:62.00, delivery:0, total:62.00, offer:false, placed:"2026-07-26 11:50"}
+      ],
+      customers: [
+        {phone:"+971 52 330 1187", name:"Elena C.", msgs:31, last:"2026-07-26 12:04"},
+        {phone:"+971 52 330 5541", name:"Raj M.", msgs:6, last:"2026-07-26 12:18"},
+        {phone:"+971 52 330 7723", name:"Sofia M.", msgs:2, last:"2026-07-26 12:22"},
+        {phone:"+971 52 330 9902", name:"Noah B.", msgs:5, last:"2026-07-26 11:50"}
+      ],
+      transcript: [
+        {dir:"in", text:"Hi, I'd like a margherita pizza and tiramisu for delivery", time:"2026-07-26 12:03"},
+        {dir:"out", text:"Great choice! Margherita Pizza (AED 62) + Tiramisu (AED 20) = AED 82. Delivery is AED 10. Confirm?", time:"2026-07-26 12:03"},
+        {dir:"in", text:"Yes confirm", time:"2026-07-26 12:04"},
+        {dir:"out", text:"Order confirmed! Estimated delivery time: 35-40 minutes.", time:"2026-07-26 12:04"}
+      ],
+      catalog: [
+        {name:"Mozzarella (block)", cat:"Ingredients", price:28.00, stock:12, unit:"kg", inStock:true},
+        {name:"Chicken breast (kg)", cat:"Ingredients", price:24.00, stock:28, unit:"kg", inStock:true},
+        {name:"Naan dough (batch)", cat:"Ingredients", price:15.00, stock:6, unit:"batch", inStock:true},
+        {name:"Sparkling water (case)", cat:"Beverages", price:36.00, stock:0, unit:"case", inStock:false}
+      ],
+      offers: [
+        {title:"Weekday Lunch Special", discount:"15%", status:"active", dates:"2026-07-01 → 2026-12-31"},
+        {title:"Family Bundle Offer", discount:"AED 20", status:"draft", dates:"- → -"}
+      ],
+      deliveryFee: 10, freeDeliveryThreshold: 120
+    },
+    salon: {
+      storeName: "Smile Salon & Spa", currency: "AED",
+      stats_today: { orders_confirmed: 22, revenue: 4070.00, messages_received: 98, replies_sent: 94 },
+      stats_month: { orders_confirmed: 410, revenue: 71200.00, unique_customers: 189 },
+      daily: [
+        {day:"07-20", received:82, sent:78}, {day:"07-21", received:90, sent:86},
+        {day:"07-22", received:75, sent:71}, {day:"07-23", received:95, sent:90},
+        {day:"07-24", received:88, sent:84}, {day:"07-25", received:102, sent:97},
+        {day:"07-26", received:98, sent:94}
+      ],
+      orders: [
+        {id:1102, phone:"+971 56 440 1102", status:"fulfilled", items:"Haircut & blow-dry — 2:30 PM", subtotal:165.00, delivery:0, total:165.00, offer:false, placed:"2026-07-26 09:10"},
+        {id:1103, phone:"+971 56 440 4432", status:"confirmed", items:"Gel manicure — 3:00 PM", subtotal:140.00, delivery:0, total:140.00, offer:false, placed:"2026-07-26 09:22"},
+        {id:1104, phone:"+971 56 440 7765", status:"awaiting_confirmation", items:"Full color & style — 4:15 PM", subtotal:440.00, delivery:0, total:440.00, offer:false, placed:"2026-07-26 09:35"},
+        {id:1105, phone:"+971 56 440 9981", status:"cancelled", items:"Facial treatment — 1:00 PM", subtotal:240.00, delivery:0, total:240.00, offer:false, placed:"2026-07-26 08:50"}
+      ],
+      customers: [
+        {phone:"+971 56 440 1102", name:"Layla H.", msgs:16, last:"2026-07-26 09:10"},
+        {phone:"+971 56 440 4432", name:"Grace K.", msgs:5, last:"2026-07-26 09:22"},
+        {phone:"+971 56 440 7765", name:"Amara O.", msgs:2, last:"2026-07-26 09:35"},
+        {phone:"+971 56 440 9981", name:"Chloe M.", msgs:8, last:"2026-07-26 08:50"}
+      ],
+      transcript: [
+        {dir:"in", text:"Hi, do you have a slot for a haircut this Saturday?", time:"2026-07-26 09:09"},
+        {dir:"out", text:"Yes! We have openings at 11:00 AM, 2:30 PM, and 4:00 PM this Saturday.", time:"2026-07-26 09:09"},
+        {dir:"in", text:"I'll take 2:30 PM please", time:"2026-07-26 09:10"},
+        {dir:"out", text:"You're booked for a Haircut, Saturday at 2:30 PM. We'll send a reminder the day before.", time:"2026-07-26 09:10"}
+      ],
+      catalog: [
+        {name:"Hair color tubes", cat:"Supplies", price:45.00, stock:33, unit:"pcs", inStock:true},
+        {name:"Gel polish set", cat:"Supplies", price:60.00, stock:8, unit:"set", inStock:true},
+        {name:"Facial masks (box)", cat:"Supplies", price:80.00, stock:0, unit:"box", inStock:false}
+      ],
+      offers: [
+        {title:"Bridal Package Discount", discount:"20%", status:"active", dates:"2026-06-01 → 2026-09-30"},
+        {title:"Referral Reward", discount:"AED 30", status:"draft", dates:"- → -"}
+      ],
+      deliveryFee: 0, freeDeliveryThreshold: 0
+    }
+  };
+
+  var STATUS_BADGE = { draft:"badge-grey", awaiting_confirmation:"badge-amber", confirmed:"badge-green", cancelled:"badge-red", fulfilled:"badge-blue" };
+  var OFFER_BADGE = { draft:"badge-grey", active:"badge-green", expired:"badge-red" };
+
+  var currentBiz = "grocery";
+  var selectedCustomerPhone = null;
+
+  function money(cur, n){ return cur + " " + n.toFixed(2); }
+
+  /* ---------------- Charts (Canvas, no external lib) ---------------- */
+  function drawBarChart(canvas, labels, seriesA, seriesB, colorA, colorB){
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var w = canvas.clientWidth || 500, h = 140;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+    var pad = 24, gap = 8;
+    var max = Math.max.apply(null, seriesA.concat(seriesB)) * 1.15;
+    var groupW = (w - pad*2) / labels.length;
+    var barW = (groupW - gap) / 2.4;
+
+    ctx.strokeStyle = '#ececec';
+    ctx.lineWidth = 1;
+    for(var g=0; g<=3; g++){
+      var gy = 10 + (h - 30) * (g/3);
+      ctx.beginPath(); ctx.moveTo(pad, gy); ctx.lineTo(w-pad, gy); ctx.stroke();
+    }
+
+    labels.forEach(function(lbl, i){
+      var x0 = pad + i*groupW + groupW/2 - barW - 2;
+      var aH = (seriesA[i]/max) * (h-30);
+      var bH = (seriesB[i]/max) * (h-30);
+      ctx.fillStyle = colorA;
+      ctx.fillRect(x0, h-20-aH, barW, aH);
+      ctx.fillStyle = colorB;
+      ctx.fillRect(x0+barW+3, h-20-bH, barW, bH);
+      ctx.fillStyle = '#5b6360';
+      ctx.font = '10px -apple-system,Segoe UI,Arial,sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(lbl, x0+barW+2, h-6);
+    });
+  }
+
+  function drawLineChart(canvas, labels, seriesA, seriesB, colorA, colorB, fillA, fillB){
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var w = canvas.clientWidth || 500, h = 90;
+    canvas.width = w * dpr; canvas.height = h * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,w,h);
+    var pad = 10;
+    var max = Math.max.apply(null, seriesA.concat(seriesB)) * 1.15;
+    var stepX = (w - pad*2) / (labels.length - 1);
+
+    function drawSeries(series, color, fill){
+      function ptY(v){ return h - pad - (v/max) * (h - pad*2); }
+      ctx.beginPath();
+      series.forEach(function(v,i){
+        var x = pad + i*stepX, y = ptY(v);
+        if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      });
+      ctx.lineTo(pad + (series.length-1)*stepX, h-pad);
+      ctx.lineTo(pad, h-pad);
+      ctx.closePath();
+      ctx.fillStyle = fill;
+      ctx.fill();
+
+      ctx.beginPath();
+      series.forEach(function(v,i){
+        var x = pad + i*stepX, y = ptY(v);
+        if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      });
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.8;
+      ctx.lineJoin = 'round';
+      ctx.stroke();
+    }
+
+    drawSeries(seriesA, colorA, fillA);
+    drawSeries(seriesB, colorB, fillB);
+  }
+
+  /* ---------------- Page nav ---------------- */
+  function gotoPage(page){
+    document.querySelectorAll('.sidebar nav a').forEach(function(a){ a.classList.toggle('active', a.getAttribute('data-page') === page); });
+    document.querySelectorAll('.page').forEach(function(p){ p.classList.toggle('active', p.id === 'page-' + page); });
+    closeSidebar();
+  }
+  document.querySelectorAll('.sidebar nav a[data-page]').forEach(function(a){
+    a.addEventListener('click', function(){ gotoPage(a.getAttribute('data-page')); });
+  });
+  document.querySelectorAll('[data-goto]').forEach(function(el){
+    el.addEventListener('click', function(){ gotoPage(el.getAttribute('data-goto')); });
+  });
+
+  /* ---------------- Hamburger / off-canvas sidebar ---------------- */
+  var sidebarEl = document.getElementById('sidebar');
+  var overlayEl = document.getElementById('sidebarOverlay');
+  var menuBtn = document.getElementById('menuBtn');
+
+  function openSidebar(){
+    sidebarEl.classList.add('open');
+    overlayEl.classList.add('open');
+    menuBtn.setAttribute('aria-expanded', 'true');
+  }
+  function closeSidebar(){
+    sidebarEl.classList.remove('open');
+    overlayEl.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
+  menuBtn.addEventListener('click', function(){
+    sidebarEl.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+  overlayEl.addEventListener('click', closeSidebar);
+  window.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeSidebar();
+  });
+
+  /* ---------------- Business switcher ---------------- */
+  document.getElementById('bizSelect').addEventListener('change', function(e){
+    currentBiz = e.target.value;
+    selectedCustomerPhone = null;
+    renderAll();
+  });
+
+  /* ---------------- Renderers ---------------- */
+  function renderDashboard(d){
+    document.getElementById('sbStoreName').textContent = d.storeName;
+    document.getElementById('dashSub').textContent = "Plan, track, and grow " + d.storeName + "'s WhatsApp orders.";
+
+    var grid = document.getElementById('dashStats');
+    grid.innerHTML =
+      '<div class="stat-card dark"><div class="top">Orders Today &#8599;</div><div class="value">' + d.stats_today.orders_confirmed + '</div><div class="delta">' + money(d.currency, d.stats_today.revenue) + ' revenue today</div></div>' +
+      '<div class="stat-card"><div class="top">Orders This Month &#8599;</div><div class="value">' + d.stats_month.orders_confirmed + '</div><div class="delta">' + money(d.currency, d.stats_month.revenue) + ' revenue this month</div></div>' +
+      '<div class="stat-card"><div class="top">Messages Today &#8599;</div><div class="value">' + d.stats_today.messages_received + '</div><div class="delta">' + d.stats_today.replies_sent + ' replies sent</div></div>' +
+      '<div class="stat-card"><div class="top">Active Customers &#8599;</div><div class="value">' + d.stats_month.unique_customers + '</div><div class="delta">In the last 30 days</div></div>';
+
+    var rows = d.orders.slice(0,4).map(function(o){
+      return '<tr><td>#' + o.id + '</td><td>' + o.phone + '</td><td><span class="badge ' + (STATUS_BADGE[o.status]||'badge-grey') + '">' + o.status + '</span></td><td>' + money(d.currency, o.total) + '</td></tr>';
+    }).join('');
+    document.getElementById('dashRecentOrders').innerHTML = '<tr><th>ID</th><th>Phone</th><th>Status</th><th>Total</th></tr>' + rows;
+
+    drawBarChart(document.getElementById('dashChart'), d.daily.map(function(x){return x.day;}), d.daily.map(function(x){return x.received;}), d.daily.map(function(x){return x.sent;}), '#0a0a0a', '#ccff00');
+  }
+
+  function renderCustomers(d){
+    document.getElementById('custSub').textContent = "Everyone who has messaged " + d.storeName + " on WhatsApp.";
+    document.getElementById('custCount').textContent = 'Customers (' + d.customers.length + ')';
+    var rows = d.customers.map(function(c){
+      return '<tr><td><div class="avatar-row"><div class="avatar-sm">' + (c.name||c.phone).slice(0,1).toUpperCase() + '</div>' + (c.name||'Unknown') + '</div></td>' +
+        '<td>' + c.phone + '</td><td>' + c.msgs + '</td><td>' + c.last + '</td>' +
+        '<td><button class="btn btn-outline" data-view-conv="' + c.phone + '">View chat</button></td></tr>';
+    }).join('');
+    document.getElementById('custTable').innerHTML = '<tr><th>Customer</th><th>Phone</th><th>Messages</th><th>Last active</th><th></th></tr>' + rows;
+    document.querySelectorAll('[data-view-conv]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        selectedCustomerPhone = btn.getAttribute('data-view-conv');
+        gotoPage('conversations');
+        renderConversations(DATA[currentBiz]);
+      });
+    });
+  }
+
+  function renderConversations(d){
+    document.getElementById('convCustCount').textContent = 'Customers (' + d.customers.length + ')';
+    var rows = d.customers.map(function(c){
+      var active = c.phone === selectedCustomerPhone ? ' active-row' : '';
+      return '<tr class="' + active.trim() + '"><td><a data-sel-conv="' + c.phone + '">' + c.phone + '</a></td><td>' + (c.name||'-') + '</td><td>' + c.msgs + '</td><td>' + c.last + '</td></tr>';
+    }).join('');
+    document.getElementById('convCustTable').innerHTML = '<tr><th>Phone</th><th>Name</th><th>Msgs</th><th>Last active</th></tr>' + rows;
+    document.querySelectorAll('[data-sel-conv]').forEach(function(a){
+      a.style.cursor = 'pointer';
+      a.addEventListener('click', function(){
+        selectedCustomerPhone = a.getAttribute('data-sel-conv');
+        renderConversations(DATA[currentBiz]);
+      });
+    });
+
+    if(selectedCustomerPhone){
+      document.getElementById('convTranscriptTitle').textContent = 'Transcript · ' + selectedCustomerPhone;
+      document.getElementById('convTranscript').innerHTML = d.transcript.map(function(m){
+        return '<div class="bubble ' + m.dir + '"><div class="bubble-text">' + m.text + '</div><div class="bubble-time">' + m.time + '</div></div>';
+      }).join('');
+    } else {
+      document.getElementById('convTranscriptTitle').textContent = 'Transcript';
+      document.getElementById('convTranscript').innerHTML = '<p class="muted">Select a customer from the list to view their conversation.</p>';
+    }
+  }
+
+  function renderOrders(d){
+    document.getElementById('ordersCount').textContent = 'Orders (' + d.stats_month.orders_confirmed + ')';
+    var rows = d.orders.map(function(o){
+      return '<tr><td>#' + o.id + '</td><td>' + o.phone + '</td><td><span class="badge ' + (STATUS_BADGE[o.status]||'badge-grey') + '">' + o.status + '</span></td>' +
+        '<td>' + o.items + '</td><td>' + money(d.currency, o.subtotal) + '</td><td>' + money(d.currency, o.delivery) + '</td>' +
+        '<td><b>' + money(d.currency, o.total) + '</b>' + (o.offer ? ' <span class="badge badge-green">offer applied</span>' : '') + '</td><td>' + o.placed + '</td></tr>';
+    }).join('');
+    document.getElementById('ordersTable').innerHTML = '<tr><th>ID</th><th>Phone</th><th>Status</th><th>Items</th><th>Subtotal</th><th>Delivery</th><th>Total</th><th>Placed</th></tr>' + rows;
+  }
+
+  function renderAnalytics(d){
+    document.getElementById('analyticsStats').innerHTML =
+      '<div class="stat-card dark"><div class="top">Revenue</div><div class="value">' + money(d.currency, d.stats_month.revenue) + '</div></div>' +
+      '<div class="stat-card"><div class="top">Orders Confirmed</div><div class="value">' + d.stats_month.orders_confirmed + '</div></div>' +
+      '<div class="stat-card"><div class="top">Messages Received</div><div class="value">' + d.stats_today.messages_received + '</div></div>' +
+      '<div class="stat-card"><div class="top">Unique Customers</div><div class="value">' + d.stats_month.unique_customers + '</div></div>';
+
+    drawLineChart(document.getElementById('analyticsChart'), d.daily.map(function(x){return x.day;}),
+      d.daily.map(function(x){return x.received;}), d.daily.map(function(x){return x.sent;}),
+      '#0a0a0a', '#a6d600', 'rgba(10,10,10,0.08)', 'rgba(204,255,0,0.15)');
+
+    document.getElementById('analyticsOrdersCount').textContent = 'Orders in range (' + d.orders.length + ')';
+    var rows = d.orders.map(function(o){
+      return '<tr><td>#' + o.id + '</td><td>' + o.phone + '</td><td><span class="badge ' + (STATUS_BADGE[o.status]||'badge-grey') + '">' + o.status + '</span></td><td>' + money(d.currency, o.total) + '</td><td>' + o.placed + '</td></tr>';
+    }).join('');
+    document.getElementById('analyticsOrdersTable').innerHTML = '<tr><th>ID</th><th>Phone</th><th>Status</th><th>Total</th><th>Placed</th></tr>' + rows;
+  }
+
+  function renderCatalog(d){
+    document.getElementById('catalogCount').textContent = 'Stock items (' + d.catalog.length + ')';
+    var rows = d.catalog.map(function(item){
+      return '<tr><td>' + item.name + '</td><td>' + item.cat + '</td><td>' + money(d.currency, item.price) + '</td>' +
+        '<td>' + item.stock + ' ' + item.unit + '</td>' +
+        '<td>' + (item.inStock ? '<span class="badge badge-green">In stock</span>' : '<span class="badge badge-red">Out of stock</span>') + '</td></tr>';
+    }).join('');
+    document.getElementById('catalogTable').innerHTML = '<tr><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th></tr>' + rows;
+  }
+
+  function renderOffers(d){
+    document.getElementById('offersCount').textContent = 'All offers (' + d.offers.length + ')';
+    var rows = d.offers.map(function(o){
+      return '<tr><td>' + o.title + '</td><td>' + o.discount + '</td><td><span class="badge ' + (OFFER_BADGE[o.status]||'badge-grey') + '">' + o.status + '</span></td><td>' + o.dates + '</td>' +
+        '<td>' + (o.status !== 'active' ? '<button class="btn btn-outline">Activate</button>' : '<button class="btn btn-outline">Deactivate</button>') + ' <button class="btn btn-outline">Delete</button></td></tr>';
+    }).join('');
+    document.getElementById('offersTable').innerHTML = '<tr><th>Title</th><th>Discount</th><th>Status</th><th>Dates</th><th></th></tr>' + rows;
+  }
+
+  function renderBilling(d){
+    document.getElementById('billMsgs').textContent = d.stats_month.messages_received || d.stats_today.messages_received * 20;
+    document.getElementById('billOrders').textContent = d.stats_month.orders_confirmed;
+  }
+
+  function renderSettings(d){
+    document.getElementById('settingsTable').innerHTML =
+      '<tr><td>Store name</td><td class="settings-value">' + d.storeName + '</td></tr>' +
+      '<tr><td>Currency</td><td class="settings-value">' + d.currency + '</td></tr>' +
+      '<tr><td>Delivery fee</td><td class="settings-value">' + d.deliveryFee + '</td></tr>' +
+      '<tr><td>Free delivery threshold</td><td class="settings-value">' + d.freeDeliveryThreshold + '</td></tr>';
+  }
+
+  var offerForm = document.getElementById('offerForm');
+  offerForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var prompt = document.getElementById('offerPrompt').value || '10% off all dairy this weekend';
+    document.getElementById('odTitle').textContent = 'Weekend Special';
+    document.getElementById('odDesc').textContent = prompt;
+    document.getElementById('odDiscount').textContent = '10%';
+    document.getElementById('odScope').textContent = 'category (Dairy)';
+    document.getElementById('odDates').textContent = 'immediately → no end date';
+    document.getElementById('offerDraftBox').style.display = 'block';
+  });
+  document.getElementById('odSave').addEventListener('click', function(){
+    alert('Demo only — in the live product this saves the offer as a draft.');
+  });
+
+  function renderAll(){
+    var d = DATA[currentBiz];
+    renderDashboard(d);
+    renderCustomers(d);
+    renderConversations(d);
+    renderOrders(d);
+    renderAnalytics(d);
+    renderCatalog(d);
+    renderOffers(d);
+    renderBilling(d);
+    renderSettings(d);
+  }
+
+  window.addEventListener('resize', function(){
+    clearTimeout(window.__rzt);
+    window.__rzt = setTimeout(renderAll, 150);
+  });
+
+  renderAll();
+})();
+</script>
+</body>
+</html>

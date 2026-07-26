@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /demo-dashboard/
 
 Sitemap: https://chatcartpro.com/sitemap.xml
