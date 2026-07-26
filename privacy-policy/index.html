@@ -272,7 +272,39 @@
   @media (prefers-reduced-motion: reduce){
     #ccChatBubble{transition:none;}
   }
+
+  #ccTeaser{
+    position:fixed; right:20px; bottom:88px; z-index:998;
+    max-width:230px; background:#fff; color:#0a0a0a;
+    border:1px solid #ececec; border-radius:16px; border-bottom-right-radius:4px;
+    padding:12px 14px; font-size:13.5px; line-height:1.4;
+    box-shadow:0 14px 30px -10px rgba(0,0,0,0.25);
+    font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    display:none; cursor:pointer;
+    animation:ccTeaserIn .25s ease;
+  }
+  #ccTeaser.show{display:block;}
+  #ccTeaser .cc-teaser-close{
+    position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:50%;
+    background:#0a0a0a; color:#fff; border:none; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; font-size:13px; line-height:1; padding:0;
+  }
+  @keyframes ccTeaserIn{
+    from{opacity:0; transform:translateY(6px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  @media (max-width:420px){
+    #ccTeaser{right:14px; bottom:80px; max-width:calc(100vw - 84px);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #ccTeaser{animation:none;}
+  }
 </style>
+
+<div id="ccTeaser" role="button" tabindex="0" aria-label="Open chat: Looking for something for your business?">
+  Looking for something for your business? Ask me anything 👋
+  <button type="button" class="cc-teaser-close" aria-label="Dismiss">&times;</button>
+</div>
 
 <button id="ccChatBubble" aria-label="Open chat" aria-expanded="false" aria-controls="ccChatPanel">
   <svg class="cc-chat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
@@ -348,6 +380,7 @@
     panel.classList.add('open');
     bubble.classList.add('open');
     bubble.setAttribute('aria-expanded', 'true');
+    if(teaser) teaser.classList.remove('show');
     if(!greeted){
       greeted = true;
       addBubble("Hi! I'm the ChatCart Pro AI assistant. Ask me anything about pricing, features, or how it works for your business.", 'bot');
@@ -362,6 +395,40 @@
 
   bubble.addEventListener('click', function(){
     panel.classList.contains('open') ? closePanel() : openPanel();
+  });
+
+  /* Proactive teaser: shows once per session after 10s of inactivity,
+     unless the visitor already opened the chat or dismissed the teaser. */
+  var teaser = document.getElementById('ccTeaser');
+  var teaserCloseBtn = teaser.querySelector('.cc-teaser-close');
+
+  function hideTeaser(){
+    teaser.classList.remove('show');
+  }
+
+  if(!sessionStorage.getItem('ccTeaserShown')){
+    setTimeout(function(){
+      if(panel.classList.contains('open')) return;
+      sessionStorage.setItem('ccTeaserShown', '1');
+      teaser.classList.add('show');
+      setTimeout(hideTeaser, 12000);
+    }, 10000);
+  }
+
+  teaser.addEventListener('click', function(){
+    hideTeaser();
+    openPanel();
+  });
+  teaser.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      hideTeaser();
+      openPanel();
+    }
+  });
+  teaserCloseBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    hideTeaser();
   });
 
   function sleep(ms){
