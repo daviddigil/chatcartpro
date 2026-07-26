@@ -1301,6 +1301,30 @@
     panel.classList.contains('open') ? closePanel() : openPanel();
   });
 
+  function sleep(ms){
+    return new Promise(function(resolve){ setTimeout(resolve, ms); });
+  }
+
+  function sendChatMessage(msg, attempt){
+    attempt = attempt || 1;
+    var maxAttempts = 3;
+    return fetch(CHAT_API_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: msg, history: history })
+    }).then(function(res){
+      if(!res.ok) throw new Error('Request failed with status ' + res.status);
+      return res.json();
+    }).catch(function(err){
+      if(attempt < maxAttempts){
+        return sleep(attempt * 1500).then(function(){
+          return sendChatMessage(msg, attempt + 1);
+        });
+      }
+      throw err;
+    });
+  }
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var msg = input.value.trim();
@@ -1313,17 +1337,13 @@
     sendBtn.disabled = true;
 
     var typingEl = addBubble('Typing...', 'bot typing');
+    var slowNoticeTimer = setTimeout(function(){
+      typingEl.textContent = 'Still connecting, one moment...';
+    }, 4000);
 
-    fetch(CHAT_API_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: msg, history: history })
-    })
-      .then(function(res){
-        if(!res.ok) throw new Error('Request failed');
-        return res.json();
-      })
+    sendChatMessage(msg)
       .then(function(data){
+        clearTimeout(slowNoticeTimer);
         typingEl.remove();
         var reply = (data && data.reply) ? data.reply : "Sorry, I didn't catch that. Could you rephrase?";
         var showDemo = /\[SHOW_DEMO_FORM\]/.test(reply);
@@ -1333,6 +1353,7 @@
         if(showDemo) addDemoCta();
       })
       .catch(function(){
+        clearTimeout(slowNoticeTimer);
         typingEl.remove();
         addBubble("Something went wrong reaching the assistant. Please try again, or book a demo and we'll help directly.", 'bot');
       })
