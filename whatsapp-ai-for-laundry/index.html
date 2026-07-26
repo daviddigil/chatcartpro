@@ -989,6 +989,13 @@
   #ccChatForm button:disabled{opacity:.5; cursor:not-allowed;}
   #ccChatForm button svg{width:16px; height:16px;}
 
+  .cc-cta-wrap{background:transparent !important; border:none !important; padding:2px 0 !important; align-self:flex-start;}
+  .cc-cta-btn{
+    background:#0a0a0a; color:#ccff00; border:none; border-radius:999px;
+    padding:9px 18px; font-weight:700; font-size:13px; cursor:pointer; font-family:inherit;
+  }
+  .cc-cta-btn:hover{background:#1a1a1a;}
+
   @media (max-width:420px){
     #ccChatPanel{right:12px; bottom:82px; width:calc(100vw - 24px);}
     #ccChatBubble{right:14px; bottom:14px;}
@@ -1026,7 +1033,7 @@
 
   /* Point this at your own backend proxy that holds the OpenRouter key
      server-side. Never call OpenRouter directly from this static page. */
-  var CHAT_API_ENDPOINT = "/api/chat";
+  var CHAT_API_ENDPOINT = "https://chatcartpro-aiagent.onrender.com/api/chat";
 
   var bubble = document.getElementById('ccChatBubble');
   var panel = document.getElementById('ccChatPanel');
@@ -1045,6 +1052,27 @@
     body.appendChild(el);
     body.scrollTop = body.scrollHeight;
     return el;
+  }
+
+  function addDemoCta(){
+    var wrap = document.createElement('div');
+    wrap.className = 'cc-bubble bot cc-cta-wrap';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cc-cta-btn';
+    btn.textContent = 'Book a Demo';
+    btn.addEventListener('click', function(){
+      var demoSection = document.getElementById('demo');
+      if(demoSection){
+        closePanel();
+        demoSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = '/#demo';
+      }
+    });
+    wrap.appendChild(btn);
+    body.appendChild(wrap);
+    body.scrollTop = body.scrollHeight;
   }
 
   function openPanel(){
@@ -1092,8 +1120,11 @@
       .then(function(data){
         typingEl.remove();
         var reply = (data && data.reply) ? data.reply : "Sorry, I didn't catch that. Could you rephrase?";
+        var showDemo = /\[SHOW_DEMO_FORM\]/.test(reply);
+        reply = reply.replace(/\[SHOW_DEMO_FORM\]/g, '').trim();
         addBubble(reply, 'bot');
         history.push({ role: 'assistant', content: reply });
+        if(showDemo) addDemoCta();
       })
       .catch(function(){
         typingEl.remove();
