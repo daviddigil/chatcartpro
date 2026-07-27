@@ -425,6 +425,9 @@
   /* Two-mode */
   .mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
   @media (max-width:800px){.mode-grid{grid-template-columns:1fr;}}
+  .mode-grid-3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;}
+  @media (max-width:1000px){.mode-grid-3{grid-template-columns:1fr;}}
+  .mode-card.leads .tag{background:var(--lime-dark); color:var(--ink);}
   .mode-card{
     background:var(--card); border-radius:24px; padding:32px; border:1px solid var(--border); box-shadow:var(--shadow);
   }
@@ -763,11 +766,11 @@
   <section id="modes" class="section-pastel section-pastel-blue">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow" data-i18n="modes_eyebrow">One Agent, Two Jobs</span>
+        <span class="eyebrow" data-i18n="modes_eyebrow">One Agent, Three Jobs</span>
         <h2 data-i18n="modes_title">Whatever your business does, ChatCart Pro AI handles it</h2>
-        <p data-i18n="modes_sub">Some businesses take orders. Others take bookings. Our AI employee is built to do both configured to your exact workflow on day one.</p>
+        <p data-i18n="modes_sub">Some businesses take orders. Others take bookings. Others need every WhatsApp enquiry qualified and routed straight to a sales rep. Our AI employee is built to do all three, configured to your exact workflow on day one.</p>
       </div>
-      <div class="mode-grid">
+      <div class="mode-grid-3">
         <div class="mode-card orders">
           <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg><span data-i18n="orders_tag">Order Placing</span></span>
           <h3 data-i18n="orders_title">Let customers order straight from chat</h3>
@@ -794,6 +797,17 @@
             <a class="industry-chip" href="/whatsapp-ai-for-event-venues/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-events"></use></svg></span><span data-i18n="ind_events">Event Venues</span></a>
             <a class="industry-chip" href="/whatsapp-ai-for-car-rentals/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-carrental"></use></svg></span><span data-i18n="ind_carrental">Car Rental Companies</span></a>
           </div>
+        </div>
+        <div class="mode-card leads">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-handshake"></use></svg><span>Lead Capture & Sales Escalation</span></span>
+          <h3>Qualify every enquiry and route it straight to sales</h3>
+          <p class="desc">The AI answers from your own knowledge base, recognizes returning customers, tags genuine buying intent, and escalates the lead straight to the right sales rep on WhatsApp with delivery and reply tracking, no enquiry sits unread.</p>
+          <div class="industry-list">
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-handshake"></use></svg></span><span>B2B & Distribution</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-realestate"></use></svg></span><span>Enterprise Sales Teams</span></span>
+            <span class="industry-chip"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg></span><span>Wholesale & Industrial Supply</span></span>
+          </div>
+          <a href="/whatsapp-ai-lead-escalation/" class="btn btn-dark" style="margin-top:18px; width:100%;">See how it works</a>
         </div>
       </div>
     </div>
@@ -1061,6 +1075,7 @@
     <p data-i18n="footer_tagline">AI WhatsApp employees for orders & bookings built for businesses everywhere.</p>
     <p>&copy; 2026 ChatCart Pro AI. <span data-i18n="footer_rights">All rights reserved.</span></p>
     <p class="footer-legal"><a href="/privacy-policy/" data-i18n="footer_privacy">Privacy Policy</a> &middot; <a href="/terms-and-conditions/" data-i18n="footer_terms">Terms & Conditions</a></p>
+    <p class="footer-legal">Alternatives: <a href="/wati-alternative/">Wati</a> &middot; <a href="/respond-io-alternative/">Respond.io</a> &middot; <a href="/sleekflow-alternative/">SleekFlow</a> &middot; <a href="/gupshup-alternative/">Gupshup</a></p>
     <p class="powered-by"><span data-i18n="footer_powered_by">Powered by</span> <a href="https://nexsofture.com" target="_blank" rel="noopener">Nexsofture Private Ltd</a></p>
   </div>
 </footer>
