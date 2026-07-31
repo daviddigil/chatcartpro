@@ -480,6 +480,11 @@
     .industry-strip{gap:10px;}
     .industry-strip .industry-chip{padding:8px 12px; font-size:13px;}
   }
+  .industry-groups{display:flex; flex-direction:column; gap:26px;}
+  .industry-group-title{
+    margin:0 0 14px; text-align:center; font-size:12px; font-weight:700;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--navy-soft);
+  }
 
   /* Testimonials */
   .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
@@ -935,29 +940,49 @@
       <div class="section-head">
         <span class="eyebrow" data-i18n="industries_eyebrow">Industries</span>
         <h2 data-i18n="industries_title">Built for how your business actually runs</h2>
-        <p data-i18n="industries_sub">13 industries, one WhatsApp AI employee, configured for your exact use case.</p>
+        <p data-i18n="industries_sub">One WhatsApp AI employee, configured for how your business actually runs.</p>
       </div>
-      <div class="industry-strip">
-        <a class="industry-chip" href="/whatsapp-ai-for-grocery-stores/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-grocery"></use></svg></span><span data-i18n="ind_grocery">Grocery</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-pharmacies/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-pharmacy"></use></svg></span><span data-i18n="ind_pharmacy">Pharmacy</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-restaurants/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-restaurant"></use></svg></span><span data-i18n="ind_restaurant">Restaurant</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-salons/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-salon"></use></svg></span><span data-i18n="ind_salon2">Salon</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-hospitals-clinics/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-hospital"></use></svg></span><span data-i18n="ind_hospital2">Hospital</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-auto-repair/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-auto"></use></svg></span><span data-i18n="ind_auto2">Auto Repair</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-real-estate/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-realestate"></use></svg></span><span data-i18n="ind_realestate2">Real Estate</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-gyms/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-gym"></use></svg></span><span data-i18n="ind_gym2">Gyms & Fitness</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-dental-clinics/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-dental"></use></svg></span><span data-i18n="ind_dental">Dental Clinics</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-event-venues/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-events"></use></svg></span><span data-i18n="ind_events">Event Venues</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-laundry/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-laundry"></use></svg></span><span data-i18n="ind_laundry">Laundry & Dry Cleaning</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-courier-logistics/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-courier"></use></svg></span><span data-i18n="ind_courier">Courier & Logistics</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-car-rentals/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-carrental"></use></svg></span><span data-i18n="ind_carrental">Car Rental</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-schools/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg></span><span>Schools</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-colleges-universities/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg></span><span>Colleges</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-coaching-institutes/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg></span><span>Coaching Institutes</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-music-schools/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-music-note"></use></svg></span><span>Music Schools</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-martial-arts-schools/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-belt"></use></svg></span><span>Martial Arts</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-photo-studios/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-camera"></use></svg></span><span>Photo Studios</span></a>
-        <a class="industry-chip" href="/whatsapp-ai-for-typing-document-services/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-typing"></use></svg></span><span>Document Services</span></a>
+      <div class="industry-groups">
+        <div class="industry-group">
+          <h3 class="industry-group-title">Retail & Logistics</h3>
+          <div class="industry-strip">
+            <a class="industry-chip" href="/whatsapp-ai-for-grocery-stores/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-grocery"></use></svg></span><span data-i18n="ind_grocery">Grocery</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-pharmacies/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-pharmacy"></use></svg></span><span data-i18n="ind_pharmacy">Pharmacy</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-restaurants/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-restaurant"></use></svg></span><span data-i18n="ind_restaurant">Restaurant</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-laundry/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-laundry"></use></svg></span><span data-i18n="ind_laundry">Laundry & Dry Cleaning</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-courier-logistics/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-courier"></use></svg></span><span data-i18n="ind_courier">Courier & Logistics</span></a>
+          </div>
+        </div>
+        <div class="industry-group">
+          <h3 class="industry-group-title">Health & Wellness</h3>
+          <div class="industry-strip">
+            <a class="industry-chip" href="/whatsapp-ai-for-hospitals-clinics/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-hospital"></use></svg></span><span data-i18n="ind_hospital2">Hospital</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-dental-clinics/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-dental"></use></svg></span><span data-i18n="ind_dental">Dental Clinics</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-salons/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-salon"></use></svg></span><span data-i18n="ind_salon2">Salon</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-gyms/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-gym"></use></svg></span><span data-i18n="ind_gym2">Gyms & Fitness</span></a>
+          </div>
+        </div>
+        <div class="industry-group">
+          <h3 class="industry-group-title">Property & Mobility</h3>
+          <div class="industry-strip">
+            <a class="industry-chip" href="/whatsapp-ai-for-real-estate/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-realestate"></use></svg></span><span data-i18n="ind_realestate2">Real Estate</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-auto-repair/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-auto"></use></svg></span><span data-i18n="ind_auto2">Auto Repair</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-car-rentals/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-carrental"></use></svg></span><span data-i18n="ind_carrental">Car Rental</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-event-venues/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-events"></use></svg></span><span data-i18n="ind_events">Event Venues</span></a>
+          </div>
+        </div>
+        <div class="industry-group">
+          <h3 class="industry-group-title">Education & Services</h3>
+          <div class="industry-strip">
+            <a class="industry-chip" href="/whatsapp-ai-for-schools/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg></span><span>Schools</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-colleges-universities/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg></span><span>Colleges</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-coaching-institutes/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg></span><span>Coaching Institutes</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-music-schools/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-music-note"></use></svg></span><span>Music Schools</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-martial-arts-schools/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-belt"></use></svg></span><span>Martial Arts</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-photo-studios/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-camera"></use></svg></span><span>Photo Studios</span></a>
+            <a class="industry-chip" href="/whatsapp-ai-for-typing-document-services/"><span class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-typing"></use></svg></span><span>Document Services</span></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1247,9 +1272,9 @@
       smb4_title:"Live stock & pricing, always accurate", smb4_desc:"The AI checks your real-time inventory and price list before confirming an order so customers are never quoted a sold-out item or an old price.",
       industries_eyebrow:"Industries", industries_title:"Built for how your business actually runs", industries_sub:"12 industries, one WhatsApp AI employee, configured for your exact use case.",
       testi_eyebrow:"Testimonials", testi_title:"What business owners are saying", testi_sub:"Trusted by teams running businesses of every size, everywhere.",
-      testi1_quote:"“We used to lose orders every night after closing. Now ChatCart Pro AI takes them for us and they're ready first thing in the morning.”", testi1_role:"Owner, Northgate Mart",
-      testi2_quote:"“Our front desk used to be swamped with booking calls. Now most patients just book their slot on WhatsApp in under a minute.”", testi2_role:"Founder, Smile Care Dental",
-      testi3_quote:"“Setup took a single afternoon. Within a week our no-show rate for gym trials dropped by half thanks to automatic reminders.”", testi3_role:"Manager, UrbanFit Gyms",
+      testi1_quote:"“We used to lose orders every night after closing. Now ChatCart Pro AI takes them for us and they're ready first thing in the morning.”",
+      testi2_quote:"“Our front desk used to be swamped with booking calls. Now most patients just book their slot on WhatsApp in under a minute.”",
+      testi3_quote:"“Setup took a single afternoon. Within a week our no-show rate for gym trials dropped by half thanks to automatic reminders.”",
       faq_eyebrow:"FAQ", faq_title:"Everything you need to know", faq_sub:"Still curious? Book a demo and we'll walk you through it live.",
       faq1_q:"How does ChatCart Pro AI actually work?", faq1_a:"We connect to your WhatsApp Business number. When a customer messages you, our AI employee understands the request placing an order or booking a slot and handles it automatically, using your menu, price list, or calendar.",
       faq2_q:"Will it work for my type of business?", faq2_a:"Yes. We support order-based businesses (grocery, pharmacy, restaurants, laundry, courier) and appointment-based businesses (salons, clinics, gyms, auto repair, real estate, event venues) out of the box.",
@@ -1303,9 +1328,9 @@
       smb4_title:"مخزون وأسعار مباشرة ودقيقة دائمًا", smb4_desc:"يتحقق الذكاء الاصطناعي من مخزونك وقائمة أسعارك الفعلية قبل تأكيد الطلب حتى لا يُعرض على العملاء أبدًا صنف نفد أو سعر قديم.",
       industries_eyebrow:"الصناعات", industries_title:"مصمم لطريقة عمل نشاطك التجاري فعليًا", industries_sub:"12 قطاعًا، موظف ذكاء اصطناعي واحد على واتساب، مُعدّ خصيصًا لحالتك.",
       testi_eyebrow:"آراء العملاء", testi_title:"ماذا يقول أصحاب الأعمال", testi_sub:"موثوق به من فرق تدير أعمالًا من كل الأحجام، في كل مكان.",
-      testi1_quote:"“كنا نخسر الطلبات كل ليلة بعد الإغلاق. الآن يستقبلها ChatCart Pro AI ونجدها جاهزة أول شيء في الصباح.”", testi1_role:"مالك، Northgate Mart",
-      testi2_quote:"“كانت استقبالنا مثقلة بمكالمات الحجز. الآن يحجز معظم المرضى موعدهم عبر واتساب في أقل من دقيقة.”", testi2_role:"مؤسسة، Smile Care Dental",
-      testi3_quote:"“استغرق الإعداد بعد ظهر واحد فقط. خلال أسبوع انخفض معدل الغياب عن حصص النادي الرياضي إلى النصف بفضل التذكيرات التلقائية.”", testi3_role:"مدير، UrbanFit Gyms",
+      testi1_quote:"“كنا نخسر الطلبات كل ليلة بعد الإغلاق. الآن يستقبلها ChatCart Pro AI ونجدها جاهزة أول شيء في الصباح.”",
+      testi2_quote:"“كانت استقبالنا مثقلة بمكالمات الحجز. الآن يحجز معظم المرضى موعدهم عبر واتساب في أقل من دقيقة.”",
+      testi3_quote:"“استغرق الإعداد بعد ظهر واحد فقط. خلال أسبوع انخفض معدل الغياب عن حصص النادي الرياضي إلى النصف بفضل التذكيرات التلقائية.”",
       faq_eyebrow:"الأسئلة الشائعة", faq_title:"كل ما تحتاج لمعرفته", faq_sub:"لا تزال لديك أسئلة؟ احجز عرضًا تجريبيًا وسنوضح لك كل شيء مباشرة.",
       faq1_q:"كيف يعمل ChatCart Pro AI فعليًا؟", faq1_a:"نقوم بربط رقم واتساب بزنس الخاص بك. عندما يراسلك عميل، يفهم موظفنا الذكي الطلب سواء كان طلب شراء أو حجز موعد ويتولى الأمر تلقائيًا باستخدام قائمتك أو قائمة الأسعار أو التقويم الخاص بك.",
       faq2_q:"هل سيعمل مع نوع نشاطي التجاري؟", faq2_a:"نعم. ندعم الشركات القائمة على الطلبات (البقالة، الصيدليات، المطاعم، المغاسل، الشحن) والشركات القائمة على المواعيد (الصالونات، العيادات، الصالات الرياضية، ورش السيارات، العقارات، قاعات المناسبات) بشكل جاهز.",
@@ -1356,9 +1381,9 @@
       smb4_title:"लाइव स्टॉक और कीमत, हमेशा सटीक", smb4_desc:"ऑर्डर कन्फर्म करने से पहले AI आपकी वास्तविक इन्वेंटरी और प्राइस लिस्ट जांचता है ताकि ग्राहकों को कभी बिका हुआ आइटम या पुरानी कीमत न बताई जाए।",
       industries_eyebrow:"उद्योग", industries_title:"आपका व्यवसाय जैसे वास्तव में चलता है, वैसे ही बनाया गया", industries_sub:"12 उद्योग, एक व्हाट्सएप AI कर्मचारी, आपके सटीक उपयोग के लिए सेट किया गया।",
       testi_eyebrow:"प्रशंसापत्र", testi_title:"व्यवसाय मालिक क्या कह रहे हैं", testi_sub:"हर आकार के व्यवसाय चलाने वाली टीमों द्वारा भरोसा किया गया, हर जगह।",
-      testi1_quote:"“हम बंद होने के बाद हर रात ऑर्डर खो देते थे। अब ChatCart Pro AI उन्हें ले लेता है और सुबह सबसे पहले वे तैयार होते हैं।”", testi1_role:"मालिक, Northgate Mart",
-      testi2_quote:"“हमारा फ्रंट डेस्क बुकिंग कॉल्स से भरा रहता था। अब ज़्यादातर मरीज़ एक मिनट से भी कम समय में व्हाट्सएप पर अपना स्लॉट बुक कर लेते हैं।”", testi2_role:"संस्थापक, Smile Care Dental",
-      testi3_quote:"“सेटअप में सिर्फ एक दोपहर लगी। एक हफ़्ते के भीतर ऑटोमेटिक रिमाइंडर की वजह से जिम ट्रायल का नो-शो रेट आधा हो गया।”", testi3_role:"मैनेजर, UrbanFit Gyms",
+      testi1_quote:"“हम बंद होने के बाद हर रात ऑर्डर खो देते थे। अब ChatCart Pro AI उन्हें ले लेता है और सुबह सबसे पहले वे तैयार होते हैं।”",
+      testi2_quote:"“हमारा फ्रंट डेस्क बुकिंग कॉल्स से भरा रहता था। अब ज़्यादातर मरीज़ एक मिनट से भी कम समय में व्हाट्सएप पर अपना स्लॉट बुक कर लेते हैं।”",
+      testi3_quote:"“सेटअप में सिर्फ एक दोपहर लगी। एक हफ़्ते के भीतर ऑटोमेटिक रिमाइंडर की वजह से जिम ट्रायल का नो-शो रेट आधा हो गया।”",
       faq_eyebrow:"सामान्य प्रश्न", faq_title:"आपको जो कुछ जानना चाहिए", faq_sub:"अब भी सवाल हैं? डेमो बुक करें और हम आपको लाइव दिखाएंगे।",
       faq1_q:"ChatCart Pro AI वास्तव में कैसे काम करता है?", faq1_a:"हम आपके व्हाट्सएप बिज़नेस नंबर से जुड़ते हैं। जब कोई ग्राहक आपको मैसेज करता है, हमारा AI कर्मचारी अनुरोध को समझता है ऑर्डर देना हो या स्लॉट बुक करना और आपके मेन्यू, प्राइस लिस्ट, या कैलेंडर का उपयोग करके इसे अपने आप संभालता है।",
       faq2_q:"क्या यह मेरे व्यवसाय के प्रकार के लिए काम करेगा?", faq2_a:"हाँ। हम ऑर्डर-आधारित व्यवसायों (किराना, फार्मेसी, रेस्टोरेंट, लॉन्ड्री, कूरियर) और अपॉइंटमेंट-आधारित व्यवसायों (सैलून, क्लीनिक, जिम, ऑटो रिपेयर, रियल एस्टेट, इवेंट वेन्यू) दोनों को शुरू से ही सपोर्ट करते हैं।",
@@ -1409,9 +1434,9 @@
       smb4_title:"Stock et prix en direct, toujours exacts", smb4_desc:"L'IA vérifie votre inventaire et votre liste de prix en temps réel avant de confirmer une commande, afin que vos clients ne se voient jamais proposer un article épuisé ou un prix obsolète.",
       industries_eyebrow:"Secteurs", industries_title:"Conçu pour le fonctionnement réel de votre entreprise", industries_sub:"12 secteurs, un seul employé IA WhatsApp, configuré pour votre cas d'usage précis.",
       testi_eyebrow:"Témoignages", testi_title:"Ce que disent les chefs d'entreprise", testi_sub:"La confiance d'équipes qui gèrent des entreprises de toutes tailles, partout.",
-      testi1_quote:"«Nous perdions des commandes chaque soir après la fermeture. Maintenant, ChatCart Pro AI les prend en charge et elles sont prêtes dès le matin.»", testi1_role:"Propriétaire, Northgate Mart",
-      testi2_quote:"«Notre accueil était submergé d'appels de réservation. Maintenant, la plupart des patients réservent leur créneau sur WhatsApp en moins d'une minute.»", testi2_role:"Fondatrice, Smile Care Dental",
-      testi3_quote:"«La mise en place a pris un seul après-midi. En une semaine, notre taux d'absence aux essais de sport a été réduit de moitié grâce aux rappels automatiques.»", testi3_role:"Manager, UrbanFit Gyms",
+      testi1_quote:"«Nous perdions des commandes chaque soir après la fermeture. Maintenant, ChatCart Pro AI les prend en charge et elles sont prêtes dès le matin.»",
+      testi2_quote:"«Notre accueil était submergé d'appels de réservation. Maintenant, la plupart des patients réservent leur créneau sur WhatsApp en moins d'une minute.»",
+      testi3_quote:"«La mise en place a pris un seul après-midi. En une semaine, notre taux d'absence aux essais de sport a été réduit de moitié grâce aux rappels automatiques.»",
       faq_eyebrow:"FAQ", faq_title:"Tout ce que vous devez savoir", faq_sub:"Encore des questions ? Réservez une démo et nous vous montrerons tout en direct.",
       faq1_q:"Comment fonctionne réellement ChatCart Pro AI ?", faq1_a:"Nous nous connectons à votre numéro WhatsApp Business. Lorsqu'un client vous écrit, notre employé IA comprend la demande, commande ou rendez-vous, et la traite automatiquement à l'aide de votre menu, tarifs ou calendrier.",
       faq2_q:"Est-ce que ça fonctionnera pour mon type d'entreprise ?", faq2_a:"Oui. Nous prenons en charge les entreprises basées sur les commandes (épicerie, pharmacie, restaurants, blanchisserie, coursiers) et celles basées sur les rendez-vous (salons, cliniques, salles de sport, garages, immobilier, salles d'événements), prêtes à l'emploi.",
@@ -1462,9 +1487,9 @@
       smb4_title:"Stock y precios en vivo, siempre exactos", smb4_desc:"La IA revisa tu inventario y lista de precios en tiempo real antes de confirmar un pedido, para que nunca se le muestre a un cliente un producto agotado o un precio desactualizado.",
       industries_eyebrow:"Sectores", industries_title:"Diseñado según cómo funciona realmente tu negocio", industries_sub:"12 sectores, un solo empleado con IA en WhatsApp, configurado para tu caso exacto.",
       testi_eyebrow:"Testimonios", testi_title:"Lo que dicen los dueños de negocios", testi_sub:"Con la confianza de equipos que gestionan negocios de todos los tamaños, en todas partes.",
-      testi1_quote:"“Solíamos perder pedidos cada noche después de cerrar. Ahora ChatCart Pro AI los recibe y están listos a primera hora de la mañana.”", testi1_role:"Propietario, Northgate Mart",
-      testi2_quote:"“Nuestra recepción solía estar saturada de llamadas de reserva. Ahora la mayoría de los pacientes reservan su horario en WhatsApp en menos de un minuto.”", testi2_role:"Fundadora, Smile Care Dental",
-      testi3_quote:"“La configuración tomó solo una tarde. En una semana, nuestra tasa de ausencias en pruebas de gimnasio se redujo a la mitad gracias a los recordatorios automáticos.”", testi3_role:"Gerente, UrbanFit Gyms",
+      testi1_quote:"“Solíamos perder pedidos cada noche después de cerrar. Ahora ChatCart Pro AI los recibe y están listos a primera hora de la mañana.”",
+      testi2_quote:"“Nuestra recepción solía estar saturada de llamadas de reserva. Ahora la mayoría de los pacientes reservan su horario en WhatsApp en menos de un minuto.”",
+      testi3_quote:"“La configuración tomó solo una tarde. En una semana, nuestra tasa de ausencias en pruebas de gimnasio se redujo a la mitad gracias a los recordatorios automáticos.”",
       faq_eyebrow:"Preguntas frecuentes", faq_title:"Todo lo que necesitas saber", faq_sub:"¿Aún tienes dudas? Reserva una demo y te lo mostraremos en vivo.",
       faq1_q:"¿Cómo funciona realmente ChatCart Pro AI?", faq1_a:"Nos conectamos a tu número de WhatsApp Business. Cuando un cliente te escribe, nuestro empleado con IA entiende la solicitud, ya sea un pedido o una cita, y la gestiona automáticamente usando tu menú, lista de precios o calendario.",
       faq2_q:"¿Funcionará para mi tipo de negocio?", faq2_a:"Sí. Admitimos negocios basados en pedidos (supermercados, farmacias, restaurantes, lavanderías, mensajería) y negocios basados en citas (salones, clínicas, gimnasios, talleres, inmobiliarias, salones de eventos) listos para usar.",
@@ -1515,9 +1540,9 @@
       smb4_title:"Estoque e preços em tempo real, sempre corretos", smb4_desc:"A IA verifica seu estoque e lista de preços em tempo real antes de confirmar um pedido para que o cliente nunca veja um item esgotado ou um preço desatualizado.",
       industries_eyebrow:"Setores", industries_title:"Feito para como seu negócio realmente funciona", industries_sub:"12 setores, um único funcionário com IA no WhatsApp, configurado para o seu caso de uso exato.",
       testi_eyebrow:"Depoimentos", testi_title:"O que os empresários estão dizendo", testi_sub:"Com a confiança de equipes que administram negócios de todos os tamanhos, em qualquer lugar.",
-      testi1_quote:"“Antes perdíamos pedidos toda noite após o fechamento. Agora o ChatCart Pro AI os recebe e eles já estão prontos logo pela manhã.”", testi1_role:"Proprietário, Northgate Mart",
-      testi2_quote:"“Nossa recepção costumava ficar sobrecarregada com ligações de agendamento. Agora a maioria dos pacientes agenda o horário pelo WhatsApp em menos de um minuto.”", testi2_role:"Fundadora, Smile Care Dental",
-      testi3_quote:"“A configuração levou apenas uma tarde. Em uma semana, nossa taxa de ausência em aulas experimentais caiu pela metade graças aos lembretes automáticos.”", testi3_role:"Gerente, UrbanFit Gyms",
+      testi1_quote:"“Antes perdíamos pedidos toda noite após o fechamento. Agora o ChatCart Pro AI os recebe e eles já estão prontos logo pela manhã.”",
+      testi2_quote:"“Nossa recepção costumava ficar sobrecarregada com ligações de agendamento. Agora a maioria dos pacientes agenda o horário pelo WhatsApp em menos de um minuto.”",
+      testi3_quote:"“A configuração levou apenas uma tarde. Em uma semana, nossa taxa de ausência em aulas experimentais caiu pela metade graças aos lembretes automáticos.”",
       faq_eyebrow:"Perguntas frequentes", faq_title:"Tudo o que você precisa saber", faq_sub:"Ainda tem dúvidas? Agende uma demonstração e mostraremos tudo ao vivo.",
       faq1_q:"Como o ChatCart Pro AI realmente funciona?", faq1_a:"Conectamos ao seu número do WhatsApp Business. Quando um cliente envia uma mensagem, nosso funcionário com IA entende o pedido, seja para fazer um pedido ou agendar um horário, e cuida disso automaticamente usando seu cardápio, lista de preços ou calendário.",
       faq2_q:"Vai funcionar para o meu tipo de negócio?", faq2_a:"Sim. Damos suporte a negócios baseados em pedidos (mercearias, farmácias, restaurantes, lavanderias, entregas) e negócios baseados em agendamento (salões, clínicas, academias, oficinas, imobiliárias, espaços para eventos) prontos para uso.",
@@ -1568,9 +1593,9 @@
       smb4_title:"实时库存与价格，始终准确", smb4_desc:"AI会在确认订单前核实您的实时库存和价目表，确保客户不会被告知已售罄的商品或过时的价格。",
       industries_eyebrow:"行业", industries_title:"根据您业务的实际运作方式打造", industries_sub:"12个行业，一个WhatsApp AI员工，针对您的具体场景进行配置。",
       testi_eyebrow:"客户评价", testi_title:"企业主的真实反馈", testi_sub:"受到各地、各种规模企业团队的信赖。",
-      testi1_quote:"“以前我们每晚打烊后都会流失订单。现在ChatCart Pro AI帮我们接单，第二天一早订单就准备好了。”", testi1_role:"店主，Northgate Mart",
-      testi2_quote:"“我们的前台以前被预约电话淹没。现在大多数患者能在一分钟内通过WhatsApp完成预约。”", testi2_role:"创始人，Smile Care Dental",
-      testi3_quote:"“设置只花了一个下午。一周内，由于自动提醒，我们健身试听课的爽约率就降低了一半。”", testi3_role:"经理，UrbanFit Gyms",
+      testi1_quote:"“以前我们每晚打烊后都会流失订单。现在ChatCart Pro AI帮我们接单，第二天一早订单就准备好了。”",
+      testi2_quote:"“我们的前台以前被预约电话淹没。现在大多数患者能在一分钟内通过WhatsApp完成预约。”",
+      testi3_quote:"“设置只花了一个下午。一周内，由于自动提醒，我们健身试听课的爽约率就降低了一半。”",
       faq_eyebrow:"常见问题", faq_title:"您需要了解的一切", faq_sub:"还有疑问？预约演示，我们将为您现场演示。",
       faq1_q:"ChatCart Pro AI 究竟是如何工作的？", faq1_a:"我们会连接您的WhatsApp Business号码。当客户给您发消息时，我们的AI员工会理解请求  无论是下单还是预约  并使用您的菜单、价目表或日历自动处理。",
       faq2_q:"它适用于我的业务类型吗？", faq2_a:"是的。我们支持基于订单的业务（生鲜杂货、药店、餐厅、洗衣、快递）以及基于预约的业务（沙龙、诊所、健身房、汽修、房地产、活动场地），开箱即用。",
@@ -1621,9 +1646,9 @@
       smb4_title:"لائیو اسٹاک اور قیمت، ہمیشہ درست", smb4_desc:"آرڈر کنفرم کرنے سے پہلے AI آپ کی حقیقی انوینٹری اور قیمتوں کی فہرست چیک کرتا ہے تاکہ گاہکوں کو کبھی بھی ختم شدہ آئٹم یا پرانی قیمت نہ بتائی جائے۔",
       industries_eyebrow:"صنعتیں", industries_title:"آپ کا کاروبار جیسے واقعی چلتا ہے، ویسے ہی بنایا گیا", industries_sub:"12 صنعتیں، ایک واٹس ایپ AI ملازم، آپ کے مخصوص استعمال کے لیے ترتیب دیا گیا۔",
       testi_eyebrow:"تعریفیں", testi_title:"کاروباری مالکان کیا کہہ رہے ہیں", testi_sub:"ہر سائز کے کاروبار چلانے والی ٹیموں کا اعتماد، ہر جگہ۔",
-      testi1_quote:"“ہم بند ہونے کے بعد ہر رات آرڈرز کھو دیتے تھے۔ اب ChatCart Pro AI انہیں لے لیتا ہے اور صبح سب سے پہلے وہ تیار ہوتے ہیں۔”", testi1_role:"مالک، Northgate Mart",
-      testi2_quote:"“ہمارا فرنٹ ڈیسک بکنگ کالز سے بھرا رہتا تھا۔ اب زیادہ تر مریض ایک منٹ سے بھی کم وقت میں واٹس ایپ پر اپنا سلاٹ بک کر لیتے ہیں۔”", testi2_role:"بانی، Smile Care Dental",
-      testi3_quote:"“سیٹ اپ میں صرف ایک دوپہر لگی۔ ایک ہفتے کے اندر خودکار یاد دہانیوں کی بدولت جم ٹرائلز کی نو شو ریٹ آدھی رہ گئی۔”", testi3_role:"منیجر، UrbanFit Gyms",
+      testi1_quote:"“ہم بند ہونے کے بعد ہر رات آرڈرز کھو دیتے تھے۔ اب ChatCart Pro AI انہیں لے لیتا ہے اور صبح سب سے پہلے وہ تیار ہوتے ہیں۔”",
+      testi2_quote:"“ہمارا فرنٹ ڈیسک بکنگ کالز سے بھرا رہتا تھا۔ اب زیادہ تر مریض ایک منٹ سے بھی کم وقت میں واٹس ایپ پر اپنا سلاٹ بک کر لیتے ہیں۔”",
+      testi3_quote:"“سیٹ اپ میں صرف ایک دوپہر لگی۔ ایک ہفتے کے اندر خودکار یاد دہانیوں کی بدولت جم ٹرائلز کی نو شو ریٹ آدھی رہ گئی۔”",
       faq_eyebrow:"عمومی سوالات", faq_title:"آپ کو جو کچھ جاننا چاہیے", faq_sub:"ابھی بھی سوالات ہیں؟ ڈیمو بک کریں اور ہم آپ کو براہ راست دکھائیں گے۔",
       faq1_q:"ChatCart Pro AI اصل میں کیسے کام کرتا ہے؟", faq1_a:"ہم آپ کے واٹس ایپ بزنس نمبر سے جڑتے ہیں۔ جب کوئی گاہک آپ کو میسج کرتا ہے، ہمارا AI ملازم درخواست کو سمجھتا ہے آرڈر دینا ہو یا سلاٹ بک کرنا اور آپ کے مینو، قیمت کی فہرست، یا کیلنڈر کا استعمال کرتے ہوئے اسے خودکار طور پر سنبھالتا ہے۔",
       faq2_q:"کیا یہ میرے کاروبار کی قسم کے لیے کام کرے گا؟", faq2_a:"جی ہاں۔ ہم آرڈر پر مبنی کاروباروں (گروسری، فارمیسی، ریستوران، لانڈری، کوریئر) اور اپائنٹمنٹ پر مبنی کاروباروں (سیلونز، کلینکس، جمز، آٹو ریپیئر، رئیل اسٹیٹ، ایونٹ وینیوز) دونوں کو فوری استعمال کے لیے سپورٹ کرتے ہیں۔",
@@ -1674,9 +1699,9 @@
       smb4_title:"Stok & harga langsung, selalu akurat", smb4_desc:"AI memeriksa inventaris dan daftar harga real-time Anda sebelum mengonfirmasi pesanan sehingga pelanggan tidak pernah diberi tahu produk habis atau harga yang sudah usang.",
       industries_eyebrow:"Industri", industries_title:"Dibuat sesuai cara bisnis Anda benar-benar berjalan", industries_sub:"12 industri, satu karyawan AI WhatsApp, dikonfigurasi untuk kasus penggunaan Anda yang spesifik.",
       testi_eyebrow:"Testimoni", testi_title:"Apa kata para pemilik bisnis", testi_sub:"Dipercaya oleh tim yang menjalankan bisnis dari segala ukuran, di mana saja.",
-      testi1_quote:"“Kami dulu kehilangan pesanan setiap malam setelah tutup. Sekarang ChatCart Pro AI menerimanya untuk kami dan sudah siap pertama kali di pagi hari.”", testi1_role:"Pemilik, Northgate Mart",
-      testi2_quote:"“Resepsionis kami dulu kewalahan dengan telepon booking. Sekarang sebagian besar pasien langsung booking slot mereka di WhatsApp dalam waktu kurang dari satu menit.”", testi2_role:"Pendiri, Smile Care Dental",
-      testi3_quote:"“Pengaturannya hanya butuh satu sore. Dalam seminggu, tingkat ketidakhadiran untuk trial gym kami turun setengahnya berkat pengingat otomatis.”", testi3_role:"Manajer, UrbanFit Gyms",
+      testi1_quote:"“Kami dulu kehilangan pesanan setiap malam setelah tutup. Sekarang ChatCart Pro AI menerimanya untuk kami dan sudah siap pertama kali di pagi hari.”",
+      testi2_quote:"“Resepsionis kami dulu kewalahan dengan telepon booking. Sekarang sebagian besar pasien langsung booking slot mereka di WhatsApp dalam waktu kurang dari satu menit.”",
+      testi3_quote:"“Pengaturannya hanya butuh satu sore. Dalam seminggu, tingkat ketidakhadiran untuk trial gym kami turun setengahnya berkat pengingat otomatis.”",
       faq_eyebrow:"FAQ", faq_title:"Semua yang perlu Anda ketahui", faq_sub:"Masih penasaran? Pesan demo dan kami akan menjelaskannya secara langsung.",
       faq1_q:"Bagaimana sebenarnya cara kerja ChatCart Pro AI?", faq1_a:"Kami terhubung ke nomor WhatsApp Business Anda. Saat pelanggan mengirim pesan, karyawan AI kami memahami permintaan memesan atau booking slot dan menanganinya secara otomatis menggunakan menu, daftar harga, atau kalender Anda.",
       faq2_q:"Apakah ini akan berfungsi untuk jenis bisnis saya?", faq2_a:"Ya. Kami mendukung bisnis berbasis pesanan (toko kelontong, apotek, restoran, laundry, kurir) dan bisnis berbasis janji temu (salon, klinik, gym, bengkel, properti, gedung acara) langsung siap pakai.",
@@ -1727,9 +1752,9 @@
       smb4_title:"Актуальные остатки и цены в реальном времени", smb4_desc:"ИИ проверяет ваш реальный склад и прайс-лист перед подтверждением заказа клиенту никогда не предложат закончившийся товар или устаревшую цену.",
       industries_eyebrow:"Отрасли", industries_title:"Создано с учётом реальной работы вашего бизнеса", industries_sub:"12 отраслей, один ИИ-сотрудник в WhatsApp, настроенный под ваш конкретный случай использования.",
       testi_eyebrow:"Отзывы", testi_title:"Что говорят владельцы бизнеса", testi_sub:"Нам доверяют команды, управляющие бизнесом любого масштаба, по всему миру.",
-      testi1_quote:"«Раньше мы теряли заказы каждую ночь после закрытия. Теперь ChatCart Pro AI принимает их за нас, и они готовы уже с самого утра.»", testi1_role:"Владелец, Northgate Mart",
-      testi2_quote:"«Наша стойка регистрации была завалена звонками по записи. Теперь большинство пациентов записываются через WhatsApp меньше чем за минуту.»", testi2_role:"Основательница, Smile Care Dental",
-      testi3_quote:"«Настройка заняла всего один вечер. За неделю доля неявок на пробные тренировки сократилась вдвое благодаря автоматическим напоминаниям.»", testi3_role:"Менеджер, UrbanFit Gyms",
+      testi1_quote:"«Раньше мы теряли заказы каждую ночь после закрытия. Теперь ChatCart Pro AI принимает их за нас, и они готовы уже с самого утра.»",
+      testi2_quote:"«Наша стойка регистрации была завалена звонками по записи. Теперь большинство пациентов записываются через WhatsApp меньше чем за минуту.»",
+      testi3_quote:"«Настройка заняла всего один вечер. За неделю доля неявок на пробные тренировки сократилась вдвое благодаря автоматическим напоминаниям.»",
       faq_eyebrow:"Частые вопросы", faq_title:"Всё, что нужно знать", faq_sub:"Остались вопросы? Запишитесь на демо, и мы всё покажем вживую.",
       faq1_q:"Как на самом деле работает ChatCart Pro AI?", faq1_a:"Мы подключаемся к вашему номеру WhatsApp Business. Когда клиент пишет вам, наш ИИ-сотрудник понимает запрос оформить заказ или записаться и автоматически обрабатывает его, используя ваше меню, прайс-лист или календарь.",
       faq2_q:"Подойдёт ли это для моего вида бизнеса?", faq2_a:"Да. Мы поддерживаем бизнес, работающий с заказами (продуктовые магазины, аптеки, рестораны, прачечные, курьерские службы), и бизнес, работающий по записи (салоны, клиники, спортзалы, автосервисы, недвижимость, площадки для мероприятий) из коробки.",
@@ -1780,9 +1805,9 @@
       smb4_title:"நேரடி இருப்பு & விலை, எப்போதும் துல்லியமானது", smb4_desc:"ஆர்டரை உறுதிப்படுத்தும் முன் AI உங்கள் நிகழ்நேர இன்வென்டரி மற்றும் விலைப் பட்டியலைச் சரிபார்க்கிறது இதனால் வாடிக்கையாளர்களுக்கு விற்றுத் தீர்ந்த பொருள் அல்லது பழைய விலை ஒருபோதும் தெரிவிக்கப்படாது.",
       industries_eyebrow:"தொழில்கள்", industries_title:"உங்கள் வணிகம் உண்மையில் எவ்வாறு இயங்குகிறதோ அதற்கேற்ப உருவாக்கப்பட்டது", industries_sub:"12 தொழில்கள், ஒரே வாட்ஸ்அப் AI ஊழியர், உங்கள் சரியான பயன்பாட்டுக்கு ஏற்ப அமைக்கப்பட்டுள்ளது.",
       testi_eyebrow:"சான்றுகள்", testi_title:"வணிக உரிமையாளர்கள் என்ன சொல்கிறார்கள்", testi_sub:"எல்லா அளவிலான வணிகங்களையும் நடத்தும் குழுக்களால் நம்பப்படுகிறது, எல்லா இடங்களிலும்.",
-      testi1_quote:"“மூடிய பிறகு ஒவ்வொரு இரவும் நாங்கள் ஆர்டர்களை இழந்துகொண்டிருந்தோம். இப்போது ChatCart Pro AI அவற்றை எங்களுக்காக எடுத்துக்கொள்கிறது, காலையில் முதலிலேயே அவை தயாராக இருக்கின்றன.”", testi1_role:"உரிமையாளர், Northgate Mart",
-      testi2_quote:"“எங்கள் முன் மேசை முன்பதிவு அழைப்புகளால் நிரம்பியிருந்தது. இப்போது பெரும்பாலான நோயாளிகள் ஒரு நிமிடத்திற்குள் வாட்ஸ்அப்பில் தங்கள் ஸ்லாட்டை முன்பதிவு செய்கிறார்கள்.”", testi2_role:"நிறுவனர், Smile Care Dental",
-      testi3_quote:"“அமைப்பதற்கு ஒரு மதியம் மட்டுமே ஆனது. ஒரு வாரத்திற்குள், தானியங்கி நினைவூட்டல்கள் மூலம் ஜிம் ட்ரையல் நோ-ஷோ விகிதம் பாதியாகக் குறைந்தது.”", testi3_role:"மேலாளர், UrbanFit Gyms",
+      testi1_quote:"“மூடிய பிறகு ஒவ்வொரு இரவும் நாங்கள் ஆர்டர்களை இழந்துகொண்டிருந்தோம். இப்போது ChatCart Pro AI அவற்றை எங்களுக்காக எடுத்துக்கொள்கிறது, காலையில் முதலிலேயே அவை தயாராக இருக்கின்றன.”",
+      testi2_quote:"“எங்கள் முன் மேசை முன்பதிவு அழைப்புகளால் நிரம்பியிருந்தது. இப்போது பெரும்பாலான நோயாளிகள் ஒரு நிமிடத்திற்குள் வாட்ஸ்அப்பில் தங்கள் ஸ்லாட்டை முன்பதிவு செய்கிறார்கள்.”",
+      testi3_quote:"“அமைப்பதற்கு ஒரு மதியம் மட்டுமே ஆனது. ஒரு வாரத்திற்குள், தானியங்கி நினைவூட்டல்கள் மூலம் ஜிம் ட்ரையல் நோ-ஷோ விகிதம் பாதியாகக் குறைந்தது.”",
       faq_eyebrow:"அடிக்கடி கேட்கப்படும் கேள்விகள்", faq_title:"நீங்கள் தெரிந்துகொள்ள வேண்டிய அனைத்தும்", faq_sub:"இன்னும் சந்தேகமா? டெமோ முன்பதிவு செய்யுங்கள், நேரடியாகக் காண்பிக்கிறோம்.",
       faq1_q:"ChatCart Pro AI உண்மையில் எப்படி வேலை செய்கிறது?", faq1_a:"நாங்கள் உங்கள் வாட்ஸ்அப் பிசினஸ் எண்ணுடன் இணைகிறோம். ஒரு வாடிக்கையாளர் உங்களுக்கு மெசேஜ் அனுப்பும்போது, எங்கள் AI ஊழியர் கோரிக்கையைப் புரிந்துகொள்கிறது ஆர்டர் செய்வதாக இருந்தாலும் ஸ்லாட் முன்பதிவு செய்வதாக இருந்தாலும் உங்கள் மெனு, விலைப் பட்டியல், அல்லது கேலெண்டரைப் பயன்படுத்தி தானாகவே அதைக் கையாளுகிறது.",
       faq2_q:"இது என் வணிக வகைக்கு வேலை செய்யுமா?", faq2_a:"ஆம். நாங்கள் ஆர்டர் அடிப்படையிலான வணிகங்களை (மளிகை, மருந்தகம், உணவகங்கள், லாண்ட்ரி, கூரியர்) மற்றும் அப்பாயிண்ட்மென்ட் அடிப்படையிலான வணிகங்களை (சலூன்கள், கிளினிக்குகள், ஜிம், ஆட்டோ ரிப்பேர், ரியல் எஸ்டேட், நிகழ்வு அரங்குகள்) உடனடியாகவே ஆதரிக்கிறோம்.",
@@ -1833,9 +1858,9 @@
       smb4_title:"തത്സമയ സ്റ്റോക്കും വിലയും, എപ്പോഴും കൃത്യം", smb4_desc:"ഓർഡർ സ്ഥിരീകരിക്കുന്നതിന് മുമ്പ് AI നിങ്ങളുടെ യഥാർത്ഥ ഇൻവെന്ററിയും വിലവിവരപ്പട്ടികയും പരിശോധിക്കുന്നു അതിനാൽ വിറ്റുതീർന്ന ഇനമോ പഴയ വിലയോ ഉപഭോക്താക്കളോട് ഒരിക്കലും പറയില്ല.",
       industries_eyebrow:"വ്യവസായങ്ങൾ", industries_title:"നിങ്ങളുടെ ബിസിനസ് യഥാർത്ഥത്തിൽ പ്രവർത്തിക്കുന്ന രീതിക്കായി നിർമ്മിച്ചത്", industries_sub:"12 വ്യവസായങ്ങൾ, ഒരു വാട്ട്‌സ്ആപ്പ് AI ജീവനക്കാരൻ, നിങ്ങളുടെ കൃത്യമായ ഉപയോഗത്തിനായി ക്രമീകരിച്ചത്.",
       testi_eyebrow:"സാക്ഷ്യപത്രങ്ങൾ", testi_title:"ബിസിനസ് ഉടമകൾ എന്താണ് പറയുന്നത്", testi_sub:"എല്ലായിടത്തും, എല്ലാ വലുപ്പത്തിലുമുള്ള ബിസിനസുകൾ നടത്തുന്ന ടീമുകൾ വിശ്വസിക്കുന്നു.",
-      testi1_quote:"“അടച്ചതിനുശേഷം എല്ലാ രാത്രിയും ഞങ്ങൾക്ക് ഓർഡറുകൾ നഷ്ടപ്പെടുമായിരുന്നു. ഇപ്പോൾ ChatCart Pro AI അവ ഞങ്ങൾക്കായി എടുക്കുന്നു, രാവിലെ തന്നെ അവ തയ്യാറാണ്.”", testi1_role:"ഉടമ, Northgate Mart",
-      testi2_quote:"“ഞങ്ങളുടെ ഫ്രണ്ട് ഡെസ്ക് ബുക്കിംഗ് കോളുകളാൽ നിറഞ്ഞിരുന്നു. ഇപ്പോൾ മിക്ക രോഗികളും ഒരു മിനിറ്റിനുള്ളിൽ വാട്ട്‌സ്ആപ്പിൽ അവരുടെ സ്ലോട്ട് ബുക്ക് ചെയ്യുന്നു.”", testi2_role:"സ്ഥാപക, Smile Care Dental",
-      testi3_quote:"“സജ്ജീകരണത്തിന് ഒരു ഉച്ചതിരിഞ്ഞ് മാത്രമേ എടുത്തുള്ളൂ. ഒരാഴ്ചയ്ക്കുള്ളിൽ, ഓട്ടോമാറ്റിക് ഓർമ്മപ്പെടുത്തലുകൾ കാരണം ജിം ട്രയലുകളുടെ നോ-ഷോ നിരക്ക് പകുതിയായി കുറഞ്ഞു.”", testi3_role:"മാനേജർ, UrbanFit Gyms",
+      testi1_quote:"“അടച്ചതിനുശേഷം എല്ലാ രാത്രിയും ഞങ്ങൾക്ക് ഓർഡറുകൾ നഷ്ടപ്പെടുമായിരുന്നു. ഇപ്പോൾ ChatCart Pro AI അവ ഞങ്ങൾക്കായി എടുക്കുന്നു, രാവിലെ തന്നെ അവ തയ്യാറാണ്.”",
+      testi2_quote:"“ഞങ്ങളുടെ ഫ്രണ്ട് ഡെസ്ക് ബുക്കിംഗ് കോളുകളാൽ നിറഞ്ഞിരുന്നു. ഇപ്പോൾ മിക്ക രോഗികളും ഒരു മിനിറ്റിനുള്ളിൽ വാട്ട്‌സ്ആപ്പിൽ അവരുടെ സ്ലോട്ട് ബുക്ക് ചെയ്യുന്നു.”",
+      testi3_quote:"“സജ്ജീകരണത്തിന് ഒരു ഉച്ചതിരിഞ്ഞ് മാത്രമേ എടുത്തുള്ളൂ. ഒരാഴ്ചയ്ക്കുള്ളിൽ, ഓട്ടോമാറ്റിക് ഓർമ്മപ്പെടുത്തലുകൾ കാരണം ജിം ട്രയലുകളുടെ നോ-ഷോ നിരക്ക് പകുതിയായി കുറഞ്ഞു.”",
       faq_eyebrow:"പതിവ് ചോദ്യങ്ങൾ", faq_title:"നിങ്ങൾ അറിഞ്ഞിരിക്കേണ്ട എല്ലാം", faq_sub:"ഇപ്പോഴും സംശയമുണ്ടോ? ഡെമോ ബുക്ക് ചെയ്യുക, ഞങ്ങൾ അത് തത്സമയം കാണിച്ചുതരാം.",
       faq1_q:"ChatCart Pro AI യഥാർത്ഥത്തിൽ എങ്ങനെ പ്രവർത്തിക്കുന്നു?", faq1_a:"ഞങ്ങൾ നിങ്ങളുടെ വാട്ട്‌സ്ആപ്പ് ബിസിനസ് നമ്പറുമായി ബന്ധിപ്പിക്കുന്നു. ഒരു ഉപഭോക്താവ് നിങ്ങൾക്ക് സന്ദേശം അയക്കുമ്പോൾ, ഞങ്ങളുടെ AI ജീവനക്കാരൻ അഭ്യർത്ഥന മനസ്സിലാക്കുന്നു ഓർഡർ ചെയ്യുന്നതോ സ്ലോട്ട് ബുക്ക് ചെയ്യുന്നതോ ആകട്ടെ നിങ്ങളുടെ മെനു, വിലവിവരപ്പട്ടിക, അല്ലെങ്കിൽ കലണ്ടർ ഉപയോഗിച്ച് സ്വയമേവ അത് കൈകാര്യം ചെയ്യുന്നു.",
       faq2_q:"ഇത് എന്റെ ബിസിനസ് തരത്തിന് പ്രവർത്തിക്കുമോ?", faq2_a:"അതെ. ഞങ്ങൾ ഓർഡർ അധിഷ്ഠിത ബിസിനസുകളെ (പലചരക്ക്, ഫാർമസി, റെസ്റ്റോറന്റുകൾ, ലോൺഡ്രി, കൊറിയർ) കൂടാതെ അപ്പോയിന്റ്മെന്റ് അധിഷ്ഠിത ബിസിനസുകളെയും (സലൂണുകൾ, ക്ലിനിക്കുകൾ, ജിമ്മുകൾ, ഓട്ടോ റിപ്പയർ, റിയൽ എസ്റ്റേറ്റ്, ഇവന്റ് വേദികൾ) ഉടനടി പിന്തുണയ്ക്കുന്നു.",
