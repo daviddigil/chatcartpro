@@ -421,7 +421,32 @@
     background:var(--lime); color:var(--ink); font-size:12px; font-weight:700; padding:5px 14px; border-radius:999px; white-space:nowrap;
   }
   .tier-name{font-size:13px; font-weight:700; color:var(--lime-dark); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px;}
-  .tier-audience{font-size:14px; color:var(--navy-soft); margin-bottom:22px; min-height:42px;}
+  .tier-audience{font-size:14px; color:var(--navy-soft); margin-bottom:16px; min-height:42px;}
+  .tier-price{font-size:32px; font-weight:800; margin-bottom:2px;}
+  .tier-price .cycle{font-size:14px; font-weight:600; color:var(--navy-soft);}
+  .tier-setup{font-size:13px; color:var(--navy-soft); margin-bottom:22px;}
+  .currency-toggle{display:flex; justify-content:center; gap:8px; margin:22px 0 0; flex-wrap:wrap;}
+  .currency-toggle button{
+    border:1px solid var(--border); background:var(--card); color:var(--navy-soft);
+    padding:9px 20px; border-radius:999px; font-size:13.5px; font-weight:700; cursor:pointer; font-family:inherit;
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .currency-toggle button.active{background:var(--ink); color:var(--lime); border-color:transparent;}
+  [data-cur="usd"] .aed, [data-cur="usd"] .inr{display:none;}
+  [data-cur="aed"] .usd, [data-cur="aed"] .inr{display:none;}
+  [data-cur="inr"] .usd, [data-cur="inr"] .aed{display:none;}
+  .cost-table-wrap{overflow-x:auto; border-radius:20px; border:1px solid var(--border); box-shadow:var(--shadow); background:var(--card);}
+  table.cost-table{width:100%; border-collapse:collapse; min-width:640px;}
+  table.cost-table th, table.cost-table td{text-align:left; padding:14px 18px; font-size:13.5px; border-bottom:1px solid var(--border);}
+  table.cost-table th{background:var(--pastel-blue); font-weight:700; color:var(--navy); white-space:nowrap;}
+  table.cost-table td{color:var(--navy-soft);}
+  table.cost-table tr:last-child td{border-bottom:none;}
+  table.cost-table td strong{color:var(--navy);}
+  .fx-note{
+    background:var(--card); border:1px dashed var(--border); border-radius:16px; padding:22px 26px; margin-top:32px;
+    font-size:13px; color:var(--navy-soft); line-height:1.7; max-width:900px; margin-left:auto; margin-right:auto;
+  }
+  .fx-note strong{color:var(--navy);}
   .tier-cta-link{
     display:inline-flex; align-items:center; justify-content:center; padding:12px 20px; border-radius:999px;
     font-weight:700; font-size:14px; margin-bottom:24px; background:var(--ink); color:var(--lime);
@@ -513,7 +538,7 @@
   footer .powered-by a:hover{text-decoration:underline;}
 </style>
 </head>
-<body>
+<body data-cur="usd" id="voicePricingBody">
 
 <!-- Inline SVG icon sprite -->
 <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
@@ -821,12 +846,23 @@
         <span class="eyebrow">Tiers &amp; Features</span>
         <h2>A tier for every stage of your business</h2>
         <p>Every tier includes a DIDLogic business phone number, 24x7 call answering, and full call transcripts. Book a demo and we'll recommend the right fit for your call volume.</p>
+        <div class="currency-toggle" id="voiceCurToggle">
+          <button type="button" data-c="usd" class="active">USD ($)</button>
+          <button type="button" data-c="aed">AED (د.إ)</button>
+          <button type="button" data-c="inr">INR (₹)</button>
+        </div>
       </div>
 
       <div class="tier-grid">
         <div class="tier-card">
           <div class="tier-name">Starter</div>
           <div class="tier-audience">Single location, one phone line, getting every call answered</div>
+          <div class="tier-price">
+            <span class="usd">$300<span class="cycle">/mo</span></span>
+            <span class="aed">AED 1,099<span class="cycle">/mo</span></span>
+            <span class="inr">₹24,900<span class="cycle">/mo</span></span>
+          </div>
+          <div class="tier-setup">+ <span class="usd">$410</span><span class="aed">AED 1,500</span><span class="inr">₹34,000</span> one-time DIDLogic setup</div>
           <a href="#demo" class="tier-cta-link">Book a demo</a>
           <ul class="tier-features">
             <li><span class="check">&#10003;</span> 24x7 inbound call answering</li>
@@ -843,12 +879,19 @@
           <div class="badge">Most Popular</div>
           <div class="tier-name">Growth</div>
           <div class="tier-audience">Multi-location or higher call volume, inbound and outbound, integrated with your tools</div>
+          <div class="tier-price">
+            <span class="usd">$450<span class="cycle">/mo</span></span>
+            <span class="aed">AED 1,649<span class="cycle">/mo</span></span>
+            <span class="inr">₹37,400<span class="cycle">/mo</span></span>
+          </div>
+          <div class="tier-setup">+ <span class="usd">$410</span><span class="aed">AED 1,500</span><span class="inr">₹34,000</span> one-time DIDLogic setup</div>
           <a href="#demo" class="tier-cta-link">Book a demo</a>
           <ul class="tier-features">
             <li><span class="check">&#10003;</span> Everything in Starter, plus:</li>
             <li><span class="check">&#10003;</span> Inbound AND outbound calling (follow-ups, reminders)</li>
             <li><span class="check">&#10003;</span> Multiple phone lines / DIDLogic numbers</li>
             <li><span class="check">&#10003;</span> Appointment booking AND order taking (both modes)</li>
+            <li><span class="check">&#10003;</span> Advanced STT/LLM upgrade included (GPT&#8209;4o / Gemini transcriber)</li>
             <li><span class="check">&#10003;</span> CRM, calendar, or POS integration included</li>
             <li><span class="check">&#10003;</span> Multi-language conversational voice AI</li>
             <li><span class="check">&#10003;</span> Priority support with faster response times</li>
@@ -858,6 +901,8 @@
         <div class="tier-card">
           <div class="tier-name">Enterprise</div>
           <div class="tier-audience">Chains, franchises, or high call-volume operations needing custom workflows</div>
+          <div class="tier-price">Custom</div>
+          <div class="tier-setup">Setup scoped per deployment</div>
           <a href="#demo" class="tier-cta-link">Talk to sales</a>
           <ul class="tier-features">
             <li><span class="check">&#10003;</span> Everything in Growth, plus:</li>
@@ -872,6 +917,65 @@
       </div>
 
       <div class="tier-trust-strip"><span class="check">&#10003;</span> No long-term lock-in. Book a demo to see which tier fits your call volume.</div>
+    </div>
+  </section>
+
+  <!-- VOICE AI COST COMPONENTS -->
+  <section class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Transparent Costs</span>
+        <h2>What's actually included in the price</h2>
+        <p>No hidden fees. Here's exactly what each part of your Voice AI plan covers.</p>
+      </div>
+      <div class="cost-table-wrap">
+        <table class="cost-table">
+          <thead>
+            <tr><th>Cost component</th><th>Starter</th><th>Growth</th><th>Enterprise</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>DIDLogic number activation</strong><br>One-time telephony setup, business phone number provisioning, first invoice only</td>
+              <td class="usd">$410</td><td class="usd">$410</td><td class="usd">Scoped</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="aed">AED 1,500</td><td class="aed">AED 1,500</td><td class="aed">Scoped</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="inr">₹34,000</td><td class="inr">₹34,000</td><td class="inr">Scoped</td>
+            </tr>
+            <tr>
+              <td><strong>Vapi + DIDLogic voice infrastructure</strong><br>Inbound and outbound call minutes, blended, standard transcriber</td>
+              <td class="usd">$300 / mo</td><td class="usd">$450 / mo</td><td class="usd">Scoped</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="aed">AED 1,099 / mo</td><td class="aed">AED 1,649 / mo</td><td class="aed">Scoped</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="inr">₹24,900 / mo</td><td class="inr">₹37,400 / mo</td><td class="inr">Scoped</td>
+            </tr>
+            <tr>
+              <td><strong>Advanced STT/LLM upgrade</strong><br>GPT&#8209;4o or Gemini transcriber, opt-in per agent, usage-based</td>
+              <td class="usd">+$25&ndash;$70 / mo</td><td class="usd">Included</td><td class="usd">Included</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="aed">+AED 90&ndash;260 / mo</td><td class="aed">Included</td><td class="aed">Included</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="inr">+₹2,000&ndash;₹5,900 / mo</td><td class="inr">Included</td><td class="inr">Included</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="fx-note">
+        <strong>How these prices were set:</strong> Voice AI runs on Vapi (orchestration) and DIDLogic (telephony), with a blended inbound + outbound cost of roughly AED 700&ndash;960/mo depending on call volume and whether the advanced STT/LLM transcriber upgrade is active. Starter and Growth pricing above reflects that real infrastructure cost plus a standard platform margin, not a markup on top of an already-marked-up number. AED and INR prices are set directly for each market and reviewed periodically as Vapi and DIDLogic rates change.
+      </div>
     </div>
   </section>
 
@@ -1114,6 +1218,16 @@
       });
     });
   })();
+
+  var voicePricingBody = document.getElementById('voicePricingBody');
+  var voiceCurButtons = document.querySelectorAll('#voiceCurToggle button');
+  voiceCurButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      voiceCurButtons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      voicePricingBody.setAttribute('data-cur', btn.getAttribute('data-c'));
+    });
+  });
 </script>
 
 </body>
