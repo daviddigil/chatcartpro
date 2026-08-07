@@ -3,6 +3,25 @@
 <head>
 <meta charset="UTF-8">
 
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
 <script>
@@ -397,7 +416,7 @@
         <h2 data-i18n="mm_title">Understands voice, photos, and video, not just typed text</h2>
         <p data-i18n="mm_sub">Real customers don't only type. ChatCart Pro AI is built to handle how people actually message on WhatsApp.</p>
       </div>
-      <div class="benefits-grid">
+      <div class="benefits-grid bento-grid">
         <div class="benefit-card">
           <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-mic"></use></svg></div>
           <h4 data-i18n="mm1_title">Voice notes</h4>
@@ -430,7 +449,7 @@
         <h2 data-i18n="benefits_title">Why businesses switch to ChatCart Pro AI</h2>
         <p data-i18n="benefits_sub">A 24/7 AI customer service agent and virtual receptionist in one, everything you need to stop losing customers to slow replies and missed calls.</p>
       </div>
-      <div class="benefits-grid">
+      <div class="benefits-grid bento-grid">
         <div class="benefit-card">
           <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-zap"></use></svg></div>
           <h4 data-i18n="benefit1_title">Instant replies, 24/7</h4>
@@ -463,7 +482,7 @@
         <h2 data-i18n="smb_title">Keep more of what you earn</h2>
         <p data-i18n="smb_sub">ChatCart Pro AI is designed for local and small-scale businesses that want the reach of a delivery app, without giving up their margin or their customer relationship.</p>
       </div>
-      <div class="benefits-grid">
+      <div class="benefits-grid bento-grid">
         <div class="benefit-card">
           <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-no-app"></use></svg></div>
           <h4 data-i18n="smb1_title">No extra app to install</h4>

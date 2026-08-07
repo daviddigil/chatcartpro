@@ -9,6 +9,10 @@
    2. FAQ accordion
    3. Demo form submit via EmailJS (guarded: no-op if #demoForm is absent)
    4. Floating AI chat widget (guarded: no-op if #ccChatBubble is absent)
+   5. Auto light/dark theme periodic re-check (the initial pre-paint theme
+      is set synchronously in a small inline <script> in each page's <head>,
+      to avoid a flash of the wrong theme; this section just re-evaluates
+      it every few minutes for tabs left open across the 7am/7pm boundary)
 
    Each section is defensive about missing DOM elements so this file is
    safe to include on every page, even ones that only use a subset of the
@@ -310,6 +314,24 @@ document.addEventListener('DOMContentLoaded', function(){
     window.addEventListener('keydown', function(e){
       if(e.key === 'Escape' && panel.classList.contains('open')) closePanel();
     });
+  })();
+
+  /* ---------- 5. Auto theme periodic re-check ---------- */
+  (function(){
+    function computeAutoTheme(){
+      var hour = new Date().getHours();
+      return (hour >= 19 || hour < 7) ? 'dark' : 'light';
+    }
+    function applyTheme(theme){
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    setInterval(function(){
+      try{
+        var saved = localStorage.getItem('cc_theme');
+        if(saved === 'light' || saved === 'dark') return; // manual override wins
+        applyTheme(computeAutoTheme());
+      }catch(e){}
+    }, 5 * 60 * 1000);
   })();
 
 });
