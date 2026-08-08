@@ -364,30 +364,40 @@ section{padding:96px 0;}
 /* Two-mode */
 .mode-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px;}
 @media (max-width:800px){.mode-grid{grid-template-columns:1fr;}}
+
+/* Three-mode (One Agent, Three Jobs) */
+.mode-grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; align-items:stretch;}
+@media (max-width:1080px){.mode-grid-3{grid-template-columns:1fr; max-width:640px; margin:0 auto;}}
+
 .mode-card{
   background:var(--card); border-radius:24px; padding:32px; border:1px solid var(--border); box-shadow:var(--shadow);
+  display:flex; flex-direction:column;
 }
 .mode-card .tag{
   display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:999px; font-weight:700; font-size:13px; margin-bottom:16px;
+  align-self:flex-start;
 }
 .mode-card .tag .ico-svg{width:15px; height:15px;}
 .mode-card.orders .tag{background:var(--lime); color:var(--surface-dark);}
 .mode-card.bookings .tag{background:var(--surface-dark); color:var(--lime);}
-.mode-card h3{font-size:24px; margin:0 0 10px;}
-.mode-card p.desc{color:var(--navy-soft); font-size:15px; line-height:1.6; margin:0 0 22px;}
-.industry-list{display:flex; flex-wrap:wrap; gap:10px;}
+.mode-card.leads .tag{background:var(--pastel-blue); color:var(--navy);}
+.mode-card h3{font-size:22px; margin:0 0 10px; line-height:1.25;}
+.mode-card p.desc{color:var(--navy-soft); font-size:14.5px; line-height:1.6; margin:0 0 22px;}
+.industry-list{display:flex; flex-direction:column; gap:8px;}
+.mode-grid-3 .mode-card .industry-list{flex:1;}
 .industry-chip{
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center; gap:10px; width:100%;
   background:#f6f7fb; border:1px solid var(--border); border-radius:12px;
-  padding:10px 14px; font-size:14px; font-weight:600; color:var(--navy);
+  padding:10px 14px; font-size:13.5px; font-weight:600; color:var(--navy);
+  line-height:1.3;
 }
-.industry-chip .ico{font-size:17px; display:inline-flex;}
+.industry-chip .ico{font-size:16px; display:inline-flex; flex-shrink:0; width:20px; justify-content:center;}
 .industry-chip .ico .ico-svg{color:var(--lime-dark);}
 
 @media (max-width:600px){
   .mode-card{padding:22px;}
   .mode-card h3{font-size:20px;}
-  .industry-chip{padding:8px 12px; font-size:13px;}
+  .industry-chip{padding:9px 12px; font-size:13px;}
 }
 
 /* Benefits grid */
