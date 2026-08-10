@@ -1,6 +1,6 @@
 # ChatCart Pro AI
 
-> ChatCart Pro AI is an AI employee platform for businesses: an AI WhatsApp agent that takes orders and books appointments, an AI chatbot for websites, and ChatCart Voice AI, a 24x7 AI voice calling employee that answers and places phone calls. Built by Nexsofture Private Ltd, and an authorized DIDLogic telephony partner covering 140+ countries.
+> ChatCart Pro AI is an AI employee platform for businesses: an AI WhatsApp agent that takes orders and books appointments, an AI chatbot for websites, ChatCart Voice AI (a 24x7 AI voice calling employee that answers and places phone calls), and ChatCart Pro POS (a restaurant point-of-sale system unifying counter, AI voice, and WhatsApp ordering into one order pipeline). Built by Nexsofture Private Ltd, and an authorized DIDLogic telephony partner covering 140+ countries.
 
 ChatCart Pro AI serves businesses across every vertical, retail, healthcare, real estate, hospitality, restaurants, automotive, education, financial services, logistics, home services, salons, and more, with AI employees that work 24x7 across WhatsApp, website chat, and phone calls. No prices are listed publicly; every business is quoted after a short discovery call. All plans are demo-first: book a free demo to see the product live and get a tier recommendation.
 
@@ -9,6 +9,7 @@ ChatCart Pro AI serves businesses across every vertical, retail, healthcare, rea
 - [Home / AI WhatsApp Employee](https://chatcartpro.com/): AI WhatsApp agent that takes orders and books appointments for businesses, understands 40+ languages plus voice notes, photos, and video.
 - [ChatCart Voice AI](https://chatcartpro.com/ai-voice-calling-agent/): The #1 AI voice calling platform, a 24x7 AI employee that answers inbound calls and places outbound calls for every business vertical. Authorized DIDLogic telephony partner with business phone numbers in 140+ countries. No visa, insurance, food/accommodation, transportation, flight allowance, or annual leave costs, unlike a human hire.
 - [AI Chatbot for Websites](https://chatcartpro.com/ai-chatbot-for-website/): Embeddable AI chat widget that answers visitor questions from a business's own knowledge base and hands off high-intent visitors to a demo form.
+- [Restaurant POS + AI Voice & WhatsApp Ordering](https://chatcartpro.com/restaurant-pos-voice-chat/): ChatCart Pro POS, a restaurant point-of-sale system unified with AI voice calling and WhatsApp ordering. Dine-in orders at the counter, phone orders taken by the AI voice employee, and WhatsApp orders all write into one shared menu, order pipeline, and kitchen display, with table management, kitchen ticket tracking, delivery agent dispatch, receipt printing (network/Bluetooth/USB), and a discounts/offers engine.
 - [Pricing / Plan Configurator](https://chatcartpro.com/pricing/): Interactive configurator that recommends a Starter, Growth, or Enterprise plan based on conversation volume, locations, and required AI capabilities, shown in USD, AED, or INR.
 
 ## Industry Pages
