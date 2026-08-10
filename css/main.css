@@ -286,9 +286,9 @@ nav.wrap::before{
   max-width:78%; padding:10px 14px; border-radius:14px; font-size:14px; line-height:1.45;
   box-shadow:0 1px 1px rgba(0,0,0,.08);
 }
-.bubble.in{background:#fff; border-top-left-radius:2px; align-self:flex-start;}
+.bubble.in{background:#fff; color:#0a0a0a; border-top-left-radius:2px; align-self:flex-start;}
 .bubble.out{background:#dcf8c6; border-top-right-radius:2px; align-self:flex-end;}
-.bubble small{display:block; margin-top:4px; font-size:10.5px; color:#8b9a8d; text-align:right;}
+.bubble small{display:block; margin-top:4px; font-size:10.5px; color:#5b6a5d; text-align:right;}
 .bubble .chips{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px;}
 .bubble .chip{
   background:#075e54; color:#fff; font-size:12px; padding:5px 10px; border-radius:999px; font-weight:600;
