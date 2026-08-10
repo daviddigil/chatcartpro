@@ -3,6 +3,25 @@
 <head>
 <meta charset="UTF-8">
 
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
 <script>
@@ -19,6 +38,7 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://chatcartpro.com/privacy-policy/">
 <link rel="icon" type="image/png" href="/logo/logo.png">
+<link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/logo/logo.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ChatCart Pro AI">
@@ -40,14 +60,27 @@
     --card:#ffffff;
     --border:#ececec;
     --shadow: 0 20px 45px -20px rgba(7,94,84,0.22);
+    --body-bg:#ffffff;
+    --theme-transition:background-color .6s ease, color .6s ease, border-color .6s ease, box-shadow .6s ease;
+  }
+  html[data-theme="dark"]{
+    --navy:#e8ece9;
+    --navy-soft:#a7b0ac;
+    --ink:#f2f4f2;
+    --card:#161a17;
+    --border:#2a2f2b;
+    --shadow: 0 20px 45px -20px rgba(0,0,0,0.6);
+    --body-bg:#0a0d0b;
   }
   *{box-sizing:border-box;}
+  html{transition:var(--theme-transition);}
   body{
     margin:0;
     line-height:1.5;
     font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Nirmala UI', 'Tamil MN', 'Malayalam MN', Helvetica, Arial, sans-serif;
     color:var(--ink);
-    background:#ffffff;
+    background:var(--body-bg);
+    transition:var(--theme-transition);
   }
   a{color:var(--lime-dark); text-decoration:none;}
   a:hover{text-decoration:underline;}
@@ -363,6 +396,24 @@
   </form>
 </div>
 
+<script>
+  /* Auto theme periodic re-check (the initial pre-paint theme is set inline
+     in <head> to avoid a flash of the wrong theme; this just re-evaluates
+     every 5 minutes so the theme still flips if the visit spans dusk/dawn). */
+  (function(){
+    function computeAutoTheme(){
+      var hour = new Date().getHours();
+      return (hour >= 19 || hour < 7) ? 'dark' : 'light';
+    }
+    setInterval(function(){
+      try{
+        var saved = localStorage.getItem('cc_theme');
+        if(saved === 'light' || saved === 'dark') return;
+        document.documentElement.setAttribute('data-theme', computeAutoTheme());
+      }catch(e){}
+    }, 5 * 60 * 1000);
+  })();
+</script>
 <script>
 (function(){
   "use strict";
