@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W50ECXZCXE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate Program | Earn Commission Referring ChatCart Pro AI</title>
+<meta name="description" content="Join the ChatCart Pro AI affiliate program. Earn recurring commission for every business you refer that signs up for our AI WhatsApp employee, Voice AI, or Restaurant POS products. Free to join, apply in minutes.">
+<meta name="keywords" content="ChatCart Pro AI affiliate program, WhatsApp AI chatbot affiliate, earn commission referring SaaS, AI chatbot referral program, affiliate marketing WhatsApp automation">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Nexsofture Private Ltd">
+<link rel="canonical" href="https://chatcartpro.com/affiliate-program/">
+<link rel="icon" type="image/png" href="/logo/logo.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/logo/logo.png">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="/css/main.css?v=20260811e">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ChatCart Pro AI">
+<meta property="og:title" content="Affiliate Program | Earn Commission Referring ChatCart Pro AI">
+<meta property="og:description" content="Earn recurring commission for every business you refer that signs up for ChatCart Pro AI. Free to join, apply in minutes.">
+<meta property="og:url" content="https://chatcartpro.com/affiliate-program/">
+<meta property="og:image" content="https://chatcartpro.com/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Affiliate Program | Earn Commission Referring ChatCart Pro AI">
+<meta name="twitter:description" content="Earn recurring commission for every business you refer that signs up for ChatCart Pro AI. Free to join, apply in minutes.">
+<meta name="twitter:image" content="https://chatcartpro.com/og-image.png">
+
+<!-- Structured data: Organization + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the ChatCart Pro AI affiliate program work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You apply for free, get a unique referral link, and share it with businesses that could use an AI WhatsApp employee, Voice AI, or Restaurant POS. When someone signs up through your link and becomes a paying customer, you earn a recurring commission on their subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much commission do affiliates earn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Affiliates earn a percentage of recurring revenue for referred customers. Exact rates and terms are confirmed when your application is approved, since they can vary by product and referral volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can join the affiliate program?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anyone with an audience of business owners, agencies, consultants, or communities where an AI employee for WhatsApp, phone calls, or restaurant POS would be a genuine fit, no minimum follower count required, we review each application individually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When and how do I get paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payout schedule, minimum payout threshold, and payment method are confirmed during onboarding once your application is approved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a cost to join?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The affiliate program is free to join, there's no cost or purchase required to apply or start referring."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* Page-specific styles below (see /css/main.css for the shared marketing base) */
+  .alt-hero{padding:60px 0 10px; text-align:center;}
+  .alt-hero .vs-badge{
+    display:inline-flex; align-items:center; gap:8px; background:var(--surface-dark); color:var(--lime);
+    padding:7px 16px; border-radius:999px; font-weight:700; font-size:13px; margin-bottom:20px;
+  }
+  .steps-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  @media (max-width:900px){.steps-grid{grid-template-columns:1fr;}}
+  .step-card{
+    background:var(--card); border-radius:20px; padding:28px; border:1px solid var(--border);
+    box-shadow:0 12px 30px -18px rgba(21,36,71,0.15); position:relative;
+  }
+  .step-card .step-num{
+    width:36px; height:36px; border-radius:50%; background:var(--lime); color:var(--surface-dark);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:15px; margin-bottom:16px;
+  }
+  .step-card h4{margin:0 0 8px; font-size:17px;}
+  .step-card p{margin:0; font-size:14px; color:var(--navy-soft); line-height:1.55;}
+  .commission-note{
+    max-width:820px; margin:0 auto; text-align:center; background:var(--card); border:1px dashed var(--border);
+    border-radius:16px; padding:22px 26px; font-size:13.5px; color:var(--navy-soft); line-height:1.7;
+  }
+  .commission-note strong{color:var(--navy);}
+</style>
+</head>
+<body>
+
+<!-- Inline SVG icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24"><path d="M9.5 13.5 14.5 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 6.5 12.5 5a3.5 3.5 0 0 1 5 5l-1.5 1.5M13 17.5 11.5 19a3.5 3.5 0 0 1-5-5l1.5-1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12.5a1.5 1.5 0 0 1-1.5 1.5H6.5A1.5 1.5 0 0 1 5 20.5L6 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V10M11 20V4M18 20v-7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M2.5 20.5h19" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="icon-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12.5 6 9l3.2 2.6a1.6 1.6 0 0 0 2.2-2.3L9.5 7.3M22 12.5 18 9l-3.2 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m6 9 5 4.5 1.3-1.1M18 9l-5.5 5-2.5-2M2 12.5 6 17l2 1.8a1.5 1.5 0 0 0 2.1-2.1M22 12.5 18 17l-2 1.8a1.5 1.5 0 0 1-2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2.5 4 6v6c0 5 3.4 8.7 8 9.5 4.6-.8 8-4.5 8-9.5V6l-8-3.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3L15.5 9.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14.5 8.5V6.8c0-.7.5-1.3 1.3-1.3h1.7V2.5h-2.4C12.5 2.5 11 4 11 6.5v2h-2v3h2v10h3.5V11.5h2.4l.5-3h-2.9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-x-twitter" viewBox="0 0 24 24"><path d="M4 4 20 20M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.7" cy="8" r="1.1" fill="currentColor"/><path d="M7.7 11v6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 17.5v-4c0-1.4 1-2.5 2.4-2.5s2.3 1 2.3 2.5v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><img src="/logo/logo.png" alt="" width="32" height="32" loading="eager"></span> <span class="logo-text">ChatCart Pro AI</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="/#modes">Product</a>
+      <a href="/#industries">Industries</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="/ar/" lang="ar" dir="rtl">العربية</a>
+      <div class="nav-links-mobile-extra">
+        <a href="#apply" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="#apply" class="btn btn-primary">Apply Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="alt-hero">
+    <div class="wrap">
+      <span class="vs-badge"><svg class="ico-svg" aria-hidden="true"><use href="#icon-handshake"></use></svg> Affiliate Program</span>
+      <h1 style="font-size:48px; line-height:1.1; margin:0 0 20px; font-weight:700; max-width:820px; margin-left:auto; margin-right:auto; letter-spacing:-.02em;">Earn recurring commission for every business you refer</h1>
+      <p style="max-width:640px; margin:0 auto 28px; font-size:17px; color:var(--navy-soft); line-height:1.6;">Share ChatCart Pro AI with businesses that could use an AI employee on WhatsApp, phone calls, or their POS, and earn a recurring commission on every referral that becomes a customer. Free to join.</p>
+      <div class="hero-ctas" style="display:flex; gap:14px; justify-content:center; margin-bottom:16px; flex-wrap:wrap;">
+        <a href="#apply" class="btn btn-primary">Apply Now</a>
+        <a href="#how-it-works" class="btn btn-dark">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Join</span>
+        <h2>Built for creators, agencies, and consultants</h2>
+        <p>If you talk to business owners, this is a straightforward way to earn from a product they'll actually use.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-zap"></use></svg></div>
+          <h4>Free to join, no minimums</h4>
+          <p>No cost, no follower-count requirement, no purchase needed. Apply and get your referral link once approved.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-chart"></use></svg></div>
+          <h4>Recurring commission</h4>
+          <p>Earn on the ongoing subscription for every customer you refer, not just a one-time bounty on signup.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg></div>
+          <h4>Three products to refer</h4>
+          <p>WhatsApp AI ordering and bookings, Voice AI phone calls, and Restaurant POS, refer whichever fits your audience.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-shield"></use></svg></div>
+          <h4>A product people actually use</h4>
+          <p>You're referring a real AI employee businesses put in front of their customers, not vaporware, easier to recommend honestly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How It Works</span>
+        <h2>Three steps to your first commission</h2>
+        <p>No technical setup required on your end.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h4>Apply for free</h4>
+          <p>Fill out the short form below. We review every application individually, no minimum audience size required.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h4>Get your referral link</h4>
+          <p>Once approved, you'll get a unique link to share with businesses that could use an AI WhatsApp, voice, or POS employee.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h4>Earn as they stay customers</h4>
+          <p>When someone signs up through your link and becomes a paying customer, you earn a recurring commission on their subscription.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMISSION -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Commission</span>
+        <h2>Recurring commission on every referral</h2>
+        <p>Exact terms are confirmed when your application is approved.</p>
+      </div>
+      <div class="commission-note">
+        <strong>Indicative structure:</strong> affiliates earn approximately <strong>20% recurring commission</strong> on a referred customer's subscription for up to <strong>12 months</strong> from signup. Final commission rate, cookie duration, minimum payout threshold, and payment method are confirmed during onboarding once your application is approved, they can vary by product and referral volume.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Everything you need to know</h2>
+        <p>Still curious? Apply below and we'll follow up with full details.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span>How does the ChatCart Pro AI affiliate program work?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a" style="max-height:400px;"><p>You apply for free, get a unique referral link, and share it with businesses that could use an AI WhatsApp employee, Voice AI, or Restaurant POS. When someone signs up through your link and becomes a paying customer, you earn a recurring commission on their subscription.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>How much commission do affiliates earn?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Affiliates earn a percentage of recurring revenue for referred customers. Exact rates and terms are confirmed when your application is approved, since they can vary by product and referral volume.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Who can join the affiliate program?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Anyone with an audience of business owners, agencies, consultants, or communities where an AI employee for WhatsApp, phone calls, or restaurant POS would be a genuine fit, no minimum follower count required, we review each application individually.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>When and how do I get paid?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Payout schedule, minimum payout threshold, and payment method are confirmed during onboarding once your application is approved.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Is there a cost to join?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>No. The affiliate program is free to join, there's no cost or purchase required to apply or start referring.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLY FORM -->
+  <section id="apply">
+    <div class="wrap">
+      <div class="demo-section">
+        <div id="demoFormWrap">
+          <h2>Apply to become an affiliate</h2>
+          <p class="sub">Tell us a bit about you and how you'd refer businesses to ChatCart Pro AI.</p>
+          <form id="demoForm">
+            <div class="field">
+              <label for="fname">Full name</label>
+              <input id="fname" type="text" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="fbusiness">Website, channel, or company name</label>
+              <input id="fbusiness" type="text" required placeholder="e.g. your website or social handle">
+            </div>
+            <div class="field">
+              <label for="findustry">How would you refer businesses?</label>
+              <select id="findustry" required>
+                <option value="">Select an option</option>
+                <option>Content creator / social media</option>
+                <option>Marketing or web design agency</option>
+                <option>Business consultant / coach</option>
+                <option>Existing ChatCart Pro AI customer</option>
+                <option>Community or newsletter</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fwhatsapp">WhatsApp number</label>
+              <input id="fwhatsapp" type="tel" required placeholder="+1 5XX XXX XXXX">
+            </div>
+            <div class="field full">
+              <label for="femail">Email</label>
+              <input id="femail" type="email" required placeholder="you@example.com">
+            </div>
+            <div class="field full submit-row">
+              <button type="submit" class="btn btn-primary" id="demoSubmitBtn">Apply Now</button>
+              <p class="form-error" id="demoFormError" style="display:none;">Something went wrong sending your request. Please try again, or reach us directly.</p>
+            </div>
+          </form>
+        </div>
+        <div class="demo-success" id="demoSuccess">
+          <div class="check">&#10003;</div>
+          <h3>Thanks, application received!</h3>
+          <p>We review every application individually and will follow up by email within a few business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to start earning?</h2>
+        <p>Apply for free and start referring ChatCart Pro AI to businesses that need an AI employee.</p>
+        <a href="#apply" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="flogo"><span class="logo-mark" style="width:26px;height:26px;font-size:14px;"><img src="/logo/logo.png" alt="" width="26" height="26" loading="lazy"></span> ChatCart Pro AI</div>
+        <p>AI WhatsApp employees for orders & bookings built for businesses everywhere.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/#modes">WhatsApp AI Employee</a></li>
+          <li><a href="/ai-voice-calling-agent/">Voice AI</a></li>
+          <li><a href="/restaurant-pos-voice-chat/">Restaurant POS</a></li>
+          <li><a href="/ai-chatbot-for-website/">AI Chatbot for Websites</a></li>
+          <li><a href="/whatsapp-ai-lead-escalation/">Lead Capture &amp; Sales Escalation</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Grow With Us</h5>
+        <ul>
+          <li><a href="/affiliate-program/">Affiliate Program</a></li>
+          <li><a href="/partner-with-us/">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/wati-alternative/">Wati Alternative</a></li>
+          <li><a href="/respond-io-alternative/">Respond.io Alternative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ChatCart Pro AI. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg class="ico-svg" aria-hidden="true"><use href="#icon-facebook"></use></svg></a>
+        <a href="#" aria-label="X (Twitter)"><svg class="ico-svg" aria-hidden="true"><use href="#icon-x-twitter"></use></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg class="ico-svg" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="ico-svg" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ico-svg" aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+      </div>
+      <p class="powered-by">Powered by <a href="https://nexsofture.com" target="_blank" rel="noopener">Nexsofture Private Ltd</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING AI CHAT WIDGET ============ -->
+
+<div id="ccTeaser" role="button" tabindex="0" aria-label="Open chat: Looking for something for your business?">
+  Looking for something for your business? Ask me anything &#128075;
+  <button type="button" class="cc-teaser-close" aria-label="Dismiss">&times;</button>
+</div>
+
+<button id="ccChatBubble" aria-label="Open chat" aria-expanded="false" aria-controls="ccChatPanel">
+  <svg class="cc-chat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+  <svg class="cc-close-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+</button>
+
+<div id="ccChatPanel" role="dialog" aria-label="Chat with ChatCart Pro AI">
+  <div class="cc-head">
+    <span class="cc-avatar">C</span>
+    <div>
+      <div class="cc-title">ChatCart Pro AI</div>
+      <div class="cc-sub">Usually replies in a few seconds</div>
+    </div>
+  </div>
+  <div id="ccChatBody"></div>
+  <form id="ccChatForm" autocomplete="off">
+    <input id="ccChatInput" type="text" placeholder="Ask about pricing, features..." required maxlength="500" aria-label="Message">
+    <button type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11.5 21 3l-5 18.5-4.5-7.5L3 11.5Z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script>
+  /* Floating AI chat widget, same behavior as the rest of the site
+     (see /js/main.js section 4). Kept inline here since this page uses
+     its own standalone nav/FAQ/form scripts rather than /js/main.js. */
+  (function(){
+    "use strict";
+
+    var bubble = document.getElementById('ccChatBubble');
+    var panel = document.getElementById('ccChatPanel');
+    if(!bubble || !panel) return;
+
+    var CHAT_API_ENDPOINT = "https://chatcartpro-aiagent.onrender.com/api/chat";
+
+    var body = document.getElementById('ccChatBody');
+    var form = document.getElementById('ccChatForm');
+    var input = document.getElementById('ccChatInput');
+    var sendBtn = form.querySelector('button');
+
+    var history = [];
+    var greeted = false;
+
+    function addBubble(text, who){
+      var el = document.createElement('div');
+      el.className = 'cc-bubble ' + who;
+      el.textContent = text;
+      body.appendChild(el);
+      body.scrollTop = body.scrollHeight;
+      return el;
+    }
+
+    function addDemoCta(){
+      var wrap = document.createElement('div');
+      wrap.className = 'cc-bubble bot cc-cta-wrap';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'cc-cta-btn';
+      btn.textContent = 'Book a Demo';
+      btn.addEventListener('click', function(){
+        var demoSection = document.getElementById('demo');
+        if(demoSection){
+          closePanel();
+          demoSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.location.href = '/#demo';
+        }
+      });
+      wrap.appendChild(btn);
+      body.appendChild(wrap);
+      body.scrollTop = body.scrollHeight;
+    }
+
+    function openPanel(){
+      panel.classList.add('open');
+      bubble.classList.add('open');
+      bubble.setAttribute('aria-expanded', 'true');
+      if(teaser) teaser.classList.remove('show');
+      if(!greeted){
+        greeted = true;
+        addBubble("Hi! I'm the ChatCart Pro AI assistant. Ask me anything about pricing, features, or how it works for your business.", 'bot');
+      }
+      input.focus();
+    }
+    function closePanel(){
+      panel.classList.remove('open');
+      bubble.classList.remove('open');
+      bubble.setAttribute('aria-expanded', 'false');
+    }
+
+    bubble.addEventListener('click', function(){
+      panel.classList.contains('open') ? closePanel() : openPanel();
+    });
+
+    var teaser = document.getElementById('ccTeaser');
+    var teaserCloseBtn = teaser ? teaser.querySelector('.cc-teaser-close') : null;
+
+    function hideTeaser(){
+      if(teaser) teaser.classList.remove('show');
+    }
+
+    if(teaser && !sessionStorage.getItem('ccTeaserShown')){
+      setTimeout(function(){
+        if(panel.classList.contains('open')) return;
+        sessionStorage.setItem('ccTeaserShown', '1');
+        teaser.classList.add('show');
+        setTimeout(hideTeaser, 12000);
+      }, 10000);
+    }
+
+    if(teaser){
+      teaser.addEventListener('click', function(){
+        hideTeaser();
+        openPanel();
+      });
+      teaser.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          hideTeaser();
+          openPanel();
+        }
+      });
+    }
+    if(teaserCloseBtn){
+      teaserCloseBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        hideTeaser();
+      });
+    }
+
+    function sleep(ms){
+      return new Promise(function(resolve){ setTimeout(resolve, ms); });
+    }
+
+    function sendChatMessage(msg, attempt){
+      attempt = attempt || 1;
+      var maxAttempts = 3;
+      return fetch(CHAT_API_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: msg, history: history })
+      }).then(function(res){
+        if(!res.ok) throw new Error('Request failed with status ' + res.status);
+        return res.json();
+      }).catch(function(err){
+        if(attempt < maxAttempts){
+          return sleep(attempt * 1500).then(function(){
+            return sendChatMessage(msg, attempt + 1);
+          });
+        }
+        throw err;
+      });
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = input.value.trim();
+      if(!msg) return;
+
+      addBubble(msg, 'user');
+      history.push({ role: 'user', content: msg });
+      input.value = '';
+      input.disabled = true;
+      sendBtn.disabled = true;
+
+      var typingEl = addBubble('Typing...', 'bot typing');
+      var slowNoticeTimer = setTimeout(function(){
+        typingEl.textContent = 'Still connecting, one moment...';
+      }, 4000);
+
+      sendChatMessage(msg)
+        .then(function(data){
+          clearTimeout(slowNoticeTimer);
+          typingEl.remove();
+          var reply = (data && data.reply) ? data.reply : "Sorry, I didn't catch that. Could you rephrase?";
+          var showDemo = /\[SHOW_DEMO_FORM\]/.test(reply);
+          reply = reply.replace(/\[SHOW_DEMO_FORM\]/g, '').trim();
+          addBubble(reply, 'bot');
+          history.push({ role: 'assistant', content: reply });
+          if(showDemo) addDemoCta();
+        })
+        .catch(function(){
+          clearTimeout(slowNoticeTimer);
+          typingEl.remove();
+          addBubble("Something went wrong reaching the assistant. Please try again, or book a demo and we'll help directly.", 'bot');
+        })
+        .finally(function(){
+          input.disabled = false;
+          sendBtn.disabled = false;
+          input.focus();
+        });
+    });
+
+    window.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && panel.classList.contains('open')) closePanel();
+    });
+  })();
+</script>
+
+<script>
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  var navWrap = document.querySelector('nav.wrap');
+  if(navToggle){
+    navToggle.addEventListener('click', function(){
+      var open = navLinks.classList.toggle('open');
+      navWrap.classList.toggle('menu-open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  (function(){
+    var EMAILJS_PUBLIC_KEY = 'NRu8tw60wiU7jY3pD';
+    var EMAILJS_SERVICE_ID = 'service_9cpjres';
+    var EMAILJS_TEMPLATE_NOTIFY = 'template_4pu5t3l';
+    var EMAILJS_TEMPLATE_AUTOREPLY = 'template_8bvo8id';
+
+    if(window.emailjs){
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
+    var demoForm = document.getElementById('demoForm');
+    var submitBtn = document.getElementById('demoSubmitBtn');
+    var errorEl = document.getElementById('demoFormError');
+
+    demoForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      errorEl.style.display = 'none';
+      submitBtn.disabled = true;
+      var originalLabel = submitBtn.textContent;
+      submitBtn.textContent = '...';
+
+      var params = {
+        from_name: document.getElementById('fname').value,
+        business_name: document.getElementById('fbusiness').value,
+        industry: 'Affiliate application: ' + document.getElementById('findustry').value,
+        whatsapp: document.getElementById('fwhatsapp').value,
+        from_email: document.getElementById('femail').value
+      };
+
+      var sendNotify = emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFY, params);
+      var sendAutoReply = emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, params);
+
+      Promise.all([sendNotify, sendAutoReply]).then(function(){
+        document.getElementById('demoFormWrap').style.display = 'none';
+        document.getElementById('demoSuccess').style.display = 'block';
+        if(typeof gtag === 'function'){
+          gtag('event', 'generate_lead', {
+            event_category: 'affiliate_application',
+            event_label: params.industry
+          });
+        }
+      }).catch(function(err){
+        console.error('EmailJS send failed:', err);
+        var detail = (err && (err.text || err.message)) ? (' (' + (err.status || '') + ' ' + (err.text || err.message) + ')') : '';
+        errorEl.textContent = 'Something went wrong sending your request' + detail + '. Please try again, or reach us directly.';
+        errorEl.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      });
+    });
+  })();
+
+  /* Auto theme periodic re-check (the initial pre-paint theme is set inline
+     in <head> to avoid a flash of the wrong theme; this just re-evaluates
+     every 5 minutes so the theme still flips if the visit spans dusk/dawn). */
+  (function(){
+    function computeAutoTheme(){
+      var hour = new Date().getHours();
+      return (hour >= 19 || hour < 7) ? 'dark' : 'light';
+    }
+    setInterval(function(){
+      try{
+        var saved = localStorage.getItem('cc_theme');
+        if(saved === 'light' || saved === 'dark') return;
+        document.documentElement.setAttribute('data-theme', computeAutoTheme());
+      }catch(e){}
+    }, 5 * 60 * 1000);
+  })();
+</script>
+
+</body>
+</html>
