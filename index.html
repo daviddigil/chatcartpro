@@ -46,7 +46,7 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/logo/logo.png">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<link rel="stylesheet" href="/css/main.css?v=20260811e">
+<link rel="stylesheet" href="/css/main.css?v=20260811g">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -153,10 +153,22 @@
   @media (max-width:1000px){.mode-grid-3{grid-template-columns:1fr;}}
   .mode-card.leads .tag{background:var(--lime-dark); color:#0a0a0a;}
 
-  .industry-groups{display:flex; flex-direction:column; gap:26px;}
+  .industry-groups{display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; align-items:stretch;}
+  .industry-group{
+    background:var(--card); border:1px solid var(--border); border-radius:20px; padding:22px;
+    display:flex; flex-direction:column;
+  }
   .industry-group-title{
-    margin:0 0 14px; text-align:center; font-size:12px; font-weight:700;
+    margin:0 0 14px; text-align:left; font-size:12px; font-weight:700;
     letter-spacing:0.08em; text-transform:uppercase; color:var(--navy-soft);
+  }
+  .industry-group .industry-strip{flex:1; flex-wrap:nowrap; flex-direction:column; align-items:stretch; justify-content:space-between; gap:8px;}
+  .industry-group .industry-chip{width:100%; justify-content:flex-start;}
+  @media (max-width:900px){
+    .industry-groups{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media (max-width:560px){
+    .industry-groups{grid-template-columns:1fr;}
   }
 </style>
 </head>
