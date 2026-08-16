@@ -1419,5 +1419,86 @@
   });
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script>
+  /* GSAP scroll-triggered reveal animations (see /js/main.js section 6 for
+     the shared version; kept inline here since this page uses its own
+     standalone scripts rather than /js/main.js). */
+  (function(){
+    if(typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.section-head').forEach(function(el){
+      gsap.from(el, {
+        opacity: 0, y: 28, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      });
+    });
+
+    var cardGroupSelectors = [
+      '.benefits-grid', '.mode-grid-3', '.industry-groups', '.steps-grid',
+      '.tier-grid', '.testi-grid', '.why-grid', '.ask-grid', '.stage-strip'
+    ];
+    cardGroupSelectors.forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(group){
+        var items = group.children;
+        if(!items.length) return;
+        gsap.from(items, {
+          opacity: 0, y: 24, duration: 0.6, ease: 'power2.out',
+          stagger: 0.08,
+          scrollTrigger: { trigger: group, start: 'top 88%' }
+        });
+      });
+    });
+
+    document.querySelectorAll('.industry-strip, .industry-list').forEach(function(list){
+      var chips = list.children;
+      if(!chips.length) return;
+      gsap.from(chips, {
+        opacity: 0, y: 12, duration: 0.4, ease: 'power1.out',
+        stagger: 0.04,
+        scrollTrigger: { trigger: list, start: 'top 90%' }
+      });
+    });
+
+    document.querySelectorAll('.big').forEach(function(el){
+      var raw = el.textContent.trim();
+      var match = raw.match(/^([0-9]+(?:\.[0-9]+)?)(.*)$/);
+      if(!match) return;
+
+      var target = parseFloat(match[1]);
+      var suffix = match[2];
+      var decimals = match[1].includes('.') ? match[1].split('.')[1].length : 0;
+      var counter = { val: 0 };
+
+      gsap.to(counter, {
+        val: target, duration: 1.3, ease: 'power1.out',
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+        onUpdate: function(){
+          el.textContent = counter.val.toFixed(decimals) + suffix;
+        },
+        onComplete: function(){
+          el.textContent = target.toFixed(decimals) + suffix;
+        }
+      });
+    });
+
+    var heroTimeline = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } });
+    var heroEls = [
+      document.querySelector('.hero .eyebrow, .alt-hero .vs-badge'),
+      document.querySelector('.hero h1, .alt-hero h1'),
+      document.querySelector('.hero .sub, .alt-hero p'),
+      document.querySelector('.hero .hero-ctas, .alt-hero .hero-ctas')
+    ].filter(Boolean);
+    if(heroEls.length){
+      heroTimeline.from(heroEls, { opacity: 0, y: 20, stagger: 0.12 });
+    }
+  })();
+</script>
+
 </body>
 </html>

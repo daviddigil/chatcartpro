@@ -13,6 +13,9 @@
       is set synchronously in a small inline <script> in each page's <head>,
       to avoid a flash of the wrong theme; this section just re-evaluates
       it every few minutes for tabs left open across the 7am/7pm boundary)
+   6. GSAP scroll-triggered reveal animations (guarded: no-op if GSAP/
+      ScrollTrigger didn't load, and skipped entirely under
+      prefers-reduced-motion)
 
    Each section is defensive about missing DOM elements so this file is
    safe to include on every page, even ones that only use a subset of the
@@ -332,6 +335,91 @@ document.addEventListener('DOMContentLoaded', function(){
         applyTheme(computeAutoTheme());
       }catch(e){}
     }, 5 * 60 * 1000);
+  })();
+
+  /* ---------- 6. GSAP scroll-triggered reveal animations ---------- */
+  (function(){
+    if(typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Section headers: fade + rise as they enter the viewport.
+    gsap.utils.toArray('.section-head').forEach(function(el){
+      gsap.from(el, {
+        opacity: 0, y: 28, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      });
+    });
+
+    // Card grids: stagger children in as a group so a whole row animates
+    // together rather than each card triggering independently.
+    var cardGroupSelectors = [
+      '.benefits-grid', '.mode-grid-3', '.industry-groups', '.steps-grid',
+      '.tier-grid', '.testi-grid', '.why-grid', '.ask-grid', '.stage-strip'
+    ];
+    cardGroupSelectors.forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(group){
+        var items = group.children;
+        if(!items.length) return;
+        gsap.from(items, {
+          opacity: 0, y: 24, duration: 0.6, ease: 'power2.out',
+          stagger: 0.08,
+          scrollTrigger: { trigger: group, start: 'top 88%' }
+        });
+      });
+    });
+
+    // Industry/mode chip lists: a lighter, faster stagger since these lists
+    // can be long and a full 0.6s-per-card stagger would feel sluggish.
+    document.querySelectorAll('.industry-strip, .industry-list').forEach(function(list){
+      var chips = list.children;
+      if(!chips.length) return;
+      gsap.from(chips, {
+        opacity: 0, y: 12, duration: 0.4, ease: 'power1.out',
+        stagger: 0.04,
+        scrollTrigger: { trigger: list, start: 'top 90%' }
+      });
+    });
+
+    // Stat numbers (".big"): count up from 0 to the printed value for
+    // purely numeric labels (92%, 3.2x, 140+, 3B+); left untouched for
+    // non-numeric labels (24x7, "All Verticals") since there's nothing to
+    // count up to.
+    document.querySelectorAll('.big').forEach(function(el){
+      var raw = el.textContent.trim();
+      var match = raw.match(/^([0-9]+(?:\.[0-9]+)?)(.*)$/);
+      if(!match) return;
+
+      var target = parseFloat(match[1]);
+      var suffix = match[2];
+      var decimals = match[1].includes('.') ? match[1].split('.')[1].length : 0;
+      var counter = { val: 0 };
+
+      gsap.to(counter, {
+        val: target, duration: 1.3, ease: 'power1.out',
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+        onUpdate: function(){
+          el.textContent = counter.val.toFixed(decimals) + suffix;
+        },
+        onComplete: function(){
+          el.textContent = target.toFixed(decimals) + suffix;
+        }
+      });
+    });
+
+    // Hero: a light entrance for the eyebrow/heading/sub/CTAs on load,
+    // since these are above the fold and won't get a scroll trigger.
+    var heroTimeline = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } });
+    var heroEls = [
+      document.querySelector('.hero .eyebrow, .alt-hero .vs-badge'),
+      document.querySelector('.hero h1, .alt-hero h1'),
+      document.querySelector('.hero .sub, .alt-hero p'),
+      document.querySelector('.hero .hero-ctas, .alt-hero .hero-ctas')
+    ].filter(Boolean);
+    if(heroEls.length){
+      heroTimeline.from(heroEls, { opacity: 0, y: 20, stagger: 0.12 });
+    }
   })();
 
 });
