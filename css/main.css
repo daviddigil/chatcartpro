@@ -403,7 +403,7 @@ section{padding:96px 0;}
 @media (max-width:800px){.mode-grid{grid-template-columns:1fr;}}
 
 /* Three-mode (One Agent, Three Jobs) */
-.mode-grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; align-items:stretch;}
+.mode-grid-3{display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; align-items:start;}
 @media (max-width:1080px){.mode-grid-3{grid-template-columns:1fr; max-width:640px; margin:0 auto;}}
 
 .mode-card{
@@ -421,7 +421,6 @@ section{padding:96px 0;}
 .mode-card h3{font-size:22px; margin:0 0 10px; line-height:1.25;}
 .mode-card p.desc{color:var(--navy-soft); font-size:14.5px; line-height:1.6; margin:0 0 22px;}
 .industry-list{display:flex; flex-direction:column; gap:8px;}
-.mode-grid-3 .mode-card .industry-list{flex:1; justify-content:space-between;}
 .industry-chip{
   display:flex; align-items:center; gap:10px; width:100%;
   background:var(--chip-bg); border:1px solid var(--border); border-radius:12px;
