@@ -420,6 +420,20 @@ document.addEventListener('DOMContentLoaded', function(){
     if(heroEls.length){
       heroTimeline.from(heroEls, { opacity: 0, y: 20, stagger: 0.12 });
     }
+
+    // ScrollTrigger calculates each trigger's pixel position against the
+    // document's height at registration time, which runs on DOMContentLoaded,
+    // before web fonts, images, and icon sprites have finished loading and
+    // settled the page's final height. Without a refresh afterwards, trigger
+    // positions can end up calculated against a too-short document, so a
+    // "top 88%" trigger further down the page never matches a real scroll
+    // position and its target elements stay stuck at opacity:0 forever.
+    // Refresh once everything has loaded, and once more shortly after as a
+    // safety net for any late web-font swap.
+    window.addEventListener('load', function(){
+      ScrollTrigger.refresh();
+      setTimeout(function(){ ScrollTrigger.refresh(); }, 500);
+    });
   })();
 
 });
