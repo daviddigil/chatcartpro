@@ -181,6 +181,33 @@
   }
   .quick-answer h2{font-size:16px; margin:0 0 10px; text-transform:uppercase; letter-spacing:.03em; color:var(--navy-soft);}
   .quick-answer p{margin:0; font-size:15px; line-height:1.7; color:var(--navy);}
+
+  /* Reporting dashboard mockup: an illustrative stylized graphic, not a real
+     product screenshot, matching the site's existing chat/order mockup
+     visual language (rounded card, dark header, lime accents). */
+  .rbs-dash-wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:28px; align-items:center;}
+  @media (max-width:900px){ .rbs-dash-wrap{grid-template-columns:1fr;} }
+  .rbs-dash-card{
+    background:var(--card); border-radius:22px; box-shadow:var(--shadow); border:1px solid var(--border);
+    overflow:hidden;
+  }
+  .rbs-dash-head{
+    background:var(--surface-dark); color:#fff; padding:16px 20px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .rbs-dash-head .title{font-weight:700; font-size:14.5px; display:flex; align-items:center; gap:8px;}
+  .rbs-dash-head .range{font-size:12px; opacity:.65; background:rgba(255,255,255,0.08); padding:4px 10px; border-radius:999px;}
+  .rbs-dash-body{padding:22px;}
+  .rbs-dash-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:22px;}
+  .rbs-dash-stat{background:var(--pastel-mint); border-radius:14px; padding:14px 12px; text-align:center;}
+  .rbs-dash-stat .n{font-size:20px; font-weight:800; color:var(--navy);}
+  .rbs-dash-stat .l{font-size:11px; color:var(--navy-soft); margin-top:2px;}
+  .rbs-dash-mix{display:flex; flex-direction:column; gap:12px;}
+  .rbs-dash-mix-row{display:flex; align-items:center; gap:12px; font-size:13px;}
+  .rbs-dash-mix-row .src{width:74px; flex-shrink:0; font-weight:700; color:var(--navy); display:flex; align-items:center; gap:6px;}
+  .rbs-dash-mix-row .src .ico-svg{width:14px; height:14px; color:var(--lime-dark);}
+  .rbs-dash-mix-bar{flex:1; height:10px; border-radius:999px; background:var(--border); overflow:hidden;}
+  .rbs-dash-mix-bar span{display:block; height:100%; background:var(--lime); border-radius:999px;}
+  .rbs-dash-mix-row .pct{width:38px; text-align:right; color:var(--navy-soft); font-weight:700; flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -361,6 +388,50 @@
           <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-phone"></use></svg></div>
           <h4>AI voice &amp; WhatsApp ordering</h4>
           <p>The part most restaurant billing software doesn't have: phone and chat orders taken by AI, writing straight into your billing system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTING DASHBOARD -->
+  <section class="section-pastel section-pastel-yellow">
+    <div class="wrap">
+      <div class="rbs-dash-wrap">
+        <div>
+          <span class="eyebrow">One Reports View</span>
+          <h2 style="font-size:32px; font-weight:700; margin:0 0 16px; line-height:1.2;">See every channel's sales in one dashboard, not three</h2>
+          <p style="color:var(--navy-soft); font-size:15.5px; line-height:1.7; margin:0 0 10px;">Counter, phone, and WhatsApp orders all roll up into the same reports view, so you can see total sales, order volume, and exactly which channel is driving revenue, without stitching numbers together from separate systems.</p>
+          <p style="color:var(--navy-soft); font-size:12.5px; line-height:1.6; margin:0;">Illustrative dashboard, sample figures shown for layout only.</p>
+        </div>
+        <div class="rbs-dash-card">
+          <div class="rbs-dash-head">
+            <span class="title"><svg class="ico-svg" style="width:16px;height:16px;" aria-hidden="true"><use href="#icon-chart"></use></svg> Sales Overview</span>
+            <span class="range">Today</span>
+          </div>
+          <div class="rbs-dash-body">
+            <div class="rbs-dash-stats">
+              <div class="rbs-dash-stat"><div class="n">184</div><div class="l">Orders Today</div></div>
+              <div class="rbs-dash-stat"><div class="n">$3,940</div><div class="l">Total Sales</div></div>
+              <div class="rbs-dash-stat"><div class="n">$21.4</div><div class="l">Avg. Order</div></div>
+            </div>
+            <div class="rbs-dash-mix">
+              <div class="rbs-dash-mix-row">
+                <span class="src"><svg class="ico-svg" aria-hidden="true"><use href="#icon-pos"></use></svg> Counter</span>
+                <span class="rbs-dash-mix-bar"><span style="width:52%;"></span></span>
+                <span class="pct">52%</span>
+              </div>
+              <div class="rbs-dash-mix-row">
+                <span class="src"><svg class="ico-svg" aria-hidden="true"><use href="#icon-chat"></use></svg> WhatsApp</span>
+                <span class="rbs-dash-mix-bar"><span style="width:31%;"></span></span>
+                <span class="pct">31%</span>
+              </div>
+              <div class="rbs-dash-mix-row">
+                <span class="src"><svg class="ico-svg" aria-hidden="true"><use href="#icon-phone"></use></svg> AI Voice</span>
+                <span class="rbs-dash-mix-bar"><span style="width:17%;"></span></span>
+                <span class="pct">17%</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
