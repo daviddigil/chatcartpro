@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W50ECXZCXE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta AI Business Agent Alternative: A Custom AI Employee vs. Meta's Native Agent | ChatCart Pro AI</title>
+<meta name="description" content="Comparing Meta's native AI Business Agent to ChatCart Pro AI: real order-taking and appointment booking, live inventory sync, voice calling, website chat, and dedicated support, not just a configured chat widget. See the full comparison and book a free demo.">
+<meta name="keywords" content="Meta AI Business Agent alternative, Meta AI Business Agent vs ChatCart Pro AI, WhatsApp AI agent comparison, alternative to Meta AI Business Agent, custom WhatsApp AI agent, AI order taking WhatsApp, AI appointment booking WhatsApp, Meta Business AI comparison 2026">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Nexsofture Private Ltd">
+<link rel="canonical" href="https://chatcartpro.com/meta-ai-business-agent-alternative/">
+<link rel="icon" type="image/png" href="/logo/logo.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/logo/logo.png">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="/css/main.css?v=20260811h">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ChatCart Pro AI">
+<meta property="og:title" content="Meta AI Business Agent Alternative: A Custom AI Employee vs. Meta's Native Agent">
+<meta property="og:description" content="Comparing Meta's native AI Business Agent to ChatCart Pro AI: real order-taking and appointment booking, live inventory sync, voice calling, website chat, and dedicated support, not just a configured chat widget.">
+<meta property="og:url" content="https://chatcartpro.com/meta-ai-business-agent-alternative/">
+<meta property="og:image" content="https://chatcartpro.com/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meta AI Business Agent Alternative: A Custom AI Employee vs. Meta's Native Agent">
+<meta name="twitter:description" content="Comparing Meta's native AI Business Agent to ChatCart Pro AI: real order-taking and appointment booking, live inventory sync, voice calling, website chat, and dedicated support, not just a configured chat widget.">
+<meta name="twitter:image" content="https://chatcartpro.com/og-image.png">
+
+<!-- Structured data: Organization + Software product -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChatCart Pro AI",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, WhatsApp",
+  "description": "A custom-built AI WhatsApp employee for order-taking and appointment booking, positioned as an alternative to Meta's native AI Business Agent, with live inventory sync, voice calling, website chat, and dedicated setup and support.",
+  "url": "https://chatcartpro.com/meta-ai-business-agent-alternative/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://chatcartpro.com/meta-ai-business-agent-alternative/#demo",
+    "description": "Book a free demo"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Nexsofture Private Ltd",
+    "url": "https://nexsofture.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+  }
+}
+</script>
+
+<!-- Structured data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the main difference between Meta's AI Business Agent and ChatCart Pro AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meta's AI Business Agent is a free, native chat agent built by Meta and configured through Meta Business Suite's own screens. ChatCart Pro AI is a custom-built AI employee: we configure real order-taking, appointment booking, live inventory and price sync, and escalation routing specific to your business, plus voice calling and website chat as separate integrated products, not just a WhatsApp chat widget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Meta's AI Business Agent take real orders and check live inventory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meta's AI Business Agent is primarily conversational, answering questions and sharing product or business information. ChatCart Pro AI is built with a transactional order-taking flow that checks your real-time stock and pricing before confirming an order, so customers are never quoted a sold-out item or an old price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Meta's AI Business Agent offer voice calling or a website chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, Meta's AI Business Agent is limited to WhatsApp and Instagram chat. ChatCart Pro AI also offers a 24x7 AI voice calling agent for inbound and outbound phone calls, and the same AI can run as a chat widget directly on your website, not just inside Meta's apps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who supports me if something goes wrong: Meta or ChatCart Pro AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With Meta's AI Business Agent, you're largely self-serve once it's configured. With ChatCart Pro AI, we build, test, and continue tuning your AI employee with you, and you have a vendor directly accountable for it working correctly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my customer data used to train someone else's AI model?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Meta's own terms state that Meta receives AI chats to improve the quality of AI at Meta. ChatCart Pro AI is configured and supported by us for your business specifically; your conversations aren't used to train a shared, unrelated foundation model."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Meta's AI Business Agent and ChatCart Pro AI together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Some businesses start with Meta's native agent for basic coverage and add ChatCart Pro AI for order-taking, booking, voice, or website chat as they need more capability. We also offer a separate setup service if you want Meta's own agent configured properly."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  /* Page-specific styles below (see /css/main.css for the shared marketing base) */
+  .alt-hero{padding:60px 0 10px; text-align:center;}
+  .alt-hero .vs-badge{
+    display:inline-flex; align-items:center; gap:8px; background:var(--surface-dark); color:var(--lime);
+    padding:7px 16px; border-radius:999px; font-weight:700; font-size:13px; margin-bottom:20px;
+  }
+  .alt-card{
+    background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px;
+    box-shadow:var(--shadow);
+  }
+  .alt-card h4{margin:0 0 12px; font-size:17px;}
+  .alt-card p{margin:0 0 10px; font-size:14px; line-height:1.6; color:var(--navy-soft);}
+  .alt-card p:last-child{margin-bottom:0;}
+  .alt-tag{
+    display:inline-block; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.04em;
+    padding:2px 8px; border-radius:6px; margin-right:6px;
+  }
+  .alt-tag-problem{background:#e7eefc; color:#1d4fa3;}
+  .alt-tag-solution{background:#e6f7ee; color:#1a7a4c;}
+  .alt-pricing-note{
+    max-width:760px; margin:0 auto; text-align:center; background:var(--card); border:1px dashed var(--border);
+    border-radius:16px; padding:22px 26px; font-size:13.5px; color:var(--navy-soft); line-height:1.7;
+  }
+  .alt-compare-table-wrap{overflow-x:auto; border-radius:20px; border:1px solid var(--border); box-shadow:var(--shadow); background:var(--card);}
+  table.alt-compare{width:100%; border-collapse:collapse; min-width:640px;}
+  table.alt-compare th, table.alt-compare td{text-align:left; padding:14px 18px; font-size:13.5px; border-bottom:1px solid var(--border); vertical-align:top;}
+  table.alt-compare th{background:var(--pastel-blue); font-weight:700; color:var(--navy); white-space:nowrap;}
+  table.alt-compare td{color:var(--navy-soft);}
+  table.alt-compare tr:last-child td{border-bottom:none;}
+  table.alt-compare td strong{color:var(--navy);}
+  table.alt-compare .yes{color:#1a7a4c; font-weight:700;}
+  table.alt-compare .no{color:var(--navy-soft);}
+  .alt-disclaimer{
+    max-width:760px; margin:0 auto; text-align:center; font-size:12px; color:var(--navy-soft); line-height:1.6;
+  }
+
+  /* AIO-friendly quick-answer block: a direct, quotable summary near the top
+     of the page for AI answer engines and featured snippets to lift cleanly. */
+  .quick-answer{
+    max-width:820px; margin:32px auto 0; background:var(--card); border:1px solid var(--border);
+    border-radius:18px; padding:24px 28px; text-align:left; box-shadow:var(--shadow);
+  }
+  .quick-answer h2{font-size:16px; margin:0 0 10px; text-transform:uppercase; letter-spacing:.03em; color:var(--navy-soft);}
+  .quick-answer p{margin:0; font-size:15px; line-height:1.7; color:var(--navy);}
+</style>
+</head>
+<body>
+
+<!-- Inline SVG icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12.5 6 9l3.2 2.6a1.6 1.6 0 0 0 2.2-2.3L9.5 7.3M22 12.5 18 9l-3.2 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m6 9 5 4.5 1.3-1.1M18 9l-5.5 5-2.5-2M2 12.5 6 17l2 1.8a1.5 1.5 0 0 0 2.1-2.1M22 12.5 18 17l-2 1.8a1.5 1.5 0 0 1-2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-stock" viewBox="0 0 24 24"><path d="M3.5 7.5 12 3l8.5 4.5V16L12 20.5 3.5 16Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v8.5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-mic" viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3.5M8.5 21.5h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-image" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="10" r="1.7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 17 5-5 4 4 3-3 4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2.5 4 6v6c0 5 3.4 8.7 8 9.5 4.6-.8 8-4.5 8-9.5V6l-8-3.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3L15.5 9.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.4.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.35.55 3.4a1 1 0 0 1-.25 1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14.5 8.5V6.8c0-.7.5-1.3 1.3-1.3h1.7V2.5h-2.4C12.5 2.5 11 4 11 6.5v2h-2v3h2v10h3.5V11.5h2.4l.5-3h-2.9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-x-twitter" viewBox="0 0 24 24"><path d="M4 4 20 20M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.7" cy="8" r="1.1" fill="currentColor"/><path d="M7.7 11v6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 17.5v-4c0-1.4 1-2.5 2.4-2.5s2.3 1 2.3 2.5v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><img src="/logo/logo.png" alt="" width="32" height="32" loading="eager"></span> <span class="logo-text">ChatCart Pro AI</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#compare">Comparison</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#faq">FAQ</a>
+      <a href="/meta-ai-business-agent-setup/">Meta Agent Setup Service</a>
+      <div class="nav-links-mobile-extra">
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="alt-hero">
+    <div class="wrap">
+      <span class="vs-badge">Meta AI Business Agent Alternative</span>
+      <h1><span>A custom AI employee, built as an alternative to</span> <span class="highlight">Meta's native AI Business Agent</span></h1>
+      <p class="sub" style="max-width:700px;margin:0 auto;">Meta's AI Business Agent is free and easy to turn on. ChatCart Pro AI is a purpose-built AI employee, configured, tested, and supported specifically for your business, with real order-taking, live inventory, voice calling, and website chat included.</p>
+      <div class="hero-ctas">
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+        <a href="#compare" class="btn btn-dark">See the Comparison</a>
+      </div>
+
+      <div class="quick-answer">
+        <h2>Quick answer</h2>
+        <p>Meta's AI Business Agent is a free, native chat tool for WhatsApp and Instagram, configured inside Meta Business Suite and bounded by what that product exposes. ChatCart Pro AI is a custom-built AI employee: we configure real order-taking and appointment booking, sync it to your live inventory and pricing, add voice calling and website chat as connected products, and stay accountable for it working correctly, not just handed back to you after setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities" class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Where They Actually Differ</span>
+        <h2>Meta's agent answers questions. ChatCart Pro AI runs your front desk.</h2>
+        <p>Both can hold a WhatsApp conversation. The real difference shows up in what happens after "hello."</p>
+      </div>
+      <div class="benefits-grid" style="grid-template-columns:repeat(3,1fr);">
+        <div class="alt-card">
+          <h4>Real orders, not just answers</h4>
+          <p class="alt-problem"><span class="alt-tag alt-tag-problem">Meta AI Business Agent</span> Primarily conversational: shares product info, hours, and FAQs, but isn't built as a transactional order-taking engine.</p>
+          <p class="alt-solution"><span class="alt-tag alt-tag-solution">ChatCart Pro AI</span> Takes the order, checks live stock and pricing, confirms it, and can process payment, all inside the same WhatsApp chat.</p>
+        </div>
+        <div class="alt-card">
+          <h4>Live inventory & pricing sync</h4>
+          <p class="alt-problem"><span class="alt-tag alt-tag-problem">Meta AI Business Agent</span> No native real-time inventory integration; answers are only as current as what's manually kept up to date.</p>
+          <p class="alt-solution"><span class="alt-tag alt-tag-solution">ChatCart Pro AI</span> Checks your real-time stock and price list before confirming an order, so customers are never quoted a sold-out item or an old price.</p>
+        </div>
+        <div class="alt-card">
+          <h4>Beyond WhatsApp and Instagram</h4>
+          <p class="alt-problem"><span class="alt-tag alt-tag-problem">Meta AI Business Agent</span> Lives entirely inside Meta's own apps, WhatsApp and Instagram chat only.</p>
+          <p class="alt-solution"><span class="alt-tag alt-tag-solution">ChatCart Pro AI</span> Also available as a 24x7 AI voice calling agent for phone calls, and as a chat widget directly on your own website.</p>
+        </div>
+        <div class="alt-card">
+          <h4>Configured for your business, specifically</h4>
+          <p class="alt-problem"><span class="alt-tag alt-tag-problem">Meta AI Business Agent</span> Configured through Meta's own setup screens, bounded by whatever options that product exposes.</p>
+          <p class="alt-solution"><span class="alt-tag alt-tag-solution">ChatCart Pro AI</span> We build your order flows, booking logic, and escalation rules around your actual business, not a generic template.</p>
+        </div>
+        <div class="alt-card">
+          <h4>Lead routing to the right person</h4>
+          <p class="alt-problem"><span class="alt-tag alt-tag-problem">Meta AI Business Agent</span> Basic handoff exists, but there's no configurable routing to specific sales reps or teams.</p>
+          <p class="alt-solution"><span class="alt-tag alt-tag-solution">ChatCart Pro AI</span> Recognizes buying intent and escalates the conversation straight to the right rep, with delivery and reply tracking.</p>
+        </div>
+        <div class="alt-card">
+          <h4>Who's accountable if it breaks</h4>
+          <p class="alt-problem"><span class="alt-tag alt-tag-problem">Meta AI Business Agent</span> Self-serve once configured, Meta operates the infrastructure but isn't a support vendor for your business.</p>
+          <p class="alt-solution"><span class="alt-tag alt-tag-solution">ChatCart Pro AI</span> We build, test, and continue tuning it with you. You have a vendor directly accountable for it working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Side by Side</span>
+        <h2>Meta AI Business Agent vs. ChatCart Pro AI</h2>
+        <p>A direct comparison based on Meta's own public product description and ChatCart Pro AI's current feature set.</p>
+      </div>
+      <div class="alt-compare-table-wrap">
+        <table class="alt-compare">
+          <thead><tr><th></th><th>Meta AI Business Agent</th><th>ChatCart Pro AI</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Built &amp; operated by</strong></td><td>Meta</td><td>Nexsofture Private Ltd (us), configured for your business</td></tr>
+            <tr><td><strong>Order-taking</strong></td><td>Not a transactional engine</td><td class="yes">Full order flow with confirmation</td></tr>
+            <tr><td><strong>Appointment booking</strong></td><td>Not built-in</td><td class="yes">Built-in booking &amp; reminders</td></tr>
+            <tr><td><strong>Live inventory &amp; pricing sync</strong></td><td class="no">No</td><td class="yes">Yes, checked before order confirmation</td></tr>
+            <tr><td><strong>Voice calling agent</strong></td><td class="no">Not available</td><td class="yes">24x7 inbound &amp; outbound, 140+ countries</td></tr>
+            <tr><td><strong>Website chat widget</strong></td><td class="no">Not available</td><td class="yes">Same AI, embedded on your site</td></tr>
+            <tr><td><strong>Lead routing to specific reps</strong></td><td>Basic handoff only</td><td class="yes">Configurable, tracked escalation</td></tr>
+            <tr><td><strong>Multimodal input (voice notes, photos)</strong></td><td>Handled by Meta's own model</td><td class="yes">Understands voice notes, photos, short videos</td></tr>
+            <tr><td><strong>Setup</strong></td><td>Self-configured in Meta Business Suite</td><td>Configured and tested with you by our team</td></tr>
+            <tr><td><strong>Ongoing support</strong></td><td>Self-serve</td><td class="yes">Dedicated, ongoing tuning</td></tr>
+            <tr><td><strong>Cost</strong></td><td>Free to enable</td><td>Flat monthly fee, see <a href="/pricing/">pricing</a></td></tr>
+            <tr><td><strong>Conversation data</strong></td><td>Used by Meta to improve Meta's own AI, per Meta's terms</td><td>Configured and supported by us for your business</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alt-pricing-note" style="margin-top:24px;">
+        <strong>On cost:</strong> Meta's AI Business Agent is free to turn on, since you're configuring Meta's own infrastructure directly. ChatCart Pro AI is a paid, custom-built AI employee with order-taking, live inventory, and dedicated support included, see the <a href="/pricing/">pricing page</a> for exact numbers. If you'd rather use Meta's free native agent but want it configured properly, we also offer a <a href="/meta-ai-business-agent-setup/">dedicated setup service</a> for that.
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO OFFER SETUP SERVICE -->
+  <section class="section-pastel section-pastel-blue">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Prefer Meta's Free Agent Instead?</span>
+        <h2>We'll set up Meta's own AI Business Agent for you, properly</h2>
+        <p>If Meta's native agent is the right fit for your business, we also offer a done-for-you setup and configuration service, so it works correctly the first time.</p>
+      </div>
+      <div style="text-align:center;">
+        <a href="/meta-ai-business-agent-setup/" class="btn btn-dark">See the Meta AI Business Agent setup service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Choosing between Meta's agent and ChatCart Pro AI?</h2>
+        <p>Still curious? Book a demo and we'll walk you through it live.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span>What is the main difference between Meta's AI Business Agent and ChatCart Pro AI?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a" style="max-height:400px;"><p>Meta's AI Business Agent is a free, native chat agent built by Meta and configured through Meta Business Suite's own screens. ChatCart Pro AI is a custom-built AI employee: we configure real order-taking, appointment booking, live inventory and price sync, and escalation routing specific to your business, plus voice calling and website chat as separate integrated products, not just a WhatsApp chat widget.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can Meta's AI Business Agent take real orders and check live inventory?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Meta's AI Business Agent is primarily conversational, answering questions and sharing product or business information. ChatCart Pro AI is built with a transactional order-taking flow that checks your real-time stock and pricing before confirming an order, so customers are never quoted a sold-out item or an old price.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Does Meta's AI Business Agent offer voice calling or a website chatbot?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>No, Meta's AI Business Agent is limited to WhatsApp and Instagram chat. ChatCart Pro AI also offers a 24x7 AI voice calling agent for inbound and outbound phone calls, and the same AI can run as a chat widget directly on your website, not just inside Meta's apps.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Who supports me if something goes wrong: Meta or ChatCart Pro AI?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>With Meta's AI Business Agent, you're largely self-serve once it's configured. With ChatCart Pro AI, we build, test, and continue tuning your AI employee with you, and you have a vendor directly accountable for it working correctly.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Is my customer data used to train someone else's AI model?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Meta's own terms state that Meta receives AI chats to improve the quality of AI at Meta. ChatCart Pro AI is configured and supported by us for your business specifically; your conversations aren't used to train a shared, unrelated foundation model.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can I use Meta's AI Business Agent and ChatCart Pro AI together?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. Some businesses start with Meta's native agent for basic coverage and add ChatCart Pro AI for order-taking, booking, voice, or website chat as they need more capability. We also offer a <a href="/meta-ai-business-agent-setup/">separate setup service</a> if you want Meta's own agent configured properly.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="demo-section">
+        <div id="demoFormWrap">
+          <h2>Book your free demo</h2>
+          <p class="sub">Tell us a bit about your business and we'll show you exactly how ChatCart Pro AI compares to Meta's native AI Business Agent for your use case.</p>
+          <form id="demoForm">
+            <div class="field">
+              <label for="fname">Full name</label>
+              <input id="fname" type="text" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="fbusiness">Business name</label>
+              <input id="fbusiness" type="text" required placeholder="Your business name">
+            </div>
+            <div class="field">
+              <label for="findustry">Industry</label>
+              <select id="findustry" required>
+                <option value="">Select industry</option>
+                <option>Grocery</option>
+                <option>Pharmacy</option>
+                <option>Restaurant</option>
+                <option>Salon</option>
+                <option>Hospital / Clinic</option>
+                <option>Real Estate Agency</option>
+                <option>Gym / Fitness Studio</option>
+                <option selected>Other / General Business</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fwhatsapp">WhatsApp number</label>
+              <input id="fwhatsapp" type="tel" required placeholder="+1 5XX XXX XXXX">
+            </div>
+            <div class="field full">
+              <label for="femail">Email</label>
+              <input id="femail" type="email" required placeholder="you@business.com">
+            </div>
+            <div class="field full submit-row">
+              <button type="submit" class="btn btn-primary" id="demoSubmitBtn">Book a Demo</button>
+              <p class="form-error" id="demoFormError" style="display:none;">Something went wrong sending your request. Please try again, or reach us directly.</p>
+            </div>
+          </form>
+        </div>
+        <div class="demo-success" id="demoSuccess">
+          <div class="check">&#10003;</div>
+          <h3>Thanks, request received!</h3>
+          <p>Our team will reach out on WhatsApp within one business day to schedule your live demo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to see the difference for your business?</h2>
+        <p>See ChatCart Pro AI side by side with Meta's AI Business Agent, no pressure, no commitment.</p>
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+      <p class="alt-disclaimer" style="margin-top:28px;">Meta, WhatsApp, and Instagram are trademarks of Meta Platforms, Inc. This page reflects Meta's publicly stated product description and terms as of 2026 and is not affiliated with or endorsed by Meta. Meta's product and terms change frequently, please verify current details directly with Meta before deciding.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="flogo"><span class="logo-mark" style="width:26px;height:26px;font-size:14px;"><img src="/logo/logo.png" alt="" width="26" height="26" loading="lazy"></span> ChatCart Pro AI</div>
+        <p>AI WhatsApp employees for orders & bookings built for businesses everywhere.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/#modes">WhatsApp AI Employee</a></li>
+          <li><a href="/ai-voice-calling-agent/">Voice AI</a></li>
+          <li><a href="/ai-chatbot-for-website/">AI Chatbot for Websites</a></li>
+          <li><a href="/meta-ai-business-agent-setup/">Meta AI Business Agent Setup</a></li>
+          <li><a href="/whatsapp-ai-lead-escalation/">Lead Capture &amp; Sales Escalation</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="/whatsapp-ai-for-grocery-stores/">Grocery</a></li>
+          <li><a href="/whatsapp-ai-for-restaurants/">Restaurants</a></li>
+          <li><a href="/whatsapp-ai-for-salons/">Salons</a></li>
+          <li><a href="/whatsapp-ai-for-gyms/">Gyms & Fitness</a></li>
+          <li><a href="/whatsapp-ai-for-real-estate/">Real Estate</a></li>
+          <li><a href="/#industries">See all industries &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/meta-ai-business-agent-alternative/">Meta AI Agent Alternative</a></li>
+          <li><a href="/wati-alternative/">Wati Alternative</a></li>
+          <li><a href="/respond-io-alternative/">Respond.io Alternative</a></li>
+          <li><a href="/sleekflow-alternative/">SleekFlow Alternative</a></li>
+          <li><a href="/gupshup-alternative/">Gupshup Alternative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ChatCart Pro AI. All rights reserved. Not affiliated with Meta Platforms, Inc.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg class="ico-svg" aria-hidden="true"><use href="#icon-facebook"></use></svg></a>
+        <a href="#" aria-label="X (Twitter)"><svg class="ico-svg" aria-hidden="true"><use href="#icon-x-twitter"></use></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg class="ico-svg" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="ico-svg" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ico-svg" aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+      </div>
+      <p class="powered-by">Powered by <a href="https://nexsofture.com" target="_blank" rel="noopener">Nexsofture Private Ltd</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile nav toggle, FAQ accordion, and the demo-form EmailJS submit handler now live in /js/main.js (shared across marketing pages). -->
+
+<!-- ============ FLOATING AI CHAT WIDGET ============ -->
+
+<div id="ccTeaser" role="button" tabindex="0" aria-label="Open chat: Looking for something for your business?">
+  Looking for something for your business? Ask me anything 👋
+  <button type="button" class="cc-teaser-close" aria-label="Dismiss">&times;</button>
+</div>
+
+<button id="ccChatBubble" aria-label="Open chat" aria-expanded="false" aria-controls="ccChatPanel">
+  <svg class="cc-chat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+  <svg class="cc-close-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+</button>
+
+<div id="ccChatPanel" role="dialog" aria-label="Chat with ChatCart Pro AI">
+  <div class="cc-head">
+    <span class="cc-avatar">C</span>
+    <div>
+      <div class="cc-title">ChatCart Pro AI</div>
+      <div class="cc-sub">Usually replies in a few seconds</div>
+    </div>
+  </div>
+  <div id="ccChatBody"></div>
+  <form id="ccChatForm" autocomplete="off">
+    <input id="ccChatInput" type="text" placeholder="Ask about pricing, features..." required maxlength="500" aria-label="Message">
+    <button type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11.5 21 3l-5 18.5-4.5-7.5L3 11.5Z"/></svg>
+    </button>
+  </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
