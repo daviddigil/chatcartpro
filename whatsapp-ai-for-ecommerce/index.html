@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W50ECXZCXE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp AI Sales Agent for Ecommerce & Online Stores | ChatCart Pro AI</title>
+<meta name="description" content="Turn your WhatsApp into an AI sales and support agent for your online store. Product recommendations, cart recovery, order tracking, and Shopify/WooCommerce catalog sync, configured for your ecommerce business. Book a free demo.">
+<meta name="keywords" content="WhatsApp AI for ecommerce, AI sales agent for online store, WhatsApp cart recovery bot, Shopify WhatsApp AI agent, WooCommerce WhatsApp bot, AI customer support for ecommerce, conversational commerce AI, WhatsApp catalog ordering, AI product recommendation chatbot, D2C WhatsApp automation">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Nexsofture Private Ltd">
+<link rel="canonical" href="https://chatcartpro.com/whatsapp-ai-for-ecommerce/">
+<link rel="icon" type="image/png" href="/logo/logo.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/logo/logo.png">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="/css/main.css?v=20260811h">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ChatCart Pro AI">
+<meta property="og:title" content="WhatsApp AI Sales Agent for Ecommerce & Online Stores | ChatCart Pro AI">
+<meta property="og:description" content="Turn your WhatsApp into an AI sales and support agent for your online store. Product recommendations, cart recovery, order tracking, and store catalog sync. Book a free demo.">
+<meta property="og:url" content="https://chatcartpro.com/whatsapp-ai-for-ecommerce/">
+<meta property="og:image" content="https://chatcartpro.com/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WhatsApp AI Sales Agent for Ecommerce & Online Stores | ChatCart Pro AI">
+<meta name="twitter:description" content="Turn your WhatsApp into an AI sales and support agent for your online store. Product recommendations, cart recovery, order tracking, and store catalog sync.">
+<meta name="twitter:image" content="https://chatcartpro.com/og-image.png">
+
+<!-- Structured data: Organization + Software product -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChatCart Pro AI",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, WhatsApp",
+  "description": "An AI WhatsApp sales and support agent for ecommerce and online stores: product recommendations, cart recovery, order tracking, and store catalog sync, configured for your business.",
+  "url": "https://chatcartpro.com/whatsapp-ai-for-ecommerce/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://chatcartpro.com/whatsapp-ai-for-ecommerce/#demo",
+    "description": "Book a free demo"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Nexsofture Private Ltd",
+    "url": "https://nexsofture.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+  }
+}
+</script>
+
+<!-- Structured data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can it recommend products from my actual catalog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The AI is configured around your real product catalog and pricing, so recommendations and answers reflect what you actually sell and have in stock, not a generic script."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with Shopify, WooCommerce, or other store platforms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Catalog and order sync with platforms like Shopify, WooCommerce, and others is configured during onboarding based on the platform your store runs on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it recover abandoned carts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The AI can follow up on an abandoned cart with a WhatsApp message, answer any last question the customer has, and help them complete the order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can customers check their order status without contacting support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Customers can ask about order status, shipping, or returns directly in WhatsApp, and the AI answers from real order data instead of a static tracking page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it also work on Instagram or just WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WhatsApp is the primary channel. Instagram and other social channels can be configured as part of your setup depending on your plan, ask us during your demo about what's available for your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a commission on sales, like with a marketplace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ChatCart Pro AI is a flat subscription fee, not a percentage of sales. You keep 100% of what your customer pays you."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Inline SVG icon sprite: minimal line-style icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 12.5a1.5 1.5 0 0 1-1.5 1.5H6.5A1.5 1.5 0 0 1 5 20.5L6 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="17.5" cy="20" r="1.4" fill="currentColor"/><path d="M2.5 3h2.5l2.3 12a2 2 0 0 0 2 1.6h8a2 2 0 0 0 2-1.6L21 7.5H6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12.5 6 9l3.2 2.6a1.6 1.6 0 0 0 2.2-2.3L9.5 7.3M22 12.5 18 9l-3.2 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m6 9 5 4.5 1.3-1.1M18 9l-5.5 5-2.5-2M2 12.5 6 17l2 1.8a1.5 1.5 0 0 0 2.1-2.1M22 12.5 18 17l-2 1.8a1.5 1.5 0 0 1-2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 17v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="icon-truck" viewBox="0 0 24 24"><rect x="1" y="8" width="13" height="8" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M14 11h4l4 3v2h-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="6" cy="18.5" r="1.7" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="18.5" r="1.7" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="icon-commission" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="icon-x-twitter" viewBox="0 0 24 24"><path d="M4 4 20 20M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.7" cy="8" r="1.1" fill="currentColor"/><path d="M7.7 11v6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 17.5v-4c0-1.4 1-2.5 2.4-2.5s2.3 1 2.3 2.5v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14.5 8.5V6.8c0-.7.5-1.3 1.3-1.3h1.7V2.5h-2.4C12.5 2.5 11 4 11 6.5v2h-2v3h2v10h3.5V11.5h2.4l.5-3h-2.9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><img src="/logo/logo.png" alt="" width="32" height="32" loading="eager"></span> <span class="logo-text">ChatCart Pro AI</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#modes">Product</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#faq">FAQ</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-links-mobile-extra">
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Built for ecommerce &amp; online stores</span>
+      <h1><span>Turn your store's WhatsApp into an</span> <span class="highlight">AI Sales &amp; Support Agent</span></h1>
+      <p class="sub">Customers browse your catalog, get real product recommendations, recover an abandoned cart, and check order status, all inside WhatsApp. ChatCart Pro AI is configured around your actual products, pricing, and orders, not a generic chatbot script.</p>
+      <div class="hero-ctas">
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+      <p class="hero-note">No app for your customers to install, it all happens inside WhatsApp.</p>
+
+      <div class="mock-stage">
+        <div class="chat-card">
+          <div class="chat-head">
+            <div class="avatar">CC</div>
+            <div>
+              <div class="name">Coastal Co. Store</div>
+              <div class="status">AI Agent &middot; online</div>
+            </div>
+          </div>
+          <div class="chat-body">
+            <div class="bubble in">Hi, do you have the linen shirt in blue, size M?</div>
+            <div class="bubble out">Yes! Blue Linen Shirt, size M is in stock, $42. Want me to add it to your cart, or show similar styles?
+              <div class="chips"><span class="chip">Add to cart</span><span class="chip">Show similar</span></div>
+              <small>10:14 AM &#10003;&#10003;</small></div>
+            <div class="bubble in">Add to cart, and where's my last order?</div>
+            <div class="bubble out">Added! Your last order (#4821) shipped yesterday, arriving Thursday. Anything else?
+              <small>10:13 AM &#10003;&#10003;</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why they switch</span>
+        <h2>Most online stores lose sales in the gap between a question and a reply</h2>
+        <p>ChatCart Pro AI closes that gap, and keeps selling after the first message.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-cart"></use></svg></div>
+          <h4>Abandoned carts that never get followed up</h4>
+          <p>The AI can reach out on WhatsApp about an abandoned cart, answer the question that stopped the purchase, and help the customer finish checking out.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg></div>
+          <h4>"Is this in stock?" questions that go unanswered for hours</h4>
+          <p>The AI checks your real catalog and stock before answering, so customers get a real yes or no immediately, not a guess.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-truck"></use></svg></div>
+          <h4>"Where's my order?" tickets clogging support</h4>
+          <p>Customers ask order status directly in chat, and the AI answers from real order and shipping data, no ticket, no wait.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-commission"></use></svg></div>
+          <h4>Marketplace and aggregator fees eating your margin</h4>
+          <p>Customers order directly through your own WhatsApp, you keep 100% of what they pay, no commission cut.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT HANDLES -->
+  <section id="modes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What It Handles</span>
+        <h2>From "what do you recommend?" to "where's my order?"</h2>
+        <p>One AI agent covering pre-sale, sale, and post-sale, not just answering FAQs.</p>
+      </div>
+      <div class="mode-grid-3">
+        <div class="mode-card orders">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg><span>Pre-Sale</span></span>
+          <h3>Product discovery &amp; recommendations</h3>
+          <p class="desc">Customers describe what they want, and the AI recommends real products from your catalog, with real prices and stock.</p>
+        </div>
+        <div class="mode-card bookings">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-cart"></use></svg><span>Sale</span></span>
+          <h3>Cart recovery &amp; order completion</h3>
+          <p class="desc">The AI follows up on abandoned carts and helps customers complete checkout without leaving the chat.</p>
+        </div>
+        <div class="mode-card leads">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-truck"></use></svg><span>Post-Sale</span></span>
+          <h3>Order tracking &amp; support</h3>
+          <p class="desc">Order status, shipping updates, and return questions are answered instantly from real order data, escalated to a human when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section id="integrations" class="section-pastel section-pastel-blue">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Store Platform Integrations</span>
+        <h2>Configured around the store platform you already run</h2>
+        <p>Catalog, stock, and order sync are set up during onboarding based on your platform, so the AI always answers from real, current data.</p>
+      </div>
+      <div class="industry-strip">
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg> Shopify</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg> WooCommerce</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg> Salla</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bag"></use></svg> Zid</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-plug"></use></svg> Custom store platforms &amp; APIs</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram (on request)</span>
+      </div>
+      <p style="text-align:center; max-width:640px; margin:24px auto 0; font-size:13px; color:var(--navy-soft);">Platform and channel integrations are scoped to your setup, tell us what you run on during your demo and we'll confirm exact support.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Everything you need to know</h2>
+        <p>Still curious? Book a demo and we'll walk you through it live.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span>Can it recommend products from my actual catalog?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a" style="max-height:400px;"><p>Yes. The AI is configured around your real product catalog and pricing, so recommendations and answers reflect what you actually sell and have in stock, not a generic script.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Does it work with Shopify, WooCommerce, or other store platforms?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. Catalog and order sync with platforms like Shopify, WooCommerce, and others is configured during onboarding based on the platform your store runs on.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can it recover abandoned carts?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. The AI can follow up on an abandoned cart with a WhatsApp message, answer any last question the customer has, and help them complete the order.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can customers check their order status without contacting support?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. Customers can ask about order status, shipping, or returns directly in WhatsApp, and the AI answers from real order data instead of a static tracking page.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Does it also work on Instagram or just WhatsApp?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>WhatsApp is the primary channel. Instagram and other social channels can be configured as part of your setup depending on your plan, ask us during your demo about what's available for your business.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Is there a commission on sales, like with a marketplace?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>No. ChatCart Pro AI is a flat subscription fee, not a percentage of sales. You keep 100% of what your customer pays you.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="demo-section">
+        <div id="demoFormWrap">
+          <h2>Book your free demo</h2>
+          <p class="sub">Tell us about your store and we'll show you exactly how ChatCart Pro AI would work for your business.</p>
+          <form id="demoForm">
+            <div class="field">
+              <label for="fname">Full name</label>
+              <input id="fname" type="text" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="fbusiness">Store name</label>
+              <input id="fbusiness" type="text" required placeholder="e.g. Coastal Co. Store">
+            </div>
+            <div class="field">
+              <label for="findustry">Store platform</label>
+              <select id="findustry" required>
+                <option value="">Select platform</option>
+                <option>Shopify</option>
+                <option>WooCommerce</option>
+                <option>Salla</option>
+                <option>Zid</option>
+                <option>Custom / Other Platform</option>
+                <option selected>Not Sure Yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fwhatsapp">WhatsApp number</label>
+              <input id="fwhatsapp" type="tel" required placeholder="+1 5XX XXX XXXX">
+            </div>
+            <div class="field full">
+              <label for="femail">Email</label>
+              <input id="femail" type="email" required placeholder="you@store.com">
+            </div>
+            <div class="field full submit-row">
+              <button type="submit" class="btn btn-primary" id="demoSubmitBtn">Book a Demo</button>
+              <p class="form-error" id="demoFormError" style="display:none;">Something went wrong sending your request. Please try again, or reach us directly.</p>
+            </div>
+          </form>
+        </div>
+        <div class="demo-success" id="demoSuccess">
+          <div class="check">&#10003;</div>
+          <h3>Thanks, request received!</h3>
+          <p>Our team will reach out on WhatsApp within one business day to schedule your live demo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to put your store's WhatsApp to work?</h2>
+        <p>Join businesses around the world automating sales and support with ChatCart Pro AI.</p>
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="flogo"><span class="logo-mark" style="width:26px;height:26px;font-size:14px;"><img src="/logo/logo.png" alt="" width="26" height="26" loading="lazy"></span> ChatCart Pro AI</div>
+        <p>AI WhatsApp employees for orders & bookings built for businesses everywhere.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/#modes">WhatsApp AI Employee</a></li>
+          <li><a href="/ai-voice-calling-agent/">Voice AI</a></li>
+          <li><a href="/restaurant-pos-voice-chat/">Restaurant POS</a></li>
+          <li><a href="/ai-chatbot-for-website/">AI Chatbot for Websites</a></li>
+          <li><a href="/whatsapp-ai-lead-escalation/">Lead Capture &amp; Sales Escalation</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="/whatsapp-ai-for-ecommerce/">Ecommerce &amp; Online Stores</a></li>
+          <li><a href="/whatsapp-ai-for-grocery-stores/">Grocery</a></li>
+          <li><a href="/whatsapp-ai-for-restaurants/">Restaurants</a></li>
+          <li><a href="/whatsapp-ai-for-salons/">Salons</a></li>
+          <li><a href="/whatsapp-ai-for-real-estate/">Real Estate</a></li>
+          <li><a href="/#industries">See all industries &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/revora-alternative/">Revora Alternative</a></li>
+          <li><a href="/wati-alternative/">Wati Alternative</a></li>
+          <li><a href="/gupshup-alternative/">Gupshup Alternative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ChatCart Pro AI. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg class="ico-svg" aria-hidden="true"><use href="#icon-facebook"></use></svg></a>
+        <a href="#" aria-label="X (Twitter)"><svg class="ico-svg" aria-hidden="true"><use href="#icon-x-twitter"></use></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg class="ico-svg" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="ico-svg" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ico-svg" aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+      </div>
+      <p class="powered-by">Powered by <a href="https://nexsofture.com" target="_blank" rel="noopener">Nexsofture Private Ltd</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile nav toggle, FAQ accordion, and the demo-form EmailJS submit handler now live in /js/main.js (shared across marketing pages). -->
+<!-- ============ FLOATING AI CHAT WIDGET ============ -->
+
+<div id="ccTeaser" role="button" tabindex="0" aria-label="Open chat: Looking for something for your business?">
+  Looking for something for your business? Ask me anything 👋
+  <button type="button" class="cc-teaser-close" aria-label="Dismiss">&times;</button>
+</div>
+
+<button id="ccChatBubble" aria-label="Open chat" aria-expanded="false" aria-controls="ccChatPanel">
+  <svg class="cc-chat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+  <svg class="cc-close-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+</button>
+
+<div id="ccChatPanel" role="dialog" aria-label="Chat with ChatCart Pro AI">
+  <div class="cc-head">
+    <span class="cc-avatar">C</span>
+    <div>
+      <div class="cc-title">ChatCart Pro AI</div>
+      <div class="cc-sub">Usually replies in a few seconds</div>
+    </div>
+  </div>
+  <div id="ccChatBody"></div>
+  <form id="ccChatForm" autocomplete="off">
+    <input id="ccChatInput" type="text" placeholder="Ask about pricing, features..." required maxlength="500" aria-label="Message">
+    <button type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11.5 21 3l-5 18.5-4.5-7.5L3 11.5Z"/></svg>
+    </button>
+  </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
