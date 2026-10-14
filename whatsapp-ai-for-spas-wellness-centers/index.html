@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W50ECXZCXE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp AI Booking Agent for Spas & Wellness Centers | ChatCart Pro AI</title>
+<meta name="description" content="Let clients book spa treatments, massages, and wellness sessions straight from WhatsApp, 24x7. ChatCart Pro AI checks your real-time calendar, upsells add-on treatments, and sends reminders that cut no-shows. Book a free demo.">
+<meta name="keywords" content="WhatsApp AI for spas, AI booking agent for wellness center, spa WhatsApp automation, AI receptionist for spa, WhatsApp scheduling for massage therapist, AI appointment scheduling for wellness, spa no-show reduction software, AI chatbot for salon and spa, wellness center automation, WhatsApp AI for yoga studio">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Nexsofture Private Ltd">
+<link rel="canonical" href="https://chatcartpro.com/whatsapp-ai-for-spas-wellness-centers/">
+<link rel="icon" type="image/png" href="/logo/logo.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/logo/logo.png">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="/css/main.css?v=20260811h">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ChatCart Pro AI">
+<meta property="og:title" content="WhatsApp AI Booking Agent for Spas & Wellness Centers | ChatCart Pro AI">
+<meta property="og:description" content="Let clients book spa treatments, massages, and wellness sessions straight from WhatsApp, 24x7. ChatCart Pro AI checks your real-time calendar, upsells add-on treatments, and sends reminders that cut no-shows. Book a free demo.">
+<meta property="og:url" content="https://chatcartpro.com/whatsapp-ai-for-spas-wellness-centers/">
+<meta property="og:image" content="https://chatcartpro.com/og-image.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WhatsApp AI Booking Agent for Spas & Wellness Centers | ChatCart Pro AI">
+<meta name="twitter:description" content="Let clients book spa treatments, massages, and wellness sessions straight from WhatsApp, 24x7. ChatCart Pro AI checks your real-time calendar, upsells add-on treatments, and sends reminders that cut no-shows.">
+<meta name="twitter:image" content="https://chatcartpro.com/og-image.png">
+
+<!-- Structured data: Organization + Software product -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChatCart Pro AI",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, WhatsApp",
+  "description": "An AI WhatsApp booking agent for spas and wellness centers: real-time appointment booking, treatment and therapist selection, add-on upsells, and automated reminders that cut no-shows, configured for your business.",
+  "url": "https://chatcartpro.com/whatsapp-ai-for-spas-wellness-centers/",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://chatcartpro.com/whatsapp-ai-for-spas-wellness-centers/#demo",
+    "description": "Book a free demo"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Nexsofture Private Ltd",
+    "url": "https://nexsofture.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "IN" }
+  }
+}
+</script>
+
+<!-- Structured data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it sync with my existing spa booking software or calendar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ChatCart Pro AI can sync appointments with common spa management tools and calendars. We confirm your exact integration during the demo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it handle different treatments, therapists, and room availability?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You configure your treatment menu, durations, therapist schedules, and room capacity, and the AI books against that real setup automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it suggest add-on treatments or packages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The AI can recommend complementary add-ons or packages based on what the client is already booking, configured around your actual menu and pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about last-minute cancellations or reschedules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clients can message to reschedule or cancel and the AI updates your calendar in real time, with a human notified for anything unusual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do clients need to download an app to book a session?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Booking happens entirely inside WhatsApp, which clients already have, so there is nothing new for them to install."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it reduce no-shows for high-value treatments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Automatic confirmations and reminders sent ahead of the appointment measurably cut no-show rates, protecting revenue on longer, higher-value slots."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Inline SVG icon sprite: minimal line-style icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-spa" viewBox="0 0 24 24"><path d="M12 21c-4-1.2-6.5-4.6-6.5-9 2.4 0 4.4.9 5.8 2.4C11.6 11 12 7.5 9.8 3.5c3.6 1.2 5.6 4.2 5.4 7.7 1.1-1.3 2.7-2 4.3-2 0 4.4-2.5 7.8-6.5 9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 21v-6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-offer" viewBox="0 0 24 24"><path d="M12.7 2.9 20 10.2a2 2 0 0 1 0 2.8l-6.5 6.5a2 2 0 0 1-2.8 0L3.5 12.3a2 2 0 0 1-.6-1.6l.4-6.1a2 2 0 0 1 1.9-1.9l6.1-.4a2 2 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M6 10.5a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 14.5 6 10.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 19.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M2 12.5 6 9l3.2 2.6a1.6 1.6 0 0 0 2.2-2.3L9.5 7.3M22 12.5 18 9l-3.2 2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m6 9 5 4.5 1.3-1.1M18 9l-5.5 5-2.5-2M2 12.5 6 17l2 1.8a1.5 1.5 0 0 0 2.1-2.1M22 12.5 18 17l-2 1.8a1.5 1.5 0 0 1-2.1-2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><path d="M12 17v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="icon-commission" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="17" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="19" y1="5" x2="5" y2="19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="icon-x-twitter" viewBox="0 0 24 24"><path d="M4 4 20 20M20 4 4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="7.7" cy="8" r="1.1" fill="currentColor"/><path d="M7.7 11v6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 17.5v-4c0-1.4 1-2.5 2.4-2.5s2.3 1 2.3 2.5v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14.5 8.5V6.8c0-.7.5-1.3 1.3-1.3h1.7V2.5h-2.4C12.5 2.5 11 4 11 6.5v2h-2v3h2v10h3.5V11.5h2.4l.5-3h-2.9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a href="/" class="logo">
+      <span class="logo-mark"><img src="/logo/logo.png" alt="" width="32" height="32" loading="eager"></span> <span class="logo-text">ChatCart Pro AI</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="/#modes">Product</a>
+      <a href="#modes">What It Handles</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#faq">FAQ</a>
+      <a href="/pricing/">Pricing</a>
+      <div class="nav-links-mobile-extra">
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Built for spas &amp; wellness centers</span>
+      <h1><span>Turn your spa's WhatsApp into an</span> <span class="highlight">AI Booking &amp; Concierge Agent</span></h1>
+      <p class="sub">Clients message your WhatsApp to book a massage, facial, or wellness session. ChatCart Pro AI checks your real calendar, suggests the right treatment and therapist, confirms the slot, and sends reminders, so your front desk stops drowning in calls and no-shows stop eating your margin.</p>
+      <div class="hero-ctas">
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+      <p class="hero-note">No app for your clients to install, it all happens inside WhatsApp.</p>
+
+      <div class="mock-stage">
+        <div class="chat-card">
+          <div class="chat-head">
+            <div class="avatar">SW</div>
+            <div>
+              <div class="name">Serenity Wellness Spa</div>
+              <div class="status">AI Agent &middot; online</div>
+            </div>
+          </div>
+          <div class="chat-body">
+            <div class="bubble in">Hi, do you have a 60-min massage slot tomorrow evening?</div>
+            <div class="bubble out">Yes! We have 6:00 PM and 7:30 PM open tomorrow for a 60-min Swedish massage with Priya.
+              <div class="chips"><span class="chip">6:00 PM</span><span class="chip">7:30 PM</span></div>
+              <small>10:14 AM &#10003;&#10003;</small></div>
+            <div class="bubble in">7:30 PM works, and can I add a hot stone upgrade?</div>
+            <div class="bubble out">Booked! 60-min Swedish + Hot Stone upgrade, tomorrow 7:30 PM with Priya. We'll send a reminder 2 hours before ✅
+              <small>10:13 AM &#10003;&#10003;</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="section-pastel section-pastel-mint">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why they switch</span>
+        <h2>Most spas lose revenue in the gap between a calendar and a phone call</h2>
+        <p>ChatCart Pro AI closes that gap, and keeps the chair or table filled.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-spa"></use></svg></div>
+          <h4>Front desk swamped with booking calls</h4>
+          <p>Clients book their own session on WhatsApp in under a minute, freeing your staff to focus on treatments, not the phone.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bell"></use></svg></div>
+          <h4>No-shows eating into high-value slots</h4>
+          <p>Automatic confirmations and reminders sent ahead of the appointment measurably cut no-shows, protecting revenue on longer, premium sessions.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-calendar"></use></svg></div>
+          <h4>Double-booked therapists or rooms</h4>
+          <p>The AI checks live therapist and room availability before confirming, so clients only ever see slots that are actually open.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="ico"><svg class="ico-svg" aria-hidden="true"><use href="#icon-offer"></use></svg></div>
+          <h4>Missed upsells on add-ons and packages</h4>
+          <p>The AI suggests relevant add-ons, upgrades, and packages at the moment of booking, lifting average ticket size without a hard sell.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT HANDLES -->
+  <section id="modes">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What It Handles</span>
+        <h2>From "what do you recommend?" to "see you at 7:30"</h2>
+        <p>One AI agent covering discovery, booking, and follow-up, not just answering FAQs.</p>
+      </div>
+      <div class="mode-grid-3">
+        <div class="mode-card orders">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-spa"></use></svg><span>Discovery</span></span>
+          <h3>Treatment &amp; therapist matching</h3>
+          <p class="desc">Clients describe what they want, pain points, mood, or occasion, and the AI recommends the right treatment and therapist from your real menu.</p>
+        </div>
+        <div class="mode-card bookings">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-calendar"></use></svg><span>Booking</span></span>
+          <h3>Real-time slot booking &amp; upsells</h3>
+          <p class="desc">The AI checks live availability, books the session, and offers relevant add-ons or packages before the client even leaves the chat.</p>
+        </div>
+        <div class="mode-card leads">
+          <span class="tag"><svg class="ico-svg" aria-hidden="true"><use href="#icon-bell"></use></svg><span>Follow-up</span></span>
+          <h3>Reminders, reschedules &amp; rebooking</h3>
+          <p class="desc">Automatic reminders cut no-shows, and the AI handles reschedules or nudges clients to rebook their next session, escalated to a human when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section id="integrations" class="section-pastel section-pastel-blue">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Spa &amp; Wellness Integrations</span>
+        <h2>Configured around the booking system you already run</h2>
+        <p>Calendar, treatment menu, and therapist schedules are set up during onboarding, so the AI always answers from real, current data.</p>
+      </div>
+      <div class="industry-strip">
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-calendar"></use></svg> Spa &amp; salon management software</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-calendar"></use></svg> Google &amp; Outlook calendars</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-plug"></use></svg> Custom booking platforms &amp; APIs</span>
+        <span class="industry-chip"><svg class="ico-svg" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram (on request)</span>
+      </div>
+      <p style="text-align:center; max-width:640px; margin:24px auto 0; font-size:13px; color:var(--navy-soft);">Platform and channel integrations are scoped to your setup, tell us what you run on during your demo and we'll confirm exact support.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Everything you need to know</h2>
+        <p>Still curious? Book a demo and we'll walk you through it live.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span>Does it sync with my existing spa booking software or calendar?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a" style="max-height:400px;"><p>Yes. ChatCart Pro AI can sync appointments with common spa management tools and calendars. We confirm your exact integration during the demo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can it handle different treatments, therapists, and room availability?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. You configure your treatment menu, durations, therapist schedules, and room capacity, and the AI books against that real setup automatically.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can it suggest add-on treatments or packages?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. The AI can recommend complementary add-ons or packages based on what the client is already booking, configured around your actual menu and pricing.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>What about last-minute cancellations or reschedules?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Clients can message to reschedule or cancel and the AI updates your calendar in real time, with a human notified for anything unusual.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Do clients need to download an app to book a session?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>No. Booking happens entirely inside WhatsApp, which clients already have, so there is nothing new for them to install.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can it reduce no-shows for high-value treatments?</span> <span class="chev">&#9662;</span></button>
+          <div class="faq-a"><p>Yes. Automatic confirmations and reminders sent ahead of the appointment measurably cut no-show rates, protecting revenue on longer, higher-value slots.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO FORM -->
+  <section id="demo">
+    <div class="wrap">
+      <div class="demo-section">
+        <div id="demoFormWrap">
+          <h2>Book your free demo</h2>
+          <p class="sub">Tell us a bit about your spa or wellness center and we'll show you exactly how ChatCart Pro AI would work for you.</p>
+          <form id="demoForm">
+            <div class="field">
+              <label for="fname">Full name</label>
+              <input id="fname" type="text" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="fbusiness">Business name</label>
+              <input id="fbusiness" type="text" required placeholder="e.g. Serenity Wellness Spa">
+            </div>
+            <div class="field">
+              <label for="findustry">Industry</label>
+              <select id="findustry" required>
+                <option value="">Select industry</option>
+                <option selected>Spa / Wellness Center</option>
+                <option>Salon</option>
+                <option>Gym / Fitness Studio</option>
+                <option>Hospital / Clinic</option>
+                <option>Dental Clinic</option>
+                <option>Event Venue</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fwhatsapp">WhatsApp number</label>
+              <input id="fwhatsapp" type="tel" required placeholder="+1 5XX XXX XXXX">
+            </div>
+            <div class="field full">
+              <label for="femail">Email</label>
+              <input id="femail" type="email" required placeholder="you@spa.com">
+            </div>
+            <div class="field full submit-row">
+              <button type="submit" class="btn btn-primary" id="demoSubmitBtn">Book a Demo</button>
+              <p class="form-error" id="demoFormError" style="display:none;">Something went wrong sending your request. Please try again, or reach us directly.</p>
+            </div>
+          </form>
+        </div>
+        <div class="demo-success" id="demoSuccess">
+          <div class="check">&#10003;</div>
+          <h3>Thanks, request received!</h3>
+          <p>Our team will reach out on WhatsApp within one business day to schedule your live demo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Ready to put your spa's WhatsApp to work?</h2>
+        <p>Join spas and wellness centers around the world automating bookings and reminders with ChatCart Pro AI.</p>
+        <a href="#demo" class="btn btn-primary">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="flogo"><span class="logo-mark" style="width:26px;height:26px;font-size:14px;"><img src="/logo/logo.png" alt="" width="26" height="26" loading="lazy"></span> ChatCart Pro AI</div>
+        <p>AI WhatsApp employees for orders & bookings built for businesses everywhere.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="/#modes">WhatsApp AI Employee</a></li>
+          <li><a href="/ai-voice-calling-agent/">Voice AI</a></li>
+          <li><a href="/restaurant-pos-voice-chat/">Restaurant POS</a></li>
+          <li><a href="/ai-chatbot-for-website/">AI Chatbot for Websites</a></li>
+          <li><a href="/whatsapp-ai-lead-escalation/">Lead Capture &amp; Sales Escalation</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="/whatsapp-ai-for-spas-wellness-centers/">Spas &amp; Wellness Centers</a></li>
+          <li><a href="/whatsapp-ai-for-salons/">Salons</a></li>
+          <li><a href="/whatsapp-ai-for-gyms/">Gyms &amp; Fitness Studios</a></li>
+          <li><a href="/whatsapp-ai-for-hospitals-clinics/">Hospitals &amp; Clinics</a></li>
+          <li><a href="/whatsapp-ai-for-real-estate/">Real Estate</a></li>
+          <li><a href="/#industries">See all industries &rarr;</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/revora-alternative/">Revora Alternative</a></li>
+          <li><a href="/wati-alternative/">Wati Alternative</a></li>
+          <li><a href="/gupshup-alternative/">Gupshup Alternative</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ChatCart Pro AI. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><svg class="ico-svg" aria-hidden="true"><use href="#icon-facebook"></use></svg></a>
+        <a href="#" aria-label="X (Twitter)"><svg class="ico-svg" aria-hidden="true"><use href="#icon-x-twitter"></use></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg class="ico-svg" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="ico-svg" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ico-svg" aria-hidden="true"><use href="#icon-youtube"></use></svg></a>
+      </div>
+      <p class="powered-by">Powered by <a href="https://nexsofture.com" target="_blank" rel="noopener">Nexsofture Private Ltd</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile nav toggle, FAQ accordion, and the demo-form EmailJS submit handler now live in /js/main.js (shared across marketing pages). -->
+<!-- ============ FLOATING AI CHAT WIDGET ============ -->
+
+<div id="ccTeaser" role="button" tabindex="0" aria-label="Open chat: Looking for something for your business?">
+  Looking for something for your business? Ask me anything 👋
+  <button type="button" class="cc-teaser-close" aria-label="Dismiss">&times;</button>
+</div>
+
+<button id="ccChatBubble" aria-label="Open chat" aria-expanded="false" aria-controls="ccChatPanel">
+  <svg class="cc-chat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+  <svg class="cc-close-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+</button>
+
+<div id="ccChatPanel" role="dialog" aria-label="Chat with ChatCart Pro AI">
+  <div class="cc-head">
+    <span class="cc-avatar">C</span>
+    <div>
+      <div class="cc-title">ChatCart Pro AI</div>
+      <div class="cc-sub">Usually replies in a few seconds</div>
+    </div>
+  </div>
+  <div id="ccChatBody"></div>
+  <form id="ccChatForm" autocomplete="off">
+    <input id="ccChatInput" type="text" placeholder="Ask about pricing, features..." required maxlength="500" aria-label="Message">
+    <button type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11.5 21 3l-5 18.5-4.5-7.5L3 11.5Z"/></svg>
+    </button>
+  </form>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
