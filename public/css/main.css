@@ -769,3 +769,18 @@ html[dir="rtl"] footer .footer-grid, html[dir="rtl"] footer .footer-bottom{text-
   #ccTeaser{animation:none;}
 }
 </content>
+
+/* ===== Mobile hardening (added in restructure) ===== */
+html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+body{overflow-wrap:break-word;}
+video,canvas,iframe{max-width:100%;}
+@media (max-width:600px){
+  /* long CTA labels must wrap instead of being clipped by body overflow-x */
+  .btn{white-space:normal; text-align:center; min-height:44px;}
+  /* 16px inputs stop iOS Safari auto-zooming on focus */
+  input,select,textarea{font-size:16px;}
+  /* comfortable tap targets */
+  .nav-links a, .footer a, .faq-q, .showcase-tabs button{min-height:44px; display:inline-flex; align-items:center;}
+  .faq-q{display:flex;}
+  table{font-size:13px;}
+}
