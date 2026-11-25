@@ -1,29 +1,66 @@
-# ChatCart Pro
+# ChatCart Pro AI
 
-> ChatCart Pro is an AI ordering system for supermarkets, mini marts and restaurants in the UAE (and India). It runs on the business's own WhatsApp number and phone line. Customers order by chatting or calling in Tamil, Hindi, Malayalam, Telugu or English. The AI takes the order, checks live stock from the store's system (for example GOFRUGAL), and sends it to a kitchen display or store dashboard, with delivery rider management built in. Built by Nexsofture Tech FZ LLC, Dubai.
+> ChatCart Pro AI is an AI employee platform for businesses: an AI WhatsApp agent that takes orders and books appointments, an AI chatbot for websites, ChatCart Voice AI (a 24x7 AI voice calling employee that answers and places phone calls), and ChatCart Pro POS (a restaurant point-of-sale system unifying counter, AI voice, and WhatsApp ordering into one order pipeline). Built by Nexsofture Private Ltd, and an authorized DIDLogic telephony partner covering 140+ countries.
 
-Key facts:
-- It is an ordering system, not a WhatsApp marketing tool.
-- Customers never leave WhatsApp: no app, no web menu link.
-- Voice ordering is for inbound customer calls only.
-- Customers are told they are talking to an AI assistant; calls are recorded with notice.
-- Zero commission on orders. Flat monthly price per store, one-time setup fee, WhatsApp (Meta) message fees billed at cost.
-- Uses the official WhatsApp Business Platform (Cloud API) from Meta.
+ChatCart Pro AI serves businesses across every vertical, retail, healthcare, real estate, hospitality, restaurants, automotive, education, financial services, logistics, home services, salons, and more, with AI employees that work 24x7 across WhatsApp, website chat, and phone calls. No prices are listed publicly; every business is quoted after a short discovery call. All plans are demo-first: book a free demo to see the product live and get a tier recommendation.
 
-## Main pages
+## Core Products
 
-- [Home](https://chatcartpro.com/): What ChatCart Pro does, how it works, features, FAQ and demo booking.
-- [Supermarkets & mini marts](https://chatcartpro.com/whatsapp-ai-for-grocery-stores/): Grocery lists by WhatsApp or phone, live stock check, substitutions, delivery.
-- [Restaurants & cafeterias](https://chatcartpro.com/whatsapp-ai-for-restaurants/): Takeaway and delivery orders to the kitchen display, no delivery-app commission.
-- [Multi-branch chains](https://chatcartpro.com/whatsapp-ordering-for-grocery-chains/): One dashboard and per-branch stock for several stores.
-- [Pricing](https://chatcartpro.com/pricing/): Single-store and multi-branch plans, shown in the visitor's local currency (AED, INR or USD).
+- [Home / AI WhatsApp Employee](https://chatcartpro.com/): AI WhatsApp agent that takes orders and books appointments for businesses, understands 40+ languages plus voice notes, photos, and video.
+- [ChatCart Voice AI](https://chatcartpro.com/ai-voice-calling-agent/): The #1 AI voice calling platform, a 24x7 AI employee that answers inbound calls and places outbound calls for every business vertical. Authorized DIDLogic telephony partner with business phone numbers in 140+ countries. No visa, insurance, food/accommodation, transportation, flight allowance, or annual leave costs, unlike a human hire.
+- [AI Chatbot for Websites](https://chatcartpro.com/ai-chatbot-for-website/): Embeddable AI chat widget that answers visitor questions from a business's own knowledge base and hands off high-intent visitors to a demo form.
+- [Restaurant POS + AI Voice & WhatsApp Ordering](https://chatcartpro.com/restaurant-pos-voice-chat/): ChatCart Pro POS, the UAE's AI-powered restaurant point-of-sale system unified with AI voice calling and WhatsApp ordering. Dine-in orders at the counter, phone orders taken by the AI voice employee, and WhatsApp orders all write into one shared menu, order pipeline, and kitchen display, with table management, kitchen ticket tracking, delivery agent dispatch, receipt printing (network/Bluetooth/USB), VAT-ready AED billing, and a discounts/offers engine, built for restaurants in Dubai, Abu Dhabi, and across the UAE.
+- [Pricing / Plan Configurator](https://chatcartpro.com/pricing/): Interactive configurator that recommends a Starter, Growth, or Enterprise plan based on conversation volume, locations, and required AI capabilities, shown in USD, AED, or INR.
 
-## Legal
+- [Restaurant Billing Software](https://chatcartpro.com/restaurant-billing-software/): Restaurant billing and reporting software, part of ChatCart Pro POS.
+- [Arabic homepage](https://chatcartpro.com/ar/): Arabic version of the site.
 
-- [Privacy Policy](https://chatcartpro.com/privacy-policy/): WhatsApp and phone data, call recordings, UAE PDPL.
+## Industry Pages
+
+- [E-commerce](https://chatcartpro.com/whatsapp-ai-for-ecommerce/)
+- [Grocery Stores](https://chatcartpro.com/whatsapp-ai-for-grocery-stores/)
+- [Pharmacies](https://chatcartpro.com/whatsapp-ai-for-pharmacies/)
+- [Restaurants](https://chatcartpro.com/whatsapp-ai-for-restaurants/)
+- [Salons](https://chatcartpro.com/whatsapp-ai-for-salons/)
+- [Spas & Wellness Centers](https://chatcartpro.com/whatsapp-ai-for-spas-wellness-centers/)
+- [Gyms](https://chatcartpro.com/whatsapp-ai-for-gyms/)
+- [Hospitals & Clinics](https://chatcartpro.com/whatsapp-ai-for-hospitals-clinics/)
+- [Dental Clinics](https://chatcartpro.com/whatsapp-ai-for-dental-clinics/)
+- [Real Estate](https://chatcartpro.com/whatsapp-ai-for-real-estate/)
+- [Car Rentals](https://chatcartpro.com/whatsapp-ai-for-car-rentals/)
+- [Auto Repair](https://chatcartpro.com/whatsapp-ai-for-auto-repair/)
+- [Laundry Services](https://chatcartpro.com/whatsapp-ai-for-laundry/)
+- [Courier & Logistics](https://chatcartpro.com/whatsapp-ai-for-courier-logistics/)
+- [Event Venues](https://chatcartpro.com/whatsapp-ai-for-event-venues/)
+- [Schools](https://chatcartpro.com/whatsapp-ai-for-schools/)
+- [Colleges & Universities](https://chatcartpro.com/whatsapp-ai-for-colleges-universities/)
+- [Coaching Institutes](https://chatcartpro.com/whatsapp-ai-for-coaching-institutes/)
+- [Music Schools](https://chatcartpro.com/whatsapp-ai-for-music-schools/)
+- [Martial Arts Schools](https://chatcartpro.com/whatsapp-ai-for-martial-arts-schools/)
+- [Photo Studios](https://chatcartpro.com/whatsapp-ai-for-photo-studios/)
+- [Typing & Document Services](https://chatcartpro.com/whatsapp-ai-for-typing-document-services/)
+
+## Comparisons
+
+- [vs. Meta AI Business Agent](https://chatcartpro.com/meta-ai-business-agent-alternative/)
+- [Meta AI Business Agent setup guide](https://chatcartpro.com/meta-ai-business-agent-setup/)
+- [vs. Revora](https://chatcartpro.com/revora-alternative/)
+- [vs. Wati](https://chatcartpro.com/wati-alternative/)
+- [vs. Respond.io](https://chatcartpro.com/respond-io-alternative/)
+- [vs. SleekFlow](https://chatcartpro.com/sleekflow-alternative/)
+- [vs. Gupshup](https://chatcartpro.com/gupshup-alternative/)
+
+## Use Cases
+
+- [AI WhatsApp Lead Escalation](https://chatcartpro.com/whatsapp-ai-lead-escalation/)
+
+## Programs
+
+- [Affiliate Program](https://chatcartpro.com/affiliate-program/): Earn recurring commission referring businesses to ChatCart Pro AI, ChatCart Voice AI, or ChatCart Pro POS. Free to join, application-based.
+- [Partner With Us](https://chatcartpro.com/partner-with-us/): Agency, reseller, white-label, and technology partner program for businesses that want a deeper relationship than a referral link.
+
+## Company
+
+- [Privacy Policy](https://chatcartpro.com/privacy-policy/)
 - [Terms & Conditions](https://chatcartpro.com/terms-and-conditions/)
-
-## Contact
-
-- WhatsApp: +971 54 737 8597 (https://wa.me/971547378597)
-- Operated by Nexsofture Tech FZ LLC, Dubai, UAE.
+- Operated by Nexsofture Private Ltd (https://nexsofture.com)

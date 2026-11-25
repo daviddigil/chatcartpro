@@ -1,132 +1,672 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script>(function(){try{var s=localStorage.getItem('cc_theme'),t;if(s==='light'||s==='dark'){t=s}else{var h=new Date().getHours();t=(h>=19||h<7)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
-<title>Privacy Policy | ChatCart Pro</title>
-<meta name="description" content="How ChatCart Pro handles WhatsApp and phone data, call recordings and personal data under UAE data protection law (PDPL).">
-<meta name="robots" content="index, follow, max-image-preview:large">
+
+<!-- Auto light/dark theme by device local time, set synchronously pre-paint
+     to avoid a flash of the wrong theme. See /js/main.js for the periodic
+     re-check and the manual-override toggle wiring. -->
+<script>
+  (function(){
+    try{
+      var saved = localStorage.getItem('cc_theme');
+      var theme;
+      if(saved === 'light' || saved === 'dark'){
+        theme = saved;
+      } else {
+        var hour = new Date().getHours();
+        theme = (hour >= 19 || hour < 7) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W50ECXZCXE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - ChatCart Pro AI</title>
+<meta name="description" content="Privacy Policy for ChatCart Pro AI, an AI WhatsApp employee product by Nexsofture Private Ltd.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://chatcartpro.com/privacy-policy/">
 <link rel="icon" type="image/png" href="/logo/logo.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/logo/logo.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="ChatCart Pro">
-<meta property="og:title" content="Privacy Policy | ChatCart Pro">
-<meta property="og:description" content="How ChatCart Pro handles WhatsApp and phone data, call recordings and personal data under UAE data protection law (PDPL).">
-<meta property="og:url" content="https://chatcartpro.com/privacy-policy/">
+<meta property="og:site_name" content="ChatCart Pro AI">
+<meta property="og:title" content="Privacy Policy - ChatCart Pro AI">
+<meta property="og:description" content="Privacy Policy for ChatCart Pro AI, an AI WhatsApp employee product by Nexsofture Private Ltd.">
+<meta property="og:url" content="https://chatcartpro.com/privacy-policy.html">
 <meta property="og:image" content="https://chatcartpro.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/css/main.css?v=20261125">
-<link rel="stylesheet" href="/css/site.css?v=20261125">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W50ECXZCXE"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-W50ECXZCXE');</script>
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://chatcartpro.com/"},{"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://chatcartpro.com/privacy-policy/"}]}</script>
+<meta name="twitter:title" content="Privacy Policy - ChatCart Pro AI">
+<meta name="twitter:description" content="Privacy Policy for ChatCart Pro AI, an AI WhatsApp employee product by Nexsofture Private Ltd.">
+<meta name="twitter:image" content="https://chatcartpro.com/og-image.png">
+<style>
+  :root{
+    --navy:#0b0f0d;
+    --navy-soft:#5b6360;
+    --ink:#0a0a0a;
+    --lime:#ccff00;
+    --lime-dark:#a6d600;
+    --card:#ffffff;
+    --border:#ececec;
+    --shadow: 0 20px 45px -20px rgba(7,94,84,0.22);
+    --body-bg:#ffffff;
+    --theme-transition:background-color .6s ease, color .6s ease, border-color .6s ease, box-shadow .6s ease;
+  }
+  html[data-theme="dark"]{
+    --navy:#e8ece9;
+    --navy-soft:#a7b0ac;
+    --ink:#f2f4f2;
+    --card:#161a17;
+    --border:#2a2f2b;
+    --shadow: 0 20px 45px -20px rgba(0,0,0,0.6);
+    --body-bg:#0a0d0b;
+  }
+  *{box-sizing:border-box;}
+  html{transition:var(--theme-transition);}
+  body{
+    margin:0;
+    line-height:1.5;
+    font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Noto Sans Tamil', 'Noto Sans Malayalam', 'Nirmala UI', 'Tamil MN', 'Malayalam MN', Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background:var(--body-bg);
+    transition:var(--theme-transition);
+  }
+  a{color:var(--lime-dark); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:840px; margin:0 auto; padding:0 24px;}
+  header{
+    position:sticky; top:14px; z-index:50;
+    padding:0 16px;
+  }
+  nav.wrap{
+    position:relative;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 12px 12px 22px; gap:16px;
+    max-width:1200px; margin:0 auto;
+    background:rgba(15,17,15,0.46);
+    backdrop-filter:blur(22px) saturate(220%);
+    -webkit-backdrop-filter:blur(22px) saturate(220%);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:999px;
+    box-shadow:0 18px 40px -18px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12), inset 0 0 0 1px rgba(255,255,255,0.03);
+  }
+  nav.wrap::before{
+    content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+    background:linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0) 55%);
+  }
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; color:#fff; text-decoration:none;}
+  .logo-mark{
+    width:34px; height:34px; border-radius:10px;
+    background:var(--lime);
+    display:flex; align-items:center; justify-content:center; color:var(--ink); font-size:18px; flex-shrink:0;
+  }
+  .logo-mark .ico-svg{width:18px; height:18px;}
+  .logo-mark img{width:100%; height:100%; object-fit:cover; border-radius:inherit;}
+  .ico-svg{width:1em; height:1em; display:inline-block; flex-shrink:0; vertical-align:middle;}
+  .back-link{font-size:14px; font-weight:600; color:#fff; background:rgba(255,255,255,0.1); padding:9px 16px; border-radius:999px;}
+  .back-link:hover{background:rgba(255,255,255,0.18); text-decoration:none;}
+  main{padding:56px 0 80px;}
+  h1{font-size:38px; font-weight:800; margin:0 0 8px; line-height:1.2;}
+  .updated{color:var(--navy-soft); font-size:14px; margin:0 0 40px;}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:24px;
+    padding:40px; box-shadow:var(--shadow);
+  }
+  h2{font-size:21px; margin:32px 0 12px; font-weight:700;}
+  h2:first-child{margin-top:0;}
+  p, li{font-size:15px; line-height:1.7; color:var(--navy-soft);}
+  ul{padding-left:22px; margin:10px 0;}
+  li{margin-bottom:6px;}
+  strong{color:var(--ink);}
+  footer{background:#0a0a0a; padding:30px 0 40px; text-align:center; color:rgba(255,255,255,0.6); font-size:13px; margin-top:40px;}
+  footer a{color:var(--lime);}
+  @media (max-width:640px){
+    header{top:10px; padding:0 12px;}
+    nav.wrap{padding:10px 10px 10px 18px; border-radius:26px;}
+    .logo{font-size:16px;}
+    .back-link{font-size:13px; padding:8px 12px;}
+    .card{padding:24px;}
+    h1{font-size:28px;}
+  }
+  @media (max-width:400px){
+    .back-link span.back-text{display:none;}
+  }
+</style>
 </head>
 <body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+  <defs>
+    <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-graduation-cap" viewBox="0 0 24 24"><path d="M12 4 2 9l10 5 10-5-10-5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M6 11.5v4.5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M20 9.5v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="20" cy="17" r="1.1" fill="currentColor"/></symbol>
+
+    <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M3.5 8.5A1.5 1.5 0 0 1 5 7h2.2l1-1.6a1.5 1.5 0 0 1 1.28-.7h5.04a1.5 1.5 0 0 1 1.28.7l1 1.6H19a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5v-9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="13" r="1.1" fill="currentColor"/></symbol>
+
+    <symbol id="icon-typing" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 15.5h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M8 11v-1.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="11.2" cy="10.4" r="0.9" fill="currentColor"/><circle cx="14.3" cy="10.4" r="0.9" fill="currentColor"/><circle cx="17.4" cy="10.4" r="0.9" fill="currentColor"/></symbol>
+
+    <symbol id="icon-belt" viewBox="0 0 24 24"><path d="M2.5 7.5c4 2 7 2 9.5 0s5.5-2 9.5 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M2.5 12c4-2 7-2 9.5 0s5.5 2 9.5 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="9.7" y="8.3" width="4.6" height="7.4" rx="1" transform="rotate(45 12 12)" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 17.5 6.5 20M15 17.5 17.5 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+
+    <symbol id="icon-music-note" viewBox="0 0 24 24"><circle cx="6.5" cy="17.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="15.5" cy="15.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.7 17.5V6.5l9-2v11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.7 9.5 17.7 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
 <header>
   <nav class="wrap">
-    <a href="/" class="logo"><span class="logo-mark"><img src="/logo/logo.png" alt="" width="32" height="32"></span> <span class="logo-text">ChatCart Pro</span></a>
-    <div class="nav-links" id="navLinks">
-      <a href="/#how">How it works</a>
-      <a href="/#features">Features</a>
-      <a href="/whatsapp-ai-for-grocery-stores/">Supermarkets</a>
-      <a href="/whatsapp-ai-for-restaurants/">Restaurants</a>
-      <a href="/whatsapp-ordering-for-grocery-chains/">Chains</a>
-      <a href="/pricing/">Pricing</a>
-      <a href="/#faq">FAQ</a>
-      <div class="nav-links-mobile-extra"><a href="#demo" class="btn btn-primary" data-demo-cta data-loc="nav-mobile">Book a free demo</a></div>
-    </div>
-    <div class="nav-cta">
-      <a href="/#demo" class="btn btn-primary" data-demo-cta data-loc="nav">Book a free demo</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
-    </div>
+    <a href="/" class="logo">
+      <span class="logo-mark"><img src="/logo/logo.png" alt="" width="32" height="32" loading="eager"></span> ChatCart Pro AI
+    </a>
+    <a href="/" class="back-link">&larr; <span class="back-text">Back to home</span></a>
   </nav>
 </header>
-<main id="top">
-<section class="page-hero"><div class="wrap"><h1>Privacy Policy</h1><p>Last updated: 25 November 2026</p></div></section>
-<section class="legal"><div class="wrap-narrow">
-<p class="notice"><strong>Draft for legal review.</strong> Text in <span class="ph">[yellow brackets]</span> must be completed by Nexsofture Tech FZ LLC, and a UAE lawyer should review this page before launch.</p>
 
-<h2>1. Who we are</h2>
-<p>ChatCart Pro is operated by Nexsofture Tech FZ LLC, Dubai, UAE (<span class="ph">[trade licence no.]</span>, <span class="ph">[address]</span>). Contact: chatcartpro@gmail.com, WhatsApp +971 54 737 8597.</p>
-<h2>2. Two roles: your customers' data and your own</h2>
-<p><strong>Business customers (shops and restaurants).</strong> For the personal data of your own customers that passes through ChatCart Pro (names, phone numbers, order contents, chat messages, call audio), you decide why it is collected. We process it on your behalf to run your ordering, as your processor, under your instructions.</p>
-<p><strong>Website visitors and prospects.</strong> For data you give us on this website (demo form, WhatsApp messages to us), we are the controller.</p>
-<h2>3. What we collect</h2>
-<div class="tbl"><table><tr><th>Data</th><th>Why</th></tr>
-<tr><td>Demo form: name, business name, number of stores, WhatsApp number, POS used, email (optional)</td><td>To contact you and prepare your demo</td></tr>
-<tr><td>WhatsApp messages and phone number of people who message a business using ChatCart Pro</td><td>To take and confirm orders for that business</td></tr>
-<tr><td>Call audio and transcripts of calls to a business using ChatCart Pro</td><td>To take orders, and so the business can check what was ordered</td></tr>
-<tr><td>Order details, delivery address, rider and delivery status</td><td>To fulfil and deliver the order</td></tr>
-<tr><td>Website analytics (Google Analytics 4, Meta Pixel)</td><td>To measure visits, WhatsApp clicks and demo requests</td></tr></table></div>
-<h2>4. AI assistant and notice</h2>
-<p>Customers speaking to a ChatCart Pro-powered business are talking to an AI ordering assistant. It introduces itself as an AI. Staff can take over a conversation at any time.</p>
-<h2>5. Call recordings</h2>
-<p>Calls to a business using ChatCart Pro voice ordering are recorded and transcribed. Callers hear a notice at the start of the call. Businesses must not disable this notice. Recordings are kept for <span class="ph">[retention period]</span> and then deleted unless the business asks us to keep them longer.</p>
-<h2>6. WhatsApp and broadcasts</h2>
-<p>We use the WhatsApp Business Platform (Cloud API) provided by Meta. Messages pass through Meta's systems under Meta's own terms. Broadcast and offer messages are sent only to people who opted in, and they can opt out at any time by replying STOP. We follow the WhatsApp Business Messaging Policy.</p>
-<h2>7. UAE data protection (PDPL) and other laws</h2>
-<p>We handle personal data in line with the UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL). Where a business serves customers in India, we also respect applicable Indian data protection law. We process data only for the purposes above, keep it only as long as needed, and do not sell it.</p>
-<h2>8. Your rights</h2>
-<p>You can ask to access, correct, delete or restrict your personal data, or object to its processing, subject to law. If you are a customer of a business using ChatCart Pro, please contact that business first; we will help them respond. Contact us at chatcartpro@gmail.com.</p>
-<h2>9. Who else sees data (sub-processors)</h2>
-<p>Meta (WhatsApp Business Platform), <span class="ph">[cloud hosting provider and region]</span>, <span class="ph">[telephony provider]</span>, <span class="ph">[AI model provider]</span>, EmailJS (demo form notifications), Google (Analytics), Meta (Pixel). Data may be transferred outside the UAE with appropriate safeguards.</p>
-<h2>10. Security</h2>
-<p>We use encryption in transit, access controls and logging. <span class="ph">[Confirm encryption at rest, backups, access policy.]</span> No system is perfectly secure; we will tell affected businesses without undue delay if there is a breach.</p>
-<h2>11. Cookies and analytics</h2>
-<p>We use Google Analytics 4 and (when enabled) Meta Pixel to count visits, WhatsApp clicks and demo requests. <span class="ph">[Add a cookie consent banner before enabling the Meta Pixel.]</span></p>
-<h2>12. Changes</h2>
-<p>We will post changes here and update the date above.</p>
-</div></section>
+<main>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 17, 2026</p>
+
+    <div class="card">
+      <h2>1. Introduction</h2>
+      <p>ChatCart Pro AI ("we," "our," "us") is a product owned and operated by <strong>Nexsofture Private Ltd</strong>, a company registered in India. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our website, request a demo, or use ChatCart Pro AI to communicate with a business over WhatsApp.</p>
+
+      <h2>2. Information We Collect</h2>
+      <p>We may collect the following categories of information:</p>
+      <ul>
+        <li><strong>Demo request information:</strong> name, business name, industry, WhatsApp number, and email address submitted through our demo booking form.</li>
+        <li><strong>WhatsApp conversation data:</strong> when a customer messages a business using ChatCart Pro AI, we process message content, phone number, timestamps, and order/booking details necessary to fulfil the conversation.</li>
+        <li><strong>Usage data:</strong> pages visited, browser type, device type, and general location (country-level), collected automatically via standard web analytics.</li>
+        <li><strong>Business account information:</strong> when a business signs up, we collect business details, WhatsApp Business API credentials, and configuration data (menus, price lists, calendars) needed to operate the service.</li>
+      </ul>
+
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>To operate, maintain, and improve ChatCart Pro AI and respond to customer conversations automatically.</li>
+        <li>To schedule and conduct product demonstrations requested through our website.</li>
+        <li>To process orders, bookings, confirmations, and reminders on behalf of the businesses we serve.</li>
+        <li>To detect, prevent, and address technical issues, fraud, or abuse.</li>
+        <li>To comply with legal obligations.</li>
+      </ul>
+
+      <h2>4. How We Share Information</h2>
+      <p>We do not sell personal information. We may share information with:</p>
+      <ul>
+        <li><strong>Meta / WhatsApp Business Platform:</strong> messages sent and received through ChatCart Pro AI are transmitted via the WhatsApp Business API, which is operated by Meta and subject to Meta's own data policies.</li>
+        <li><strong>AI model providers:</strong> message content may be processed by third-party AI models (text, voice, image, or video processing providers) to generate responses. These providers process data solely to deliver the requested functionality.</li>
+        <li><strong>Service providers:</strong> hosting, infrastructure, analytics, and payment processors who help us operate our business, under confidentiality obligations.</li>
+        <li><strong>The business you are messaging:</strong> if you interact with a business using ChatCart Pro AI, that business receives your conversation, order, and booking details as the merchant of record.</li>
+        <li><strong>Legal authorities:</strong> where required to comply with applicable law, regulation, or legal process.</li>
+      </ul>
+
+      <h2>5. Data Retention</h2>
+      <p>We retain conversation and account data for as long as necessary to provide the service, comply with legal obligations, resolve disputes, and enforce our agreements. Businesses using ChatCart Pro AI may configure their own retention settings within limits we provide.</p>
+
+      <h2>6. Data Security</h2>
+      <p>We use industry-standard technical and organizational measures, including encryption in transit, access controls, and periodic security reviews, to protect information against unauthorized access, alteration, disclosure, or destruction. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+      <h2>7. International Data Transfers</h2>
+      <p>As we serve businesses in the UAE, India, and globally, information may be transferred to and processed in countries other than your own, including India, where Nexsofture Private Ltd is headquartered. We take steps to ensure such transfers comply with applicable data protection laws.</p>
+
+      <h2>8. Your Rights</h2>
+      <p>Depending on your jurisdiction, you may have the right to access, correct, delete, or restrict the processing of your personal information, and to object to certain processing or request data portability. To exercise these rights, contact us using the details below.</p>
+
+      <h2>9. Children's Privacy</h2>
+      <p>ChatCart Pro AI is intended for business use and is not directed at children. We do not knowingly collect personal information from children under 18.</p>
+
+      <h2>10. Cookies and Similar Technologies</h2>
+      <p>Our website may use cookies or similar technologies to remember your language preference and understand aggregate usage patterns. You can control cookies through your browser settings.</p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date above. Continued use of ChatCart Pro AI after changes take effect constitutes acceptance of the revised policy.</p>
+
+      <h2>12. Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or wish to exercise your data rights, please contact:</p>
+      <p><strong>Nexsofture Private Ltd</strong><br>
+      Email: <a href="mailto:chatcartpro@gmail.com">chatcartpro@gmail.com</a><br>
+      Website: <a href="https://nexsofture.com" target="_blank" rel="noopener">nexsofture.com</a><br>
+      Product: ChatCart Pro AI</p>
+    </div>
+  </div>
 </main>
+
 <footer>
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="flogo"><span class="logo-mark" style="width:26px;height:26px;"><img src="/logo/logo.png" alt="" width="26" height="26" loading="lazy"></span> ChatCart Pro</div>
-        <p>AI ordering on your own WhatsApp number and phone line, for supermarkets, mini marts and restaurants in the UAE and India.</p>
-        <p style="margin-top:12px">Built in Dubai by Nexsofture Tech FZ LLC.<br>Licence no. [trade licence number]<br>[Registered address, Dubai, UAE]</p>
-      </div>
-      <div class="footer-col">
-        <h5>Who it's for</h5>
-        <ul>
-          <li><a href="/whatsapp-ai-for-grocery-stores/">Supermarkets &amp; mini marts</a></li>
-          <li><a href="/whatsapp-ai-for-restaurants/">Restaurants &amp; cafeterias</a></li>
-          <li><a href="/whatsapp-ordering-for-grocery-chains/">Multi-branch chains</a></li>
-          <li><a href="/pricing/">Pricing</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Talk to us</h5>
-        <ul>
-          <li><a href="https://wa.me/971547378597?text=Hi%20ChatCart%20Pro%2C%20I'd%20like%20to%20see%20a%20demo%20for%20my%20store%2Frestaurant." target="_blank" rel="noopener">WhatsApp +971 54 737 8597</a></li>
-          <li><a href="mailto:chatcartpro@gmail.com">chatcartpro@gmail.com</a></li>
-          <li><a href="/#demo">Book a free demo</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <ul>
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
-        </ul>
-        <p style="margin-top:12px;font-size:12.5px">Customers who message or call a business using ChatCart Pro are speaking with an AI ordering assistant.</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Nexsofture Tech FZ LLC. All rights reserved.</p>
-      <p class="powered-by">WhatsApp is a trademark of Meta. ChatCart Pro uses the WhatsApp Business Platform.</p>
-    </div>
+    <p>&copy; 2026 ChatCart Pro AI, a product by Nexsofture Private Ltd. All rights reserved.</p>
+    <p><a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/terms-and-conditions/">Terms & Conditions</a></p>
   </div>
 </footer>
 
-<script src="/js/main.js?v=20261125" defer></script>
-<script src="/js/pricing-config.js?v=20261125"></script>
-<script src="/js/site.js?v=20261125" defer></script>
+<!-- ============ FLOATING AI CHAT WIDGET ============ -->
+<style>
+  #ccChatBubble{
+    position:fixed; right:20px; bottom:20px; z-index:999;
+    width:58px; height:58px; border-radius:50%;
+    background:#0a0a0a; color:#ccff00;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 30px -10px rgba(0,0,0,0.4);
+    cursor:pointer; border:none;
+    transition:transform .15s ease;
+  }
+  #ccChatBubble:hover{transform:scale(1.06);}
+  #ccChatBubble svg{width:26px; height:26px;}
+  #ccChatBubble .cc-close-ico{display:none;}
+  #ccChatBubble.open .cc-chat-ico{display:none;}
+  #ccChatBubble.open .cc-close-ico{display:block;}
+
+  #ccChatBubble::before, #ccChatBubble::after{
+    content:''; position:absolute; inset:0; border-radius:50%;
+    border:2px solid var(--lime); pointer-events:none;
+    animation:ccBubbleWave 2.4s ease-out infinite;
+  }
+  #ccChatBubble::after{animation-delay:1.2s;}
+  #ccChatBubble.open::before, #ccChatBubble.open::after{display:none;}
+  @keyframes ccBubbleWave{
+    0%{transform:scale(1); opacity:.6;}
+    100%{transform:scale(1.8); opacity:0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #ccChatBubble::before, #ccChatBubble::after{animation:none; display:none;}
+  }
+
+  #ccChatPanel{
+    position:fixed; right:20px; bottom:88px; z-index:999;
+    width:340px; max-width:calc(100vw - 40px);
+    height:460px; max-height:calc(100vh - 140px);
+    background:#fff; color:#0a0a0a; border-radius:20px; overflow:hidden;
+    box-shadow:0 24px 60px -16px rgba(0,0,0,0.35);
+    border:1px solid #ececec;
+    display:none; flex-direction:column;
+    font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  #ccChatPanel.open{display:flex;}
+
+  #ccChatPanel .cc-head{
+    background:#0a0a0a; color:#fff; padding:14px 16px;
+    display:flex; align-items:center; gap:10px; flex-shrink:0;
+  }
+  #ccChatPanel .cc-head .cc-avatar{
+    width:32px; height:32px; border-radius:50%; background:#ccff00; color:#0a0a0a;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; flex-shrink:0;
+  }
+  #ccChatPanel .cc-head .cc-title{font-weight:700; font-size:14px;}
+  #ccChatPanel .cc-head .cc-sub{font-size:11.5px; opacity:.65;}
+
+  #ccChatBody{
+    flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:8px;
+    background:#f7f7f4;
+  }
+  #ccChatBody .cc-bubble{
+    max-width:82%; padding:9px 13px; border-radius:14px; font-size:13.5px; line-height:1.45;
+  }
+  #ccChatBody .cc-bubble.bot{background:#fff; color:#0a0a0a; border:1px solid #ececec; align-self:flex-start; border-bottom-left-radius:3px;}
+  #ccChatBody .cc-bubble.user{background:#0a0a0a; color:#fff; align-self:flex-end; border-bottom-right-radius:3px;}
+  #ccChatBody .cc-bubble.typing{color:#5b6360; font-style:italic;}
+
+  #ccChatForm{
+    display:flex; gap:8px; padding:10px; border-top:1px solid #ececec; background:#fff; flex-shrink:0;
+  }
+  #ccChatForm input{
+    flex:1; border:1px solid #ececec; border-radius:999px; padding:9px 14px; font-size:13.5px;
+    font-family:inherit; outline:none; background:#fff; color:#0a0a0a;
+  }
+  #ccChatForm input::placeholder{color:#8a8f8c;}
+  #ccChatForm input:focus{border-color:#a6d600;}
+  #ccChatForm button{
+    background:#ccff00; color:#0a0a0a; border:none; border-radius:999px; width:38px; height:38px;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;
+  }
+  #ccChatForm button:disabled{opacity:.5; cursor:not-allowed;}
+  #ccChatForm button svg{width:16px; height:16px;}
+
+  .cc-cta-wrap{background:transparent !important; border:none !important; padding:2px 0 !important; align-self:flex-start;}
+  .cc-cta-btn{
+    background:#0a0a0a; color:#ccff00; border:none; border-radius:999px;
+    padding:9px 18px; font-weight:700; font-size:13px; cursor:pointer; font-family:inherit;
+  }
+  .cc-cta-btn:hover{background:#1a1a1a;}
+
+  @media (max-width:420px){
+    #ccChatPanel{right:12px; bottom:82px; width:calc(100vw - 24px);}
+    #ccChatBubble{right:14px; bottom:14px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #ccChatBubble{transition:none;}
+  }
+
+  #ccTeaser{
+    position:fixed; right:20px; bottom:88px; z-index:998;
+    max-width:230px; background:#fff; color:#0a0a0a;
+    border:1px solid #ececec; border-radius:16px; border-bottom-right-radius:4px;
+    padding:12px 14px; font-size:13.5px; line-height:1.4;
+    box-shadow:0 14px 30px -10px rgba(0,0,0,0.25);
+    font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display:none; cursor:pointer;
+    animation:ccTeaserIn .25s ease;
+  }
+  #ccTeaser.show{display:block;}
+  #ccTeaser .cc-teaser-close{
+    position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:50%;
+    background:#0a0a0a; color:#fff; border:none; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; font-size:13px; line-height:1; padding:0;
+  }
+  @keyframes ccTeaserIn{
+    from{opacity:0; transform:translateY(6px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  @media (max-width:420px){
+    #ccTeaser{right:14px; bottom:80px; max-width:calc(100vw - 84px);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #ccTeaser{animation:none;}
+  }
+</style>
+
+<div id="ccTeaser" role="button" tabindex="0" aria-label="Open chat: Looking for something for your business?">
+  Looking for something for your business? Ask me anything 👋
+  <button type="button" class="cc-teaser-close" aria-label="Dismiss">&times;</button>
+</div>
+
+<button id="ccChatBubble" aria-label="Open chat" aria-expanded="false" aria-controls="ccChatPanel">
+  <svg class="cc-chat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.1-3.7A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12.5 3 8.5 8.5 0 0 1 21 11.5Z"/></svg>
+  <svg class="cc-close-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+</button>
+
+<div id="ccChatPanel" role="dialog" aria-label="Chat with ChatCart Pro AI">
+  <div class="cc-head">
+    <span class="cc-avatar">C</span>
+    <div>
+      <div class="cc-title">ChatCart Pro AI</div>
+      <div class="cc-sub">Usually replies in a few seconds</div>
+    </div>
+  </div>
+  <div id="ccChatBody"></div>
+  <form id="ccChatForm" autocomplete="off">
+    <input id="ccChatInput" type="text" placeholder="Ask about pricing, features..." required maxlength="500" aria-label="Message">
+    <button type="submit" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 11.5 21 3l-5 18.5-4.5-7.5L3 11.5Z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script>
+  /* Auto theme periodic re-check (the initial pre-paint theme is set inline
+     in <head> to avoid a flash of the wrong theme; this just re-evaluates
+     every 5 minutes so the theme still flips if the visit spans dusk/dawn). */
+  (function(){
+    function computeAutoTheme(){
+      var hour = new Date().getHours();
+      return (hour >= 19 || hour < 7) ? 'dark' : 'light';
+    }
+    setInterval(function(){
+      try{
+        var saved = localStorage.getItem('cc_theme');
+        if(saved === 'light' || saved === 'dark') return;
+        document.documentElement.setAttribute('data-theme', computeAutoTheme());
+      }catch(e){}
+    }, 5 * 60 * 1000);
+  })();
+</script>
+<script>
+(function(){
+  "use strict";
+
+  /* Point this at your own backend proxy that holds the OpenRouter key
+     server-side. Never call OpenRouter directly from this static page. */
+  var CHAT_API_ENDPOINT = "https://chatcartpro-aiagent.onrender.com/api/chat";
+
+  var bubble = document.getElementById('ccChatBubble');
+  var panel = document.getElementById('ccChatPanel');
+  var body = document.getElementById('ccChatBody');
+  var form = document.getElementById('ccChatForm');
+  var input = document.getElementById('ccChatInput');
+  var sendBtn = form.querySelector('button');
+
+  var history = [];
+  var greeted = false;
+
+  function addBubble(text, who){
+    var el = document.createElement('div');
+    el.className = 'cc-bubble ' + who;
+    el.textContent = text;
+    body.appendChild(el);
+    body.scrollTop = body.scrollHeight;
+    return el;
+  }
+
+  function addDemoCta(){
+    var wrap = document.createElement('div');
+    wrap.className = 'cc-bubble bot cc-cta-wrap';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cc-cta-btn';
+    btn.textContent = 'Book a Demo';
+    btn.addEventListener('click', function(){
+      var demoSection = document.getElementById('demo');
+      if(demoSection){
+        closePanel();
+        demoSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = '/#demo';
+      }
+    });
+    wrap.appendChild(btn);
+    body.appendChild(wrap);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function openPanel(){
+    panel.classList.add('open');
+    bubble.classList.add('open');
+    bubble.setAttribute('aria-expanded', 'true');
+    if(teaser) teaser.classList.remove('show');
+    if(!greeted){
+      greeted = true;
+      addBubble("Hi! I'm the ChatCart Pro AI assistant. Ask me anything about pricing, features, or how it works for your business.", 'bot');
+    }
+    input.focus();
+  }
+  function closePanel(){
+    panel.classList.remove('open');
+    bubble.classList.remove('open');
+    bubble.setAttribute('aria-expanded', 'false');
+  }
+
+  bubble.addEventListener('click', function(){
+    panel.classList.contains('open') ? closePanel() : openPanel();
+  });
+
+  /* Proactive teaser: shows once per session after 10s of inactivity,
+     unless the visitor already opened the chat or dismissed the teaser. */
+  var teaser = document.getElementById('ccTeaser');
+  var teaserCloseBtn = teaser.querySelector('.cc-teaser-close');
+
+  function hideTeaser(){
+    teaser.classList.remove('show');
+  }
+
+  if(!sessionStorage.getItem('ccTeaserShown')){
+    setTimeout(function(){
+      if(panel.classList.contains('open')) return;
+      sessionStorage.setItem('ccTeaserShown', '1');
+      teaser.classList.add('show');
+      setTimeout(hideTeaser, 12000);
+    }, 10000);
+  }
+
+  teaser.addEventListener('click', function(){
+    hideTeaser();
+    openPanel();
+  });
+  teaser.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      hideTeaser();
+      openPanel();
+    }
+  });
+  teaserCloseBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    hideTeaser();
+  });
+
+  function sleep(ms){
+    return new Promise(function(resolve){ setTimeout(resolve, ms); });
+  }
+
+  function sendChatMessage(msg, attempt){
+    attempt = attempt || 1;
+    var maxAttempts = 3;
+    return fetch(CHAT_API_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: msg, history: history })
+    }).then(function(res){
+      if(!res.ok) throw new Error('Request failed with status ' + res.status);
+      return res.json();
+    }).catch(function(err){
+      if(attempt < maxAttempts){
+        return sleep(attempt * 1500).then(function(){
+          return sendChatMessage(msg, attempt + 1);
+        });
+      }
+      throw err;
+    });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var msg = input.value.trim();
+    if(!msg) return;
+
+    addBubble(msg, 'user');
+    history.push({ role: 'user', content: msg });
+    input.value = '';
+    input.disabled = true;
+    sendBtn.disabled = true;
+
+    var typingEl = addBubble('Typing...', 'bot typing');
+    var slowNoticeTimer = setTimeout(function(){
+      typingEl.textContent = 'Still connecting, one moment...';
+    }, 4000);
+
+    sendChatMessage(msg)
+      .then(function(data){
+        clearTimeout(slowNoticeTimer);
+        typingEl.remove();
+        var reply = (data && data.reply) ? data.reply : "Sorry, I didn't catch that. Could you rephrase?";
+        var showDemo = /\[SHOW_DEMO_FORM\]/.test(reply);
+        reply = reply.replace(/\[SHOW_DEMO_FORM\]/g, '').trim();
+        addBubble(reply, 'bot');
+        history.push({ role: 'assistant', content: reply });
+        if(showDemo) addDemoCta();
+      })
+      .catch(function(){
+        clearTimeout(slowNoticeTimer);
+        typingEl.remove();
+        addBubble("Something went wrong reaching the assistant. Please try again, or book a demo and we'll help directly.", 'bot');
+      })
+      .finally(function(){
+        input.disabled = false;
+        sendBtn.disabled = false;
+        input.focus();
+      });
+  });
+
+  window.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && panel.classList.contains('open')) closePanel();
+  });
+})();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script>
+  /* GSAP scroll-triggered reveal animations (see /js/main.js section 6 for
+     the shared version; kept inline here since this page uses its own
+     standalone scripts rather than /js/main.js). */
+  (function(){
+    if(typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.section-head').forEach(function(el){
+      gsap.from(el, {
+        opacity: 0, y: 28, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      });
+    });
+
+    var cardGroupSelectors = [
+      '.benefits-grid', '.mode-grid-3', '.industry-groups', '.steps-grid',
+      '.tier-grid', '.testi-grid', '.why-grid', '.ask-grid', '.stage-strip'
+    ];
+    cardGroupSelectors.forEach(function(sel){
+      document.querySelectorAll(sel).forEach(function(group){
+        var items = group.children;
+        if(!items.length) return;
+        gsap.from(items, {
+          opacity: 0, y: 24, duration: 0.6, ease: 'power2.out',
+          stagger: 0.08,
+          scrollTrigger: { trigger: group, start: 'top 88%' }
+        });
+      });
+    });
+
+    document.querySelectorAll('.industry-strip, .industry-list').forEach(function(list){
+      var chips = list.children;
+      if(!chips.length) return;
+      gsap.from(chips, {
+        opacity: 0, y: 12, duration: 0.4, ease: 'power1.out',
+        stagger: 0.04,
+        scrollTrigger: { trigger: list, start: 'top 90%' }
+      });
+    });
+
+    document.querySelectorAll('.big').forEach(function(el){
+      var raw = el.textContent.trim();
+      var match = raw.match(/^([0-9]+(?:\.[0-9]+)?)(.*)$/);
+      if(!match) return;
+
+      var target = parseFloat(match[1]);
+      var suffix = match[2];
+      var decimals = match[1].includes('.') ? match[1].split('.')[1].length : 0;
+      var counter = { val: 0 };
+
+      gsap.to(counter, {
+        val: target, duration: 1.3, ease: 'power1.out',
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+        onUpdate: function(){
+          el.textContent = counter.val.toFixed(decimals) + suffix;
+        },
+        onComplete: function(){
+          el.textContent = target.toFixed(decimals) + suffix;
+        }
+      });
+    });
+
+    var heroTimeline = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } });
+    var heroEls = [
+      document.querySelector('.hero .eyebrow, .alt-hero .vs-badge'),
+      document.querySelector('.hero h1, .alt-hero h1'),
+      document.querySelector('.hero .sub, .alt-hero p'),
+      document.querySelector('.hero .hero-ctas, .alt-hero .hero-ctas')
+    ].filter(Boolean);
+    if(heroEls.length){
+      heroTimeline.from(heroEls, { opacity: 0, y: 20, stagger: 0.12 });
+    }
+  })();
+</script>
+
 </body>
 </html>
