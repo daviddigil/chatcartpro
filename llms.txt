@@ -12,12 +12,8 @@ ChatCart Pro AI serves businesses across every vertical, retail, healthcare, rea
 - [Restaurant POS + AI Voice & WhatsApp Ordering](https://chatcartpro.com/restaurant-pos-voice-chat/): ChatCart Pro POS, the UAE's AI-powered restaurant point-of-sale system unified with AI voice calling and WhatsApp ordering. Dine-in orders at the counter, phone orders taken by the AI voice employee, and WhatsApp orders all write into one shared menu, order pipeline, and kitchen display, with table management, kitchen ticket tracking, delivery agent dispatch, receipt printing (network/Bluetooth/USB), VAT-ready AED billing, and a discounts/offers engine, built for restaurants in Dubai, Abu Dhabi, and across the UAE.
 - [Pricing / Plan Configurator](https://chatcartpro.com/pricing/): Interactive configurator that recommends a Starter, Growth, or Enterprise plan based on conversation volume, locations, and required AI capabilities, shown in USD, AED, or INR.
 
-- [Restaurant Billing Software](https://chatcartpro.com/restaurant-billing-software/): Restaurant billing and reporting software, part of ChatCart Pro POS.
-- [Arabic homepage](https://chatcartpro.com/ar/): Arabic version of the site.
-
 ## Industry Pages
 
-- [E-commerce](https://chatcartpro.com/whatsapp-ai-for-ecommerce/)
 - [Grocery Stores](https://chatcartpro.com/whatsapp-ai-for-grocery-stores/)
 - [Pharmacies](https://chatcartpro.com/whatsapp-ai-for-pharmacies/)
 - [Restaurants](https://chatcartpro.com/whatsapp-ai-for-restaurants/)
@@ -42,9 +38,6 @@ ChatCart Pro AI serves businesses across every vertical, retail, healthcare, rea
 
 ## Comparisons
 
-- [vs. Meta AI Business Agent](https://chatcartpro.com/meta-ai-business-agent-alternative/)
-- [Meta AI Business Agent setup guide](https://chatcartpro.com/meta-ai-business-agent-setup/)
-- [vs. Revora](https://chatcartpro.com/revora-alternative/)
 - [vs. Wati](https://chatcartpro.com/wati-alternative/)
 - [vs. Respond.io](https://chatcartpro.com/respond-io-alternative/)
 - [vs. SleekFlow](https://chatcartpro.com/sleekflow-alternative/)

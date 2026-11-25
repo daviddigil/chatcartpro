@@ -1,7 +1,0 @@
-node_modules/
-.claude/
-.DS_Store
-*.pdf
-cover.png
-.env
-.env.*
